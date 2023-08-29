@@ -1,0 +1,55 @@
+\documentclass{article}
+
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\theoremstyle{plain}
+\newtheorem{axioma}{Axioma}
+\newtheorem{prop}{Proposição}
+
+\theoremstyle{definition}
+\newtheorem{definicao}{Definição}[section]
+
+\theoremstyle{remark}
+\newtheorem{obs}{Observação}[section]
+\newtheorem{exemp}{Exemplo}[section]
+
+\begin{document}
+\section{Conjuntos Finitos e Infinitos}
+\subsection{Números naturais}
+\paragraph{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb{N}$, cujos elementos são os números naturais, e uma função $s:\mathbb{N} \to \mathbb{N}$. Para cada $n\in \mathbb{N}$, o número $s(n)$ é o sucessor de $n$.  Temos os axiomas:}
+\begin{axioma}
+	$s:\mathbb{N} \to \mathbb{N}$ é injetiva.
+\end{axioma}
+\begin{axioma}
+	$\mathbb{N} - s(n) = \left\{ 1 \right\}$. Ou seja, só existe um número natural que não é sucessor de nenhum outro, e ele é denotado por $1$.
+\end{axioma}
+\begin{axioma}
+	Se $X\subset \mathbb{N}$ é  um subconjunto tal que: 
+	$$
+	\begin{cases}
+		1 \in X\\~\\
+		n \in X \implies s(n) \in X
+	\end{cases}
+	$$
+	Então $\mathbb{N} = X$.
+\end{axioma}
+\begin{definicao}[Soma]
+	Dados $m,n\in \mathbb{N}$, sua soma $m+n$ é definida como:$$ m+n \coloneqq s^n(m).$$ A soma deve obedecer \begin{equation} m+1 = s(m)\end{equation} \begin{equation}m +s(n) = s(m+n)\end{equation}  para todos os $m,n$ naturais.
+\end{definicao}
+\begin{obs}
+	Dedekind prova o "Teorema da Definição por Indução" para garantir que a notação $s^n(m)$ faça sentido.
+\end{obs}
+\begin{prop}[Associatividade da Soma]
+	Para todos $p,m,n \in \mathbb{N}$, temos $m+(n+p) = (m+n) +p$.
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{ p \in \mathbb{N} \: | \forall m,n\in \mathbb{N} \: : \: m+(n+p) = (m+n) + p \right\}$. Da definição de adição, temos pra qualquer $m,n$ que $n+1 = s(n)$, logo $m+(n+1)  = m+s(n) = s(m+n) = (m+n) +1 \implies m+(n+1) = (m+n) +1 $. Logo $1\in X$.  Se $p \in X$, temos $m+(n+p) = (m+n) +p $. Logo \begin{align*} 
+		m+(n+s(p)) &= m+ s(n+p) \\~\\
+		&= s\left(m+(n+p)\right) \\~\\ 
+		&= s\left((m+n)+p\right) \\~\\ 
+		&= (m+n) + s(p)
+	\end{align*}
+\end{proof}
+\end{document}
