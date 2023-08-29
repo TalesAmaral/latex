@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.27)  27 AUG 2023 22:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.27)  28 AUG 2023 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -151,32 +151,33 @@ LaTeX Info: Redefining \] on input line 2954.
 )
 \c@axioma=\count275
 \c@prop=\count276
-\c@definicao=\count277
-\c@obs=\count278
-\c@exemp=\count279
+\c@lema=\count277
+\c@definicao=\count278
+\c@obs=\count279
+\c@exemp=\count280
 
 (C:\Users\tales\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count280
+\l__color_backend_stack_int=\count281
 \l__pdf_internal_box=\box54
 ) (analise.aux)
 \openout1 = `analise.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 (C:\Users\tales\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -199,16 +200,16 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 (C:\Users\tales\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count281
+\scratchcounter=\count282
 \scratchdimen=\dimen160
 \scratchbox=\box55
-\nofMPsegments=\count282
-\nofMParguments=\count283
+\nofMPsegments=\count283
+\nofMParguments=\count284
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count284
+\MPscratchCnt=\count285
 \MPscratchDim=\dimen161
-\MPnumerator=\count285
-\makeMPintoPDFobject=\count286
+\MPnumerator=\count286
+\makeMPintoPDFobject=\count287
 \everyMPtoPDFconversion=\toks30
 )))
 (C:\Users\tales\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -224,17 +225,17 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 \Gin@req@height=\dimen162
 \Gin@req@width=\dimen163
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
 
  (C:\Users\tales\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
 
 (C:\Users\tales\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (2.9448pt too wide) in paragraph at lines 48--48
+Overfull \hbox (2.9448pt too wide) in paragraph at lines 49--49
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$. Da defini^^Xc
 ~ao
  []
@@ -244,13 +245,13 @@ Overfull \hbox (2.9448pt too wide) in paragraph at lines 48--48
 {C:/Users/tales/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 (analise.aux) ) 
 Here is how much of TeX's memory you used:
- 3289 strings out of 476331
- 51392 string characters out of 5787765
- 1861660 words of memory out of 5000000
- 23720 multiletter control sequences out of 15000+600000
+ 3296 strings out of 476331
+ 51436 string characters out of 5787765
+ 1862660 words of memory out of 5000000
+ 23727 multiletter control sequences out of 15000+600000
  515850 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,8n,76p,378b,184s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,8n,76p,378b,193s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/tales/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb><C:/Users/tales/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tales/AppData/Local/Programs/MiKTeX/
@@ -262,7 +263,7 @@ les/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
 /Users/tales/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti1
 0.pfb><C:/Users/tales/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb>
-Output written on analise.pdf (2 pages, 107769 bytes).
+Output written on analise.pdf (2 pages, 108989 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

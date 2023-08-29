@@ -7,6 +7,7 @@
 \theoremstyle{plain}
 \newtheorem{axioma}{Axioma}
 \newtheorem{prop}{Proposição}
+\newtheorem{lema}{Lema}
 
 \theoremstyle{definition}
 \newtheorem{definicao}{Definição}[section]
@@ -25,7 +26,7 @@
 \begin{axioma}
 	$\mathbb{N} - s(n) = \left\{ 1 \right\}$. Ou seja, só existe um número natural que não é sucessor de nenhum outro, e ele é denotado por $1$.
 \end{axioma}
-\begin{axioma}
+\begin{axioma}[Princípio de indução]
 	Se $X\subset \mathbb{N}$ é  um subconjunto tal que: 
 	$$
 	\begin{cases}
@@ -49,7 +50,28 @@
 		m+(n+s(p)) &= m+ s(n+p) \\~\\
 		&= s\left(m+(n+p)\right) \\~\\ 
 		&= s\left((m+n)+p\right) \\~\\ 
-		&= (m+n) + s(p)
+		&= (m+n) + s(p).
 	\end{align*}
+	Logo $p \in X \implies s(p) \in X$. Temos que $X =  \mathbb{N}$ pelo princípio de indução. Logo a soma é associativa nos naturais.
+\end{proof}
+\begin{lema}[Comutatividade da soma com o $1$]
+	\label{lema1}
+	Para todo $m \in \mathbb{N}$, temos $m+1 = 1 +m$.
+\end{lema}
+\begin{proof}
+	Seja $X = \left\{ m \in \mathbb{N} \: |  m+1 = 1+m \right\}$. Temos $1\in X$, pois $1+1 = 1+1$. Supondo $m\in X$, logo $m+1 = 1+m$. Temos \begin{align*} 
+		1+ s(m)  &= 1+(m+1) \\~ \\
+		&= (1+m) +1 \\~\\
+		&= (m+1) +1 \\~\\
+		&= s(m)+1
+	\end{align*}
+	Como $m\in X \implies s(m) \in X$ e $1\in X$, temos $X= \mathbb{N}$.
+\end{proof}
+\begin{prop}[Comutatividade da soma]
+	Para todos $m,n \in \mathbb{N}$, temos $m+n = n +m$.
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{ m \in \mathbb{N} \: | \forall n \in \mathbb{N} \: : \:  m+n = n+m \right\}$. Temos $1\in X$  pelo  Lema \ref{lema1}.
+	Temos $m+1 = s(m) = $
 \end{proof}
 \end{document}
