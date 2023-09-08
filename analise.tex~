@@ -26,6 +26,16 @@
 \begin{axioma}
 	$\mathbb{N} - s(n) = \left\{ 1 \right\}$. Ou seja, só existe um número natural que não é sucessor de nenhum outro, e ele é denotado por $1$.
 \end{axioma}
+\begin{prop}
+	\label{propsuc}
+	Todo natural diferente de $1$ possui um antecessor.
+\end{prop}
+\begin{proof}
+	Seja $n\neq 1$ um número natural. Suponha que não exista $n_0$ natural com $s(n_0) = n$. Logo $n \not \in s\left(\mathbb{N}\right)$. Logo $n\in \mathbb{N} - s(n)$. Mas $\mathbb{N} - s(n) = \left\{ 1 \right\}$. Logo $n = 1$. Contradição. Logo existe  $n_0\in \mathbb{N}$ tal que $s(n_0) = n$.
+\end{proof}
+\begin{obs}
+	Observe que a função $s: \mathbb{N} \to \mathbb{N}\setminus \{1\}$ é injetiva por definição e sobrejetiva pela proposicao \ref{propsuc}, logo é uma bijeção entre um subconjunto dos naturais com os naturais.
+\end{obs}
 \begin{axioma}[Princípio de indução]
 	Se $X\subset \mathbb{N}$ é  um subconjunto tal que: 
 	$$
@@ -60,8 +70,8 @@
 \end{lema}
 \begin{proof}
 	Seja $X = \left\{ m \in \mathbb{N} \: |  m+1 = 1+m \right\}$. Temos $1\in X$, pois $1+1 = 1+1$. Supondo $m\in X$, logo $m+1 = 1+m$. Temos \begin{align*} 
-		1+ s(m)  &= 1+(m+1) \\~ \\
-		&= (1+m) +1 \\~\\
+		1+ s(m)  &= s(1+m) \\~ \\
+		&= s(m+1) \\~\\
 		&= (m+1) +1 \\~\\
 		&= s(m)+1
 	\end{align*}
@@ -72,6 +82,189 @@
 \end{prop}
 \begin{proof}
 	Seja $X = \left\{ m \in \mathbb{N} \: | \forall n \in \mathbb{N} \: : \:  m+n = n+m \right\}$. Temos $1\in X$  pelo  Lema \ref{lema1}.
-	Temos $m+1 = s(m) = $
+	Supondo $m\in X$, logo $m+n = n+m$ para todo $n\in \mathbb{N}$. Temos \begin{align*}
+		n + s(m) &= s(n+m)  \\~\\
+		&= s(m+n) \\~\\
+		&= (m+n) + 1\\~\\
+		&= 1+(m +n )\\~\\
+		&= (1+m )+n \\~\\
+		&= (m+1 )+n \\~\\
+		&= s(m) +n \\~\\
+	\end{align*}
+	Como $1\in X$ e $m \in X \implies s(m) \in X$, temos $X = \mathbb{N}$ pelo princípio de indução.
+\end{proof}
+\begin{prop}[Lei do corte]
+	Para todos $m,n, p  \in \mathbb{N}$, temos $m+n = m +p \implies n = p $.
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{ m \in \mathbb{N} \: | \forall n\in \mathbb{N}\: \forall p \in \mathbb{N} \: : \:  m+n = m+p\implies n=p \right\}$. Temos $1\in X$  pois $1+n = 1+p \implies n+1 = p+1 \implies s(n) = s(p) \implies n =p$ pela injetividade de $s$.
+	Supondo $m\in X$, temos $m+n = m+ p \implies n = p$ para todos $n,p$ naturais. Temos \begin{align*}
+		s(m) + n = s(m)+p &\implies \\~\\
+		n + s(m)  =  p + s(m) &\implies \\~\\
+		s(n + m)  =  s(p + m) &\implies \\~\\
+		n+m = p+m &\implies \\~\\
+		m+ n = m+p &\implies \\~\\
+		n = p.
+	\end{align*}
+	Logo $s(m) +n = s(m) + p \implies n = p$.
+	Como $1\in X$ e $m \in X \implies s(m) \in X$, temos $X = \mathbb{N}$ pelo princípio de indução.
+\end{proof}
+\begin{lema}[Não existem ciclos nos naturais]
+	\label{lema2}
+	Para todos $m,p\in \mathbb{N}$, temos $m\neq m+p$.
+\end{lema}
+\begin{proof}
+	Suponha que $m = m+p$ com $m,p\in \mathbb{N}$. Logo $s(m) = s(m+p) \implies m+1 = (m+p) +1 \implies m+1 = m+(p+1) \implies 1 = p+1 \implies s(p) = 1$. Como $1$ não é sucessor de nenhum natural, temos uma contradição. Logo $m\neq m+p$ para todos naturais $m,p$.
+\end{proof}
+\begin{lema}[Unicidade da Tricotomia]
+	\label{lema3}
+	Dados dois naturais $m$ e $n$, apenas uma das 3 possibilidades ocorre:
+	$$
+	\begin{cases}
+		m = n \\~\\
+		\exists p \in \mathbb{N} \: : \: m = n+p \\~\\
+		\exists q \in \mathbb{N} \:  : \:n = m+q 
+	\end{cases}
+	$$
+\end{lema}
+\begin{proof}
+	Pelo lema \ref{lema2}, se $m=n$, não podemos ter $m = n+p = m+p$ ou $n = m+q = n+q$ para algum $p,q \in\mathbb{N}$. Se $\exists p \in \mathbb{N} \: : \:m = n+p$, não podemos ter $m = n$ pelo lema \ref{lema2} e não podemos ter $\exists q \in \mathbb{N} \: : \:n = m+q$, pois  teríamos $m = n+p = (m+q)+p = m+(q+p) \implies  m = m +(q+p)$, que contradiz o lema \ref{lema2}.
+\end{proof}
+\begin{prop}[Tricotomia]
+	\label{tricotomia}
+	Dados dois naturais $m$ e $n$, exatamente uma das 3 possibilidades ocorre:
+	$$
+	\begin{cases}
+		m = n \\~\\
+		\exists p \in \mathbb{N} \: : \: m = n+p \\~\\
+		\exists q \in \mathbb{N} \:  : \:n = m+q 
+	\end{cases}
+	$$
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{m \in \mathbb{N} | \forall n \in \mathbb{N} \: : \: (m = n ) \lor (	\exists p \in \mathbb{N} \: : \: m = n+p ) \lor ( 	\exists q \in \mathbb{N} \: : \: n = m+q ) \right\}$, ou seja: o conjunto dos números naturais que satisfazem pelo menos uma das condições da tricotomia para todo $n$.  
+
+	$1\in X$, pois dado $n\in \mathbb{N}$, temos $n = 1$ ou $n\neq 1$. Se $n=1$, temos $m =1 = n$. Se $n\neq 1$, como $\mathbb{N} - s(\mathbb{N}) = \left\{1\right\}$, temos que existe um $n_0\in \mathbb{N}$ tal que $s(n_0) = n$. Logo $n = n_0 +1 \implies \exists q \: : \: n = q+1  = q+m $.
+	
+	Supondo $m\in X$. Dado $n\in \mathbb{N}$, se $m = n$, temos $s(m) = s(n) = n+1$, logo $\exists p \in\mathbb{N} \: : \: s(n) = n+p$. Se  $\exists p \in\mathbb{N} \: : \: m = n+p$, temos $s(m) = s(n+p) = (n+p+1) = n +s(p)$ , logo $\exists p' \in\mathbb{N} \: : \: s(n) = n+p'$. Se $\exists q \in \mathbb{N} \: : \: n = m+q $ com $q=1$, temos $n = m+1 = s(m)$. Se $\exists q \in \mathbb{N} \: : \: n = m+q $ com $q\neq 1$, existe $q_0\in \mathbb{N}$ tal que $s(q_0) = q$, logo temos $n = m+q = m +s(q_0) = m+(q_0+1) = m+1+q_0 = s(m)+q_0 \implies \exists q' \in \mathbb{N} \: : \: n = s(m)+q' $. 
+
+	Como $1\in X$ e $m\in X \implies s(m) \in X$, temos $X = \mathbb{N}$.  Logo para todo par $m,n\in \mathbb{N}$, pelo menos uma das condições da tricotomia ocorre. Pelo lema \ref{lema3}, apenas uma das possbilidades ocorre. 
+	%Melhorar
+\end{proof}
+\begin{definicao}[$<$]
+	$$ m<n \iff \exists p\in \mathbb{N} \: : \: n = m+p$$
+	Dados $m,n$ naturais, dizemos que $m$ é menor que $n$ ( $m<n$) quando existe $p\in \mathbb{N}$ tal que $n = m+p$.
+\end{definicao}
+
+\begin{prop}
+	Temos $1 < n $ para todo $ 1 \neq n \in \mathbb{N}$ .
+\end{prop}
+\begin{proof}
+	Como $n \neq 1$, temos pela proposição \label{propsuc} que $n$ possui um antecessor. Logo existe $n_0$ tal que $s(n_0) =n \implies n  = 1+n_0$. Logo $1<n$.
+\end{proof}
+\begin{definicao}[$\leq$]
+	$$m \leq n \iff (m = n) \lor (m <n)$$
+\end{definicao}
+\begin{prop}[Transitividade da relação $<$]
+	$m< n \land n< p \implies m < p$
+\end{prop}
+\begin{proof}
+	Se $m<n$ e $n<p$, temos $n = m+q$ e $p = n+r$ para algum par $q,r\in \mathbb{N}$. Logo $p = n +r = (m +q) +r =m +(q+r)$. Logo $m<p$.
+\end{proof}
+\begin{prop}[Tricotomia da relação $<$]
+	Dados $m,n\in \mathbb{N}$, exatamente uma das afirmações ocorre: $m=n$, ou $m<n$, ou $n<m$.
+\end{prop}
+\begin{proof}
+	Segue diretamente da proposição \ref{tricotomia}.
+\end{proof}
+\begin{prop}
+	Dados $m,n,p$ naturais, temos $$m +p < n+p \implies m <n.$$
+\end{prop}
+\begin{proof}
+	Temos $m+p < n+p \implies \exists q \in \mathbb{N} \: : \: n+p = (m+p) + q \implies  \exists q \in \mathbb{N} \: : \: n = m + q \implies m<n$.
+\end{proof}
+\begin{definicao}[Multiplicação]
+	Para todo $m\in \mathbb{N}$, seja $f_m : \mathbb{N} \to \mathbb{N}$ que associa cada $p\in \mathbb{N}$ a $f_m(p) = m+p$.
+	Dados $m,n \in \mathbb{N}$, o produto entre naturais satisfaz $m\cdot 1 = m$ e  $ m\cdot (n+1) = (f_m)^n(m)$ .
+\end{definicao}
+\begin{lema}[ Distributiva do sucessor]
+	$$m\cdot(n+1) = mn +m$$
+\end{lema}
+\begin{proof}
+	\label{lemaDistributiva1}
+	Seja $X = \left\{m \in \mathbb{N} | \forall n \in \mathbb{N} \: : \:  n\cdot(m+1) = nm + n\right\}$. Como $n\cdot(1+1) = (f_n)^1(n) = f_n(n) = n+n = n\cdot 1 +n$, logo $1\in X$. Supondo $m\in X$, ou seja: $n\cdot(m+1) = (f_n)^{m} (n) = nm +n$. Temos $n\cdot( s(m) +1) = (f_n)^{s(m)}(n) = f_n( (f_n)^{m} (n)) = f_n( n(m+1)) = n(m+1)+n = n\cdot s(m) + n$.Como $1\in X$ e $m \in X \implies s(m) \in X$, temos $X = \mathbb{N}$.
+	%não precisava de indução
+\end{proof}
+\begin{prop}[ Distributiva à esquerda]
+	$$m\cdot(n+p) = mn +mp$$
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{p \in \mathbb{N} | \forall m,n \in \mathbb{N} \: : \:  n\cdot(m+p) = nm + np\right\}$. Temos $1\in X$ pelo lema \ref{lemaDistributiva1}. Supondo $p\in X$. Temos \begin{align*}
+		n\cdot(m+s(p)) &= n\cdot ((m+p)+1)  \\~\\
+		&= n\cdot(m+p) + n\\~\\
+		&= nm+np+n\\~\\
+		&=nm+n(p+1)\\~\\
+		&=nm+n\cdot s(p)
+	\end{align*}
+	Como $p\in X\implies s(p) \in X $ e $1\in X$, temos $X = \mathbb{N}$.
+\end{proof}
+\begin{prop}[ Distributiva à direita]
+	$$(m+n)\cdot p = mp +np$$
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{p \in \mathbb{N} | \forall m,n \in \mathbb{N} \: : \:  (m+n)\cdot p = mp + np\right\}$. Temos $1\in X$, pos $(m+n)\cdot 1 = m+n = m\cdot 1 + n \cdot 1$ . Supondo $p\in X$. Temos \begin{align*}
+		(m+n)\cdot s(p) &= (m+n)\cdot(p+1)  \\~\\
+		&= (m+n)\cdot p + (m+n)\\~\\
+		&= mp+np+m+n\\~\\
+		&=mp+m+ np+n\\~\\
+		&=m(p+1)+ n(p+1)\\~\\
+		&=m\cdot s(p) + n\cdot s(p)
+	\end{align*}
+	Como $p\in X\implies s(p) \in X $ e $1\in X$, temos $X = \mathbb{N}$.
+\end{proof}
+\begin{prop}[Associatividade]
+	$$m\cdot(n\cdot p) = (m\cdot n ) \cdot p$$
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{p \in \mathbb{N} | \forall m,n \in \mathbb{N} \: : \:  m\cdot( n\cdot p) = (m\cdot n )\cdot p \right\}$. Temos $m\cdot (n\cdot1) = m\cdot n = (m\cdot n ) \cdot 1$, logo $1\in X$. \\ ~\\ Supondo $p\in X$. Temos 
+	 \begin{align*}
+		 m\cdot (n\cdot s(p)) &= m\cdot(n\cdot ( p+1) )  \\~\\
+		 &= m\cdot ( n\cdot p + n) \\~\\
+		 &= m\cdot ( n\cdot p) + m\cdot n \\~\\
+		 &= (m\cdot  n)\cdot p + (m\cdot n) \\~\\
+		 &= (m\cdot  n)\cdot (p+1) \\~\\
+		 &= (m\cdot  n)\cdot s(p) \\~\\
+	\end{align*}
+	Como $p\in X\implies s(p) \in X $ e $1\in X$, temos $X = \mathbb{N}$.
+\end{proof}
+\begin{lema}[Comutatividade com $1$]
+	\label{comutatividade1}
+	$$m\cdot 1 = 1 \cdot m $$
+\end{lema}
+\begin{proof}
+	Seja $X = \left\{m \in \mathbb{N} |  m\cdot 1 = 1\cdot m  \right\}$. Temos $1\cdot 1 = 1\cdot 1  $, logo $1\in X$. Supondo $m\in X$. Temos 
+	 \begin{align*}
+		 s(m)\cdot 1 &= (m+1)\cdot 1   \\~\\
+		 &= m+1  \\~\\
+		 &= m\cdot 1 + 1\cdot1  \\~\\
+		 &= 1\cdot m +1\cdot 1   \\~\\
+		 &=1\cdot (m+1)   \\~\\
+		 &=1\cdot s(m)   \\~\\
+	\end{align*}
+	Como $m\in X\implies s(m) \in X $ e $1\in X$, temos $X = \mathbb{N}$.
+\end{proof}
+\begin{prop}[Comutatividade]
+	$$m\cdot n = n \cdot m $$
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{n \in \mathbb{N} | \forall m \in \mathbb{N} \: : \:  m\cdot n = n\cdot m  \right\}$. Temos $1\in X$ pelo lema \ref{comutatividade1}. Supondo $n\in X$. Temos 
+	 \begin{align*}
+		 m\cdot s(n) &= m\cdot(n +1 )  \\~\\
+		 &=mn + m\cdot1 \\~\\
+		 &=nm + 1\cdot m \\~\\
+		 &=(n+1)\cdot m + \\~\\
+		 &=s(n)\cdot m + \\~\\
+	\end{align*}
+	Como $p\in X\implies s(p) \in X $ e $1\in X$, temos $X = \mathbb{N}$.
 \end{proof}
 \end{document}
