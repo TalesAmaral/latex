@@ -7,6 +7,7 @@
 \theoremstyle{plain}
 \newtheorem{axioma}{Axioma}
 \newtheorem{prop}{Proposição}
+\newtheorem{teo}{Teorema}
 \newtheorem{lema}{Lema}
 
 \theoremstyle{definition}
@@ -18,6 +19,14 @@
 
 \begin{document}
 \section{Teoria de conjuntos}
+\begin{prop}
+	Se $f:X\to Y$ e $g:Y\to Z$ são bijeções, então $(g \circ f) X\to Z$ é uma bijeção.
+\end{prop}
+\begin{proof}
+	Temos $g(f(a)) = g(f(b)) \implies f(a) = f(b) \implies a = b$. Logo $g \circ f$ é injetiva.
+
+	Tomando $z \in Z$. Como $g$ é sobrejetiva, existe $y\in Y$ tal que $g(y) = z$. Como f é sobrejetiva, existe $x\in X$ tal que $f(x) = y$. Logo existe $x\in X$ tal que  $g(f(x)) = g(y) = z$. Logo $g\circ f$ é sobrejetiva.
+\end{proof}
 \section{Conjuntos Finitos e Infinitos}
 \subsection{Números naturais}
 \paragraph{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb{N}$, cujos elementos são os números naturais, e uma função $s:\mathbb{N} \to \mathbb{N}$. Para cada $n\in \mathbb{N}$, o número $s(n)$ é o sucessor de $n$.  Temos os axiomas:}
@@ -169,6 +178,7 @@
 \begin{prop}[Transitividade da relação $<$]
 	$m< n \land n< p \implies m < p$
 \end{prop}
+
 \begin{proof}
 	Se $m<n$ e $n<p$, temos $n = m+q$ e $p = n+r$ para algum par $q,r\in \mathbb{N}$. Logo $p = n +r = (m +q) +r =m +(q+r)$. Logo $m<p$.
 \end{proof}
@@ -179,10 +189,28 @@
 	Segue diretamente da proposição \ref{tricotomia}.
 \end{proof}
 \begin{prop}
+	$$ p\leq q \land q \leq p \iff  p = q$$
+\end{prop}
+\begin{proof}
+	Supondo $p = q$, temos $p\leq q $ e $q \leq p$. 
+
+	Supondo $p\leq q \land q\leq p$. Se $p=q$, acabou a demonstração. Supondo $p\neq q$. Logo devemos ter $p <q $ e $q <p$ (contradição). Logo devemos ter $p=q$.
+
+\end{proof}
+\begin{prop}
 	Dados $m,n,p$ naturais, temos $$m +p < n+p \implies m <n.$$
 \end{prop}
 \begin{proof}
 	Temos $m+p < n+p \implies \exists q \in \mathbb{N} \: : \: n+p = (m+p) + q \implies  \exists q \in \mathbb{N} \: : \: n = m + q \implies m<n$.
+\end{proof}
+\begin{lema}
+	\label{lemaDesigualdade}
+	$$ m < n+1 \iff m \leq n$$
+\end{lema}
+\begin{proof}
+	Supondo $m<n+1$. Logo existe $q\in \mathbb{N}$ tal que $n+1 = m+q$. Se $q = 1$, temos $n+1  = m+1 \implies n = m \implies m \leq n$. Se $q\neq 1$, existe $q_0$ tal que $s(q_0) = q$. Logo $n+1 = m+s(q_0) = m+q_0+1\implies n = m+q_0 \implies m< n \implies m \leq n$. 
+
+	Se $m \leq n$, temos $m\leq n < n+1 \implies m<n+1$.
 \end{proof}
 \begin{definicao}[Multiplicação]
 	Para todo $m\in \mathbb{N}$, seja $f_m : \mathbb{N} \to \mathbb{N}$ que associa cada $p\in \mathbb{N}$ a $f_m(p) = m+p$.
@@ -266,5 +294,92 @@
 		 &=s(n)\cdot m \\~\\
 	\end{align*}
 	Como $p\in X\implies s(p) \in X $ e $1\in X$, temos $X = \mathbb{N}$.
+\end{proof}
+\begin{prop}[Monotonicidade]
+	$$ m< n \implies  mp < np $$
+\end{prop}
+\begin{proof}
+	Supondo $m<n$. Logo $n = m+q$ com $q\in \mathbb{N}$. Logo $np = (m+q)p = mp +qp$. Como $qp\in \mathbb{N}$, temos $mp < np$.
+\end{proof}
+\begin{prop}[Lei do cancelamento]
+	$$ mp < np \implies  m < n $$
+\end{prop}
+\begin{proof}
+	Supondo $mp < np$. Pela tricotomia, temos  $n<m$, $m=n$, ou $m < n$. Se $n<m$, temos $np < mp$ (contradição). Se $m = n$, temos $mp = np$ (contradição). Logo devemos ter $m <n$.
+
+\end{proof}
+\begin{definicao}[Elemento Mínimo]
+	Dado $X\subset \mathbb{N}$, dizemo que $p\in X$ é o menor elemento (ou elemento mínimo) de $X$ se $\forall n\in X \: : \: p\leq n$.
+\end{definicao}
+\begin{obs}
+	Como $\forall n\in \mathbb{N} \: : \: 1 \leq n$, temos que $1\in X$ implica $1$ menor elemento de $X$.
+\end{obs}
+\begin{prop}
+	O elemento mínimo de um conjunto $X\subset \mathbb{N}$, quando existir, é unico.
+\end{prop}
+\begin{proof}
+	Suponha que dado um conjunto $X\subset\mathbb{N}$,  existam $p,q\in X$ elementos mínimos. Logo $p\leq q $ e $q \leq p$. Logo $p=q$.
+\end{proof}
+\begin{definicao}[Maior elemento]
+	Dado $X\subset \mathbb{N}$, dizemo que $p\in X$ é o maior elemento (ou elemento máximo) de $X$ se $\forall n\in X \: : \: p\geq n$.
+\end{definicao}
+\begin{prop}
+	Os naturais não possuem maior elemento.
+\end{prop}
+\begin{proof}
+	Suponha que $x\in \mathbb{N}$ seja o maior elemento de $\mathbb{N}$. Teríamos $s(x)\in \mathbb{N}$ e $x < s(x)$ (contradição). Logo os naturais não possuem maior elemento. 
+\end{proof}
+\begin{prop}
+	O elemento máximo de um conjunto $X\subset \mathbb{N}$, quando existir, é unico.
+\end{prop}
+\begin{proof}
+	Exercício.
+\end{proof}
+\begin{definicao}[$I_n$]
+	$$I_n := \left\{ x\in \mathbb{N} \: | \:  x\leq n \right\}$$
+\end{definicao}
+\begin{teo}[Princípio da boa Ordenação]
+	Todo subconjunto $A\neq \varnothing $ dos naturais admite menor elemento.
+\end{teo}
+\begin{proof}
+	Dado $A\subset \mathbb{N}$ não vazio. Se $1\in A$, temos $1$ menor elemento.  
+
+	Supondo $1\not \in A$. Logo $1\in \mathbb{N} - A$.  Seja $X = \left\{ x \in \mathbb{N} \: | \:  I_n \subset \mathbb{N} - A \right\}$.   Como $1\in \mathbb{N} - A$, temos $I_1 = \left\{1\right\} \subset \mathbb{N} - A$, logo $1 \in X$.   Como  $A$ é não vazio, existe $a\in A$. Logo $a\not \in \mathbb{N} -A$.  Temos $a\leq a \implies a\in I_a$. Logo $I_a \not \subset \mathbb{N} - A$.   Logo $a \not \in X$. Temos $1 \in X$ e $X\neq \mathbb{N}$, logo o axioma da indução deve falhar. Logo deve existir $n\in X$ com $n+1 = s(n)\not \in X$. 
+
+	Afirmo que $n+1$ é o menor elemento de $A$.  Como $n\in X$, temos $I_n \subset \mathbb{N} - A$, logo $x \leq n \implies x \in \mathbb{N} - A$. Como $n+1\not \in X$, temos $I_{n+1} \not \subset \mathbb{N} - A$.  Logo existe um $m \in I_{n+1}$ com $m\not \in \mathbb{N} - A\implies m  \in A$. Observe que $m\in I_{n+1} \implies m \leq n+1 \implies m = n+1 \lor m<n+1$. Se $m < n+1$, temos pelo Lema \ref{lemaDesigualdade} que $m\leq n$, que implica $m\in I_{n}$, logo $m\in \mathbb{N} - A$ (contradição). Logo devemos ter $m = n+1$. Temos portanto que $n+1\in A$. 
+
+
+	Suponha que exista $p \in A$ tal que $p < n+1$.  Teríamos $p\leq n \implies p \in I_n \implies p \in \mathbb{N} -A \implies p \not \in A$. Contradição. Logo temos $n+1\leq p$ para todo $p\in A$. Logo $n+1$ é o menor elemento de $A$.
+\end{proof}
+\begin{teo}[Indução completa]
+	Seja $X \subset \mathbb{N}$ tal que $( \forall m \in \mathbb{N} \: : \: m < n \implies m\in X) \implies n \in X $. Então $X = \mathbb{N}$
+\end{teo}
+\begin{proof}
+	Temos $1 \in X$, pois $1\not \in X$ implicaria na existência de um $m < 1$ com $m\not \in X$.    Supondo $X\neq \mathbb{N}$ e $A = \mathbb{N} - X$. Como $X\neq \mathbb{N}$, temos $A \neq \emptyset$. Logo $A$ possui um menor elemento $a\in A$.  Se $p\in \mathbb{N}$ com $p < a $, então $p \not \in A$, logo $p\in X$. Como $ \forall p \in \mathbb{N} \: : \: p < a \implies p \in X$, temos $a \in X$. Contradição. Logo $A$ é vazio. Logo $X = \mathbb{N}$.
+\end{proof}
+
+
+\section{Conjuntos Finitos e Infinitos}
+
+\begin{definicao}[ Conjuntos finitos]
+	Um conjunto $X$ é finito quando for vazio ou quando existir para algum $n\in \mathbb{N}$ uma bijeção $\phi \: :\: I_n \to X$
+\end{definicao}
+\begin{definicao}[Tamanho de um conjunto]
+	Dado um conjunto finito. Dizemos que ele tem zero elementos se for vazio e que ele tem $n$ elementos se tiver bijeção com $I_n$.
+\end{definicao}
+\begin{obs}
+	O conjunto $I_n$ é finito e possui $n$ elementos. 
+\end{obs}
+\begin{prop}
+	Se $f:X\to Y$ é uma bijeção, então $X$ é finito se, e somente se, $Y$ for finito.
+\end{prop}
+\begin{proof}
+	Se $X$ for finito, então existe um bijeção $\phi \: : \: I_n \to X$.  A composição $(\phi \circ f) \: : \: I_n \to Y$ é uma bijeção, logo $Y$ é finito. O caso $Y$ finito é análogo.
+\end{proof}
+\begin{teo}
+	Seja $A\subset I_n$ não vazio. Se exite uma bijeção $f: I_n \to A$, então $A = I_n$.
+\end{teo}
+\begin{proof}
+	Seja $X = \left\{n \in \mathbb{N} \: | \: \forall A \subset I_n \: : \: (\text{Existe uma bijeção } f: A\to I_n ) \implies A = I_n \right\}$. Temos $1\in X$, pois  $I_1 = \left\{1\right\}$ e $A\subset I_1 \implies A = \left\{1\right\}  = I_1$. Supondo $n\in X$.  Seja $A\subset I_{n+1}$ com uma bijeção $f:I_{n+1} \to A$. Restringindo $f$ a $I_n$, obtemos $f': I_n \to A-\left\{f(n+1)\right\}$.  Se $A - \left\{f(n+1) \right\} \subset I_n$, temos por $n\in X$ que 
 \end{proof}
 \end{document}
