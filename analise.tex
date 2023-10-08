@@ -20,13 +20,39 @@
 \begin{document}
 \section{Teoria de conjuntos}
 \begin{prop}
-	Se $f:X\to Y$ e $g:Y\to Z$ são bijeções, então $(g \circ f) X\to Z$ é uma bijeção.
+	$$(A-B)\cup B =  A\cup B$$
+\end{prop}
+\begin{proof}
+	\begin{align*}
+		x\in (A-B)\cup B &\iff \\~\\
+		(x\in A \land x \not \in B) \lor x\in B &\iff \\~\\
+		(x\in A\lor x\in B)  \land( x \not \in B \lor x\in B) &\iff \\~\\
+		(x\in A\lor x\in B)  \land t &\iff \\~\\
+		x\in A\lor x\in B &\iff \\~\\
+		x \in A \cup B  &\iff \\~\\
+	\end{align*}
+\end{proof}
+\begin{obs}
+	Acima, $t$ representa tautologia.  Algo que sempre tem valor lógico verdadeiro.
+\end{obs}
+\begin{prop}
+	Se $f:X\to Y$ e $g:Y\to Z$ são bijeções, então $(g \circ f): X\to Z$ é uma bijeção.
 \end{prop}
 \begin{proof}
 	Temos $g(f(a)) = g(f(b)) \implies f(a) = f(b) \implies a = b$. Logo $g \circ f$ é injetiva.
 
 	Tomando $z \in Z$. Como $g$ é sobrejetiva, existe $y\in Y$ tal que $g(y) = z$. Como f é sobrejetiva, existe $x\in X$ tal que $f(x) = y$. Logo existe $x\in X$ tal que  $g(f(x)) = g(y) = z$. Logo $g\circ f$ é sobrejetiva.
 \end{proof}
+\begin{prop}
+	\label{propbijecao}
+	Se $f: A\cup B \to C$ é uma bijeção, então $f': A \to C-f(B)$, $a\mapsto f(a)$ é uma bijeção.
+\end{prop}
+\begin{proof}
+	Se $a,b \in A$, temos $f'(a) = f'(b) \iff f(a) = f(b) \implies a = b$. Logo $f'$ é injetiva.
+
+	Tomando $y \in C-f(B)$. Como $f$ é sobrejetiva, existe $x\in A\cup B$ tal que $f(x) = y$. Se $x\in B$, teríamos $f(x) \in f(B)$, logo $f(x) \not \in C-f(b)$ (contradição). Logo devemos ter $x\in A$. Logo existe $x\in A$ tal que $f'(x) = f(x) = y$. Logo $f'$ é sobrejetiva. 
+\end{proof}
+
 \section{Conjuntos Finitos e Infinitos}
 \subsection{Números naturais}
 \paragraph{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb{N}$, cujos elementos são os números naturais, e uma função $s:\mathbb{N} \to \mathbb{N}$. Para cada $n\in \mathbb{N}$, o número $s(n)$ é o sucessor de $n$.  Temos os axiomas:}
@@ -338,6 +364,19 @@
 \begin{definicao}[$I_n$]
 	$$I_n := \left\{ x\in \mathbb{N} \: | \:  x\leq n \right\}$$
 \end{definicao}
+\begin{lema}
+	$$I_{n+1} = I_n \cup \left\{n+1\right\}$$
+\end{lema}
+\begin{proof}
+	\begin{align*}
+		x \in I_{n+1} &\iff \\
+		x\leq n+1 &\iff \\
+		x < n+1 \lor x = n+1 &\iff \\
+		x \leq n \lor x = n+1 & \iff \\
+		x\in I_n \lor x \in \left\{n+1\right\} & \iff \\
+		x \in I_n \cup \left\{n+1\right\} \\
+	\end{align*}
+\end{proof}
 \begin{teo}[Princípio da boa Ordenação]
 	Todo subconjunto $A\neq \varnothing $ dos naturais admite menor elemento.
 \end{teo}
@@ -380,6 +419,8 @@
 	Seja $A\subset I_n$ não vazio. Se exite uma bijeção $f: I_n \to A$, então $A = I_n$.
 \end{teo}
 \begin{proof}
-	Seja $X = \left\{n \in \mathbb{N} \: | \: \forall A \subset I_n \: : \: (\text{Existe uma bijeção } f: A\to I_n ) \implies A = I_n \right\}$. Temos $1\in X$, pois  $I_1 = \left\{1\right\}$ e $A\subset I_1 \implies A = \left\{1\right\}  = I_1$. Supondo $n\in X$.  Seja $A\subset I_{n+1}$ com uma bijeção $f:I_{n+1} \to A$. Restringindo $f$ a $I_n$, obtemos $f': I_n \to A-\left\{f(n+1)\right\}$.  Se $A - \left\{f(n+1) \right\} \subset I_n$, temos por $n\in X$ que 
+	Seja $X = \left\{n \in \mathbb{N} \: | \: \forall A \subset I_n \: : \: (\text{Existe uma bijeção } f:  I_n \to A ) \implies A = I_n \right\}$. Temos $1\in X$, pois  $I_1 = \left\{1\right\}$ e $A\subset I_1 \implies A = \left\{1\right\}  = I_1$. Supondo $n\in X$.  Seja $A\subset I_{n+1}$ com uma bijeção $f:I_{n+1} \to A$. Restringindo $f$ a $I_n$, obtemos $f': I_n \to A-\left\{f(n+1)\right\}$, que é uma bijeção pela proposição \ref{propbijecao}.
+
+	Se $A - \left\{f(n+1) \right\} \subset I_n$, temos por $n\in X$ que $A-\left\{f(n+1)\right\} = I_n$. Como o contra-domínio de $f$ é $A$ e $A\subset I_{n+1}$, temos que $f(n+1)\in A \implies f(n+1) \in I_{n+1} \implies f(n+1) \in I_n \lor f(n+1)\in \left\{n+1\right\} $. Se $f(n+1) \in I_n$, temos $f(n+1)\not \in A-\left\{f(n+1)\right\}$, logo $A - \left\{ f(n+1) \right\} \neq I_n$ (contradição). Logo temos $f(n+1) = n+1$. Logo $ f(n+1) = n+1 \in A$. Como $ A - \left\{ n+1\right\} = A -\left\{ f(n+1) \right\}  = I_n$, temos $ (A - \left\{ n+1\right\}) \cup \left\{n+1\right\} =   I_n\cup\left\{n+1\right\}$
 \end{proof}
 \end{document}
