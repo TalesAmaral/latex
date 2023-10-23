@@ -6,7 +6,7 @@
 \usepackage{amsmath}
 \theoremstyle{plain}
 \newtheorem{axioma}{Axioma}
-\newtheorem{prop}{Proposição}
+\newtheorem{prop}{Proposição}[section]
 \newtheorem{teo}{Teorema}
 \newtheorem{lema}{Lema}
 
@@ -44,13 +44,47 @@
 	Tomando $z \in Z$. Como $g$ é sobrejetiva, existe $y\in Y$ tal que $g(y) = z$. Como f é sobrejetiva, existe $x\in X$ tal que $f(x) = y$. Logo existe $x\in X$ tal que  $g(f(x)) = g(y) = z$. Logo $g\circ f$ é sobrejetiva.
 \end{proof}
 \begin{prop}
+	Seja $f:X \to Y$ uma função sobrejetiva. $f$ admite inversa à direita.
+\end{prop}
+\begin{proof}
+	Para todo $y\in Y$, temos $f^{-1}(y) \neq \emptyset$, logo existe $x_y \in f^{-1}(y)$ tal que $f(x_y) = y$. Defina $g: Y\to X$, que associa $y\to x_y$ (axioma da escolha). Logo temos $f(g(y)) = f(x_y) = y$.
+\end{proof}
+\begin{prop}
+	Se $f:X\to Y$ é uma injeção então $f': X\to f(X)$, definida como $f'(x) = f(x)$, é uma bijeção.
+\end{prop}
+\begin{proof}
+	Seja $y\in f(X)$. Por definição de $f(X)$, existe $x\in X$ tal que $f(x) = y$. Logo $f'$ é sobrejetiva.
+	Dados $a,b\in X$ com $f'(a)  = f(a) = f(b) =  f'(b)$. Como $f$ é injetiva, temos $a = b$, logo $f'$ é injetiva.
+\end{proof}
+\begin{prop}
 	\label{propbijecao}
 	Se $f: A\cup B \to C$ é uma bijeção, então $f': A \to C-f(B)$, $a\mapsto f(a)$ é uma bijeção.
 \end{prop}
 \begin{proof}
-	Se $a,b \in A$, temos $f'(a) = f'(b) \iff f(a) = f(b) \implies a = b$. Logo $f'$ é injetiva.
+	Se $a,b \in A\subset A\cup B$, temos $f'(a) = f'(b) \iff f(a) = f(b) \implies a = b$ ($f$ é injetiva). Logo $f'$ é injetiva.
 
 	Tomando $y \in C-f(B)$. Como $f$ é sobrejetiva, existe $x\in A\cup B$ tal que $f(x) = y$. Se $x\in B$, teríamos $f(x) \in f(B)$, logo $f(x) \not \in C-f(b)$ (contradição). Logo devemos ter $x\in A$. Logo existe $x\in A$ tal que $f'(x) = f(x) = y$. Logo $f'$ é sobrejetiva. 
+\end{proof}
+\begin{prop}
+	Se $f: A \to B$ é uma bijeção e $C \subset B$, então $f': f^{-1}(C) \to C$, $x\mapsto f(x)$ é uma bijeção.
+\end{prop}
+\begin{proof}
+	Se $a,b \in f^{-1}(C) \subset A$, temos $f'(a) = f'(b) \iff f(a) = f(b) \implies a = b$ ($f$ é injetiva). Logo $f'$ é injetiva.
+
+	Tomando $y \in C$. Como $f$ é sobrejetiva, existe $x\in A$ tal que $f(x) = y\in C$. Como $f(x)\in C$, temos $x \in f^{-1}(C)$. Logo existe $x\in f^{-1}(X)$ tal que $f(x) = f'(x) =  y$. Logo $f'$ é sobrejetiva.   
+\end{proof}
+
+\begin{prop}
+	Seja $f:A\to B$ uma função e $X\subset Y \subset B$. Temos $f^{-1}(X) \subset f^{-1}(Y)$.
+\end{prop}
+\begin{proof}
+	Se $x\in f^{-1}(X)$, temos $f(x)\in X$. Como $X\subset Y$, temos $f(x)\in Y$. Portanto  $x\in f^{-1}(Y)$. Como $x\in f^{-1}(X) \implies x\in f^{-1}(Y)$, temos $f^{-1}(X) \subset f^{-1}(Y)$.
+\end{proof}
+\begin{prop}
+	Seja $f:A\to B$ uma função bijetiva e $X,Y \subset B$. Temos $f^{-1}(X) = f^{-1}(Y) \iff X = Y$.
+\end{prop}
+\begin{proof}
+	Se $X = Y$ é direto. Supondo $f^{-1}(X) = f^{-1}(Y)$. Se $x\in X$, existe $a\in A$ tal que $f(a) = x$. Logo  $a\in f^{-1}(X)$. Portanto $a\in f^{-1}(Y)$. Logo $x = f(a) \in Y$.  Temos $ x = f(a) \in X \implies x = f(a) \in Y$. Para $y\in Y$ é análogo. Logo temos $X = Y$.
 \end{proof}
 
 \section{Conjuntos Finitos e Infinitos}
@@ -409,6 +443,9 @@
 \begin{obs}
 	O conjunto $I_n$ é finito e possui $n$ elementos. 
 \end{obs}
+\begin{obs}
+	Denota-se $|A|$ como o tamanho do conjunto $A$.
+\end{obs}
 \begin{prop}
 	Se $f:X\to Y$ é uma bijeção, então $X$ é finito se, e somente se, $Y$ for finito.
 \end{prop}
@@ -417,10 +454,75 @@
 \end{proof}
 \begin{teo}
 	Seja $A\subset I_n$ não vazio. Se exite uma bijeção $f: I_n \to A$, então $A = I_n$.
+	\label{TeoremaSubFinito}
 \end{teo}
 \begin{proof}
 	Seja $X = \left\{n \in \mathbb{N} \: | \: \forall A \subset I_n \: : \: (\text{Existe uma bijeção } f:  I_n \to A ) \implies A = I_n \right\}$. Temos $1\in X$, pois  $I_1 = \left\{1\right\}$ e $A\subset I_1 \implies A = \left\{1\right\}  = I_1$. Supondo $n\in X$.  Seja $A\subset I_{n+1}$ com uma bijeção $f:I_{n+1} \to A$. Restringindo $f$ a $I_n$, obtemos $f': I_n \to A-\left\{f(n+1)\right\}$, que é uma bijeção pela proposição \ref{propbijecao}.
 
-	Se $A - \left\{f(n+1) \right\} \subset I_n$, temos por $n\in X$ que $A-\left\{f(n+1)\right\} = I_n$. Como o contra-domínio de $f$ é $A$ e $A\subset I_{n+1}$, temos que $f(n+1)\in A \implies f(n+1) \in I_{n+1} \implies f(n+1) \in I_n \lor f(n+1)\in \left\{n+1\right\} $. Se $f(n+1) \in I_n$, temos $f(n+1)\not \in A-\left\{f(n+1)\right\}$, logo $A - \left\{ f(n+1) \right\} \neq I_n$ (contradição). Logo temos $f(n+1) = n+1$. Logo $ f(n+1) = n+1 \in A$. Como $ A - \left\{ n+1\right\} = A -\left\{ f(n+1) \right\}  = I_n$, temos $ (A - \left\{ n+1\right\}) \cup \left\{n+1\right\} =   I_n\cup\left\{n+1\right\}$
+	Se $A - \left\{f(n+1) \right\} \subset I_n$, temos por $n\in X$ que $A-\left\{f(n+1)\right\} = I_n$. Como o contra-domínio de $f$ é $A$ e $A\subset I_{n+1}$, temos que $f(n+1)\in A \implies f(n+1) \in I_{n+1} \implies f(n+1) \in I_n \lor f(n+1)\in \left\{n+1\right\} $. Se $f(n+1) \in I_n$, temos $f(n+1)\not \in A-\left\{f(n+1)\right\}$, logo $A - \left\{ f(n+1) \right\} \neq I_n$ (contradição). Logo temos $f(n+1) = n+1$. Logo $ f(n+1) = n+1 \in A$. Como $ A - \left\{ n+1\right\} = A -\left\{ f(n+1) \right\}  = I_n$, temos $ (A - \left\{ n+1\right\}) \cup \left\{n+1\right\} =   I_n\cup\left\{n+1\right\} \implies A\cup \left\{n+1\right\} = I_{n+1} \implies A = I_{n+1}$. Logo temos $A = I_{n+1}$.
+
+
+	Se $A - \left\{f(n+1)\right\} \not \subset I_n$. Logo existe $a\in A$ tal que $a\not \in I_n$ e $a\neq f(n+1)$. Mas $A\subset I_{n+1}$. Logo $a\in I_{n+1} = I_n \cup \left\{n+1\right\}$. Logo devemos ter $a  =n+1$. Como $f$ é sobrejetiva, existe $m\in I_{n+1}$ tal que $f(m) = n+1$. Definindo a função $g \: : \: I_{n+1} \to A$, como $g(x) = \begin{cases}
+		f(x), &x\neq f(n+1) \land x \neq n+1\\
+		n+1, &x = n+1 \\
+		f(n+1), &x = m
+	\end{cases}$. Temos $g$ uma bijeção. Logo a restrição $g': I_n \to A-\left\{g(n+1) \right\}$ é uma bijeção com $A - \left\{g(n+1) \right\} \subset I_n$ . Portanto temos $A - \left\{g(n+1)\right\} = I_n$ com $A = I_{n+1}$. 
+	%melhorar
 \end{proof}
+\begin{prop}
+	Se existe uma bijeção $f: I_n \to I_m$, então $I_m = I_n$.
+\end{prop}
+\begin{proof}
+	Se $m\leq n$, então existe uma bijeção $f:I_n \to I_m$ com $I_m \subset I_n$. Logo pelo teorema anterior, temos $I_m = I_n$. Se $n > m$, temos a bijeção $f^{-1}: I_m \to I_n$ com $I_n \subset I_m$. Logo pelo teorema anterior $I_m = I_n$.
+\end{proof}
+\begin{prop}
+	Não existe uma bijeção $f:X\to Y$ entre um conjunto finito $X$ e uma parte própia $Y \subset X$.
+\end{prop}
+\begin{proof}
+	Como $X$ é finito, existe uma bijeção $g: I_n \to X$. Suponha que exista uma bijeção $f:X\to Y$. Como $Y$ é parte própria, existe um $x\in X -Y$. Tome $A = g^{-1}(Y)\subset g^{-1}(X) = I_n$. Temos $g^{-1}(x) \not \in A$, logo $A$ é uma parte própria de $I_n$. Queremos achar uma bijeção $h: I_n \to A$. Restringindo $g$ a $A$, obtendo a bijeção $g':A\to Y$. Definindo a bijeção $h = (g') \circ f \circ g : I_n \to A$. Pelo teorema \ref{TeoremaSubFinito}, temos que $A = I_n$. Uma contradição, pois $A$ é parte própria de $I_n$. Logo não existe bijeção entre um conjunto finito $X$ e uma parte própria $Y\subset X$.
+\end{proof}
+\begin{lema}
+	Todo subconjunto $A$ de $I_n$ é finito e temos $|A| \leq n$ 
+\end{lema}
+\begin{proof}
+	Seja $X = \left\{ n\in \mathbb{N} \: | \:  A \subset I_n \implies A \text{ finito } \land |A| \leq n \right\}$. Temos $1 \in X$, pois os subconjuntos de $I_1 = \left\{1\right\}$ são $\left\{\right\} $ e $\left\{1\right\} = I_1$, ambos finitos. 
+
+	Suponha $n \in X$.  Seja $A \subset I_{n+1} = I_n\cup \left\{n+1\right\}$.  Se $n+1\not \in A$, então temos $A \subset I_n$. Pela hipótese de indução, temos $A$ finito e $|A| \leq n < n+1$. 
+
+	Supondo $n+1\in A$. Se $A = \left\{n+1\right\}$, temos $A$ finito e $|A| = 1 \leq n$.  Supondo $A \neq \left\{n+1\right\}$, temos $B = A-\left\{n+1\right\} \neq \emptyset$ e $B\subset I_n$. Logo $B$ é finito e temos $ k = |B| \leq n$. Como $B$ é finito, existe a bijeção $f: I_k \to B$. Definindo a bijeção $f': I_{k+1} \to A$ pondo $f'(x) = f(x)$ para $x\in I_n$ e $f(k+1) = n+1$.  Logo $A$ é finito e temos $|A| = k+1 \leq n+1$.
+
+
+\end{proof}
+\begin{lema}
+	Seja $A\subset I_n$. Temos $|A| = n \iff A = I_n$.
+\end{lema}
+\begin{proof}
+	Se $|A| = n$, existe a bijeção $f: I_n \to A$,com $A \subset I_n$, logo $A = I_n$.
+\end{proof}
+\begin{teo}
+	Todo subconjunto $Y$ de um conjunto finito $X$ é finito e $|Y| \leq |X|$, com $|Y| = |X| \iff X = Y$.
+\end{teo}
+\begin{proof}
+	Se $X$ é finito, existe uma bijeção $f : I_n \to X$. Seja $A = f^{-1}(Y) \subset I_n$ e seja a bijeção $f': A \to Y$ a restrição de $f$ a $A$.  Como $A\subset I_n$, temos $A$ finito e $|A| \leq n$. Logo $Y$ é finito e  $|Y| = |A| \leq n$.  Temos $|Y| = |A| = n  = |X| \iff |A| = I_n$. Logo $f^{-1}(Y) = I_n = f^{-1}(X)$. Logo $X = Y$.
+\end{proof}
+\begin{prop}
+	Seja $f:X\to Y$ uma função injetiva. Se $Y$ é finito, então $X$ é finito e $|X|\leq |Y|$.
+\end{prop}
+\begin{proof}
+	Como existe a injeção $f: X\to Y$, temos a bijeção $f': X \to f(X)$,  com $f(X)\subset Y$. Como $Y$ é finito, temos $f(X)$ finito e  $|f(X)| \leq Y$. Como existe a bijeção $f':X\to f(X)$, temos $|X| = |f(X)| \leq Y$.
+\end{proof}
+\begin{prop}
+	Seja $f:X\to Y$ uma função sobrejetiva. Se $X$ é finito, então $Y$ é finito e $|Y|\leq |X|$.
+\end{prop}
+\begin{proof}
+	Como $f$ é sobrejetiva, ela admite inversa à direita. Seja $g: Y\to X$ a inversa à direita de $f$.  Se $g(y) = g(y')$, temos $f(g(y)) = f(g(y'))$, logo $y = y'$. Logo $g$ é injetiva. Pela proposição anterior, temos $Y$ finito com $|Y| \leq |X|$. 
+\end{proof}
+\begin{definicao}[Conjunto infinito]
+	Um conjunto é infinito quando não for finito.
+\end{definicao}
+\begin{obs}
+	A função sucessor com o contradomínio reduzido é uma bijeção entre uma parte dos naturais com os naturais:
+	$$s: \mathbb{N} \to \mathbb{N} - \left\{1\right\}$$
+	Logo os naturais são infinitos.
+\end{obs}
 \end{document}
