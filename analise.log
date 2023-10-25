@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.10)  23 OCT 2023 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.10)  24 OCT 2023 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -241,32 +241,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (2.9448pt too wide) in paragraph at lines 129--129
+Overfull \hbox (2.9448pt too wide) in paragraph at lines 134--134
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$. Da defini^^Xc
 ~ao
  []
 
-[3]
-Overfull \hbox (1.19443pt too wide) in paragraph at lines 170--171
+[3] [4]
+Overfull \hbox (1.19443pt too wide) in paragraph at lines 175--176
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$. Temos
  []
 
-[4] [5]
-Overfull \hbox (66.18355pt too wide) in paragraph at lines 215--216
+[5]
+Overfull \hbox (66.18355pt too wide) in paragraph at lines 220--221
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$,
  []
 
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
-[8] [9] [10] [11]
-Overfull \hbox (22.64381pt too wide) in paragraph at lines 460--461
+[9] [10] [11]
+Overfull \hbox (22.64381pt too wide) in paragraph at lines 465--466
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$.
  []
 
-[12] [13] [14] (./analise.aux)
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
+
+ []
+
+[14] [15] (./analise.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -277,29 +282,30 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3292 strings out of 476379
- 49586 string characters out of 5794759
- 1938791 words of memory out of 5000000
- 24624 multiletter control sequences out of 15000+600000
- 561632 words of font info for 50 fonts, out of 8000000 for 9000
+ 3297 strings out of 476379
+ 49680 string characters out of 5794759
+ 1940791 words of memory out of 5000000
+ 24628 multiletter control sequences out of 15000+600000
+ 561967 words of font info for 51 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 70i,8n,79p,740b,206s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
-al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
-texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
-ive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on analise.pdf (14 pages, 176596 bytes).
+ 70i,8n,79p,796b,206s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/talesamaral/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm10
+00.600pk></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
+al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on analise.pdf (15 pages, 180713 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

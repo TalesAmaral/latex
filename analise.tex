@@ -86,7 +86,12 @@
 \begin{proof}
 	Se $X = Y$ é direto. Supondo $f^{-1}(X) = f^{-1}(Y)$. Se $x\in X$, existe $a\in A$ tal que $f(a) = x$. Logo  $a\in f^{-1}(X)$. Portanto $a\in f^{-1}(Y)$. Logo $x = f(a) \in Y$.  Temos $ x = f(a) \in X \implies x = f(a) \in Y$. Para $y\in Y$ é análogo. Logo temos $X = Y$.
 \end{proof}
-
+\begin{prop}
+	Se existe a bijeção $f: {a} \to X$, então $X = {b}$ para algum $b$.
+\end{prop}
+\begin{proof}
+	Seja $b = f(a) \in X$. Seja $c\in X$. Como $f$ é sobrejetiva, existe $k\in \left\{a\right\}$ tal que $f(k) = c$. Temos obrigatoriamente que $k = a$, logo $b = f(a) = c$. Logo  $X =\left\{b\right\}$.
+\end{proof}
 \section{Conjuntos Finitos e Infinitos}
 \subsection{Números naturais}
 \paragraph{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb{N}$, cujos elementos são os números naturais, e uma função $s:\mathbb{N} \to \mathbb{N}$. Para cada $n\in \mathbb{N}$, o número $s(n)$ é o sucessor de $n$.  Temos os axiomas:}
@@ -525,4 +530,32 @@
 	$$s: \mathbb{N} \to \mathbb{N} - \left\{1\right\}$$
 	Logo os naturais são infinitos.
 \end{obs}
+\begin{definicao}[Conjunto limitado]
+	Um conjunto $X\subset \mathbb{N}$ é limitado quando existe $p\in \mathbb{N}$ tal que $\forall n\in \mathbb{X} \: : \: n \leq p$.
+\end{definicao}
+
+%
+%\begin{definicao}[Soma finita]
+	%Seja $A$ um anel, $n\in \mathbb{N}$ e $x_1,x_2,\cdots, x_n \in A$. Definimos indutivamente a soma de $x_1,\cdots, x_n$, como 
+%\end{definicao}
+
+\begin{teo}
+	Seja $X\subset \mathbb{N}$. As seguintes afirmações são equivalentes:
+	\begin{itemize}
+		\item $X$ é finito.
+		\item $X$ é limitado.
+		\item $X$ possui maior elemento.
+	\end{itemize}
+\end{teo}
+\begin{proof}
+	$\text{(a) } \implies \text{ (b)}$ \\
+
+	Seja $A = \left\{ n\in \mathbb{N} \: | \:  |X| = n \implies X \text{ limitado } \right\}$. Se $|X| = 1$, temos que $X =\left\{a\right\}$ para algum $a\in \mathbb{N}$. Logo $X$ é limitado pelo $a$, pois $a\leq a$. Supondo $n\in X$.  Seja $|X| = n+1$. Logo existe uma bijeção $f: I_{n+1} \to X$. Tomando a bijeção $f':I_n \to X-\left\{f(n+1)\right\}$. Logo $X-\left\{f(n+1)\right\}$ tem tamanho $n$. Pela hipótese de indução, temos $X - \left\{ f(n+1)\right\}$ limitado por um $p \in \mathbb{N}$, ou seja: $\forall t\in X - \left\{f(n+1) \right\} \: : \: t\leq p $. Se $f(n+1) \leq p$, temos que $p$ limita $X$. Se $p\leq f(n+1)$, temos para todo $t\in X - \left\{ f(n+1) \right\}$ que $t\leq p \leq f(n+1)$ e $f(n+1)\leq f(n+1)$, logo $f(n+1)$ limita $X$.
+
+	Como $1\in A$ e $n \in A \implies n+1\in A$, temos $A = \mathbb{N}$
+
+
+	$\text{(a) } \implies \text{ (b)}$ [Outra forma] \\
+	Seja $X = \left\{x_1,x_2,\cdots x_n \right\}$, defina $a = x_1+x_2+\cdots x_n$. Temos $x\leq a $ para todo $x\in X$, logo $X$ é limitado.
+\end{proof}
 \end{document}
