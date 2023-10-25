@@ -36,6 +36,25 @@
 	Acima, $t$ representa tautologia.  Algo que sempre tem valor lógico verdadeiro.
 \end{obs}
 \begin{prop}
+	$$A\times (B\cup C ) = (A\times B )\cup( A\times C)$$
+\end{prop}
+\begin{proof}
+	\begin{align*}
+		(x,y) \in A\times (B\cup C ) & \iff 
+		x\in A \land (y\in B\cup C)  \\~\\ &\iff 
+		x\in A \land (y\in B\lor y\in  C)  \\~\\& \iff
+		(x\in A \land y\in B) \lor (x\in A \land y\in  C)  \\~\\& \iff
+		((x,y)\in A\times B) \lor  ((x,y)\in  A\times C) \\~\\ & \iff
+		(x,y)\in (A\times B) \cup  (A\times C)
+	\end{align*}
+\end{proof}
+\begin{lema}
+	Existe uma bijeção entre $X$ e  $X \times \left\{ a\right\}$ .
+\end{lema}
+\begin{proof}
+	Seja a função $g: X  \to  X \times \left\{a\right\}$, dada por $g(x) = (x,a)$. Temos $g(p) = g(q) \iff (p,a) = (q,a) \iff p = q $, logo $g$ é injetiva. Dado $(x,a) \in X \times \left\{ a\right\}$, temos $x\in X$ e $a\in \left\{a\right\}$. Logo existe $x\in X$ tal que $g(x) = (x,a) $. Portanto $g$ é sobrejetiva. Como $g$ é injetiva e sobrejetiva, temos  $g$  bijetiva.
+\end{proof}
+\begin{prop}
 	Se $f:X\to Y$ e $g:Y\to Z$ são bijeções, então $(g \circ f): X\to Z$ é uma bijeção.
 \end{prop}
 \begin{proof}
@@ -87,10 +106,20 @@
 	Se $X = Y$ é direto. Supondo $f^{-1}(X) = f^{-1}(Y)$. Se $x\in X$, existe $a\in A$ tal que $f(a) = x$. Logo  $a\in f^{-1}(X)$. Portanto $a\in f^{-1}(Y)$. Logo $x = f(a) \in Y$.  Temos $ x = f(a) \in X \implies x = f(a) \in Y$. Para $y\in Y$ é análogo. Logo temos $X = Y$.
 \end{proof}
 \begin{prop}
-	Se existe a bijeção $f: {a} \to X$, então $X = {b}$ para algum $b$.
+	Se existe a bijeção $f: \{a\} \to X$, então $X = \{b\}$ para algum $b$.
 \end{prop}
 \begin{proof}
 	Seja $b = f(a) \in X$. Seja $c\in X$. Como $f$ é sobrejetiva, existe $k\in \left\{a\right\}$ tal que $f(k) = c$. Temos obrigatoriamente que $k = a$, logo $b = f(a) = c$. Logo  $X =\left\{b\right\}$.
+\end{proof}
+\begin{prop}
+	Se $f:A\to B$ e $g: C \to D$ são bijeções, então $h : A\times B \to B\times D$, $h(a,c) = (f(a),g(c))$ é uma bijeção.
+\end{prop}
+\begin{proof}
+	Seja $(b,d) \in B\times D$. Como $f$ e $g$ são sobrejetivas, existem $a\in A$ e $c\in C$ tal que $f(a) = b$ e $g(c) = d$. Logo existe $(a,c) \in A\times C$ tal que $h(a,c) = (f(a),g(c)) = (b,d)$. Logo $h$ é sobrejetiva.
+
+	Suponha $h((a,b)) = h((c,d)) \iff (f(a), g(b)) = (f(c), g(d)) \iff f(a) = f(c) \land g(b) = g(d)$. Como $f$ e $g$ são injetivas, temos $f(a) = f(c) \implies a =c $ e $g(b) = g(d) \implies b = d$. 
+	Logo $h$ é injetiva. Como $h$ é injetiva e sobrejetiva, temos que  $h$ é bijetiva.
+
 \end{proof}
 \section{Conjuntos Finitos e Infinitos}
 \subsection{Números naturais}
@@ -531,7 +560,7 @@
 	Logo os naturais são infinitos.
 \end{obs}
 \begin{definicao}[Conjunto limitado]
-	Um conjunto $X\subset \mathbb{N}$ é limitado quando existe $p\in \mathbb{N}$ tal que $\forall n\in \mathbb{X} \: : \: n \leq p$.
+	Um conjunto $X\subset \mathbb{N}$ é limitado quando existe $p\in \mathbb{N}$ tal que $\forall n\in X \: : \: n \leq p$.
 \end{definicao}
 
 %
@@ -540,7 +569,7 @@
 %\end{definicao}
 
 \begin{teo}
-	Seja $X\subset \mathbb{N}$. As seguintes afirmações são equivalentes:
+	Seja $X\subset \mathbb{N}$ não vazio. As seguintes afirmações são equivalentes:
 	\begin{itemize}
 		\item $X$ é finito.
 		\item $X$ é limitado.
@@ -557,5 +586,71 @@
 
 	$\text{(a) } \implies \text{ (b)}$ [Outra forma] \\
 	Seja $X = \left\{x_1,x_2,\cdots x_n \right\}$, defina $a = x_1+x_2+\cdots x_n$. Temos $x\leq a $ para todo $x\in X$, logo $X$ é limitado.
+	
+
+	$\text{(b) } \implies \text{ (c)}$ \\
+
+	Como $X$ é limitado, existe um $p\in \mathbb{N}$ tal que $\forall n \in X \: : \: n \leq p$. É natural pensar que o maior elemento será o menor dos "limitadores". Logo seja $A = \left\{ p \in \mathbb{N} \: | \: \forall n \in X \: : \: n\leq p \right\}$. $A$ é não vazio, logo é limitado inferiormente por um $a\in A$. Se $a\in X$, $a$ é o maior elemento de $X$.  Supondo $a\not \in X$. Logo temos para todo $n\in X$ que  $n \leq a$, mas nunca  $n = a$, logo temos $n < a$. Se $a = 1$, temos $n<1$ (contradição) . Se $a \neq 1$, existe $a_0$ tal que $a_0 + 1 = a$. Pelo lema \ref{lemaDesigualdade}, obtemos $n < a_0+1 \implies n \leq a_0$ para todo $n\in X$. Uma contradição, pois $a_0\in A$ com $a_0 < a$ ($a$ é o menor elemento de $A$).  Logo devemos ter $a\in X$. Logo $X$ possui maior elemento.
+
+	$\text{(c) } \implies \text{ (a)}$ \\
+
+	Seja $p\in X$ o maior elemento de $X$. Conjecturo que $|X| \leq p$.  Vamos mostrar que $X \subset I_p$.  Seja $x\in X$. Como $p$ é o maior elemento de $X$, temos $x\leq p$. Como $X\subset \mathbb{N}$, temos $x\in \mathbb{N}$. Como $x\in \mathbb{N}$ e $x\leq p$, temos $x\in I_p$. Como $x\in X\implies x\in I_p$, temos $X\subset I_p$. Logo $X$ é finito e $|X| \leq  p$.
 \end{proof}
+\begin{teo}
+	Sejam $X,Y$ conjuntos finitos disjuntos, então $X\cup Y$ é finito e $|X\cup Y| = |X| + |Y|$.
+\end{teo}
+\begin{proof}
+	Sejam $f_x : I_n \to X$ e $f_y : I_m \to Y$ bijeções.
+	Seja $f_{xy}: I_{n+m} \to X\cup Y$ definida como: 
+
+	$$ f_{xy}(p) = \begin{cases} f_x(p), & p\leq n \\ f_y(r), &n <  p \leq n+m    \end{cases} $$
+	Se $n <p$, existe $r \in \mathbb{N}$ tal que $p = n+r$. Como $p \leq n+m$, temos $r \leq m$.
+
+	Supondo $f_{xy}(p) = f_{xy}(q)$ com $p\neq q$. Logo $p<q$ ou $q<p$. Supondo sem perda de generalidade que $p<q$. Se $n < q \leq n+m$ e $p \leq n$, temos $f_x(p) = f_y(q)$, mas $X$ e $Y$ são disjuntos, logo  devemos ter ou $p < q \leq n$  ou $n < p < q \leq m+n$. Se $ p < q \leq n$, temos $f_x(p) = f_x(q) \implies p = q$ ($f_x$ injetiva). O caso $ n < p < q \leq m+n$ é analogo. Logo $f_{xy}(p) = f_{xy}(q) \implies p = q$ (contradição). Logo devemos ter  $p = q$. Logo $f_{xy}$ é injetiva.
+
+	Seja $p\in X\cup Y$. Logo $p\in X$ ou $p\in Y$. Supondo $p\in X$. Como $f_x$ é sobrejetiva, existe $n_x \in I_n$ tal que $f_x(n_x) = p$. Como $n_x\leq n$, temos $f_{xy}(n_x) = f_x(n_x) = p$.  Se  $p\in Y$. Como $f_y$ é sobrejetiva, existe $n_y \in I_m$ tal que $f_y(n_y) = p$. Como $n_y\leq m$, temos $ n < n+n_y \leq m $  e $f_{xy}(n+n_y) = f_y(n_y) = p \: (n_y = r)$ . Logo $f_{xy}$ é sobrejetiva.
+	
+	Logo $f_{xy}$ é bijetiva.
+
+	Logo $X\cup Y$ é finito e tem tamanho $n+m = |X| + |Y|$.
+
+
+	
+\end{proof}
+\begin{prop}
+	Sejam $X,Y$ conjuntos finitos , então $X\cup Y$ é finito e $|X\cup Y| \leq |X| + |Y|$.
+\end{prop}
+\begin{proof}
+	Sejam $f_x : I_n \to X$ e $f_y : I_m \to Y$ bijeções.
+	Seja $f_{xy}: I_{n+m} \to X\cup Y$ definida como: 
+
+	$$ f_{xy}(p) = \begin{cases} f_x(p), & p\leq n \\ f_y(r), &n <  p \leq n+m    \end{cases} $$
+	Se $n <p$, existe $r \in \mathbb{N}$ tal que $p = n+r$. Como $p \leq n+m$, temos $r \leq m$.
+
+
+	Seja $p\in X\cup Y$. Logo $p\in X$ ou $p\in Y$. Supondo $p\in X$. Como $f_x$ é sobrejetiva, existe $n_x \in I_n$ tal que $f_x(n_x) = p$. Como $n_x\leq n$, temos $f_{xy}(n_x) = f_x(n_x) = p$.  Se  $p\in Y$. Como $f_y$ é sobrejetiva, existe $n_y \in I_m$ tal que $f_y(n_y) = p$. Como $n_y\leq m$, temos $ n < n+n_y \leq m $  e $f_{xy}(n+n_y) = f_y(n_y) = p \: (n_y = r)$ . Logo $f_{xy}$ é sobrejetiva.
+	
+
+	Logo $X\cup Y$ é finito e $|X| + |Y| \leq |X| + |Y|$.
+
+\end{proof}
+\begin{prop}
+	Temos para todos $m,n\in \mathbb{N}$ que $I_n\times I_m$ é finito e $|I_n\times I_m| = n\cdot m$.
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{ n \in \mathbb{N} \: | \: \forall m\in \mathbb{N} \: : \: |I_n \times I_m| = n\cdot m \right\}$.  Temos $1\in X$, pois para qualquer $m\in \mathbb{N}$, existe uma bijeção entre $I_m$ e $I_m\times I_1$, logo $I_m\times I_1$ é finito e  $|I_m\times I_1| = |I_m| = m = 1\cdot m$.
+
+
+	Supondo $n \in X$. Dado $m\in \mathbb{N}$, seja $ I_m \times I_{n+1} = I_m\times \left( I_n \cup \left\{n+1\right\} \right) = (I_m \times I_n) \cup \left( I_m \times \left\{ n+1\right\}\right)$. Temos $(I_m \times I_n)$ finito e $|I_m \times I_n| = m\cdot n$ (hipótese de indução) e $I_m\times \left\{n+1\right\}$ finito com  $|I_m\times \left\{n+1\right\}| = m$. Logo $| I_m \times I_{n+1}  |=| (I_m \times I_n) \cup \left( I_m \times \left\{ n+1\right\}\right)| = mn + m = m\cdot(n+1)$.
+
+	Como $1\in X$ e $n\in X \implies n+1\in X$, temos $X = \mathbb{N}$.
+\end{proof}
+\begin{prop}
+	Sejam $X,Y$ conjuntos finitos , então $X\times  Y$ é finito e $|X\times Y| = |X| \times |Y|$.
+\end{prop}
+\begin{proof}
+	Sejam $f_x : I_n \to X$ e $f_y : I_m \to Y$ bijeções. Logo $g: I_n \times I_m \to X\times Y$, definida por $g(p,q) = (f_x(p), f_y(q))$ é uma bijeção. Logo $|X\times Y| = |I_n\times I_m| = m\cdot n = |X| \times |Y|$.
+		
+\end{proof}
+
 \end{document}
