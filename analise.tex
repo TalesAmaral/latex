@@ -54,6 +54,12 @@
 \begin{proof}
 	Seja a função $g: X  \to  X \times \left\{a\right\}$, dada por $g(x) = (x,a)$. Temos $g(p) = g(q) \iff (p,a) = (q,a) \iff p = q $, logo $g$ é injetiva. Dado $(x,a) \in X \times \left\{ a\right\}$, temos $x\in X$ e $a\in \left\{a\right\}$. Logo existe $x\in X$ tal que $g(x) = (x,a) $. Portanto $g$ é sobrejetiva. Como $g$ é injetiva e sobrejetiva, temos  $g$  bijetiva.
 \end{proof}
+\begin{lema}
+	Existe uma bijeção entre $X$ e  $\mathcal{F}(\left\{a\right\}, X )$ .
+\end{lema}
+\begin{proof}
+	Seja a função $g: X  \to  \mathcal{F}( \left\{a\right\}, X )$, dada por $g(x) = f$, onde $f_x: \left\{ a\right\} \to X, f_x(a) = x$ . Temos $g(p) = g(q) \iff f_p(a) = f_q(a) \iff p = q $, logo $g$ é injetiva. Dado $f \in \mathcal{F}( \left\{ a\right\}, X)$, seja $p = f(a)$. Temos $g(p) = f_p = f$. Logo existe $p\in X$ tal que $g(p) = f $. Portanto $g$ é sobrejetiva. Como $g$ é injetiva e sobrejetiva, temos  $g$  bijetiva.
+\end{proof}
 \begin{prop}
 	Se $f:X\to Y$ e $g:Y\to Z$ são bijeções, então $(g \circ f): X\to Z$ é uma bijeção.
 \end{prop}
@@ -120,6 +126,18 @@
 	Suponha $h((a,b)) = h((c,d)) \iff (f(a), g(b)) = (f(c), g(d)) \iff f(a) = f(c) \land g(b) = g(d)$. Como $f$ e $g$ são injetivas, temos $f(a) = f(c) \implies a =c $ e $g(b) = g(d) \implies b = d$. 
 	Logo $h$ é injetiva. Como $h$ é injetiva e sobrejetiva, temos que  $h$ é bijetiva.
 
+\end{proof}
+\begin{prop}
+	Se $f:A\to B$ é uma bijeção, então existe uma bijeção entre $\mathcal{F}(A, C)$ e $\mathcal{F}(B,C)$.
+\end{prop}
+\begin{proof}
+	Definimos $\phi : \mathcal{F}(A, C) \to \mathcal{F}(B, C)$, que associa $g:A\to C$ a $h = g\circ f^{-1} :B\to C   $.  Se $\phi(p) = \phi(q)$, temos $p\circ f^{-1} = q \circ f^{-1}$, logo $(p\circ f^{-1} ) \circ f = (q\circ f^{-1})\circ f \implies p = q$, logo $\phi$ é injetiva. Seja $p \in \mathcal{F}(B,C)$. Seja $h = p\circ f : A\to C$. Temos $h\in \mathcal{F}(A,C)$ com $\phi(h) = (p\circ f)\circ f^{-1} = p$, logo $\phi$ é sobrejetiva.
+\end{proof}
+\begin{prop}
+	Se $f:A\to B$ é uma bijeção, então existe uma bijeção entre $\mathcal{F}(C, A)$ e $\mathcal{F}(C,B)$.
+\end{prop}
+\begin{proof}
+	Definimos $\phi : \mathcal{F}(C, A) \to \mathcal{F}(C, B)$, que associa $g:C\to A$ a $h = f\circ g :C\to B   $.  Se $\phi(p) = \phi(q)$, temos $f\circ p  = f\circ q $, logo $f^{-1} \circ (f\circ p ) = f^{-1} \circ (f\circ q )  \implies p = q$, logo $\phi$ é injetiva. Seja $p \in \mathcal{F}(C,B)$. Seja $h = f^{-1} \circ p  : C\to A$. Temos $h\in \mathcal{F}(C,A)$ com $\phi(h) = f^{-1} \circ (f\circ p)  = p$, logo $\phi$ é sobrejetiva.
 \end{proof}
 \section{Conjuntos Finitos e Infinitos}
 \subsection{Números naturais}
@@ -651,6 +669,14 @@
 \begin{proof}
 	Sejam $f_x : I_n \to X$ e $f_y : I_m \to Y$ bijeções. Logo $g: I_n \times I_m \to X\times Y$, definida por $g(p,q) = (f_x(p), f_y(q))$ é uma bijeção. Logo $|X\times Y| = |I_n\times I_m| = m\cdot n = |X| \times |Y|$.
 		
+\end{proof}
+\begin{prop}
+	Temos para todos $m,n\in \mathbb{N}$ que $\mathcal{F}(I_n, I_m)$ é finito e $|\mathcal{F}(I_n, I_m)| = m^n$.
+\end{prop}
+\begin{proof}
+	Seja $X = \left\{ n \in \mathbb{N} \: | \: \forall m\in \mathbb{N} \: : \: |\mathcal{F}(I_n, I_m) | = m^n \right\}$.  Temos $1\in X$, pois para qualquer $m\in \mathbb{N}$, existe uma bijeção entre $I_m$ e $\mathcal{F}(I_1, I_m)$, logo $\mathcal{F}(I_1, I_m)$ é finito e  $|\mathcal{F}(I_1, I_m)| = |I_m| = m =  m^1$. 
+
+	Supondo $n\in X$. 
 \end{proof}
 
 \end{document}
