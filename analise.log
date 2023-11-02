@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.10)  30 OCT 2023 21:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.10)  2 NOV 2023 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -163,11 +163,7 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count282
 \l__pdf_internal_box=\box54
 )
-(./analise.aux
-
-LaTeX Warning: Label `propsuc' multiply defined.
-
-)
+(./analise.aux)
 \openout1 = `analise.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -184,7 +180,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
@@ -240,50 +237,65 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (10.82709pt too wide) in paragraph at lines 78--79
+[]\OT1/cmr/m/n/10 Seja $(\OML/cmm/m/it/10 g[]; h[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m
+/n/10 2 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; Y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/
+10 ^^B F\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 ; Y\OT1/cmr/m/n/10 )$. Seja $\OML/
+cmm/m/it/10 f \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 [ [] \OML/c
+mm/m/it/10 ; f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []$.
+ []
 
-Overfull \hbox (2.9448pt too wide) in paragraph at lines 181--181
+[2] [3]
+Overfull \hbox (21.84447pt too wide) in paragraph at lines 165--166
+[]\OT1/cmr/m/n/10 Suponha que ex-ista a so-breje^^Xc~ao $\OML/cmm/m/it/10 f \OT
+1/cmr/m/n/10 : \OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 ! P\OT1/cmr/m/n/10 (\OML/cmm
+/m/it/10 X\OT1/cmr/m/n/10 )$. Seja $\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = []$.
+ []
+
+[4]
+Overfull \hbox (2.9448pt too wide) in paragraph at lines 212--212
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$. Da defini^^Xc
 ~ao
  []
 
-[4] [5]
-Overfull \hbox (1.19443pt too wide) in paragraph at lines 222--223
+[5]
+Overfull \hbox (1.19443pt too wide) in paragraph at lines 253--254
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$. Temos
  []
 
-[6]
-Overfull \hbox (66.18355pt too wide) in paragraph at lines 267--268
+[6] [7]
+Overfull \hbox (66.18355pt too wide) in paragraph at lines 298--299
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$,
  []
 
-[7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
-[10] [11] [12]
-Overfull \hbox (22.64381pt too wide) in paragraph at lines 512--513
+[10] [11] [12] [13]
+Overfull \hbox (22.64381pt too wide) in paragraph at lines 543--544
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$.
  []
 
-[13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 598--599
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 609--610
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--614
+Underfull \hbox (badness 10000) in paragraph at lines 640--641
 
  []
 
-[16]
-Overfull \hbox (12.31955pt too wide) in paragraph at lines 674--675
+
+Underfull \hbox (badness 10000) in paragraph at lines 644--645
+
+ []
+
+[16] [17]
+Overfull \hbox (12.31955pt too wide) in paragraph at lines 705--706
 \OT1/cmr/bx/n/10 Proposi^^Xc~ao 3.9. \OT1/cmr/m/it/10 Temos para to-dos $\OML/c
 mm/m/it/10 m; n \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N$ \OT1/cmr/m/it/10 que $\OMS/
 cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 )$ \OT1/
@@ -291,24 +303,37 @@ cmr/m/it/10 ^^Se finito e $\OMS/cmsy/m/n/10 jF\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
  I[]; I[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 =
  []
 
-[17] [18] (./analise.aux)
+
+Overfull \hbox (14.28745pt too wide) in paragraph at lines 710--711
+\OT1/cmr/m/n/10 bije^^Xc~ao en-tre $\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 ([] \OML/
+cmm/m/it/10 ; I[]\OT1/cmr/m/n/10 )$ e $\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/
+cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 )$. Logo ex-iste uma bije^^Xc~ao en-tre $\O
+MS/cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 ) \OM
+S/cmsy/m/n/10 ^^B
+ []
+
+[18]
+Overfull \hbox (16.66707pt too wide) in paragraph at lines 727--728
+\OT1/cmr/m/n/10 onde $\OML/cmm/m/it/10 n[]$ \OT1/cmr/m/n/10 ^^Se o suces-sor de
+ $\OML/cmm/m/it/10 n$\OT1/cmr/m/n/10 . Se para al-gum $\OML/cmm/m/it/10 n \OMS/
+cmsy/m/n/10 2 \U/msb/m/n/10 N$ \OT1/cmr/m/n/10 tiver-mos $\OML/cmm/m/it/10 A \O
+MS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 =
+ []
+
+[19] (./analise.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
  3298 strings out of 476379
  49688 string characters out of 5794759
- 1941791 words of memory out of 5000000
+ 1938791 words of memory out of 5000000
  24629 multiletter control sequences out of 15000+600000
  561967 words of font info for 51 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 70i,8n,79p,843b,206s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,8n,79p,947b,209s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/talesamaral/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm10
 00.600pk></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
@@ -322,10 +347,10 @@ usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on analise.pdf (18 pages, 193672 bytes).
+Output written on analise.pdf (19 pages, 199208 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 131 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

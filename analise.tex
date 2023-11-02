@@ -48,6 +48,15 @@
 		(x,y)\in (A\times B) \cup  (A\times C)
 	\end{align*}
 \end{proof}
+\begin{prop}
+	Se $A\subset B$ e $B-A = \emptyset$, então $A = B$.
+\end{prop}
+\begin{proof}
+	O caso $A = B  = \emptyset $ é trivial. Supondo $B \neq \emptyset$.
+	Supondo $A\subset B$ e $B-A = \emptyset$. Como já temos $A\subset B$, basta provar $B \subset A$. 
+
+	Supondo $x\in B$ e $x\not \in A$. Como $B-A = \emptyset$, temos $x\in \emptyset$ (contradição). Logo se $x\in B$, devemos ter $x\in A$. Logo $B \subset A$. Logo $A = B$.
+\end{proof}
 \begin{lema}
 	Existe uma bijeção entre $X$ e  $X \times \left\{ a\right\}$ .
 \end{lema}
@@ -59,6 +68,16 @@
 \end{lema}
 \begin{proof}
 	Seja a função $g: X  \to  \mathcal{F}( \left\{a\right\}, X )$, dada por $g(x) = f$, onde $f_x: \left\{ a\right\} \to X, f_x(a) = x$ . Temos $g(p) = g(q) \iff f_p(a) = f_q(a) \iff p = q $, logo $g$ é injetiva. Dado $f \in \mathcal{F}( \left\{ a\right\}, X)$, seja $p = f(a)$. Temos $g(p) = f_p = f$. Logo existe $p\in X$ tal que $g(p) = f $. Portanto $g$ é sobrejetiva. Como $g$ é injetiva e sobrejetiva, temos  $g$  bijetiva.
+\end{proof}
+\begin{lema}
+	Existe uma bijeção entre $\mathcal{F}(X  , Y )\times \mathcal{F}( \left\{ a \right\} , Y ) $ e  $\mathcal{F}(X \cup \left\{ a \right\} , Y )$, com $a\not \in X$.
+\end{lema}
+\begin{proof}
+	Seja $\phi: \mathcal{F}(X \cup \left\{ a \right\} , Y ) \to \mathcal{F}(X  , Y )\times \mathcal{F}( \left\{ a \right\} , Y ) $. Que associa $f: X\cup \left\{a\right\} \to Y$ a $(g,h)$, onde $g: X\to Y, g(x) = f(x)$ e $h: \left\{a\right\} \to Y, h(a) = f(a)$. Se $\phi(f_1) = \phi(f_2)$, temos $(g_1, h_1) = (g_2, h_2)$, que implica $g_1 = g_2$ e $h_1 = h_2$. Logo $f_1 = f_2$. Logo $\phi$ é injetiva. 
+
+	Seja $(g_0,h_0) \in \mathcal{F}(X  , Y )\times \mathcal{F}( \left\{ a \right\} , Y ) $. Seja $f: X\cup \left\{a\right\}, f(x) = \begin{cases} g_0(x), & x\in X \\ h_0(a), &x= a \end{cases}$. Temos $\phi(f)  = (g_0,h_0)$, logo $\phi$ é sobrejetiva.
+
+		Como $\phi$ é injetiva e sobrejetiva, temos $\phi$ bijetiva.
 \end{proof}
 \begin{prop}
 	Se $f:X\to Y$ e $g:Y\to Z$ são bijeções, então $(g \circ f): X\to Z$ é uma bijeção.
@@ -138,6 +157,18 @@
 \end{prop}
 \begin{proof}
 	Definimos $\phi : \mathcal{F}(C, A) \to \mathcal{F}(C, B)$, que associa $g:C\to A$ a $h = f\circ g :C\to B   $.  Se $\phi(p) = \phi(q)$, temos $f\circ p  = f\circ q $, logo $f^{-1} \circ (f\circ p ) = f^{-1} \circ (f\circ q )  \implies p = q$, logo $\phi$ é injetiva. Seja $p \in \mathcal{F}(C,B)$. Seja $h = f^{-1} \circ p  : C\to A$. Temos $h\in \mathcal{F}(C,A)$ com $\phi(h) = f^{-1} \circ (f\circ p)  = p$, logo $\phi$ é sobrejetiva.
+\end{proof}
+\begin{prop}
+	Não existe sobrejeção entre $X$ e $\mathcal{P}( X)$.
+\end{prop}
+\begin{proof}
+	Suponha que exista a sobrejeção $f: X \to \mathcal{P}(X)$. Seja $A = \left\{ x \in X \: | \: x\not\in f(x) \right\}$. Temos $A\in \mathcal{P}(X)$. Como $f$ é sobrejetica, existe $p\in X$ tal que $f(p) = A$.  Temos $p\in A$ ou $p\not \in A$. Se $p\in A$, obtemos uma contradição, pois $x \in A \iff x \not \in f(x)$ e $f(p) = A$. Se $p\not \in A$, temos $p\in A$, pela definição  de $A$. Em ambos os casos, obtemos uma contradição. Logo não existe sobrejeção entre $X$ e $\mathcal{P}(X)$.
+\end{proof}
+\begin{prop}
+	Existe injeção entre $X$ e $\mathcal{P}( X)$.
+\end{prop}
+\begin{proof}
+	Seja $f: X\to \mathcal{P}(X), f(x) = \left\{x\right\}$. Temos $f(x) = f(y) \iff \left\{ x\right\} = \left\{y\right\}  \iff x = y$. Logo $f$ é injetiva.
 \end{proof}
 \section{Conjuntos Finitos e Infinitos}
 \subsection{Números naturais}
@@ -282,7 +313,7 @@
 	Temos $1 < n $ para todo $ 1 \neq n \in \mathbb{N}$ .
 \end{prop}
 \begin{proof}
-	Como $n \neq 1$, temos pela proposição \label{propsuc} que $n$ possui um antecessor. Logo existe $n_0$ tal que $s(n_0) =n \implies n  = 1+n_0$. Logo $1<n$.
+	Como $n \neq 1$, temos pela proposição \ref{propsuc} que $n$ possui um antecessor. Logo existe $n_0$ tal que $s(n_0) =n \implies n  = 1+n_0$. Logo $1<n$.
 \end{proof}
 \begin{definicao}[$\leq$]
 	$$m \leq n \iff (m = n) \lor (m <n)$$
@@ -676,7 +707,24 @@
 \begin{proof}
 	Seja $X = \left\{ n \in \mathbb{N} \: | \: \forall m\in \mathbb{N} \: : \: |\mathcal{F}(I_n, I_m) | = m^n \right\}$.  Temos $1\in X$, pois para qualquer $m\in \mathbb{N}$, existe uma bijeção entre $I_m$ e $\mathcal{F}(I_1, I_m)$, logo $\mathcal{F}(I_1, I_m)$ é finito e  $|\mathcal{F}(I_1, I_m)| = |I_m| = m =  m^1$. 
 
-	Supondo $n\in X$. 
+	Supondo $n\in X$. Temos $\mathcal{F}(I_{n+1}, I_{m} ) = \mathcal{F}(I_n\cup\left\{n+1\right\}, I_m)$. Existe uma bijeção entre $\mathcal{F}(I_n\cup\left\{n+1\right\}, I_m)$ e $\mathcal{F}(I_n, I_m) \times \mathcal{F}(\left\{n+1\right\}, I_m)$. Existe uma bijeção entre  $\mathcal{F}(\left\{n+1\right\}, I_m)$ e  $\mathcal{F}(I_1, I_m)$. Logo  existe uma bijeção entre $\mathcal{F}(I_n, I_m) \times \mathcal{F}(\left\{n+1\right\}, I_m)$ e $\mathcal{F}(I_n, I_m) \times \mathcal{F}(I_1, I_m)$.  Como $\mathcal{F}(I_n, I_m) $ é finito e possui tamanho $m^n$ e $ \mathcal{F}(I_1, I_m)$ é finito epossui tamanho $m^1$, temos $\mathcal{F}(I_n, I_m) \times \mathcal{F}(I_1, I_m)$ finito e de tamanho $m^n\cdot m = m^{n+1}$. Como existe uma bijeção entre $\mathcal{F}(I_n, I_m) \times \mathcal{F}(I_1, I_m)$ e  $\mathcal{F}(I_{n+1}, I_{m} ) $, temos $\mathcal{F}(I_{n+1}, I_{m} ) $ finito e de tamaho $m^{m+1}$.
+
+	Como $n\in X \implies n+1\in X$ e $1\in X$, temos $X = \mathbb{N}$.
+\end{proof}
+\begin{definicao}[Conjunto Enumerável]
+	Um conjunto é dito enumerável se é finito ou se existe uma bijeção $f: \mathbb{N} \to X$.
+\end{definicao}
+\begin{prop}
+	Se existe uma injeção $f: \mathbb{N} \to Y$, então $f(\mathbb{N})$ é contável. 
+\end{prop}
+\begin{proof}
+	Definindo a bijeção $f' : \mathbb{N} \to f( \mathbb{N}), f'(x) = f(x)$. Temos $f(\mathbb{N})$ contável.
+\end{proof}
+\begin{prop}
+	Todo conjunto infinito $X$ tem um subconjunto contável.
+\end{prop}
+\begin{proof}
+	Basta construir uma injeção $f: \mathbb{N} \to X$. Seja $A = \mathcal{P}(X) - \emptyset$. Temos $\bigcup A = X$ e $\emptyset \not \in A$. Seja $g: A \to X$ a função escolha aplicada em $A$. Logo temos $g(a) \in X$ para todo $a\in A$. Seja $f: \mathbb{N} \to X$ definida indutivamente por $$f(n) =\begin{cases} g(A), &n =1\\ g(A - \left\{ f(1),f(2),\cdots , f(n_0)\right\}), &n\neq 1 \end{cases} $$  onde $n_0$ é o sucessor de $n$. Se  para algum $n\in \mathbb{N}$ tivermos $A- \left\{ f(1), f(2),\cdots f(n_0)\right\} = \emptyset$, teríamos $A = \left\{f(1),\cdots, f(n_0)\right\}$, logo $A$ 
 \end{proof}
 
 \end{document}
