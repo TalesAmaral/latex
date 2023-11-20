@@ -67,7 +67,7 @@
 	Existe uma bijeção entre $X$ e  $\mathcal{F}(\left\{a\right\}, X )$ .
 \end{lema}
 \begin{proof}
-	Seja a função $g: X  \to  \mathcal{F}( \left\{a\right\}, X )$, dada por $g(x) = f$, onde $f_x: \left\{ a\right\} \to X, f_x(a) = x$ . Temos $g(p) = g(q) \iff f_p(a) = f_q(a) \iff p = q $, logo $g$ é injetiva. Dado $f \in \mathcal{F}( \left\{ a\right\}, X)$, seja $p = f(a)$. Temos $g(p) = f_p = f$. Logo existe $p\in X$ tal que $g(p) = f $. Portanto $g$ é sobrejetiva. Como $g$ é injetiva e sobrejetiva, temos  $g$  bijetiva.
+	Seja a função $g: X  \to  \mathcal{F}( \left\{a\right\}, X )$, dada por $g(x) = f_x$, onde $f_x: \left\{ a\right\} \to X, f_x(a) = x$ . Temos $g(p) = g(q) \iff f_p(a) = f_q(a) \iff p = q $, logo $g$ é injetiva. Dado $f \in \mathcal{F}( \left\{ a\right\}, X)$, seja $p = f(a)$. Temos $g(p) = f_p = f$. Logo existe $p\in X$ tal que $g(p) = f $. Portanto $g$ é sobrejetiva. Como $g$ é injetiva e sobrejetiva, temos  $g$  bijetiva.
 \end{proof}
 \begin{lema}
 	Existe uma bijeção entre $\mathcal{F}(X  , Y )\times \mathcal{F}( \left\{ a \right\} , Y ) $ e  $\mathcal{F}(X \cup \left\{ a \right\} , Y )$, com $a\not \in X$.
@@ -94,10 +94,22 @@
 	Para todo $y\in Y$, temos $f^{-1}(y) \neq \emptyset$, logo existe $x_y \in f^{-1}(y)$ tal que $f(x_y) = y$. Defina $g: Y\to X$, que associa $y\to x_y$ (axioma da escolha). Logo temos $f(g(y)) = f(x_y) = y$.
 \end{proof}
 \begin{prop}
+	Seja $f:X \to Y$ uma função injetiva. $f$ admite inversa à esquerda.
+\end{prop}
+\begin{proof}
+	Queremos definir $g: Y \to X$. Dado $y \in f(X)$, existe um único $x \in X$ tal que $f(x) = y$. Defina $g(y) = x$. Para $y\in Y - f(x)$, colocamos $g(y) = x_0$ , onde $x_0 \in X$ qualquer. Para todo $x\in X$, temos $f(x) \in f(X)$, logo $g\circ f (x) = x$. 
+\end{proof}
+\begin{prop}
+	Se $f:X\to Y$ é uma função  então $f': X\to f(X)$, definida como $f'(x) = f(x)$, é uma sobrejeção.
+\end{prop}
+\begin{proof}
+	Seja $y\in f(X)$. Por definição de $f(X)$, existe $x\in X$ tal que $f(x) = f'(x) =  y$. Logo $f'$ é sobrejetiva.
+\end{proof}
+\begin{prop}
 	Se $f:X\to Y$ é uma injeção então $f': X\to f(X)$, definida como $f'(x) = f(x)$, é uma bijeção.
 \end{prop}
 \begin{proof}
-	Seja $y\in f(X)$. Por definição de $f(X)$, existe $x\in X$ tal que $f(x) = y$. Logo $f'$ é sobrejetiva.
+	Pela proposição anterior, $f'$ é sobrejetiva.
 	Dados $a,b\in X$ com $f'(a)  = f(a) = f(b) =  f'(b)$. Como $f$ é injetiva, temos $a = b$, logo $f'$ é injetiva.
 \end{proof}
 \begin{prop}
@@ -177,14 +189,14 @@
 	$s:\mathbb{N} \to \mathbb{N}$ é injetiva.
 \end{axioma}
 \begin{axioma}
-	$\mathbb{N} - s(n) = \left\{ 1 \right\}$. Ou seja, só existe um número natural que não é sucessor de nenhum outro, e ele é denotado por $1$.
+	$\mathbb{N} - s(\mathbb{N}) = \left\{ 1 \right\}$. Ou seja, só existe um número natural que não é sucessor de nenhum outro, e ele é denotado por $1$.
 \end{axioma}
 \begin{prop}
 	\label{propsuc}
 	Todo natural diferente de $1$ possui um antecessor.
 \end{prop}
 \begin{proof}
-	Seja $n\neq 1$ um número natural. Suponha que não exista $n_0$ natural com $s(n_0) = n$. Logo $n \not \in s\left(\mathbb{N}\right)$. Logo $n\in \mathbb{N} - s(n)$. Mas $\mathbb{N} - s(n) = \left\{ 1 \right\}$. Logo $n = 1$. Contradição. Logo existe  $n_0\in \mathbb{N}$ tal que $s(n_0) = n$.
+	Seja $n\neq 1$ um número natural. Suponha que não exista $n_0$ natural com $s(n_0) = n$. Logo $n \not \in s\left(\mathbb{N}\right)$. Logo $n\in \mathbb{N} - s(\mathbb{N})$. Mas $\mathbb{N} - s(\mathbb{N}) = \left\{ 1 \right\}$. Logo $n = 1$. Contradição. Logo existe  $n_0\in \mathbb{N}$ tal que $s(n_0) = n$.
 \end{proof}
 \begin{obs}
 	Observe que a função $s: \mathbb{N} \to \mathbb{N}\setminus \{1\}$ é injetiva por definição e sobrejetiva pela proposicao \ref{propsuc}, logo é uma bijeção entre um subconjunto dos naturais com os naturais.
@@ -562,6 +574,7 @@
 	Não existe uma bijeção $f:X\to Y$ entre um conjunto finito $X$ e uma parte própia $Y \subset X$.
 \end{prop}
 \begin{proof}
+	\label{propPartePropria}
 	Como $X$ é finito, existe uma bijeção $g: I_n \to X$. Suponha que exista uma bijeção $f:X\to Y$. Como $Y$ é parte própria, existe um $x\in X -Y$. Tome $A = g^{-1}(Y)\subset g^{-1}(X) = I_n$. Temos $g^{-1}(x) \not \in A$, logo $A$ é uma parte própria de $I_n$. Queremos achar uma bijeção $h: I_n \to A$. Restringindo $g$ a $A$, obtendo a bijeção $g':A\to Y$. Definindo a bijeção $h = (g') \circ f \circ g : I_n \to A$. Pelo teorema \ref{TeoremaSubFinito}, temos que $A = I_n$. Uma contradição, pois $A$ é parte própria de $I_n$. Logo não existe bijeção entre um conjunto finito $X$ e uma parte própria $Y\subset X$.
 \end{proof}
 \begin{lema}
@@ -714,17 +727,112 @@
 \begin{definicao}[Conjunto Enumerável]
 	Um conjunto é dito enumerável se é finito ou se existe uma bijeção $f: \mathbb{N} \to X$.
 \end{definicao}
+\begin{lema}
+	$\mathbb{N}$ é enumerável
+\end{lema}
+\begin{proof}
+	Seja $f: \mathbb{N} \to \mathbb{N}$ a função indentidade. $f$ é uma bijeção, logo $\mathbb{N}$ é enumerável.
+\end{proof}
 \begin{prop}
-	Se existe uma injeção $f: \mathbb{N} \to Y$, então $f(\mathbb{N})$ é contável. 
+	Se existe uma injeção $f: \mathbb{N} \to Y$, então $f(\mathbb{N})$ é enumerável. 
 \end{prop}
 \begin{proof}
 	Definindo a bijeção $f' : \mathbb{N} \to f( \mathbb{N}), f'(x) = f(x)$. Temos $f(\mathbb{N})$ contável.
 \end{proof}
 \begin{prop}
-	Todo conjunto infinito $X$ tem um subconjunto contável.
+	Todo conjunto infinito $X$ tem um subconjunto enumerável.
 \end{prop}
 \begin{proof}
-	Basta construir uma injeção $f: \mathbb{N} \to X$. Seja $A = \mathcal{P}(X) - \emptyset$. Temos $\bigcup A = X$ e $\emptyset \not \in A$. Seja $g: A \to X$ a função escolha aplicada em $A$. Logo temos $g(a) \in X$ para todo $a\in A$. Seja $f: \mathbb{N} \to X$ definida indutivamente por $$f(n) =\begin{cases} g(A), &n =1\\ g(A - \left\{ f(1),f(2),\cdots , f(n_0)\right\}), &n\neq 1 \end{cases} $$  onde $n_0$ é o sucessor de $n$. Se  para algum $n\in \mathbb{N}$ tivermos $A- \left\{ f(1), f(2),\cdots f(n_0)\right\} = \emptyset$, teríamos $A = \left\{f(1),\cdots, f(n_0)\right\}$, logo $A$ 
-\end{proof}
+	Basta construir uma injeção $f: \mathbb{N} \to X$. Seja $A = \mathcal{P}(X) - \emptyset$. Temos $\bigcup A = X$ e $\emptyset \not \in A$. Seja $g: A \to X$ a função escolha aplicada em $A$. Logo temos $g(a) \in a \subset X$ para todo $a\in A$. Seja $f: \mathbb{N} \to X$ definida indutivamente por $$ \begin{cases} f(1) = g(A) \\ f(n+1) = g(A -f(I_n) ) \end{cases} .$$  Se $A - f(I_n) = \emptyset$, teríamos $A = f(I_n)$, uma contradição, pois $A$ é infinito e $f(I_n)$ é finito. Logo $A - f(I_n) \neq \emptyset$ para todo $n \in \mathbb{N}$ .  Logo $g(A - f(I_n))$ está sempre definida.
 
+		Queremos mostrar que $f$ é injetiva. Suponha $f(m+1) = f(n+1)$ com $m\neq m$. Suponha sem perda de generalidade que $n<m$. Logo temos $n+1\in I_m \implies f(n+1) \in f(I_m)$. Por definição, temos $ f(n+1) = f(m+1) =  g(A - f(I_m)) \in A - f(I_m)$. Contradição, pois $f(n+1) \in f(I_m) \implies f(n+1)\not \in A - f(I_m)$. Logo $f(m+1) = f(n+1) \implies m = n$. Logo $f$ é injetiva.
+		Logo $f': \mathbb{N} \to f(\mathbb{N} )$ é bijetiva  e $f(\mathbb{N})$ é contável. Logo existe um subconjunto $f\left(\mathbb{N}\right)$ de $X$ contável.
+	%melhorar
+\end{proof}
+\begin{prop}
+	Um conjunto $X$ é infinito se, e somente se, existir uma bijeção entre $X$ e uma parte própria.
+\end{prop}
+\begin{proof}
+	
+	Pela proprosição \ref{propPartePropria}, se existir bijeção $X$ não é finito.
+
+	Suponto $X$ infinito. Logo existe subconjunto $Y\subset X$ enumerável. Seja $f:\mathbb{N} \to Y$ uma bijeção (uma enumeração). Vamos usar o fato da função $s: \mathbb{N} \to \mathbb{N} -\left\{1\right\}$ ser uma bijeção.  Seja $A = \left(X- f\left(\mathbb{N}\right)\right) \cup f(\mathbb{N} - \left\{1\right\}) = (X - Y) \cup (Y - \left\{f(1)\right\}) $. Temos $f(1) \not \in A$, logo $A$ é parte própria de $X$. Seja $h: A \to X$ definida por $$ h(x) = \begin{cases} x, & x\in X-Y\\
+	f(s^{-1}(f^{-1}(x))), & x\in Y - \left\{f(1)\right\} \end{cases}$$
+	Se $x\in Y-\left\{f(1)\right\}$, temos $x\in Y$, logo $x\not \in X- Y$. Se $x\in Y - \left\{f(1) \right\} = f(\mathbb{N} - \left\{1\right\})$, temos $f^{-1}(x) \in \mathbb{N} - \left\{ 1\right\}$, logo $s^{-1}(f^{-1}(x))$ está definida.  . Logo $h$ está bem definida.
+
+	 Se $h(x) = h(y)$, com $x,y \in X - Y$, temos $h(x) = h(y) \implies x = y$. Se $h(x) = h(y) $ com $x,y \in Y-\left\{f(1) \right\}$, temos $f(s^{-1}(f^{-1}(x))) = f(s^{-1}(f^{-1}(y))) \implies  x = y$ ($f,s^{-1}$ são bijeções).  Se $h(x) = h(y)$ com $x\in X-Y$ e $y\in Y- \left\{f(1)\right\}$, temos $h(x) = x = f(s^{-1}(f^{-1}(y))) = h(y)$. Temos $f(a) \in Y$ para todo $a\in \mathbb{N}$. Logo  $ f(s^{-1}(f^{-1}(y))) = x \in Y $. Contradição, pois $x\in X - Y$. Logo $h$ é injetiva.
+
+
+	 Seja $x\in X$. Temos $x\in Y$ ou $x\not \in Y$. Se $x\not \in Y$, temos $x \in X-Y$, logo $h(x) = x$. Se $x\in Y$, temos  $x = f(n)$ com $n\in \mathbb{N}$. Temos $s(n) \in \mathbb{N} - \left\{1\right\}$, logo $ y = f(s(n)) \in Y - \left\{f(1) \right\}$. Logo $h(y) = f(s^{-1}(f^{-1}(y))) = f(n) = x$. Logo $h$ é sobrejetiva.
+	 
+	 Como $h:A \to X$ é bijetiva, existe bijeção entre X e uma parte própria de $X$.
+\end{proof}
+\begin{prop}
+	Todo subconjunto $X\subset\mathbb{N}$ é enumerável.
+\end{prop}
+\begin{proof}
+	Se $X$ for finito, ele é enumerável por definição. Se $X$ for infinito. Seja $f:  \mathbb{N} \to X$ definida indutivamente por $$\begin{cases} f(1) = \min (X) \\ 
+	f(n+1) = \min( X- f(I_n)) \end{cases}$$
+	Como $f(I_n)$ é sempre finito, temos $X-f(I_n) \neq \emptyset$ para todo $n \in \mathbb{N}$. Logo o princípio da boa ordenação vale para $X - f(I_n)$. Logo $f$ está bem definida. 
+
+	Se $f(x+1) = f(y+1)$, com $x<y$ (sem perda de generalidade), temos $x+1 \in I_y \implies f(x+1) \in f(I_y)$. Logo $f(x+1) \not \in X - f(I_y)$. Logo $f(x+1) \neq f(y+1)$, pois $f(y+1) \in X - f(I_y)$. Logo $f$ é injetiva.
+	
+	Suponha $X \neq f(\mathbb{N})$. Logo $X - f(\mathbb{N}) \neq \emptyset$. Seja $y \in X - f(\mathbb{N})$.  Seja $x\in f(\mathbb{N})$ qualquer. Logo $x = f(n)$ para algum $n \in \mathbb{N}$. Se $x = f(1)$, temos $x = \min(X)$. Como $y \in X$, temos $x \leq y$. Se $x\neq f(1)$, temos $x = f(n+1) = \min (X - f(I_n))$. Como $y \in X - f(\mathbb{N}) \subset X - f(I_n)$, temos $y \in X - f(I_n)$, logo $x\leq y$. Ou seja: $\forall x \in \mathbb{N} \: : \: x\leq y$. Logo $\mathbb{N}$ é limitado superiormente por $y$.  Contradição (conjunto finito não possui limite superior). Logo $X = f(\mathbb{N})$.
+
+	Como $f$ é injetiva e sobrejetiva, temos $f$ bijetiva. Logo $X$ é enumerável.
+
+\end{proof}
+\begin{prop}
+	Se $f:X\to Y$ é uma bijeção e $Y$ é enumerável, então $X$ é enumerável.
+\end{prop}
+\begin{proof}
+	Se $X$ for finito, ele é enumerável. Se $X$ for infinito,  então $Y$ é infinito.  Como $Y$ é enumerável,  existe uma bijeção $g: Y \to \mathbb{N}$. Logo existe a bijeção $g\circ f: X \to \mathbb{N}$. Logo $X$ é enumerável.
+\end{proof}
+\begin{prop}
+	Todo subconjunto $X$ de um conjunto enumerável $Y$ é enumerável.
+\end{prop}
+\begin{proof}
+	Se $X$ for finito, ele é enumerável. Se $X$ for infinito,  então $Y$ é infinito. Logo existe uma bijeção $f: Y \to \mathbb{N}$. Seja  a bijeção $f':X\to f(X)$ a restrição de $f$ a $X$. Como $f(X)\subset \mathbb{N}$ , temos $f(X)$ enumerável. Como existe uma bijeção entre $X$ e um conjunto enumerável, temos $X$  enumerável.
+\end{proof}
+\begin{prop}
+	Se $f:X\to Y$ é uma injeção e $Y$ é enumerável, então $X$ é enumerável.
+\end{prop}
+\begin{proof}
+	Se $X$ for finito, ele é enumerável. Se $X$ for infinito,  então $Y$ é infinito. Temos $f(X) \subset Y$ é enumerável (subconjunto de conjunto enumerável). Seja  a bijeção $f':X\to f(X)$ a restrição de $f$ a $X$. Como existe uma bijeção entre $X$ e um conjunto enumerável, temos $X$ enumerável.
+\end{proof}
+\begin{prop}
+	Se $f:X\to Y$ é uma sobrejeção e $X$ é enumerável, então $Y$ é enumerável.
+\end{prop}
+\begin{proof}
+	Como $f$ é sobrejetiva, ela admite inversa à direita. Seja $g: Y\to X$ a inversa à direita de $f$.  Se $g(y) = g(y')$, temos $f(g(y)) = f(g(y'))$, logo $y = y'$. Logo $g$ é injetiva. Pela proposição anterior, temos $Y$ enumerável. 
+\end{proof}
+\begin{lema}
+	Um conjunto $X$ é enumerável se, e somente se, existir uma injeção $f: X \to \mathbb{N}$.
+\end{lema}
+\begin{proof}
+	Supondo $X$ for enumerável. Se $X$ for finito, existe uma bijeção $h: X \to I_n$. Como $I_n \subset \mathbb{N}$,  existe uma injeção $X\to \mathbb{N}$. Se $X$ for infinito, existe uma bijeção $g: X \to \mathbb{N}$. Em ambos os casos existe uma injeção entre $X$ e $\mathbb{N}$.
+
+	Supondo que existe uma injeção $f: X \to \mathbb{N}$. Como $\mathbb{N}$ é enumerável, temos $X$ enumerável.
+\end{proof}
+\begin{lema}
+	\textbf{(Teorema fundamental da aritmética)} Todo número natural ou é primo ou se escreve de modo único como um produto de números primos.
+\end{lema}
+\begin{lema}
+	$\mathbb{N} \times \mathbb{N}$ é enumerável
+\end{lema}
+\begin{proof}
+	Seja $h:\mathbb{N} \times \mathbb{N} \to \mathbb{N}$, $ h(m,n) = 2^m\cdot 3^n$. Se $h(m,n) = h(v,w)$, temos $2^m\cdot 3^n = 2^v\cdot 3^w$. Pelo lema anterior, temos $m = v$ e $n = w$. Logo $(m,n) = (v,w)$. Logo $h$ é injetiva. Logo $\mathbb{N}\times \mathbb{N}$ é enumerável.
+\end{proof}
+\begin{prop}
+	Se $X,Y$ são enumeráveis, temos $X\times Y$ enumerável.
+\end{prop}
+\begin{proof}
+	Existem injeções $f: X \to \mathbb{N}$ e $g: Y \to \mathbb{N}$. Logo a função $h : X \times Y \to \mathbb{N} \times \mathbb{N}$, $h(x,y) = (f(x), g(y))$ é uma injeção entre $X \times Y$ e um conjunto enumerável.  Logo $X\times Y$ é enumerável.
+\end{proof}
+\begin{prop}
+	Seja $(X_{\lambda})_{\lambda \in L}$ uma família enumerável de conjuntos enumeráveis. Temos $X = \displaystyle\bigcup_{\lambda \in L} X_{\lambda}$ enumerável.
+\end{prop}
+\begin{proof}
+
+\end{proof}
 \end{document}
