@@ -16,6 +16,7 @@
 \theoremstyle{remark}
 \newtheorem{obs}{Observação}[section]
 \newtheorem{exemp}{Exemplo}[section]
+\DeclareMathOperator{\card}{card}
 
 \begin{document}
 \section{Teoria de conjuntos}
@@ -181,6 +182,19 @@
 \end{prop}
 \begin{proof}
 	Seja $f: X\to \mathcal{P}(X), f(x) = \left\{x\right\}$. Temos $f(x) = f(y) \iff \left\{ x\right\} = \left\{y\right\}  \iff x = y$. Logo $f$ é injetiva.
+\end{proof}
+\begin{prop}
+	Existe injeção entre $X$ e $\mathcal{F}(X,Y)$ se $Y$ possui pelo menos $2$ elementos.
+\end{prop}
+\begin{proof}
+	$Y$ possuir 2 elementos implica na existência de $y_1,y_2\in Y$ com $y_1\neq y_2$. Logo seja $h:X\to \mathcal{F}(X,Y)$ , que associa $a\in X$ a $g_a:X\to Y$, dada por $$g_a(x) = \begin{cases} y_1 , & x = a\\ y_2, & x\neq a\end{cases}. $$
+		Se $h(a) = h(b)$, temos $g_a = g_b$, logo $g_a(x) = g_b(x)$ para todo $x\in X$. Em particular, $g_a(a) = g_b(a)$. Se $a\neq b$, temos $g_a(a) = y_1 = y_2 = g_b(a)$ (contradição).  Logo temos $ a= b$.  Logo $h$ é injetiva.Logo existe injeção entre $X$ e $\mathcal{F}(X,Y)$.
+\end{proof}
+\begin{prop}
+	Não existe função sobrejetiva entre $X$ e $\mathcal{F}(X,Y)$ se $Y$ possui pelo menos $2$ elementos.
+\end{prop}
+\begin{proof}
+	Seja $f: X \to \mathcal{F}(X,Y)$ uma função qualquer.Logo  $f$ associa $a\in X$ a uma função $\phi_a : X\to Y$. Para simplificar notação, chamaremos $f(a) = \phi_a$. Seja $g: \mathcal{P}(Y) - \emptyset \to Y$ a função escolha definida em $\mathcal{P}(Y) - \emptyset$. Seja $h: X\to Y$ definida por $h(a) = g(Y -  \left\{ \phi_a(a)\right\})$. Como $Y$ tem pelo menos 2 elementos, temos $Y - \left\{ \phi_a(a)\right\} \neq \emptyset$ para todo $a\in X$.  Pela definição de função escolha, temos $h(a) \in Y - \left\{ \phi_a(a)\right\}$, logo $h(a) \neq \phi_a(a)$ para todo $a\in X$. Logo temos $h\neq \phi_a$ para todo $a\in X$. Logo $h\not\in f(X)$. Logo $f$ não é sobrejetiva.
 \end{proof}
 \section{Conjuntos Finitos e Infinitos}
 \subsection{Números naturais}
@@ -817,6 +831,9 @@
 \begin{lema}
 	\textbf{(Teorema fundamental da aritmética)} Todo número natural ou é primo ou se escreve de modo único como um produto de números primos.
 \end{lema}
+\begin{proof}
+	Aritmética, Ahbramo. %aprender
+\end{proof}
 \begin{lema}
 	$\mathbb{N} \times \mathbb{N}$ é enumerável
 \end{lema}
@@ -830,9 +847,38 @@
 	Existem injeções $f: X \to \mathbb{N}$ e $g: Y \to \mathbb{N}$. Logo a função $h : X \times Y \to \mathbb{N} \times \mathbb{N}$, $h(x,y) = (f(x), g(y))$ é uma injeção entre $X \times Y$ e um conjunto enumerável.  Logo $X\times Y$ é enumerável.
 \end{proof}
 \begin{prop}
-	Seja $(X_{\lambda})_{\lambda \in L}$ uma família enumerável de conjuntos enumeráveis. Temos $X = \displaystyle\bigcup_{\lambda \in L} X_{\lambda}$ enumerável.
+	Seja $(X_{\lambda})_{\lambda \in L}$ uma família enumerável de conjuntos enumeráveis. Temos $Y = \displaystyle\bigcup_{\lambda \in L} X_{\lambda}$ enumerável.
 \end{prop}
 \begin{proof}
-
+	Como $X_{\lambda}$ é enumerável para todo $\lambda\in L$, temos que existe uma função $f_\lambda : X \to \mathbb{N}$ injetiva para todo $\lambda\in L$. Definindo $g: Y \to \mathbb{N}$, dada por $g(x) = \min \left\{ n\in \mathbb{N} | x \in X_n \right\}$. Se $x\in Y$, temos $x\in X_\lambda$ para algum $\lambda \in L$, logo $\left\{n \in \mathbb{N} |  x\in X_{n}\right\}$ é não vazio. Para simplificar notação, vamos chamar $g(x) = n_x$.  Seja $h: Y \to \mathbb{N} \times \mathbb{N}$, definida por $h(x) = \left( f_{n_x}(x), n_x\right)$.  Afirmo que $h$ é injetiva. De fato, se $h(x) = h(y)$, temos $(f_{n_x}(x), n_x) = (f_{n_y}(y), n_y) \iff f_{n_x}(x) = f_{n_y}(y) \land n_x = n_y$. Como $n_x = n_y$, temos  $f_{n_x} = f_{n_y}$, logo $f_{n_x}(x) = f_{n_y}(x) = f_{n_y}(y)$. Mas $f_y$ é injetiva, logo $x = y$. Logo $h$ é injetiva. Logo $Y$ é enumerável.
 \end{proof}
+\begin{prop}
+	Dados dois conjuntos $X,Y$, apenas um das 3 possibilidades ocorre: 
+	\begin{itemize}
+		\item Existe uma injeção $f: X \to Y$ e não existe sobrejeção $g: X \to Y$.
+		\item Existe bijeção $f: X\to Y$. 
+		\item Existe uma injeção $f: Y \to X$ e não existe sobrejeção $g: Y \to X$.
+	\end{itemize}
+\end{prop}
+\begin{proof}
+	Naive Set Theory. %aprender
+\end{proof}
+\begin{definicao}
+	Definimos para conjuntos infinitos $\card(X) = \card(Y)$ se, e somente se, existir bijeção $f: X\to Y$. Definimos $\card(X) < \card(Y)$ se existir injeção $f: X \to Y$ e não existir sobrejeção $g:X \to Y$. E $\card(X) > \card(Y)$ caso contrário.
+\end{definicao}
+\begin{prop}
+	(\textbf{Cantor-Bernstein-Schröder Theorem}) Se existir injeções $f:X\to Y$ e $g: Y \to X$, então existe bijeção $h:X\to Y$.
+\end{prop}
+\begin{proof}
+	%aprender
+\end{proof}
+\begin{prop}
+	Seja $(X_{\lambda})_{\lambda \in \mathbb{N}}$ uma família de conjuntos de tamanho maior ou igual a 2. Temos $Y = \displaystyle\prod_{\lambda \in \mathbb{N}} X_{\lambda}$ não é enumerável.
+\end{prop}
+\begin{proof}
+	Lembrando que cada elemento de $Y$ é uma função $\phi: \mathbb{N} \to\displaystyle\bigcup_{\lambda \in \mathbb{N}} X_{\lambda}$, onde $\phi(n) \in X_n$. Suponha $Y$ enumerável. Logo existe uma bijeção $f: \mathbb{N} \to Y$. Para simplificar a notação, denotaremos a função $f(n)$ por $f_n$.  Como $X_{\lambda}$ possui pelo menos 2 elementos, existem $a_\lambda, b_\lambda \in X_{\lambda}$ para todo $\lambda\in \mathbb{N}$. Seja $h: \mathbb{N} \to \displaystyle\bigcup_{\lambda \in \mathbb{N}} X_{\lambda}$, definida por $$h(x) = \begin{cases} a_x , & f_x(x) \neq a_x\\ b_x, & f_x(x) = a_x \end{cases}.$$
+		Temos $h(n) \neq f_n(n)$ para todo $n\in \mathbb{N}$, logo $h \neq f_n$ para todo $n\in \mathbb{N}$. Como $h\in Y$ e $h \not \in f(\mathbb{N})$, temos que $f$ não é sobrejetiva. Logo $f$ não é bijetiva (contradição). Logo $Y$ não é enumerável.
+		%falta mostrar que não existe uma injeção f: Y -> N$
+\end{proof}
+
 \end{document}
