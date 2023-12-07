@@ -196,6 +196,12 @@
 \begin{proof}
 	Seja $f: X \to \mathcal{F}(X,Y)$ uma função qualquer.Logo  $f$ associa $a\in X$ a uma função $\phi_a : X\to Y$. Para simplificar notação, chamaremos $f(a) = \phi_a$. Seja $g: \mathcal{P}(Y) - \emptyset \to Y$ a função escolha definida em $\mathcal{P}(Y) - \emptyset$. Seja $h: X\to Y$ definida por $h(a) = g(Y -  \left\{ \phi_a(a)\right\})$. Como $Y$ tem pelo menos 2 elementos, temos $Y - \left\{ \phi_a(a)\right\} \neq \emptyset$ para todo $a\in X$.  Pela definição de função escolha, temos $h(a) \in Y - \left\{ \phi_a(a)\right\}$, logo $h(a) \neq \phi_a(a)$ para todo $a\in X$. Logo temos $h\neq \phi_a$ para todo $a\in X$. Logo $h\not\in f(X)$. Logo $f$ não é sobrejetiva.
 \end{proof}
+%\begin{proof}
+	%Se existe bijeção $f : X \to Y$, então existe bijeção entre $ Z = \left\{ h \in \mathcal{X, X} \: | \: h \text{ é bijeção } \right\}$ e  $W = \left\{ h \in \mathcal{Y, Y} \: | \: h \text{ é bijeção } \right\}$
+%\end{proof}
+%\begin{proof}
+	%Definindo $\phi: Z \to W$, que associa $h\in Z$ a $g: Y \to Y$, definida por $g(y) = f(h(f^{-1}(y)))$.  Como $g$ é composição de bijeções, temos $g$ bijeção. Logo $g\in W$.  Se $\phi(h) = \phi(p)$, temos $f(h(f^{-1}(y))) = f(p(f^{-1}(y)))$ para todo $y\in Y$. Como $f$ é injetiva, temos $h(f^{-1}(y)) = p(f^{-1}(y))$.  Tomando $y = f(x)$, para $x\in X$, temos $h(f^{-1}(f(x))) = p(f^{-1}(f(x))) \implies h(x) = p(x)$ para todo $x\in X$. Logo $h = p$.
+%\end{proof}
 \section{Conjuntos Finitos e Infinitos}
 \subsection{Números naturais}
 \paragraph{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb{N}$, cujos elementos são os números naturais, e uma função $s:\mathbb{N} \to \mathbb{N}$. Para cada $n\in \mathbb{N}$, o número $s(n)$ é o sucessor de $n$.  Temos os axiomas:}
