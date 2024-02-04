@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  4 FEB 2024 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  4 FEB 2024 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -318,7 +318,7 @@ Overfull \hbox (12.43742pt too wide) in paragraph at lines 876--877
 r-Bernstein-Schr^^?oder The-o-rem\OT1/cmr/m/it/10 ) Se ex-i-s-tir inje^^Xc~oes
  []
 
-[23] [24] [25] (./analise.aux)
+[23] [24] [25] [26] [27] (./analise.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
@@ -331,7 +331,7 @@ Here is how much of TeX's memory you used:
  25394 multiletter control sequences out of 15000+600000
  563573 words of font info for 57 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 70i,10n,79p,947b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,10n,79p,947b,269s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/talesamaral/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm10
 00.600pk></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
@@ -348,10 +348,10 @@ ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on analise.pdf (25 pages, 251678 bytes).
+Output written on analise.pdf (27 pages, 255558 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 172 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -890,6 +890,15 @@
 
 
 \section{Análise no $\mathbb{R}^n$}
+\begin{definicao}[Métrica]
+	Dado um espaço vetorial $E$ sobre um corpo $K$, uma métrica é uma função $d: E\times E \to \mathbb{R}$, que satisfaz para todos $a,b\in E$ e $\lambda \in K$:
+	\begin{enumerate}
+		\item $d(a,b) \geq 0$
+		\item $d(a,b) = 0 \iff a = b $
+		\item $d(a,b) = d(b,a)$
+		\item $ d(a,b) \leq d(a,c) + d(c,b)$
+	\end{enumerate}
+\end{definicao}
 \begin{definicao}[Norma]
 	Dado um espaço vetorial $E$ sobre um corpo $K$, uma norma é uma função $\| \cdot \|: E \to \mathbb{R}$, que satisfaz para todos $x,y\in E$ e $\lambda \in K$:
 
@@ -901,9 +910,10 @@
 \end{definicao}
 \begin{prop}
 	Dada uma norma $\| \cdot \|: E \to \mathbb{R}$, temos:
-	$$ \|\vec{0} \| = 0 $$
+	$$ \| x\| = 0 \iff x = 0 $$
 \end{prop}
 \begin{proof}
+	Temos $\| x \| =0 \implies x = 0$ por definição. Basta mostrar que $\| \vec{0} \| = 0 $
 	Temos $\| \vec{0} \| = \| 0 \cdot \vec{0} \|  = |0| \cdot \| \vec{0} \| = 0 \cdot \|\vec{0} \| = 0$.
 \end{proof}
 \begin{prop}
@@ -914,24 +924,45 @@
 	Temos para todo $x,y \in E$ que $\| x+y\| \leq \|x \| + \| y \|$.  Tomando $y = - x$, temos $\| x-x\| \leq \| x\| + \| -x\| \iff \|0 \| \leq \|x\| + |-1| \cdot \| x\| \iff 0 \leq \|x\| + \|x\| \iff 2\|x\| \geq 0 \iff \|x\| \geq 0$.
 \end{proof}
 \begin{prop}
+	Dada uma norma $\| \cdot \|: E \to \mathbb{R}$, a função $d: E\times E \to \mathbb{R}$, $d(a,b) = \| a-b\|$ é uma métrica.
+\end{prop}
+\begin{proof}
+	Para todo $a,b,c\in E$, temos:
+	\begin{itemize}
+		\item $d(a,b) = |a-b| \geq 0 $.
+		\item $d(a,b) = 0 \iff |a-b| = 0 \iff a-b = 0 \iff a = b.$
+		\item $d(a,b) = |a-b| = |b-a| = d(b,a)$
+		\item $d(a,b) =  |a-b|  = |a-c+c-b| \leq |a-c| + |c-b| = d(a,c) + d(c,b)$.
+	\end{itemize}
+\end{proof}
+\begin{definicao}[Métrica proveniente da norma]
+	Dada uma norma $\| \cdot \|: E \to \mathbb{R}$, a função $d: E\times E \to \mathbb{R}$, $d(a,b) = \| a-b\|$ é chamada de métrica proveniente da norma.
+\end{definicao}
+\begin{prop}
+	Num espaço vetorial $E$, uma métrica $d$ é proveniente de uma norma, se e somente se,  para quaisquer $x,y,a\in E$ e $\lambda\in K$, tem-se $d(x+a, y+a) = d(x,y)$ e $d(\lambda \cdot x, \lambda \cdot y ) = |\lambda| \cdot d(x,y)$.
+\end{prop}
+\begin{proof}
+	Se $d$ provém de uma métrica, para $x,y, a\in E$ e $\lambda \in K$, temos  $d(x+a,y+a) = \|(x+a) -(y+a) \| = \| x- y\| = d(x,y)$ e $d(\lambda \cdot x, \lambda \cdot y ) = \| \lambda\cdot x  - \lambda \cdot y \| = \| \lambda\cdot (x-y) \| = |\lambda|\cdot \| x-y\| = |\lambda | \cdot d(x,y)$.
+
+	Supondo $d$ uma métrica qualquer com $d(x+a, y+a) = d(x,y)$ e $d(\lambda \cdot x, \lambda \cdot y ) = |\lambda| \cdot d(x,y)$. Definindo $\| \cdot \| : E \to \mathbb{R}$, com $\|x\| = d(x,0)$. De fato, $\| \cdot \| $ é uma norma, pois:
+	\begin{enumerate}
+		\item $\| x\| = 0 \iff d(x,0) = 0 \iff x =0$.
+		\item $\| \lambda \cdot x \| = d(\lambda \cdot x, 0) = d(\lambda \cdot x, \lambda \cdot 0) = |\lambda |\cdot d(x,0) = |\lambda|\cdot \| x\|$.
+		\item $\| x+y\| = d(x+y,0) \leq d(x+y, y) + d(y , 0) = d(x,0) + d(y,0) = \| x\| + \|y\| \implies \| x+y \| \leq \|x\| +   \|y\|$.
+	\end{enumerate}
+	Logo $\|\cdot \|$ é uma norma que induz $d$.
+\end{proof}
+\begin{prop}
 	$$| \| x \| - \| y \| |  \leq  \|  x - y \| $$
 \end{prop}
 \begin{proof}
-	
-	%
-	%\begin{align*}
-	%	| \| x \| - \| y \| |  \leq  \|  x - y \|  &\iff \\~\\
-	%	 - \| x - y \| \leq \| x \| - \| y \|   \leq  \|  x - y \|  &\iff \\~\\
-	%\end{align*}
+	Temos $\| x\| = \| x-y +y\| \leq \|x-y\| +\|y\| \implies \| x\| - \|y\| \leq \| x-y\|$. Além disso $\|y\| \leq \|y-x\| + \|x\| = \|x-y\| +\|x\| \implies \|y\| -\|x\| \leq \| x-y\| \implies -\|x-y\| \leq \|x\| - \|y\|$.
 
-	%\begin{align*} 
-	%	\| x \| &= \| x+y-y \| \\~\\
-	%	&= \|(x-y) +y \| \\~\\
-	%	&\leq \| x-y \| +\|y\| \\~\\
-	%\end{align*}
+	Como $-\|x-y\| \leq \|x\| - \|y\| \leq \|x-y\|$, temos $| \|x\| - \|y\| | \leq \|x\| -\|y\|$.
 
 \end{proof}
 \begin{definicao}[Normas equivalentes]
+	Duas normas $\|\cdot \|_1, \| \cdot \|_2 : E \to \mathbb{R}$ são equivalentes se existirem $C_1,C_2 > 0$ tal que $$ C_1 \cdot \|x\|_1 \leq \|x\|_2 \leq C_2\cdot \| x\|_1 $$
 \end{definicao}
 \begin{prop}
 	Se um espaço normado $E$ tiver dimensão finita, então todas as suas normas são equivalentes.
