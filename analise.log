@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  4 FEB 2024 13:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  4 FEB 2024 13:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -325,10 +325,10 @@ L3 programming layer <2023-12-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3311 strings out of 475626
- 49894 string characters out of 5780897
+ 3313 strings out of 475626
+ 49956 string characters out of 5780897
  1945457 words of memory out of 5000000
- 25392 multiletter control sequences out of 15000+600000
+ 25394 multiletter control sequences out of 15000+600000
  563573 words of font info for 57 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  70i,10n,79p,947b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -348,7 +348,7 @@ ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on analise.pdf (25 pages, 249715 bytes).
+Output written on analise.pdf (25 pages, 251678 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams

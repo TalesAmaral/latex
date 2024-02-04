@@ -890,23 +890,52 @@
 
 
 \section{Análise no $\mathbb{R}^n$}
+\begin{definicao}[Norma]
+	Dado um espaço vetorial $E$ sobre um corpo $K$, uma norma é uma função $\| \cdot \|: E \to \mathbb{R}$, que satisfaz para todos $x,y\in E$ e $\lambda \in K$:
+
+	\begin{enumerate}
+		\item $\| x \| = 0 \implies x = 0 $
+		\item $\| \lambda x \| = | \lambda | \cdot \| x \|$
+		\item $ \| x+y \| \leq \| x \| + \| y \|$
+	\end{enumerate}
+\end{definicao}
+\begin{prop}
+	Dada uma norma $\| \cdot \|: E \to \mathbb{R}$, temos:
+	$$ \|\vec{0} \| = 0 $$
+\end{prop}
+\begin{proof}
+	Temos $\| \vec{0} \| = \| 0 \cdot \vec{0} \|  = |0| \cdot \| \vec{0} \| = 0 \cdot \|\vec{0} \| = 0$.
+\end{proof}
+\begin{prop}
+	Dada uma norma $\| \cdot \|: E \to \mathbb{R}$, temos para todo $x\in E$:
+	$$ \|x \| \geq 0 $$
+\end{prop}
+\begin{proof}
+	Temos para todo $x,y \in E$ que $\| x+y\| \leq \|x \| + \| y \|$.  Tomando $y = - x$, temos $\| x-x\| \leq \| x\| + \| -x\| \iff \|0 \| \leq \|x\| + |-1| \cdot \| x\| \iff 0 \leq \|x\| + \|x\| \iff 2\|x\| \geq 0 \iff \|x\| \geq 0$.
+\end{proof}
 \begin{prop}
 	$$| \| x \| - \| y \| |  \leq  \|  x - y \| $$
 \end{prop}
 \begin{proof}
 	
-	\begin{align*}
-		| \| x \| - \| y \| |  \leq  \|  x - y \|  &\iff \\~\\
-		 - \| x - y \| \leq \| x \| - \| y \|   \leq  \|  x - y \|  &\iff \\~\\
-	\end{align*}
+	%
+	%\begin{align*}
+	%	| \| x \| - \| y \| |  \leq  \|  x - y \|  &\iff \\~\\
+	%	 - \| x - y \| \leq \| x \| - \| y \|   \leq  \|  x - y \|  &\iff \\~\\
+	%\end{align*}
 
-	\begin{align*} 
-		\| x \| &= \| x+y-y \| \\~\\
-		&= \|(x-y) +y \| \\~\\
-		&\leq \| x-y \| +\|y\| \\~\\
-	\end{align*}
+	%\begin{align*} 
+	%	\| x \| &= \| x+y-y \| \\~\\
+	%	&= \|(x-y) +y \| \\~\\
+	%	&\leq \| x-y \| +\|y\| \\~\\
+	%\end{align*}
 
 \end{proof}
+\begin{definicao}[Normas equivalentes]
+\end{definicao}
+\begin{prop}
+	Se um espaço normado $E$ tiver dimensão finita, então todas as suas normas são equivalentes.
+\end{prop}
 \begin{definicao}[$L(\mathbb{R}^n, \mathbb{R}^m)$]
 	$$L(\mathbb{R}^n, \mathbb{R}^m) = \left\{ T \in F(\mathbb{R}^n, \mathbb{R}^m) \: | \: T \text{ é linear}\right\}$$
 \end{definicao}
