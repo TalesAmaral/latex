@@ -890,6 +890,7 @@
 
 
 \section{Análise no $\mathbb{R}^n$}
+\subsection{Topologia}
 \begin{definicao}[Métrica]
 	Dado um espaço vetorial $E$ sobre um corpo $K$, uma métrica é uma função $d: E\times E \to \mathbb{R}$, que satisfaz para todos $a,b\in E$ e $\lambda \in K$:
 	\begin{enumerate}
@@ -980,13 +981,16 @@
 	$GL(\mathbb{R}^n)$ é aberto.
 \end{prop}
 \begin{proof}
+	%carro
 	Seja $T\in GL(\mathbb{R}^n$. Logo $T$ é  invertível (bijetiva). 
 \end{proof}
 \begin{prop}
 	$f:GL(\mathbb{R}^n) \to GL(\mathbb{R}^n)$, dada for $f(T) = T^{-1}$ é contínua.
 \end{prop}
 \begin{proof}
+	%carro
 \end{proof}
+\subsection{Diferenciação}
 \begin{prop}
 Seja $f: GL(\mathbb{R}^n) \to GL(\mathbb{R}^n)$, dada por $f(T) = T^{-1}$.  Temos $f$ diferenciável.
 \end{prop}
@@ -1019,7 +1023,49 @@ Afirmo que $S_T(H) = Df(T)(H)$. De fato, $S_T$ é linear (confia) e temos \begin
 &=0
 \end{align*}
 	\end{proof}
+\subsection{Integração}
 
 
+\begin{definicao}[Medida Nula]
+	Um conjunto $A\subset \mathbb{R}^n$ tem medida nula se para todo $\varepsilon>0$,  existe uma cobertura enumerável    $\left\{ U_i \right\}_{i\in L}$ de $A$ por retângulos fechados tal que $\displaystyle\sum_{i = 1}^{\infty} v\left(U_i\right) < \varepsilon$.
+\end{definicao}
+
+\begin{definicao}[Conteúdo Nulo]
+	Um conjunto $A\subset \mathbb{R}^n$ tem conteúdo nulo se para todo $\varepsilon>0$,  existe uma cobertura finita    $\left\{ U_i \right\}_{i\in L}$ de  $A$ por retângulos fechados tal que $\displaystyle\sum_{i = 1}^{\infty} v\left(U_i\right) < \varepsilon$.
+\end{definicao}
+\begin{prop}
+	Se $A$ tem conteúdo nulo, então $A$ tem medida nula.
+\end{prop}
+\begin{proof}
+	Se $A$ tem conteúdo nulo, então dado $\varepsilon$,  existe uma cobertura finita $\left\{ U_i \right\}_{i \in L}$ de $A$ tal que $\displaystyle\sum_{i = 1}^{\infty} v\left(U_i\right) < \varepsilon$. Como todo conjunto finito é enumerável, temos $\left\{ U_i \right\}_{i\in L}$ enumerável, logo $A$ tem medida nula.
+\end{proof}
+\begin{prop}
+	Uma união enumerável de conjuntos com medida nula tem medida nula.
+\end{prop}
+\begin{proof}
+	%carro
+\end{proof}
+\begin{prop}
+	Se $A$ é compacto e tem medida nula, então $A$ tem conteúdo nulo.
+\end{prop}
+\begin{proof}
+	%carro
+\end{proof}
+\begin{prop}
+	Se $X\subset \mathbb{R}^m$ tem medida nula, então  para todo $Y \subset \mathbb{R}^m$, o produto cartesiano $X\times Y \subset \mathbb{R}^{m+n}$ tem medida nula.
+\end{prop}
+\begin{proof}
+	Basta provar que se $X\subset \mathbb{R}^n$ tem medida nula, então $X\times \mathbb{R}^m$ tem medida nula. Pois uma cobertura do conjunto $X\times \mathbb{R}^m$ cobre o conjunto $X\times Y \subset X \times \mathbb{R}^m$.
+
+
+	Chamando $C_p =  \displaystyle\prod_{i  =  1}^{m} [-p, p] =\underbrace{ [-p,p] \times [-p,p]\times \cdots \times [-p,p]}_{m \text{ vezes}} \subset \mathbb{R}^m$. Temos $\mathbb{R}^m = \displaystyle\bigcup_{p \in \mathbb{N}} C_p$, logo $X\times \mathbb{R}^m = X\times\displaystyle\bigcup_{p\in \mathbb{N}} C_p = \displaystyle\bigcup_{p\in \mathbb{N}} X\times C_p$. Como é uma união enumerável de conjuntos, basta mostrar que $X\times C_p$ tem medida nula para todo $p\in \mathbb{N}$. 
+
+	Fixando $ p \in \mathbb{N}$, temos $v\left(C_p\right) = (2p)^m$. Dado $\varepsilon > 0$, existe uma cobertura enumerável $\left\{ U_i\right\}_{i\in L}$ de retângulos fechados tal  que $\displaystyle\sum_{i \in L} v\left(U_i\right) < \dfrac{\varepsilon}{(2p)^m}$. Temos $X \times C_p \subset \left( \displaystyle\bigcup_{i \in L} U_i\right) \times C_p = \displaystyle\bigcup_{i \in L} U_i\times C_p$. Como $C_p$ e $U_i$ são retângulos, temos $v\left(U_i\times C_p \right) = v\left( U_i\right) \cdot v\left( C_p\right)$. Logo temos $\displaystyle\sum_{i \in L} v\left(U_i\times C_p\right) = \displaystyle\sum_{i \in L} v\left(U_i\right)\cdot v\left( C_p\right) = \displaystyle\sum_{i \in L} v\left(U_i\right) \cdot (2p)^{m} =  (2p)^{m}\cdot \displaystyle\sum_{i \in L} v\left(U_i\right) < (2p)^{m}\cdot \dfrac{\varepsilon}{(2p)^{m}} = \varepsilon$. Logo $X\times C_p$ tem medida zero para todo $p\in \mathbb{N}$.
+
+
+	Como $X\times \mathbb{R}^n = \displaystyle\bigcup_{p\in \mathbb{N}} X\times C_p$ é uma união enumerável de conjuntos de medida nula, temos  que $X\times \mathbb{R}^n$ tem medida nula.
+
+	
+\end{proof}
 
 \end{document}

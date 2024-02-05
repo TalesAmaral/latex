@@ -1,0 +1,1372 @@
+
+%\documentclass[hidelinks]{article}
+\documentclass[12pt,leqno,twoside]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{tikz}
+\usetikzlibrary{babel,angles,quotes}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{derivative}
+\usepackage{cancel}
+
+\theoremstyle{definition}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{exmp}{Exemplo}[section]
+\newtheorem{lema}{Lema}[section]
+\newtheorem{proposicao}{Proposição}[section]
+\newtheorem{corolario}{Corolário}[section]
+\newtheorem{definicao}{Definição}[section]
+\newtheorem*{obs}{Observação}
+\newcommand{\sen}{\operatorname{sen}}
+
+%%%%EXAMPLE CURVED ARROW%%%
+%\begin{tikzcd}
+%(\bR^{M},0)\rar{F}\arrow[red, bend right]{rr}[black,swap]{H=G\circ F}  &
+%(\bR^{N},0) \rar{G}  & (\bR^{K},0)
+%\end{tikzcd}
+
+
+\providecommand{\circlearrowleft}{\acwopencirclearrow}
+\usepackage{tikz} % pacote grafico
+\usetikzlibrary{through} % circulo passando por ponto, por exemplo.
+\usetikzlibrary{patterns} % preenchimentos
+\usetikzlibrary{intersections} % interseccao entre caminhos
+\usetikzlibrary{matrix} % matriz no tikz
+\usetikzlibrary{cd} % diagrama comutativa
+
+%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%
+
+
+%Mostrar onde referencia foi citada
+%\usepackage[hyperpageref]{backref}
+%\renewcommand{\backref}{}
+%\renewcommand*{\backrefalt}[4]{
+%	\ifcase #1 %
+%	No citation.%
+%	\or
+%	Citation on page #2.%
+%	\else
+%	Citation on pages #2.%
+%	\fi}
+%-------------------
+
+\topmargin 0cm     %1.5    %0.75
+\headsep 1cm
+\headheight 0cm
+\evensidemargin 0.25cm
+\oddsidemargin 0.25cm
+\textwidth 16cm        %16.5
+\textheight 21.6cm     % 21                  %\textheight 22.5cm
+
+
+
+\begin{document}
+
+
+\title{Uma  introdução à geometria diferencial de curvas}
+
+ \author{\sc Tales da Silva Amaral}
+	\address{\sc Tales: UFES, 	Universidade Federal do Esp\'irito Santo,  Av. Fernando Ferrari, 514 - CEP 29.075-910 Vit\'oria, Espirito Santo,  Brazil}
+	\email{tales.amaral@edu.ufes.br}
+	%\email{mfsr83@gmail.com}
+
+	\keywords{xxxx,xxxx}
+	\subjclass{xxx,xxxx,xxx}
+
+ \begin{abstract}
+Nestas notas, iremos abordar conceitos fundamentais das curvas parametrizadas diferenciáveis, como vetor tangente, curva regular, mudança de parâmetro, comprimento de arco, teoria local das curvas  e fórmulas de Frenet, além do teorema fundamental das curvas. Em particular, serão estudadas as propriedades da curvatura e torção das curvas, bem como suas aplicações em outras áreas do conhecimento humano. % Esses tópicos são essenciais para a compreensão de áreas como a geometria diferencial, a física teórica e a engenharia. A teoria das curvas parametrizadas diferenciáveis é uma área fundamental da matemática que descreve as propriedades das curvas em diferentes dimensões.
+ \end{abstract}
+	\maketitle
+
+\section{Introdução}
+A geometria diferencial de curvas  é uma área fundamental da matemática que estuda as propriedades geométricas de curvas suaves através de conceitos fundamentais, como vetor tangente, curva regular, mudança de parâmetro, comprimento de arco, teoria local das curvas planas e fórmulas de Frenet, além do teorema fundamental das curvas.
+As curvas são objetos matemáticos comuns em diversas áreas, definidas como trajetórias contínuas no espaço, e que podem ser parametrizadas por uma função vetorial diferenciável.
+
+\vspace{0.3cm}
+
+Mais especificamente, uma curva parametrizada diferenciável é uma função vetorial de classe $C^k$ que mapeia um intervalo real em um espaço Euclidiano. A função vetorial é geralmente denotada como $\mathbf{r}(t) = \langle x(t), y(t) \rangle$ no plano ou $\mathbf{r}(t) = \langle x(t), y(t), z(t)\rangle$ no espaço,  onde $t$ é o parâmetro que varia no intervalo real. O vetor tangente à curva em um ponto é definido como a derivada da curva no ponto em questão, $\mathbf{T}(t) = \mathbf{r}'(t)$. A curva é dita regular se o vetor tangente é diferente de zero em todos os pontos da curva.
+
+\vspace{0.3cm}
+
+A mudança de parâmetro é uma transformação de uma curva parametrizada em uma nova curva parametrizada por uma função de parâmetro diferente. O comprimento de arco de uma curva é uma medida da distância percorrida pela curva ao longo do tempo, e é definido como a integral da norma do vetor tangente da curva em relação ao parâmetro. A teoria local das curvas planas, tratada na Seção \ref{Scp},  é o estudo das propriedades das curvas em um plano, e é fundamental para a compreensão das curvas em outras dimensões.
+
+\vspace{0.3cm}
+
+As fórmulas de Frenet são um conjunto de equações diferenciais que descrevem a curvatura e a torção de uma curva em termos de vetores tangentes, normais e binormais. Essas equações fornecem informações valiosas sobre a geometria da curva, e são amplamente utilizadas em áreas como a física e a engenharia. O teorema fundamental das curvas planas afirma que a curvatura determina de forma única uma curva plana,  a menos de sua posição no plano. Tal resultado será apresentado no final da Seção \ref{Scp}.
+
+\vspace{0.3cm}
+
+ O estudo dessas curvas é importante para várias áreas da matemática e das ciências, incluindo física, engenharia, computação gráfica e análise de dados. Por exemplo, a geometria diferencial de curvas é fundamental na física teórica, onde é utilizada para descrever as propriedades das partículas subatômicas e as trajetórias de objetos em movimento. Na engenharia, a geometria diferencial de curvas é usada para projetar e otimizar sistemas de controle de movimento, sistemas de navegação e algoritmos de visão computacional. Na computação gráfica  é usada para criar e animar objetos virtuais em 3D. Finalmente, na Geometria diferencial é usada para  estudar as propriedades geométricas de espaços mais complexos, como superfícies e variedades.
+
+\vspace{0.3cm}
+
+Portanto, estudar a a geometria diferencial de curvas no plano e no espaço, assim como suas aplicações nas mais variadas áreas do conhecimento humano,  contribuirá para o desenvolvimento de habilidades matemáticas mais avançadas, essenciais aos alunos de matemática que desejam continuar seus estudos em nível de pós-graduação.
+
+\section{A teoria local das curvas planas}\label{Scp}
+
+
+   \begin{definicao}[Curva Parametrizada Diferenciável]
+	Uma curva parametrizada diferenciável do plano é uma aplicação diferenciável $\alpha$ de classe $C^{\infty}$, de um intervalo aberto $I\subset \mathbb{R}$ em $\mathbb{R}^n$. A variável $t\in I$ é dita parâmetro da curva e o subconjunto de $\mathbb{R}^2$ dos pontos $\alpha(t)$, $t \in I$ é chamado traço da curva.
+\end{definicao}
+\begin{obs}
+	A curva parametrizada diferenciável $\alpha:I\to \mathbb{R}$ associa cada $t$ um ponto $\alpha(t) = (x(t),y(t))$, onde $x(t)$ e $y(t)$ são funções diferenciáveis de classe $C^{\infty}$.
+\end{obs}
+\begin{exmp}
+	A aplicação $$\alpha(t) = (x_0+at, y_0 +bt) = (x_0,y_0)+ t\cdot(a,b), t \in \mathbb{R}$$ com $a^2+b^2 \neq 0$, é uma curva parametrizada diferenciável cujo traço é uma linha reta passando pelo ponto $(x_0,y_0)$, com vetor diretor $(a,b)$.
+	\begin{figure}[H]
+		\center
+
+		\begin{tikzpicture}
+			\fill  (1,3) circle(2pt);
+			\draw[->] (-1, 0) -- (4.2, 0) node[right] {$x$};
+			\draw[->] (0, -1) -- (0, 4.2) node[above] {$y$};
+			\draw[->] (0, 0) -- (1, 2) node[right] {$(a,b)$};
+			\draw[ domain=-0.25:1.75, smooth, variable=\x, blue] plot ({ 1*\x}, {1+2*\x});
+			\draw[->] (1, 3) node[right]{$(x_0,y_0)$} -- (1.5, 4)  ;
+		\end{tikzpicture}
+		\caption{}
+		\label{fig:figura1}
+	\end{figure}
+\end{exmp}
+\begin{exmp}
+
+        As curvas de Bézier possuem aplicação na computação gráfica. No nosso caso, ela está determinada pelos pontos $P_0 = (-1,1), P_1 = (1,-1), P_3 = (2,1.5)$. Sua equação vetorial é dada por $B(t) = (1-t)^2 P_0 +2(1-t)t P_1 +t^2P_2$, para $t\in [0,1]$.
+        \begin{figure}[H]
+		\center
+		\begin{tikzpicture}[scale = 2]
+			\draw[->] (-1.5, 0) -- (3.5, 0) node[right] {$x$};
+			\draw[->] (0, -1.5) -- (0, 1.5) node[above] {$y$};
+			\coordinate (p1) at (-1,1);
+            \coordinate (p2) at (2,1.5);
+            \coordinate (p3) at (1,-1);
+            \draw (p1) circle(0.5pt);
+            \draw (p2) circle(0.5pt);
+            \draw (p3) circle(0.5pt);
+            \draw[ domain=0:1,samples=150, smooth, variable=\x, blue] plot ({(1-\x)^2*(-1) +2*(1-\x)*\x *(1) +(\x)^2 *2 }, {((1-\x)^2)*(1) +2*(1-\x)*\x *(-1) +(\x)^2 *1.5});
+		\end{tikzpicture}
+		\caption{}
+		\label{fig:figura1}
+	\end{figure}
+
+\end{exmp}
+
+\begin{definicao}[Vetor Tangente]
+	Seja $\alpha: I\to \mathbb{R}^2$ uma curva parametrizada diferenciável, que a cada $t\in I$ associa $\alpha(t) = (x(t),y(t))$. O vetor $$\alpha'(t) = (x'(t),y'(t))$$ é chamado vetor tangente a $\alpha$ em $t$.
+\end{definicao}
+
+\begin{definicao}[Curva Regular]
+	Uma curva parametrizada diferenciável $\alpha:I\to \mathbb{R}^2$ é dita regular se para todo $ t \in I$, temos que  $\alpha'(t) \neq 0$.
+\end{definicao}
+\begin{obs}
+	Tomamos $\alpha' \neq 0$ para garantir que a curva não tenha "bicos", ou seja, para que ela seja "suave".
+\end{obs}
+\begin{exmp}
+
+	O caminho abaixo, determinado por $\alpha(t) = (t^3,t^2)$ no intervalo $[-1,1]$ é diferenciável, mas não é regular, pois $\alpha'(0) = 0$.
+	\begin{figure}[H]
+		\center
+
+		\begin{tikzpicture}[scale = 2]
+			\draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+			\draw[->] (0, -1.5) -- (0, 1.5) node[above] {$y$};
+			\draw[ domain=-1.2:1.2,samples=150, smooth, variable=\x, blue] plot ({ \x*\x*\x }, {\x*\x});
+		\end{tikzpicture}
+		\caption{}
+		\label{fig:figura1}
+	\end{figure}
+\end{exmp}
+
+\begin{definicao}
+	Seja $\alpha:I\to \mathbb{R}^2$ uma curva regular e $t_0 \in I$. A reta tangente a $\alpha$ em $t_0$ é a reta que passa por $\alpha(t_0)$ com direção dada por $\alpha'(t_0)$, a saber,  $$ g(r) = \alpha(t_0) +r\alpha'(t_0), r \in \mathbb{R}$$.
+\end{definicao}
+
+\begin{lema}\label{l1} Sejam $\alpha, \beta:I\to \mathbb{R}^2$  curvas regulares.  A função $f:I\to \mathbb{R}$ definida por $f(t)= \langle \alpha(t), \beta(t)\rangle$ é diferenciável e
+	$$\odv{ \langle \alpha(t), \beta(t)\rangle}{t} =  \langle \alpha'(t) , \beta(t) \rangle +  \langle \alpha(t) , \beta'(t) \rangle $$
+\end{lema}
+\begin{proof}
+	Temos $$\langle \alpha(t), \beta(t)\rangle = \sum \alpha_i(t) \cdot \beta_i(t).$$
+	Logo
+	\begin{align*}
+		\odv{\langle \alpha(t), \beta(t)\rangle}{t} &= \sum \left[\alpha_i(t) \cdot \beta_i(t)\right]'\\~\\
+		&= \sum \left[ \alpha_i'(t)\cdot \beta(t)+\alpha_i(t)\cdot \beta'(t)\right] \\~\\
+		&= \sum \left[ \alpha_i'(t)\cdot \beta_i(t)\right] + \sum \left[\alpha_i(t)\cdot \beta_i'(t)\right] \\~\\
+		&= \langle \alpha'(t) , \beta(t) \rangle + \langle \alpha(t) , \beta'(t) \rangle
+	\end{align*}
+
+
+\end{proof}
+\begin{proposicao}
+	Seja $\alpha:I\to \mathbb{R}^2$ uma curva regular. Então $\left|\left|\alpha(t)\right|\right|$ é constante se, e somente se, para cada $t\in I$, o vetor $\alpha'(t)$ é ortogonal a $\alpha(t)$.
+\end{proposicao}
+\begin{proof}
+	 Seja  $c\in \mathbb{R}$ tal que $ ||\alpha(t)|| = c $, para todo $t\in I $.  Logo $ \langle \alpha(t), \alpha(t) \rangle = ||a(t)||^2 = c^2$. Usando o Lema \ref{l1} para derivar ambos os lados da igualdade anterior com respeito a $t$ obtemos $$ \langle \alpha'(t), \alpha(t) \rangle = \frac{1}{2}\odv{ \langle \alpha(t),  \alpha(t) \rangle}{t}  = 0,$$ logo $\alpha'(t)$ é ortogonal a $\alpha(t)$.
+
+	Se o vetor $\alpha'(t)$ é ortogonal a $\alpha(t)$, temos para todo $t\in I$ que $ 0 = \langle a'(t), a(t) \rangle = \frac{ 1}{2}\cdot \odv{ \langle a(t),  a(t) \rangle}{t} $ o que implica em $ \odv{|| \alpha(t)||^2}{t} = 0$ para todo $t\in I$. Como $\odv{||\alpha(t)||^2}{t}$ é identicamente nula, temos $||\alpha(t) ||^2$ constante, i.e., existe $c \in \mathbb{R}$  tal que $||\alpha(t) ||^2 = c$  e $ ||\alpha(t)|| = \sqrt{c}$.
+\end{proof}
+\begin{comment}
+\begin{proposicao}
+	Dada uma bola aberta de centro $(x_c,y_c) \in \mathbb{R}^2$ e raio $d$, denotada por $B_{d}(x_c,y_c)$, existem $\varepsilon>0$ e $\delta>0$ tal que $(x_0-\delta, x_0+ \delta) \times ( y_0 -\varepsilon, y_0 +\varepsilon) = U$ é um retângulo aberto contido em $B_{d}(x,y)$.
+\end{proposicao}
+\begin{proof}
+	Dada a bola aberta $B_{d}(x_0,y_0)\subset \mathbb{R}^2$. Tomando $U = \left(x_c - \dfrac{d}{2}, x_c + \dfrac{d}{2}\right) \times \left(y_c - \dfrac{d}{2}, y_c + \dfrac{d}{2}\right)$. Se $(x,y) \in U$, temos $|x_c - x | < \dfrac{d}{2}$ e $|y_c - y| < \dfrac{d}{2}$. Logo $$ || (x_0,y_0) - (x,y) || \leq | x_0 -x | + |y_0 - y| < d.$$
+	Portanto $U\subset B_{d}(x_0,y_0)$.
+\end{proof}
+\end{comment}
+
+\vspace{0.2cm}
+
+\begin{proposicao}
+	Sejam $\phi: I \to J$ uma função real diferenciável no ponto $a\in I$ e $f: J \to \mathbb{R}^n$ um caminho diferenciável no ponto $b = \phi(a)$. Então $f \circ \phi: I \to \mathbb{R}^n$ é um caminho diferenciável no ponto $a$ e, além disso, $(f\circ \phi)'(a) = \phi'(a)\cdot f'(\phi(a))$.
+\end{proposicao}
+\begin{proof}
+	$(f\circ \phi)(a) = ( (f_1\circ\phi)(a), (f_2\circ\phi)(a), \cdots, (f_n \circ \phi)(a)).$ Logo $$(f\circ \phi)'(a) = ( (f_1\circ\phi)'(a), (f_2\circ\phi)'(a), \cdots, (f_n \circ \phi)'(a)) .$$  Para cara $f_i$, uma função real, temos $(f_i\circ \phi)'(a) = \phi'(a) \cdot f_i'(\phi(a))$. Portanto $(f\circ \phi)'(a) = \phi'(a)\cdot ( f_1'(\phi(a)), f_2'(\phi(a)),\cdots, f_n'(\phi(a)) ) = \phi'(a)\cdot f'(\phi(a))$.
+\end{proof}
+\begin{comment}
+\begin{proposicao}
+	Sejam $f: A \subset \mathbb{R}^2 \to \mathbb{R}^2$, $A$ aberto, e $\gamma:I \to \mathbb{R}^2$, tal que $\gamma(I) \subset A$. Nestas condições, se $\gamma$ for diferenciável em $t_0$ e $f$ em $p_0 = \gamma(t_0)$, então a composta $F(t) = f(\gamma(t))$ será diferenciável em $t_0$ e vale a regra da cadeia $$ F'(t_0) = df_{\gamma(t)} ( \gamma'(t_0)).$$
+\end{proposicao}
+\begin{proof}
+	Como $f$ é diferenciável em $p_0$, temos para todo $w\in A$ que $f(p_0+w) - f(p_0) = df_{p_0}(w) + R(w)$, com $df_{p_0}$ aplicação linear e $\lim_{w \to 0}\frac{R(w)}{||w||} = 0 $. Definindo $p = w+p_0$ , temos $f(p) - f(p_0) = df_{p_0}(p-p_0) + R(p-p_0)$. Tomando $p = \gamma(t)$ para algum $t\in I$ e $p_0 = \gamma(t_0)$, temos $f(\gamma(t)) - f(\gamma(t_0)) = df_{\gamma(t_0)}(\gamma(t) - \gamma(t_0)) +R(\gamma(t) - \gamma(t_0))$. Dividindo por $t-t_0$ com $t\neq t_0$:\begin{align*}
+		\dfrac{f(\gamma(t)) - f(\gamma(t_0))}{t-t_0} &= \dfrac{df_{\gamma(t_0)}(\gamma(t) - \gamma(t_0)) +R(\gamma(t) - \gamma(t_0))}{t-t_0}\\~\\
+		&= df_{\gamma(t_0)}\left(\dfrac{\gamma(t) - \gamma(t_0)}{t-t_0}\right) +\dfrac{R(\gamma(t) - \gamma(t_0))}{t-t_0}\cdot \dfrac{|| \gamma(t) -\gamma(t_0)||}{ ||\gamma(t) -\gamma(t_0) || }\\~\\
+		&= df_{\gamma(t_0)}\left(\dfrac{\gamma(t) - \gamma(t_0)}{t-t_0}\right) +\dfrac{R(\gamma(t) - \gamma(t_0))}{||\gamma(t) -\gamma(t_0) || }\cdot \dfrac{|| \gamma(t) -\gamma(t_0)||}{ \pm|t-t_0|}\\~\\
+		&= df_{\gamma(t_0)}\left(\dfrac{\gamma(t) - \gamma(t_0)}{t-t_0}\right) \pm\dfrac{R(\gamma(t) - \gamma(t_0))}{||\gamma(t) -\gamma(t_0) ||  }\cdot\left|\left| \dfrac{ \gamma(t) -\gamma(t_0)}{ t-t_0}\right|\right| \\~\\
+	\end{align*}
+	Portanto:\begin{align*}
+		\lim_{t\to t_0} \dfrac{f(\gamma(t)) - f(\gamma(t_0))}{t-t_0} 	&=\lim_{t\to t_0}  df_{\gamma(t_0)}\left(\dfrac{\gamma(t) - \gamma(t_0)}{t-t_0}\right) \pm\cancelto{0}{\dfrac{R(\gamma(t) - \gamma(t_0))}{||\gamma(t) -\gamma(t_0) ||  }}\:\:\cdot\left|\left|\cancelto{\gamma'(t_0)}{ \dfrac{ \gamma(t) -\gamma(t_0)}{ t-t_0}}\right|\right| \\~\\
+		&= df_{\gamma(t_0)}( \gamma'(t_0))
+	\end{align*}
+	Logo $F'(t) =\lim_{t\to t_0} \dfrac{F(t) - F(t_0)}{t-t_0}  =\lim_{t\to t_0} \dfrac{f(\gamma(t)) - f(\gamma(t_0))}{t-t_0}  = df_{\gamma(t_0)}( \gamma'(t_0))$.
+
+\end{proof}
+\begin{proposicao}
+	Seja $f :S\subset\mathbb{R}^n \to \mathbb{R} $ uma função diferenciável definida num aberto $S$. Para dois pontos $p,p_0 \in S$, seja $[p_0,p]$ o caminho retilíneo que liga eles. Se $[p_0,p]\subset S$, então existe $c\in [p_0,p]$ tal que $$f(p) - f(p_0) = df_c(p -p_0)$$.
+\end{proposicao}
+\begin{proof}
+	Seja $\gamma(t) = p_0 + (p -p_0)\cdot t$ para $t\in [0,1]$ o segmento ligando $p_0$ a $p$. Defina $\phi: [0,1] \to \mathbb{R}$ como $\phi(t) = f(\gamma(t))$. Temos $\phi$ contínua e diferenciável, pois é composição de funções diferenciáveis , e $\phi(0) = f(p_0)$ e $\phi(1) = f(p)$. Logo pelo Teorema do Valor Médio, existe $k \in (0,1)$ tal que $$\phi(1) - \phi(0) = \phi'(k)\cdot ( 1-0).$$
+	Como $\phi(t) = f(\gamma(t))$, temos pela regra da cadeia que $\phi'(t) = df_{\gamma(t)} (\gamma'(t))$, logo temos $ \phi(1) - \phi(0) = f(p)-f(p_0) = \phi'(k) = df_{\gamma(k)}(\gamma'(k)) = df_{\gamma(k)}(p-p_0) $. Definindo $c = \gamma(k)$, temos $f(p) - f(p_0) = df_{c}(p-p_0)$ para algum $c\in [p_0, p]$.
+\end{proof}
+	\begin{proposicao}
+		Seja $f:A\subset \mathbb{R}^2 \to \mathbb{R}$ uma função diferenciável de classe $C^k\: (k\geq 1)$. Seja $(x_0,y_0)\in A$ e $f(x_0,y_0) = c$. Verifique que, se $\pdv{f}{y}(x_0,y_0) \neq 0$, então existe uma vizinhança $I$ de $x_0$ em $R$, $I \subset A$ e uma única função $\xi:I\to \mathbb{R}$ diferenciável de classe $C^k$ tal que $\xi(x_0) = y_0$ e $f(x, \xi(x)) = c$, para todo $x\in I$.
+	\end{proposicao}
+	\begin{proof}
+		Supondo $\pdv{f}{y}(x_0,y_0) > 0$. Como $\pdv{f}{y}(x_0,y_0)$ é contínua, existe uma bola $B_{d}(x_0,y_0)$ tal que $(x,y) \in B_{d}(x_0,y_0) \implies \pdv{f}{y}(x,y)> 0$. Logo existem $\delta> 0$ e $\varepsilon>0$ tal que pondo $I = (x_0-\delta, x_0+\delta)$ e $J = (y_0-\varepsilon, y_0+\varepsilon)$, o retângulo $ U  = (I\times J) $ estará contido em $ B_{d}(x_0, y_0)$. Logo fixando $x\in I$, a função $y\mapsto f(x,y)$ é crescente em $\overline{J}$ (fecho de $J$). Como $f(x_0,y_0) = c$, temos $f(x_0, y_0 -\varepsilon) < c $ e $f(x_0, y_0 +\varepsilon) > c$. Como $f$ é contínua, temos que existem retângulos $U_1 = I_1\times J_1$ e $U_2 = I_2\times J_2$ tal que $(x,y) \in U_1 \implies f(x,y) < c$ e  $(x,y) \in U_2 \implies f(x,y) > c$ . Tomando $I' = I_1 \cap I_2$, temos $x\in I' \implies f(x,y_0-\varepsilon) <c \land f(x,y_0+\varepsilon)>c$. Definindo $g:\overline{J}\to \mathbb{R}$ como $y\mapsto f(x, y)$, com $x \in I'$.  Temos $g(y_0 -\varepsilon)<c$ e $g(y_0 +\varepsilon)>c$, logo pelo Teorema do Valor Intermediário existe um único $\xi(x) \in J$ tal que $\xi(x) = f(x,\xi(x)) = c$ para todo $x\in I'$.  Temos portanto a função $\xi:I'\to J$ tal que para todo $x\in I' $, temos $f(x, \xi(x)) = c$. Se $k =\xi(x+h) - \xi(x)$, temos $k +\xi(x) = \xi(x+h)$, logo $f(x+h, \xi(x+h)) = f(x+h, k+\xi(x)) = f(x, \xi(x)) =  c.$ Temos pelo Teorema do Valor Médio que existe um $\theta \in (0,1)$ tal que $ 0= f(x + h, \phi(x)+k) - f(x,\phi(x)) = df_{\gamma(\theta)}(h, k)$, com $\gamma(t) =(x+ht, \phi(x) + kt)$ para $t\in [0,1]$. Lembrando que $df_{p}(w) = \left(\pdv{f}{x}(p) , \pdv{f}{y}(p) \right) \cdot w$. Logo temos $0 = df_{\gamma(\theta)}(h,k) = \left(\pdv{f}{x}(x+ \theta h , \xi(x) + \theta k) , \pdv{f}{y}(x+\theta h , \xi(x) + \theta k) \right)\cdot (h,k) = \pdv{f}{x}( x+\theta h, \xi(x) +\theta k)\cdot h+ \pdv{f}{y}( x+\theta h, \xi(x) +\theta k)\cdot k $. Logo $$\dfrac{\xi(x+h) - \xi(x)}{h} = \dfrac{k}{h} = \dfrac{ \pdv{f}{x}( x+\theta h, \xi(x) +\theta k)}{ \pdv{f}{y}( x+\theta h, \xi(x) +\theta k)}$$
+	\end{proof}
+\end{comment}
+
+
+\vspace{0.2cm}
+
+\begin{proposicao}
+	Sejam $I$ e $J$ intervalos abertos de $\mathbb{R}$, $\alpha:I\to \mathbb{R}^2$ uma curva regular e $h:J\to I$ uma função diferenciável de classe $C^{\infty}$, cuja derivada de primeira ordem é não nula em todos os pontos de $J$ e tal que $h(J) = I$. Então a função composta $$\beta = \alpha \circ h: J \to \mathbb{R}^2$$ é uma curva regular que tem o mesmo traço que $\alpha$.
+\end{proposicao}
+\begin{proof}
+	Temos $h(J) = I$. O traço de $\alpha$ é o conjunto $A = \alpha(I)$. O traço de $\beta$ é $B =\beta(J) = \alpha(h(J)) = \alpha(I) = A$. Logo $\alpha$ e $\beta$ tem o mesmo traço. Como $\beta'(s) = h'(s) \cdot \alpha'( h(s))$, temos $\beta$ diferenciável de classe $C^{\infty}$ com $\beta'(s) \neq 0$ para todo $s\in J$.
+\end{proof}
+
+\vspace{0.2cm}
+
+\begin{definicao}[Reparametrização]
+	A função composta $\beta:\alpha \circ h:J\to \mathbb{R}^2$ da proposição anterior é chamada reparametrização de $\alpha$ por $h$. A função $h$ é dita mudança de parâmetro.
+\end{definicao}
+
+
+\vspace{0.2cm}
+
+
+\begin{proposicao}
+	Considere  $h:J\to I$ com $h(J) = I$, diferenciável de classe $C^{\infty}$ uma mudança de parâmetro com $h'(s) \neq 0$ para todo $s\in J$. Temos que $h$ estritamente crescente ou decrescente.
+\end{proposicao}
+\begin{proof}
+	 Suponha sem perda de generalidade que $h'(s) > 0$ para algum $s\in J$. Se existir algum $s'\in J$ com $h'(s') < 0$, segue do fato de que  $h'(s)$ é contínua, e do  Teorema do Valor Intermediário que existe um $c\in J$ tal que $h'(c) = 0$, uma contradição, pois  $h'(s) \neq 0$ para todo $s\in J$. Logo $h$ é estritamente crescente ou decrescente.
+\end{proof}
+
+
+\vspace{0.2cm}
+
+
+\begin{proposicao}
+	Considere  $h:J\to I$ com $h(J) = I$, diferenciável de classe $C^{\infty}$ uma mudança de parâmetro com $h'(s) \neq 0$ para todo $s\in J$. Temos que $h$ é bijetora.
+\end{proposicao}
+\begin{proof}
+	Como $h(J) = I$, temos que $h$ é sobrejetora. Suponha que $h(s) = h(s')$ com $s\neq s'$. Temos pelo teorema do valor médio que existe $c\in (s,s')$ tal que $ 0 = h(s) - h(s') = h'(c) \cdot(s-s') \implies h'(c) = 0$. Uma contradição.
+\end{proof}
+
+
+\vspace{0.2cm}
+
+
+\begin{proposicao}
+	Se $\beta: J \to \mathbb{R}^2$ é uma reparametrização de $\alpha:I\to \mathbb{R}^2$ por $h:J\to I$, então $\alpha$ é uma reparametrização de $\beta$ por $h^{-1}$
+\end{proposicao}
+\begin{proof}
+	Como $\beta$ é reparametrização de $\alpha$ por $h$, temos $\beta(s) = \alpha(h(s))$. Como $h$ é bijetora, temos que existe uma função inversa $h^{-1}: I\to J$ também bijetora. Logo $\left(\beta \circ h^{-1}\right) (s)  = \beta(h^{-1}(s)) =  \alpha(h(h^{-1}(s)))  = \alpha(s)$ para todo $s\in I$. Como $h^{-1}$ é diferenciável de classe $C^{\infty}$ e $h^{-1}(I) = J$, temos que $\alpha$ é uma reparametrização de $\beta$ por $h^{-1}$.
+\end{proof}
+
+
+\vspace{0.2cm}
+
+
+
+\begin{definicao}[Orientação]
+	A orientação de uma curva regular plana $\alpha$ é o sentido do percurso do traço de $\alpha$.
+\end{definicao}
+
+\vspace{0.2cm}
+
+
+\begin{proposicao}
+	Seja $\beta$ uma reparametrização de $\alpha$ por $h$. Se $h$ é estritamente crescente, então $\beta$ e $\alpha$ tem a mesma orientação.
+\end{proposicao}
+\begin{proof}
+	Como $\beta$ é uma reparametrização por $h$, temos que $\beta(s) = \alpha(h(s))$, logo $\beta'(s) = h'(s) \cdot \alpha'( h(s))$. Se $h'(s) > 0 $, temos que $\beta'(s)$ tem mesmo sentido de $\alpha'(h(s))$, logo  $\beta$ e $\alpha$  tem mesma orientação.
+\end{proof}
+
+
+\vspace{0.2cm}
+
+
+\begin{proposicao}
+	Seja $\beta$ uma reparametrização de $\alpha$ por $h$. Se $h$ é estritamente decrescente, então $\beta$ e $\alpha$ tem orientação opostas.
+\end{proposicao}
+\begin{proof}
+	Como $\beta$ é uma reparametrização por $h$, temos que $\beta(s) = \alpha(h(s))$, logo $\beta'(s) = h'(s) \cdot \alpha'( h(s))$. Se $h'(s) < 0 $, temos que $\beta'(s)$ tem  sentido oposto de $\alpha'(h(s))$, logo  $\beta$ e $\alpha$ tem orientação oposta.
+\end{proof}
+
+\vspace{0.2cm}
+
+\begin{definicao}[Comprimento de arco]
+	A aplicação $s(t) = \displaystyle\int_{t_0}^{t}||\alpha'(t)|| dt$ é por definição o  comprimento de arco da curva $\alpha$ a partir de $t_0$.
+\end{definicao}
+
+\vspace{0.2cm}
+
+\begin{obs}
+	Se $\alpha$ for diferenciável de classe $C^{\infty}$, então a aplicação $s$ é diferenciável de classe $C^{\infty}$.
+\end{obs}
+
+\vspace{0.2cm}
+
+\begin{definicao}[Curva parametrizada pelo comprimento de arco]
+	A curva regular $\alpha:I \to \mathbb{R}^2$ é dita parametrizada pelo comprimento de arco, se para cada $t_0 ,t_1 \in I, t_0\leq t_1$ o comprimento do arco da curva $\alpha$ de $t_0$ a $t_1$ é igual a $t_1-t_0$. Isto é $$\int_{t_0}^{t_1} ||\alpha'(t) || dt = t_1 - t_0.$$
+\end{definicao}
+
+\vspace{0.2cm}
+
+\begin{proposicao}
+	Uma curva regular $\alpha: I \to \mathbb{R}^2$ está parametrizada pelo comprimento de arco se, e somente se, $  ||\alpha'(t) || = 1$, para todo $t\in I$.
+\end{proposicao}
+\begin{proof}
+	Fixe $t_0\in I$ e considere  $s(t) =\displaystyle\int_{t_0}^{t} || \alpha'(t) || dt$.  Se $\alpha:I\to \mathbb{R}$ está parametrizada pelo comprimento de arco,  temos $s(t) = t - t_0$. Se $t_0 >t $, temos $s(t) = \displaystyle\int_{t_0}^{t} ||\alpha'(t) || dt =  -\displaystyle \int_{t}^{t_0} ||\alpha'(t) || dt = -(t_0 - t) = t-t_0$. Logo $s(t) = t-t_0$ para todo $t$, o que implica em  $s'(t) = ||\alpha'(t)|| = 1$.
+
+	Se $||\alpha'(t)|| = 1$ para todo $t\in I$, temos para $t_0, t_1 \in I$ que $\displaystyle \int_{t_0}^{t_1} ||\alpha'(t)||dt = \int_{t_0}^{t_1}dt = t_1 - t_0$. Logo $\alpha$ é parametrizada pelo comprimento de arco.
+\end{proof}
+
+\vspace{0.2cm}
+
+
+\begin{proposicao}
+	Seja $\alpha:I\to\mathbb{R}^2$ uma curva regular e $s:I\to J\subset \mathbb{R}$ com $s(I) = J $ a função comprimento de arco de $\alpha$ a partir de $t_0$. Então existe a função inversa $h:J \to I$ de $s$,  e $\beta = \alpha \circ h$ é uma reparametrização de $\alpha$, onde $\beta$ está parametrizada pelo comprimento de arco.
+\end{proposicao}
+\begin{proof}
+	Como $\alpha$ é uma curva regular, temos $\forall t\in I (\alpha'(t) \neq 0 \implies ||\alpha'(t) || > 0 )$. Logo se $s(t) = \displaystyle\int_{t_0}^{t} ||\alpha'(t) || dt$, temos $s'(t) = ||\alpha'(t)|| > 0$ para todo $t$. Logo $s$ é estritamente crescente, portanto injetora.  Como $s(I) = J$, temos $s$ sobrejetora e injetora, portanto $s$ é bijetora, logo admite inversa. Seja $h:J\to I$ a inversa de $s$. Temos $\forall t\in I ( h(s(t)) = t)$, logo $ s'(t)\cdot h'(s(t)) = 1 \implies h'(s(t)) =\dfrac{1}{s'(t)} = \dfrac{1}{||\alpha'(t)||} > 0 $ para todo $t\in I$. Como $s(I) = J$, temos para todo $t'\in J$  que existe um $t\in I$ tal que $s(t) = t'$, logo $ h'( t') = h'(s(t)) = \dfrac{1}{||\alpha'(t)||} > 0$ para todo $t'\in J$. Logo temos $h'(t) \neq 0$ para todo $t\in J$. Portanto temos $\beta(t) = \alpha(h(t))$ uma reparametrização de $\alpha$, pois $h$ é diferenciável de classe $C^{\infty}$, $h(J) = I$ e $h'(t)  \neq 0$ para todo $t\in J$. Temos $\beta'(t) = h'(t)\cdot \alpha'(h(t)) \implies ||\beta'(t) || = |h'(t)| \cdot || \alpha'(h(t))||  = h'(t) \cdot || \alpha'(h(t))|| $. Como $s'(t) = || \alpha'(t)||$, temos $s'(h(t)) = || \alpha'(h(t)) || $. Logo $||\beta'(t)|| = h'(t) \cdot || \alpha'(h(t))|| = h'(t)\cdot s'(h(t)) = \left[ s(h(t))\right]' = \left[ t \right]' = 1$ para todo $t\in J$. Como $||\beta'(t) || = 1$ para todo $t\in J$, temos que $\beta$ está parametrizada pelo comprimento de arco.
+\end{proof}
+
+\vspace{0.2cm}
+
+\begin{definicao}[Vetor tangente]
+	O vetor tangente a uma curva parametrizada pelo comprimento de arco $\alpha$ é dado por $t(s)  = \alpha'(s)  = (x'(s), y'(s))$. Temos $|| t(s)|| = ||\alpha'(s) || = 1$.
+\end{definicao}
+
+\vspace{0.2cm}
+
+\begin{definicao}[Vetor Normal]
+	O vetor normal $n(s)$ é o vetor unitário ortogonal a $t(s)$, tal que a base canônica tenha a mesma orientação que a base $\left\{ t(s) , n(s)\right\}$. Logo temos $n(s) = ( -y'(t), x'(t))$.
+\end{definicao}
+
+\vspace{0.2cm}
+
+\begin{obs}
+	O conjunto de vetores $\{n(s), t(s)\}$ é dito referencial de Frenet da curva $\alpha$ em $s$.
+
+\end{obs}
+
+\vspace{0.2cm}
+
+\begin{exmp}
+	Dada a curva $ \alpha(s) = ( \sen(s)   ,  \cos(s)  )$ (circunferência), temos $\alpha'(s) = (\cos(s), -\sen(s) ) \implies || \alpha'(s)|| = 1$. Logo temos $t(s) = (\cos(s) , -\sen(s))$ e $n(s) = ( \sen(s) , \cos(s))$.
+	\begin{figure}[H]
+		\center
+
+		\begin{tikzpicture}[scale = 2]
+			\coordinate (p) at ({sqrt(2)/2} ,{sqrt(2)/2} );
+			\draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+			\draw[->] (0, -1.5) -- (0, 1.5) node[above] {$y$};
+			\draw[ domain = -500:500,samples=150, smooth, variable=\x, blue] plot ({ sin(\x) }, { -cos(\x)});
+			\fill (p) circle(0.5pt);
+			\draw[->] (p) -- ({sqrt(2)} ,{sqrt(2)} );
+			\draw[->] (p) -- ({sqrt(2)} ,0 );
+
+
+		\end{tikzpicture}
+		\caption{}
+		\label{fig:figura1}
+	\end{figure}
+\end{exmp}
+
+\vspace{0.2cm}
+
+\begin{definicao}[Reta Normal]
+	A reta normal a $\alpha$ em $s_0$ é a reta que passa por $\alpha(s_0)$ na direção de $n(s_0)$.
+\end{definicao}
+
+\vspace{0.2cm}
+
+\begin{obs}
+	Como $t(s)$ é unitário, temos que $||t(s)||$ é constante, logo $t'(s)$ é ortogonal a $t(s)$. Como $t'(s)$ é ortogonal a $t(s)$, temos que $t'(s)$ é paralelo a $n(s)$.
+\end{obs}
+
+\vspace{0.2cm}
+
+\begin{definicao}[Curvatura]
+	Seja $\alpha$ uma curva regular parametrizada pelo comprimento de arco. Uma vez que  $t'(s)$ é paralelo a $n(s)$, existe uma aplicação $k(s)$ tal que $$t'(s) = k(s)n(s).$$ A aplicação $k(s)$ é denominada curvatura de $\alpha$ em $s$.
+\end{definicao}
+
+\vspace{0.2cm}
+
+\begin{obs}
+	Temos que $|| \alpha''(s) || = || t'(s) || = || k(x) n(s)|| = |k(s)| \cdot || n(s)|| = |k(s)|$. Como $|k(s)| = ||\alpha''(s)||$, temos que $|k(s)|$ indica a velocidade com que $\alpha'(s) = t(s)$ muda de direção.
+\end{obs}
+
+\vspace{0.2cm}
+
+\begin{obs}
+	Temos $t'(s) = k(s) n(s)$. Aplicando o produto interno em ambos os lados, temos $\langle t'(s), n(s) \rangle = \langle k(s) n(s), n(s) \rangle = k(s) || n(s)||^2 = k(s)$, logo $k(s) = \langle t'(s),n(s) \rangle = \langle \alpha''(s), n(s) \rangle$. Logo $$k(s) = -x''(s) y'(s) + y''(s) x'(s).$$ De forma análoga, como $n'(s)$ é ortogonal a $n(s)$, temos $ n'(s) = k'(s) t(s) \implies  k'(s) = \langle n'(s), t(s) \rangle = -y''(s)x'(s) + x''(s) y'(s) = -k(s) $. Logo $$n'(s) = -k(s) \cdot t(s).$$
+\end{obs}
+
+\vspace{0.2cm}
+
+\begin{definicao}[Fórmulas de Frenet]
+	Se $\alpha:I\to \mathbb{R}^2$ é uma curva regular, parametrizada pelo comprimento de arco, então o referencial de Frenet $t(s), n(s)$ satisfaz as equações \begin{align*} t'(s) &= k(s)n(s), \\ n'(s) &= -k(s) t(s),\end{align*}
+	que são as fórmulas de Frenet de uma curva plana.
+\end{definicao}
+
+
+\vspace{0.2cm}
+
+	Dada uma curva regular parametrizada pelo comprimento de arco, $\alpha:I\to \mathbb{R}^2$. Fixando $s_0\in I$ e considerando os vetores $\alpha'(s_0)$ e $\alpha'(s_0+h)$, com $s_0+h\in I$. Se $\theta(h)$ é o ângulo entre eles, com $0\leq \theta(h) \leq \pi$, então $\cos \theta(h)\cdot || \alpha'(s_0)|| \cdot || \alpha'(s_0+h)|| = \langle \alpha'(s_0), \alpha'(s_0+h) \rangle \implies \cos \theta(h) =  \langle \alpha'(s_0), \alpha'(s_0+h) \rangle $. Como \begin{align*}
+	||  \alpha'(s_0+h) - \alpha'(s_0) ||&= \sqrt{ \langle   \alpha'(s_0+h) - \alpha'(s_0) ,   \alpha'(s_0+h) - \alpha'(s_0)  \rangle } \\~\\
+		&= \sqrt{ ||\alpha'(s_0) ||^2  -2 \langle \alpha'(s_0), \alpha'(s_0+h) + || \alpha'(s_0+h)||^2 \rangle} \\~\\
+	&= \sqrt{ 2 - 2\langle \alpha'(s_0), \alpha'(s_0+h) \rangle} \\~\\
+		&= \sqrt{ 2 - 2\cos \theta(h) } \\~\\
+		&= 2\sqrt{\dfrac{1 - \cos \theta(h)}{2}} \\~\\
+	&= 2\sen \dfrac{\theta(h)}{2}.\end{align*}
+	Logo para $h>0$ temos $\dfrac{|| \alpha'(s_0 +h) - \alpha'(s_0)||}{h} = \left|\left| \dfrac{\alpha'(s_0 +h) - \alpha'(s_0)}{h}\right|\right| = \dfrac{2\sen\frac{\theta(h)}{2}}{h}$. Portanto  \begin{align*}
+		|| \alpha''(s_0) || &= \lim_{h\to 0^{+}} \left|\left| \dfrac{ \alpha'(s_0 + h) - \alpha'(s_0) }{h}\right|\right| \\~\\
+		&= \lim_{h\to 0^{+}} \dfrac{2}{h}\sen \dfrac{\theta(h)}{2}\\~\\
+		&= \lim_{h\to 0^{+}} \dfrac{\theta(h)}{h} \cdot \dfrac{\sen \frac{\theta(h)}{2} }{ \frac{\theta(h)}{2} }.
+	\end{align*}
+	Para $h=0$, temos $\cos \theta(0) = \langle \alpha'(s_0),  \alpha'(s_0) \rangle  = 1 \implies \cos \theta(0) = 1 \implies \theta(0) = 0$. Logo \begin{align*}
+		|| \alpha''(s_0) || &= \lim_{h\to 0^{+}} \left|\left| \dfrac{ \alpha'(s_0 + h) - \alpha'(s_0) }{h}\right|\right| \\~\\
+		&= \lim_{h\to 0^{+}} \dfrac{\theta(h)}{h} \cdot \dfrac{\sen \frac{\theta(h)}{2} }{ \frac{\theta(h)}{2} }.\\~\\
+		&= \lim_{h\to 0^{+}} \dfrac{\theta(h)}{h} \cdot \lim_{h\to 0^+}\dfrac{\sen \frac{\theta(h)}{2} }{ \frac{\theta(h)}{2} }.\\~\\
+		&= \lim_{h\to 0^{+}} \dfrac{\theta(h)}{h}
+	\end{align*}
+
+	Conclui-se que $|k(s_0)| = || \alpha''(s_0) || = \displaystyle\lim_{h\to 0^+} \dfrac{\theta(h)}{h}$.
+
+\begin{color}{red}
+CORRIGIDO ATÉ AQUI.
+\end{color}
+
+	\begin{definicao}[Referencial de Frenet para uma curva qualquer]
+		Seja $\alpha: I \to \mathbb{R}^2$ uma curva regular de parâmetro qualquer $r\in I$. Seja $\beta:J \to \mathbb{R}^2$ uma reparametrização de $\alpha$ pelo comprimento de arco $s$. Se $t_{\beta}, n_{\beta}$ é o referencial de Frenet de $\beta$ e $k_\beta (s)$ a curvatura, então definimos $t_{\alpha} = t_{\beta}(s(r))$, $n_{\alpha} = n_{\beta}(s(r))$ é o referêncial de Frenet e  $k_{\alpha} = k_{\beta}(s(r))$ é a curvatura.
+	\end{definicao}
+	\begin{proposicao}
+		Seja $\alpha:I\to \mathbb{R}^2$ definida por $\alpha = (x(r), y(r)), r\in I$,  então \begin{align*} t(r) = \dfrac{ (x'(r) ,y'(r) )}{||(x'(r) ,y'(r) ) || } && n(r) = \dfrac{ (-y'(r) ,x'(r) )}{||(x'(r) ,y'(r) ) || }\end{align*}
+			$$k(r) = \dfrac{-x''y' +x'y''}{|| (x'(r),y'(r)) ||^3}$$
+	\end{proposicao}
+	\begin{proof}
+		Se $\beta(s)$ é uma reparametrização de $\alpha$ pelo comprimento de arco $s(r) = \displaystyle\int_{s_0}^{r}|| \alpha'(x)|| dx$. Temos $s'(r) = || \alpha'(r)||$. Como $\beta(r) = \alpha(s^{-1}(r))$, temos $\beta(s(r)) = \alpha(r)$. Derivando, obtemos $s'(r) \cdot \beta'(s(r)) = \alpha'(r) \implies \beta'(s(r)) = \dfrac{\alpha'(r)}{s'(r)} = \dfrac{\alpha'(r)}{||\alpha'(r)||} = \dfrac{(x'(r), y'(r))}{|| (x'(r),y'(r))|| } \implies t_{\beta}(s(r)) = t_{\alpha}(r) = \dfrac{(x'(r), y'(r))}{|| (x'(r),y'(r))|| }$. Pela definição de vetor normal, temos $n_{\beta}(s(r)) = n_{\alpha}(r) = \dfrac{(-y'(r), x'(r))}{|| (x'(r),y'(r))|| }$. Temos $k_{\alpha}(r) = k_{\beta}(s(r)) = \langle t_{\beta}'(s(r)), n_{\beta}(s(r)) \rangle = \langle t_{\alpha}'(r), n_\alpha(r)\rangle$. Como $s'(r) \cdot \beta'(s(r)) = \alpha'(r) $, derivando novamente, obtemos $s''(r)\cdot \beta'(s(r)) + \beta''(s(r)) \cdot \left[s'(r)\right]^2 = s''(r) \cdot t_{\alpha}(r) + t'_{\alpha}(r) \cdot || \alpha'(r)||^2 = \alpha''(r)\implies t'_{\alpha}(r) =\dfrac{ \alpha''(r) -  s''(r) \cdot t_\alpha(r)}{||\alpha'(r) ||^2} $. Como $s'(r) = || \alpha'(r)|| \implies \left[ s'(r) \right]^2 = ||\alpha'(r)||^2 = \langle \alpha'(r) , \alpha'(r) \rangle \implies  2s'(r) \cdot s''(r) = 2\langle \alpha''(r), \alpha'(r) \rangle \implies s''(r) = \dfrac{\langle \alpha''(r) , \alpha'(r) \rangle}{||\alpha'(r)||}$. Temos \begin{align*}
+			k_{\alpha}(r) &= k_{\beta}(s(r)) \\~\\
+			&= \langle t'_{\alpha}(r) , n_{\alpha}(r) \rangle \\~\\
+			&= \left\langle \dfrac{ \alpha''(r) -  s''(r) \cdot t_\alpha(r)}{||\alpha'(r) ||^2} , n_{\alpha}(r) \right\rangle \\~\\
+			&= \dfrac{\langle \alpha''(r) -  s''(r) \cdot t_\alpha(r) , n_{\alpha}(r) \rangle}{|| \alpha'(r) ||^2 } \\~\\
+			&= \dfrac{\langle \alpha''(r)  , n_{\alpha} \rangle -s''(r) \cdot \cancelto{0}{\langle t_\alpha(r) , n_{\alpha}(r) \rangle}}{|| \alpha'(r) ||^2 } \\~\\
+			&= \dfrac{\langle \alpha''(r)  , n_{\alpha} \rangle }{|| \alpha'(r) ||^2 } \\~\\
+			&= \dfrac{\left\langle (x''(r), y''(r))  , \dfrac{(-y'(r), x'(r))}{|| \alpha'(r) ||} \right\rangle }{|| \alpha'(r) ||^2 } \\~\\
+			&= \dfrac{ x'(r)\cdot y''(r) - x''(r) y'(r) )  }{|| \alpha'(r) ||^3 } \\~\\
+			&= \dfrac{ x'(r)\cdot y''(r) - x''(r) y'(r) )  }{|| (x'(r), y'(r))  ||^3 } \\~\\
+		\end{align*}
+	\end{proof}
+	\begin{definicao}[Raio de curvatura]
+		Se $\alpha(s)$ é uma curva regular de curvatura $k(s)\neq 0$, a quantidade $\rho(s) = \dfrac{1}{| k(s)|}$. é denominada raio de curvatura de $\alpha$ em $s$.
+	\end{definicao}
+	\begin{definicao}[Círculo osculador]
+		Dado uma curva regular $\alpha(s)$ de raio de curvatura $\rho(s) = \dfrac{1}{|k(s)|}, k(s) \neq 0 $, o círculo de raio $\rho(s)$ e centro $$c(s) = \alpha(s) + \dfrac{1}{k(s)} n(s)$$ é denominado círculo osculador e $c(s)$ é dito centro de curvatura.
+	\end{definicao}
+	\begin{definicao}[evoluta]
+		Dada uma curva $\alpha(s)$ de cetro de curvatura $c(s) = \alpha(s) + \dfrac{1}{k(s)} n(s)$ no ponto $s$. Temos que a curva $\beta(s) = c(s)$ é chamada evoluta de $\alpha$.
+	\end{definicao}
+
+	\begin{proposicao}
+		Dada uma função diferenciável $k:I \subset R \to \mathbb{R}$, existe uma curva regular $\alpha(s)$, parametrizada pelo comprimento de arco $s$, cuja curvatura é $k(s)$.
+
+	\end{proposicao}
+	\begin{obs}
+		Como $ t(s) = \alpha'(s)$ é unitário numa curva regular parametrizada $\alpha$, temos que existe para todo $s$ um $\theta(s)$, tal que $t(s) = (\cos(\theta(s)), \sen(\theta(s)))$. Logo $t'(s) = \theta'(s) \cdot(-\sen(\theta(s)), \cos(\theta(s))) = \theta'(s) \cdot n(s)$. Logo temos $\theta'(s) = k(s)$.
+	\end{obs}
+	\begin{proof}
+		Definimos $\theta(s) = \displaystyle \int k(s) ds$. Tomamos $\alpha(s) = (x(s), y(s))$. Com \begin{align*}
+			x(s) &= \int \cos( \theta(s))ds  \\~\\
+			y(s) &= \int \sen(\theta(s))ds
+		\end{align*}
+		Temos $ t(s) = \alpha'(s) = (\cos(\theta(s)), \sen(\theta(s))) \implies ||\alpha'(s)|| = 1$.  E temos pela obsevação que a curvatura de $\alpha$ é dada por $\theta'(s) = k(s)$.
+	\end{proof}
+	\begin{proposicao}
+		Dada a curvatura $k(s)$ de $\alpha$ e fixado $\alpha(s_0) = p_0$ e $\alpha'(s_0) = v_0$, com $||v_0|| = 1$, a curva $\alpha(s)$ é única.
+	\end{proposicao}
+	\begin{proof}
+		Pela definição de curvatura, temos que $t(s) = k(s) \cdot n(s) \implies (x''(s),y''(s)) = ( -k(s)y'(s), k(s)x'(s))$.
+
+		Suponha que existam duas curvas $\alpha(s) = (x(s), y(s))$ e $\beta(s) = (v(s), w(s))$ satisfazendo as condições acima. Definindo $f(s) = x'(s) -v'(s)$ e $g(s) = y'(s) - w'(s)$, temos $g'(s) = y''(s) - w''(s) = k(s)x'(s) -k(s)v'(s) = k(s)f(s)$. $ f'(s) =  x''(s) - v''(s) = -k(s)y'(s) +k(s)w'(s) = -k(s)g(s) $. Logo $\left(f^{2} +g^{2} \right)'(s)  = 2f(s)f'(s) +2 g(s)g'(s) = -2f(s)k(s)g(s) +2g(s)k(s)g'(s) = 0$. Logo $\left(f^2+g^2\right)(s)$ é constante. Como $\alpha'(s_0) = \beta'(s_0)$, temos $\left(f^2+g^2\right)(s_0) = 0$, portanto $f^2(s)+g^2(s) =0 \implies f(s) = 0 \land g(s) = 0$ para todo $s$.  Temos $$\begin{cases}
+			x'(s) = v'(s) \\~\\
+			y'(s) = w'(s)\\~\\
+			(x(s_0), y(s_0) = (v(s_0), w(s_0))
+		\end{cases}$$
+		que implica $\alpha(s) = \beta(s)$ para todo $s$.
+	\end{proof}
+	\begin{comment}
+		\begin{lema}
+			Translações e rotações de um caminho $\alpha$ não alteram sua curvatura $k(t)$.
+		\end{lema}
+		\begin{proof}
+			Seja $\alpha:I\to \mathbb{R}$ um caminho diferenciável. Uma translação de $\alpha$ é dada por $\beta(r)  = \alpha(t)+v$. Temos $t_{\beta} = \beta'(t) = \alpha'(t) = t_{\alpha}$. Logo suas curvaturas são iguais.
+
+			Uma rotação de $\alpha$ de $\theta$ graus em volta da origem é dada por $\gamma(s) = \left[\begin{matrix} \cos(\theta) & -\sen(\theta) \\ \sen(\theta) & \cos(\theta) \end{matrix}\right] \cdot  \alpha(s) = (\cos(\theta)x(s) -\sen(\theta)y(s), \sen(\theta)x(s) - \cos(\theta) y(s))$. Logo $t_{\gamma}(s) = \gamma'(s) = (\cos(\theta)x'(s) -\sen(\theta)y'(s), \sen(\theta) x'(s) - \cos(\theta)y'(s)) = \left[\begin{matrix} \cos(\theta) & -\sen(\theta) \\ \sen(\theta) & \cos(\theta) \end{matrix}\right] \cdot  \alpha'(s) $ e  $t_{\gamma}'(s) =  (\cos(\theta)x''(s) -\sen(\theta)y''(s), \sen(\theta) x''(s) - \cos(\theta)y''(s)) = \left[\begin{matrix} \cos(\theta) & -\sen(\theta) \\ \sen(\theta) & \cos(\theta) \end{matrix}\right] \cdot  \alpha''(s) $. Logo $$ t_{\gamma}(s) = \left[\begin{matrix} \cos(\theta) & -\sen(\theta) \\ \sen(\theta) & \cos(\theta) \end{matrix}\right] \cdot  \alpha'(s) $$ $$ n_{\gamma}(s) = \left[\begin{matrix} \cos(\theta) & -\sen(\theta) \\ \sen(\theta) & \cos(\theta) \end{matrix}\right] \cdot  \alpha'(s) $$
+		\end{proof}
+	\end{comment}
+	\begin{proposicao}
+		Duas curvas $\alpha,\beta:I\to \mathbb{R}^2$ parametrizadas pelo comprimento de arco com a mesma curvatura $k:I\to\mathbb{R}^2$ são congruentes, insto é, existe uma rotação $A:\mathbb{R}^2 \to \mathbb{R}^2$ e uma translação por um vetor $v\in \mathbb{R}^2$ tal que para todo $s\in I$, $$\beta(s) = (A \circ \alpha)(s) +b.$$
+	\end{proposicao}
+	\begin{proof}
+		Fixado $s_0 \in I$. Seja $A:\mathbb{R}^2 \to \mathbb{R}^2$ a rotação que transforma $\alpha'(s_0)$ em $\beta'(s_0)$, e defina $b = \beta(s_0) - (A\circ \alpha)(s_0)$. Temos uma nova curva $\gamma(s) =(A\circ \alpha)(s) + b$, com $\gamma'(s_0) = \beta'(s_0)$ , $\gamma(s_0) = \beta(s_0)$ e a cruvatura de $\gamma(s)$ em cada $s$ é $k(s)$. Pela proposição anterior, temos $\gamma(s) = \beta(s)$, para todo $s\in I$.
+	\end{proof}
+
+\subsection{Exercícios}
+\begin{enumerate}
+	\item Sejam $a$ e $b$ constantes não nulas. Verifique que a aplicação $\alpha(t) = (a\cos t, b\sen t)$, $t\in \mathbb{R}$, é uma curva parametrizada diferenciável. Descreva o traço de $\alpha$. O que representa geometricamente o parâmetro $t$?
+
+	\textbf{Solução:}
+		Como $ x(t) = a \cos t $ e $ y(t) = b\sen t$ são funções diferenciáveis de classe $C^{\infty}$, temos que $\alpha $ é uma curva parametrizada diferenciável.
+
+		Tomando $(x,y) = \alpha(t)$, temos $\dfrac{x}{a} = \cos(t)$ e $\dfrac{y}{b} = \sen(t)$, logo $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \cos^2(t) + \sen^2(t) = 1  $. Logo o traço de $\alpha$ é uma elipse.
+
+
+	\begin{figure}[H]
+		\center
+
+		\begin{tikzpicture}[scale = 1.5]
+			\coordinate (p) at({1.75*1/2}, {1.75* sqrt(3)/2}) ;
+			\coordinate (t) at({1.75*1/2}, { sqrt(3)/2}) ;
+			\coordinate (o) at (0,0);
+			\coordinate (q) at (1,0);
+			\draw (t) node[above] {$\alpha(t)$};
+			\fill (t)  circle(1pt);
+			\draw[->] (-2.5, 0) -- (2.5, 0) node[right] {$x$};
+			\draw[->] (0, -2) -- (0, 2) node[above] {$y$};
+			\draw[ domain=-500:500,samples=150, smooth, variable=\x, blue] plot ({ 1.75*cos(\x) }, {sin(\x)});
+			\draw[ domain=-500:500,samples=150, smooth, variable=\x, blue] plot ({ 1.75*cos(\x) }, {1.75*sin(\x)});
+			\draw[ domain=-500:500,samples=150, smooth, variable=\x, blue] plot ({ cos(\x) }, {sin(\x)});
+			 \pic [draw, "$t$", angle eccentricity=1.5] {angle = q--o--p};
+			 \draw (o)--( { 1.75*1/2}, {1.75*sqrt(3)/2});
+			\draw (p) -- ({1.75/2}, 0);
+			\draw  (0 , { sqrt(3)/2}) -- ({1.75*1/2}, { sqrt(3)/2}) ;
+		\end{tikzpicture}
+		\caption{}
+		\label{fig:figura1}
+	\end{figure}
+
+\end{enumerate}
+
+
+\begin{color}{red}
+
+ESSA PARTE VAI PARA OUTRO TRABALHO.
+\section{Apêndice}
+
+Esta seção desempenha um papel importante ao fornecer conteúdo adicional que complementa o material principal. Aqui fornecemos  informações extras que podem ser úteis para os leitores interessados em explorar tópicos mais aprofundados ou técnicas específicas  sem sobrecarregar o fluxo principal do texto. Em resumo, o objetivo dessa seção é aumentar  a utilidade dessas notas, tornando-a mais abrangente e adaptável às necessidades individuais dos leitores. Os tópicos aqui abordados são baseados nos Capítulos 1, 2 e 3 do Livro \cite{E2}.
+
+\vspace{0.3cm}
+
+\subsection{Um pouco sobre a topologia do espaço Euclideano}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Bola aberta]
+	Uma bola aberta em $\mathbb{R}^n$ de centro $p_0 \in \mathbb{R}^n$ e raio $\varepsilon > 0$ é o conjunto denotado por $B_{\varepsilon}(p_0)$, dos pontos $p \in \mathbb{R}^n$ que distam de $p_0$ menos que $\varepsilon$, isto é, $$B_{\varepsilon}(p_0) = \left\{p\in \mathbb{R}^n ; || p - p_0|| < \varepsilon\right\}.$$
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Subconjunto Aberto]
+	Um subconjunto $A$ de  $\mathbb{R}^n$  é aberto em $\mathbb{R}^n$ se para todo $p \in A$ existe uma bola aberta $B_{\varepsilon}(p) \subset A$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Aberto em $X$]
+	Fixemos um conjunto $X \subset \mathbb{R}^n$ . Um subconjunto $A \subset X$ diz-se aberto em $X$ quando, para cada $a\in A$ existe $\delta >0$ tal que $B_{\delta}(a) \cap X \subset A$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:bolab}
+	Toda bola aberta $B_{\varepsilon}(p)$ é um subconjunto aberto de $\mathbb{R}^n$.
+\end{proposicao}
+\begin{proof}
+	Se $p\in B_{\varepsilon}(p_0) \implies || p - p_0|| < \varepsilon$. Tome $r = \varepsilon - || p - p_0||$ e defina $B_{r} (p)$. Se $v \in B_{r}(p) \implies ||v - p|| < r = \varepsilon - || p - p_0|| \implies || v- p || + ||p-p_0|| < \varepsilon$. Pela desigualdade triângular, temos $ || v - p_0 || \geq || v- p || + ||p-p_0|| < \varepsilon \implies ||v - p_0 || < \varepsilon$. Logo $v\in B_{r}(p) \implies v\in B_{\varepsilon}(p_0)$. Como para todo $p \in B_{\varepsilon}(p_0)$, existe uma bola aberta $B_{r}(p) \subset B_{\varepsilon}(p_0)$, temos que toda bola aberta $B_{\varepsilon}(p_0)$ é um subconjunto aberto de $\mathbb{R}^{n}$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Vizinhança]
+	Um subconjunto aberto de  $\mathbb{R}^n$  que contém um ponto $p_0 \in \mathbb{R}^n$ é denominado uma vizinhança de $p_0$ em $\mathbb{R}^n$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Toda bola aberta $B_{\varepsilon}(p)$ é uma vizinhança de $p$.
+\end{proposicao}
+\begin{proof}
+	Pela proposição \ref{prop:bolab}, toda bola aberta é um subconjunto aberto, e $p\in B_{\varepsilon}(p)$, portanto toda bola aberta $B_{\varepsilon}(p)$ é uma vizinhança de $p$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Subconjunto Fechado]
+	Um subconjunto $A$ de  $\mathbb{R}^n$  é fechado em $\mathbb{R}^n$ se $\mathbb{R}^n -A$ é aberto.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Ponto de acumulação]
+	Um ponto  $p_0 \in \mathbb{R}^n$  é um ponto de acumulação de um subconjuto $S\subset \mathbb{R}^n$ se, para toda vizinhança $V$ de $p_0$, $V\cap S$ contém pelo menos um ponto distinto de $p_0$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Um subconjunto $A$ de $\mathbb{R}^n$ é fechado em $\mathbb{R}^n$ se, e somente se, contém todos os seus pontos de acumulação.
+\end{proposicao}
+\begin{proof}
+	Se $A\subset\mathbb{R}^n$ é fechado, então $C = \mathbb{R}^n -A$ é aberto. Logo para todo $p_0\in C$ existe uma bola $B_{\varepsilon}(p)$ tal que $p \in B_{\varepsilon}(p) \implies p \in C$. Suponha que exista um ponto de acumulação $w$ de $A$ com $w\in C$. Como $C$ é aberto, existe uma bola aberta $B_{\varepsilon}(w)$ tal que $p \in B_{\varepsilon}(w) \implies p \in C$. Como $w$ é ponto de acumulação de $A$ e $B_{\varepsilon}(w)$  é uma vizinhança de $w$, temos que $A\cap  B_{\varepsilon}(w) \neq \emptyset $.  Portanto existe um $p\in A\cap B_{\varepsilon}(w) \implies p \in A \land p\in \cap B_{\varepsilon}(w) \implies p \in A \land p \in C \implies p \in A \land p \in \mathbb{R}^n -A$, uma contradição. Logo não existe um ponto de acumulação pertencente a $\mathbb{R}^n -A$.
+
+	Se $A$ contém todos os seus pontos de acumulação. Suponha $A$ não fechado, ou seja $C = \mathbb{R}^n -A$ é não aberto. Se $C$ não é aberto, então existe um $p\in C$ tal que não existe uma bola aberta $B_{\varepsilon}(p) \subset C$, logo para toda $B_{\varepsilon}(p)$, existe um $w \not\in C \implies w\in A$. Temos que para toda vizinhança de $p$, existe um ponto $ w \in A$ com $w\neq p$. Portanto $p$ é um ponto de acumulação de $A$ com $p\not \in A$. Isso é uma contradição, logo $A$ é fechado.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Fecho]
+	O fecho de um conjunto $A\subset \mathbb{R}^n$ é a união de $S$ com o conjunto de seus pontos de acumulação.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Ponto interior]
+	Um ponto $ p \in A\subset \mathbb{R}^n$ é interior se existe uma bola $B_{\varepsilon}(p)$ tal que $B_{\varepsilon}(p) \subset A$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Interior]
+	O conjunto de todos os interiores de $A\subset \mathbb{R}^n$ é denominado interior de $A$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Fronteira]
+	A fronteira de um conjunto $A\subset\mathbb{R}^n$ é o fecho de $A$ menos o interior de $A$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Conjunto limitado]
+	Um conjunto $A\subset\mathbb{R}^n$ é limitado se existe uma bola $B_{\varepsilon}(p)$ tal que $A\subset B_{\varepsilon}(p)$.
+\end{definicao}
+
+\begin{definicao}[Conjunto conexo]
+	Um conjunto $A\subset\mathbb{R}^n$ é dito conexo se não existem abertos $A_1$ e $A_2$ em $\mathbb{R}^n$, tais que $A_1 \cap A_2 = \emptyset$, e  $A_1\cap S$ e $A_2\cap S$ são não vazios e $S \subset A_1 \cup A_2$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	A reunião de uma família de conjuntos conexos com um ponto em comum é um conjunto conexo.
+\end{proposicao}
+\begin{proof}
+	Seja $X = \displaystyle\bigcup_{\lambda \in L} X_{\lambda}$ com $p\in \displaystyle\bigcap_{\lambda \in L} X_{\lambda}$ um ponto em comum. Tomando $X = A\cup B$ com $A,B$ abertos. Se $p\in A$ e $p\in B$, temos $X$ conexo, pois $A\cap B \neq \emptyset$. Supondo, sem perda de generalidade, que $p\in A$ e $p\not \in B$ com $A\cap B = \emptyset$. Temos  para qualquer $\alpha$, $X =   \displaystyle\bigcup_{\lambda \in L} X_{\lambda} \implies X\cap X_{\alpha} =  X_\alpha \cup \displaystyle\bigcup_{\lambda \in L - \left\{X_\alpha\right\}} \left(X_{\lambda} \cap X_\alpha\right) = X_{\alpha} \implies X_{\alpha} = X_{\alpha}\cap X = X_{\alpha}\cap\left(A\cup B\right) = \left( A\cap X_{\alpha}\right) \cup \left(B\cap X_{\alpha} \right) $. Como $A$ é aberto em $X$, temos $A = C\cap X$ para algum aberto $C\subset \mathbb{R}^n$, logo $A\cap X_{\alpha} = C\cap X\cap X_{\alpha} = C\cap X_{\alpha}$, portanto $A$ é aberto em $X_{\alpha}$ . O mesmo argumento pode ser utilizado para justificar $B\cap X_{\alpha}$ ser aberto. Como $A\cap B = \emptyset$, temos $(A\cap X_{\alpha})\cap (B\cap X_{\alpha}) = A\cap B \cap X_{\alpha} = \emptyset$. Como $X_{\alpha}$ é igual a dois abertos disjuntos e  é conexo,  temos que  um deles deve ser vazio. Tomamos $p\in A\cap X_{\alpha}$, logo $B \cap X_{\alpha} = \emptyset$. Portanto $$B = B\cap X = B\cap \bigcup_{\lambda \in L} X_{\lambda} =   \bigcup_{\lambda \in L} B\cap X_{\lambda} = \emptyset.$$
+	Como $B$ é vazio, temos $X$ conexo.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:conexset}
+	Um subconjunto $A\subset \mathbb{R}$ é conexo se, e somente se, $A$ é um intervalo.
+\end{proposicao}
+
+\vspace{0.3cm}
+
+\begin{obs}
+	Dado um conjunto $B$, $B$ é 	um intervalo se para todos $a,b \in B$ com $a<b$ temos $\forall x \in \mathbb R (  a < x< b \implies x \in B)$. Logo se $B$ não é um intervalo, existem $a,b\in B$ com $a<b$ e um $c \not \in B$   tal que $ a<c<b$.
+\end{obs}
+
+\vspace{0.3cm}
+
+\begin{proof}
+	Supondo $A \subset \mathbb{R} $ conexo. Se $A$ não é um intervalo, então existem $a,b \in A$ com $a<b$ e existe um $c\not \in A$ tal que $a <c<b$. Tomando os intervalos $A_1 = (-\infty, c)$ e $A_2 = (c, \infty)$, temos $A_1 \cap A_2 = \emptyset$,  $A_1\cap A$ e $A_2\cap A$  não vazios e $A \subset A_1 \cup A_2$. Isso é uma contradição, logo A é um intervalo.
+
+	%faltou provar para intervalos fechados e provar a volta
+
+
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Conjunto compacto]
+	Um conjunto $A\subset\mathbb{R}^n$ é compacto se é fechado e limitado.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Limite $F:\mathbb{R}^n \to \mathbb{R}^m$]
+	Uma função $F:A \subset \mathbb{R}^n \to \mathbb{R}^m$, onde  $A$ é um aberto em $\mathbb{R}^n$ tem limite $L$ quando $p\in A$ tende a $p_0$ se, dado qualquer $\varepsilon >0$, existe $\delta > 0$ tal que, se $0< ||p -p_0|| < \delta$, então $||F(p) - L || < \varepsilon$.  Nesse caso, denotamos por $$\lim_{p\to p_0} F(p) = L.$$
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:limcomp}
+	Se $F:\mathbb{R}^n\to \mathbb{R}^m$ é dada por $F(p) = (F_1(p), F_2(p),\cdots, F_m(p))$ e $L = (l_1,l_2,\cdots,l_m)$, então $\displaystyle\lim_{p\to p_0} F(p) = L $ se , e somente se, $\displaystyle\lim_{p\to p_0} F_i(p) = l_i$ para todo $i$.
+\end{proposicao}
+\begin{proof}
+	Se $\displaystyle\lim_{p \to p_0} F(p) = L$, temos que dado um $\varepsilon>0$, existe um $\delta > 0$ tal que se $ 0< ||p-p_0||< \delta$, temos $ ||F(p) -L || < \varepsilon$. Observe que $ ||F(p) - L|| = \sqrt{\displaystyle \sum_{i = 0}^m \left(F_i(p) - l_i\right)^2}$ e que $|F_i(p) - l_i | = \sqrt{\left( F_i(p) - l_i\right)^2} \leq\sqrt{\displaystyle \sum_{i = 0}^m \left(F_i(p) - l_i\right)^2}$ para todo $i\in \left\{1,2,\cdots,m\right\}$ e para todo $p\in \mathbb{R}^n$. Logo para todo $\varepsilon>0$ existe um $\delta > 0$ tal que $ 0 < ||p-p_0|| < \delta \implies |F_i (p) -l_i|\leq || F(p) -L|| < \varepsilon \implies |F_i(p) - l_i | < \varepsilon $. Logo $\displaystyle \lim_{p \to p_o} F_i(p) = l_i$ para todo $i\in \{1,2,\cdots,m \}$.
+
+
+	Se $\displaystyle\lim_{p \to p_0} F_i(p) = l_i$ para todo $i\in \{1,2,\cdots,m\}$. Para $\varepsilon>0$, existem $ \delta_1, \delta_2,\cdots \delta_m$ tal que $0<|p-p_0| < \delta_i \implies |F_i(p) - l_i| < \dfrac{\varepsilon}{m}$. Temos $|| F(p) - L || = \sqrt{\displaystyle \sum_{i = 0}^m \left(F_i(p) - l_i\right)^2} \leq \displaystyle \sum_{i = 0}^m \sqrt{ \left(F_i(p) - l_i\right)^2} = \displaystyle \sum_{i = 0}^m | F_i(p) - l_i | $ para todo $p\in \mathbb{R}^n$. Tomando $\min \{ \delta_1, \delta_2\cdots \delta_n\} = \delta$, temos $0<|p-p_0|<\delta \implies |F_i(p) -l_i| < \dfrac{\varepsilon}{m} \implies ||F(p) -L|| \leq \displaystyle \sum_{i = 0}^m | F_i(p) - l_i | < \varepsilon \implies ||F(p) -L || < \varepsilon $. Logo $\displaystyle\lim_{p \to p_0} F(p) = L$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Função Contínua]
+	Dizemos que a função $F:A\subset \mathbb{R}^n \to \mathbb{R}^m$, onde $A$ é aberto em $\mathbb{R}^n$, é contínua em $p_0\in A$ se $$\lim_{p\to p_0} F(p) = F(p_0).$$
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	A aplicação linear $F:A\subset \mathbb{R}^n \to \mathbb{R}^n $ é contínua.
+\end{proposicao}
+\begin{proof}
+
+	Definindo $|| v ||_s = \sum |v_i|$ e $ || v||_{m} = \max \left\{ v_1,v_2,\cdots,v_n \right\}$. Temos $||v||_m \leq ||v || \leq || v||_s \leq n\cdot ||v||_m \implies || v ||_s \leq n\cdot ||v||_m \leq n\cdot || v || \implies ||v||_s \leq n \cdot ||v||   $ para todo $v$.
+
+		Temos $|| F(p) - F(p_0) || = || F(p -p_0) ||$. Se $v = p-p_0$, temos $|| F(v)|| = \left| \left| \displaystyle\sum_{i=1}^{n} F(e_i) \cdot v_i \right|\right| \leq   \displaystyle\sum_{i=1}^{n}  \left| \left| F(e_i)  \right|\right| \cdot | v_i | $. Tomando $b = \max\left\{ || F(e_1) || , || F(e_2) ||,\cdots, || F(e_n)|| \right\}$, temos $|| F(v)|| \leq   \displaystyle\sum_{i=1}^{n}  \left| \left| F(e_i)  \right|\right| \cdot | v_i | \leq b\cdot \displaystyle\sum_{i=1}^{n} | v_i | = b\cdot || v||_s \leq b\cdot n \cdot || v||  \implies ||F(v)|| \leq bn \cdot ||v||  $. Dado um $\varepsilon>0$, tomamos $\delta = \dfrac{\varepsilon}{bn}$. Logo para um $p_0$ qualquer, temos  $ || p -p_0|| < \dfrac{\varepsilon}{bn}  \implies ||F(p-p_0)|| \leq bn\cdot || p - p_0|| < \varepsilon \implies ||F(p) - F(p_0)|| < \varepsilon$.  Logo $F(p)$ é contínua.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Sejam $F:A\subset\mathbb{R}^n\to \mathbb{R}^m$ e $G:B\subset\mathbb{R}^m\to \mathbb{R}^k$ funções reais tais que $F(A)\subset B$, onde $A$ e $B$ são abertos de $\mathbb{R}^n$ e $\mathbb{R}^m$ respectivamente. Se $F$ é contínua em $p_0$ e $G$ é contínua em $F(p_0)$, então a função composta $G \circ F: A \subset \mathbb{R}^n \to \mathbb{R}^k$ é contínua em $p_0$.
+\end{proposicao}
+\begin{proof}
+	Se $F$ é contínua em $p_0$, temos que para todo $\varepsilon_f>0$, existe $\delta_f>0$ tal que  $$|| p-p_0 || <\delta_f \implies || F(p_0) - F(p) || < \varepsilon_f.$$
+	Se $G$ é contínua em $F(p_0)$, temos que para todo $\varepsilon_g>0$, existe $\delta_g>0$ tal que  $$|| p-F(p_0) || <\delta_g \implies || G(F(p_0)) - G(p) || < \varepsilon_w .$$
+	Escolhendo $\varepsilon_f = \delta_g$. Existe $\delta_f$ tal que $|| p-p_0 || <\delta_f \implies || F(p_0) - F(p) || < \delta_g \implies ||G(F(p_0)) - G(F(p))|| < \varepsilon_g$, para qualquer $\varepsilon_g>0$. Logo $G\circ F$ é contínua em $p_0$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{comment}
+	\begin{definicao}[Cobertura]
+		Dado $X\subset \mathbb{R}^n$. Uma cobertura de $X$ é uma família $C= (C_{\lambda})_{\lambda \in L}$ de conjuntos $C_{\lambda} \subset \mathbb{R}^n$ tais que $X  \subset \displaystyle\bigcup_{\lambda \in L} C_{\lambda}$; isto é, para todo $x \in X$, existe algum $\lambda \in L$ tal que $x\in C_{\lambda}$.
+	\end{definicao}
+	\begin{definicao}[Cobertura Aberta]
+		Dado $X\subset \mathbb{R}^n$ e uma cobertura $C= (C_{\lambda})_{\lambda \in L}$. $C$ é uma cobertura aberta se todo $C_{\lambda}$ é aberto em $\mathbb{R}^n$.
+	\end{definicao}
+	\begin{definicao}[Cobertura Finita]
+		Dado $X\subset \mathbb{R}^n$ e uma cobertura $C= (C_{\lambda})_{\lambda \in L}$. C é uma cobertura finita quando $L$ é finito.
+	\end{definicao}
+	\begin{definicao}[Subcobertura]
+		Dado $X\subset \mathbb{R}^n$ e uma cobertura $C= (C_{\lambda})_{\lambda \in L}$. Uma subcobertura de $C$ é uma família $C'= (C_{\lambda})_{\lambda \in L'}$, $L' \subset L$, tal que ainda se tenha $X\subset \displaystyle \bigcup_{\lambda \in L'} C_{\lambda}$.
+	\end{definicao}
+	\begin{proposicao}
+		Um conjunto $X \subset \mathbb{R}^n$ é compacto se, e somente se, toda cobertura aberta $C$ de $X$ possui subcobertura finita.
+	\end{proposicao}
+\end{comment}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:openset}
+	Se $F:A\to \mathbb{R}^n$ é uma função contínua com $F(A) = Y$  aberto, então $F^{-1}(Y)$ é aberto (A imagem inversa de um aberto é aberta).
+\end{proposicao}
+\begin{proof}
+	Para todo $x\in F^{-1}(Y) $, temos  $ F(x) \in Y$. Como $Y$ é aberto, existe uma bola aberta de tamanho $d>0$ com  $B_{d}(F(x)) \subset Y$. Como $F$ é contínua, se escolhermos $\varepsilon = d$, existe um $\delta>0$ tal que $x_1 \in B_{\delta}(x) \implies  F(x_1)\in B_{d}(F(x)) \implies F(x_1) \in Y \implies x_1 \in F^{-1}(Y) \implies B_{\delta}(x)  \subset F^{-1}(Y)$. Portanto para todo $x \in F^{-1}(Y)$, existe uma bola aberta em volta de $x$ contida em $F^{-1}(Y)$, logo $F^{-1}(Y)$ é aberto.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:compset}
+	Se $F:A\to \mathbb{R}^n$ é uma função contínua definida num conjunto compacto, então a imagem de $F$ é um conjunto compacto.
+\end{proposicao}
+%\begin{proof}
+%\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:conexset1}
+	Se $F:A\to \mathbb{R}^n$ é uma função contínua definida num conjunto conexo, então a imagem de $F$ é um conjunto conexo.
+\end{proposicao}
+\begin{proof}
+	Seja $F(A) = Y$ a imagem de $F$. Se não existem $X,W$ abertos com $Y \subset X\cup W$, temos $Y$ conexo por definição. Suponha $Y \subset X\cup W$ com $X,W$ abertos. Logo $F^{-1}(X)$ e $F^{-1}(W)$ são abertos. Tomando $p\in A$, temos $F(p) \in Y \implies F(p) \in X \cup W \implies p \in F^{-1} (X) \cup F^{-1}(W) \implies A \subset  F^{-1} (X) \cup   F^{-1}(W) $. Se $F^{-1}(X) \cap  F^{-1}(W)  = \emptyset$, temos $A$ desconexo, logo existe um $v \in X\cap W$. Como $X\cap W \neq \emptyset$, temos $Y$ conexo.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Se $F:A\subset \mathbb{R}^n \to \mathbb{R}$ é contínua em $A$ e $p_0\in A$ com $F(p_0) > 0$, então existe uma vizinhança $V$ de $p_0$ tal que, para todo $p\in V$, $F(p)>0$.
+\end{proposicao}
+\begin{proof}
+	Como $F$ é contínua em $p_0$, para todo $\varepsilon>0$, existe um $\delta$ tal que $|| p -p_0||<\delta \implies | F(p) - F(p_0) | < \varepsilon$. Tomando $\varepsilon = F(p_0) > 0$, existe $\delta_1$ tal que $ || p -p_0|| < \delta_1 \implies |F(p) - F(p_0)| < F(p_0) \implies -F(p_0) < F(p) - F(p_0) < F(p_0) \implies 0 < F(p) < 2F(p_0) \implies F(p) > 0 $. Tomando a bola aberta $B_{\delta_1}(p_0)$, temos $p \in B_{\delta_1} (p_0) \implies F(p) > 0 $.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Se $F:A\subset \mathbb{R}^n \to \mathbb{R}$ é contínua com $A$ compacto, então a função $F$ tem um máximo e um mínimo, isto é, existem pontos $p_1$ e $p_2$ em $A$ tais que, para todo $p\in A$, $F(p_1) \leq F(p) \leq F(p_2)$.
+\end{proposicao}
+
+\begin{proof}
+	Pela proposição \ref{prop:compset}, $F(A)$ é compacto, portanto limitado. Logo $F$ admite máximo e mínimo.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Se $A$ é conexo e  $F:A\subset \mathbb{R}^n \to \mathbb{R}$ admite os valores $a,b \in \mathbb{R}$, então para todo $c\in \mathbb{R}$, tal que $a<c<b$, existe $p\in A$ satisfazendo $F(p) = c$.
+\end{proposicao}
+\begin{proof}
+	Como $A$ é conexo temos que $F(A)$ é conexo, logo é um intervalo. Como $F(A)$ é um intervalo, temos que se $a,b\in F(A)$ com $a<b$, temos $\forall c\in \mathbb{R} ( a<c<b \implies c \in F(A))$, portanto existe $p\in A$ com $F(p) = c$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\subsection{Cálculo Diferencial no Espaço Euclidiano}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Derivada direcional]
+	Seja $F:A \subset \mathbb{R}^n \to \mathbb{R}^m$ uma função definida em um aberto $A\subset\mathbb{R}^n$. A derivada direcional de $F$ num ponto $p_0\in A$, relativamente a um vetor $ w \in \mathbb{R}^m$ é definida como $$ \dfrac{\partial F}{\partial w} (p_0) = \lim_{t \to 0} \dfrac{F(p_0+tw)-F(p_0)}{t},$$ quando esse limite existe.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:difcomp}
+	Se $F = \left(F_1, F_2,\cdots,F_m\right)$, então $\dfrac{\partial F}{\partial w} (p_0) = \left( \dfrac{\partial F_1}{\partial w} (p_0), \dfrac{\partial F_2}{\partial w} (p_0), \cdots, \dfrac{\partial F_m}{\partial w} (p_0) \right)$.
+\end{proposicao}
+\begin{proof}
+	Pela proposição \ref{prop:limcomp}, se $\dfrac{\partial F}{\partial w} (p_0) = \displaystyle\lim_{t \to 0} \dfrac{F(p_0+tw)-F(p_0)}{t}$, então $\dfrac{\partial F}{\partial w} (p_0)  = (l_1,l_2\cdots l_m)$, onde $l_i = \displaystyle\lim_{t \to 0} \dfrac{F_i(p_0+tw)-F_i(p_0)}{t} = \dfrac{\partial F_i}{\partial w}$ para todo $i\in \{0,1\cdots, m\}$. Logo $\dfrac{\partial F}{\partial w} (p_0) = \left( \dfrac{\partial F_1}{\partial w} (p_0), \dfrac{\partial F_2}{\partial w} (p_0), \cdots, \dfrac{\partial F_m}{\partial w} (p_0) \right)$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{obs}
+	A derivada parcial de $F$ em $p_0$ na direção de $e_i$ é denotada por $\dfrac{\partial F}{\partial x_i}(p_0)$ ou $F_{x_i}(p_0)$ e é igual a
+	$$\dfrac{\partial F}{\partial x_i} (p_0) = \left( \dfrac{\partial F_1}{\partial x_i} (p_0), \dfrac{\partial F_2}{\partial x_i} (p_0), \cdots, \dfrac{\partial F_m}{\partial x_i} (p_0) \right).$$
+\end{obs}
+
+\vspace{0.3cm}
+
+No que segue, vamos relembrar a definição de aplicações lineares, supondo que o leitor já possua alguma familiaridade com tais objetos. Tais aplicações  desempenham um papel fundamental em diversas áreas da Matemática, fornecendo uma estrutura algébrica poderosa para descrever e analisar uma ampla gama de fenômenos. Elas são amplamente utilizadas em áreas como álgebra linear, cálculo diferencial,  geometria, análise funcional, teoria dos grafos, otimização, física matemática e muito mais. Na Álgebra Linear as aplicações lineares são o objeto de estudo central. Elas desempenham um papel crucial na resolução de sistemas de equações lineares, diagonalização de matrizes, determinação de espaços vetoriais e subespaços, e na representação de transformações lineares por meio de matrizes, para mais detalhes, veja por exemplo \cite{E3}.
+
+\vspace{0.3cm}
+
+A principal aplicação das aplicações lineares no cálculo diferencial é a aproximação local de funções. Através do diferencial de uma função, que é uma transformação linear, podemos aproximar o comportamento da função em torno de um ponto específico. Essa aproximação linear é fundamental para entender o comportamento das funções em pequenas regiões e para derivar fórmulas que descrevem a taxa de variação das funções, veja por exemplo \begin{color}{red}CITAR AQUI AO MENOS DOIS LIVROS DE CALCULO \end{color}.
+
+\vspace{0.3cm}
+
+Além disso, as aplicações lineares são usadas para definir os espaços tangentes de curvas e superfícies. O espaço tangente é um espaço vetorial associado a cada ponto de uma curva ou superfície que representa as direções possíveis de movimento nesses pontos. As aplicações lineares são utilizadas para descrever as propriedades geométricas desses espaços tangentes, como a noção de vetor tangente, vetor normal e curvatura, como veremos nessas notas.
+
+\vspace{0.3cm}
+
+Finalmente,  no cálculo multivariável, as aplicações lineares são utilizadas para representar a derivada de uma função de várias variáveis como uma matriz jacobiana, que descreve a taxa de variação da função em diferentes direções, veja \cite[Capítulo 5]{E2} .
+
+\vspace{0.3cm}
+
+
+\begin{definicao}[Aplicação Linear]
+	Uma aplicação $F:\mathbb{R}^n \to \mathbb{R}^m$ é dita linear se para todos $p,q \in \mathbb{R}^n$ e $\lambda \in \mathbb{R}$, temos:
+	\begin{align*}
+		&F(p+q) = F(p)+F(q),\\
+		&\lambda F(p) = F(\lambda p)
+	\end{align*}
+\end{definicao}
+\begin{proposicao}
+	\label{prop:apl0}
+	Se $F:\mathbb{R}^n \to \mathbb{R}^m$ é uma aplicação linear, então $F(0) = 0$.
+\end{proposicao}
+\begin{proof}
+	\begin{align*}
+		F(x) = F(x) &\iff \\~\\
+		F(x) - F(x) = 0 &\iff\\~\\
+		F(x-x) = 0 &\iff \\~\\
+		F(0) = 0
+	\end{align*}
+
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:linap}
+	Se $F:\mathbb{R}^n \to \mathbb{R}^m$ é uma aplicação linear, então existe $A_{m\times n}$ tal que para todo $w\in \mathbb{R}^n$ temos $F(w) = A\cdot w$ .
+\end{proposicao}
+\begin{proof}
+	Se $\left\{e_1,e_2,\cdot, e_n\right\}$ é a base canônica de $\mathbb{R}^n$ e
+	\begin{align*}
+		F(e_1) &= (a_{11}, a_{21}, \cdots, a_{m1}),\\
+		F(e_2) &= (a_{12}, a_{22}, \cdots, a_{m2}),\\
+		\vdots  \\
+		F(e_n) &= (a_{1n}, a_{2n}, \cdots, a_{mn}),
+	\end{align*}
+	temos que todo $w = (w_1,w_2,\cdots,w_n) \in \mathbb{R}^n$ é dado por:
+	$$
+	w = e_1\cdot w_1+e_2\cdot w_2+\cdots +e_n\cdot w_n = \sum_{i=1}^n e_i\cdot w_i.
+	$$
+	Logo:
+	\begin{align*}
+		F(w) &=F\left( \displaystyle\sum_{i=1}^n w_i\cdot e_i\right) \\~\\
+		&= \displaystyle\sum_{i=1}^n w_i\cdot F(e_i) \\~\\
+		&= \left[\begin{array}{cccc} F(e_1)& F(e_2)& \cdots& F(e_n)  \end{array} \right]\cdot w  \\~\\
+			&= \left[\begin{array}{cccc} a_{11}& a_{12}& \cdots& a_{1n} \\ a_{21}& a_{22}& \cdots& a_{2n} \\ \vdots &&\vdots&\\ a_{m1}& a_{m2}& \cdots& a_{mn} \\  \end{array} \right]\cdot w
+	\end{align*}
+	Basta tomar $A=\left[\begin{array}{cccc} a_{11}& a_{12}& \cdots& a_{1n} \\ a_{21}& a_{22}& \cdots& a_{2n} \\ \vdots &&\vdots&\\ a_{m1}& a_{m2}& \cdots& a_{mn} \\  \end{array} \right]$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:aplinj}
+	Se $F$ é uma aplicação linear. Temos que $F$ é injetora se, e somente se,   $F(w) = 0 \implies w=0$.
+\end{proposicao}
+\begin{proof}
+	Pela proposição \ref{prop:apl0}, temos $F(0) = 0$.
+
+	Se $F$ é injetora, $F(w) = 0 = F(0) \implies F(w) = F(0) \implies w = 0$, logo $F(w) = 0 \implies w = 0$.
+
+	Se $F(w) = 0 \implies w = 0$, temos $F(a) = F(b) \implies F(a-b) = 0 \implies a-b=0 \implies a = b$, logo $F$ é injetora.
+\end{proof}
+
+\vspace{0.3cm}
+
+A diferenciabilidade de funções de várias variáveis é uma ferramenta essencial para a compreensão e análise do comportamento local de funções em espaços de dimensão superior. Ela desempenha um papel fundamental em diversas áreas da matemática e aplicações práticas, como otimização, modelagem de fenômenos físicos, análise de sistemas dinâmicos e geometria diferencial.
+
+\vspace{0.3cm}
+
+\begin{definicao}[Função $F:\mathbb{R}^n \to \mathbb{R}^m$ diferenciável]
+	Uma função $F:\mathbb{R}^n \to \mathbb{R}^m$ é diferenciável em $p_0$ se existe uma aplicação linear de $\mathbb{R}^n$ em $\mathbb{R}^m$, denotada por $dF_{p_0}$, tal que, para todo vetor $w \in \mathbb{R}^n$, $$F(p_0+w)-F(p_0) = dF_{p_0}(w)+R(w),$$ onde $\displaystyle\lim_{w\to 0} \dfrac{R(w)}{||w||} = 0$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+
+\begin{proposicao}
+	\label{prop:apln}
+	Se $F:\mathbb{R}^n \to \mathbb{R}^m$ é uma aplicação linear, então $F$ é diferenciável.
+\end{proposicao}
+\begin{proof}
+	Para todo $w\in \mathbb{R}^n$, temos $F(p+w)-F(p) = F(p+w-p) = F(w) + 0 $. Se $d_p F(w) = F(w)$ e $R(w) = 0 $, obtemos:$$F(p_0+w)-F(p_0) = dF_{p_0}(w)+R(w),$$ com $\displaystyle\lim_{w\to 0} \dfrac{R(w)}{||w||} = 0$. Logo $F$ é diferenciável.
+
+\end{proof}
+
+\vspace{0.3cm}
+
+
+Para uma função ser diferenciável, todas as suas derivadas parciais devem existir e serem contínuas em um determinado domínio. As derivadas parciais medem a taxa de variação da função em relação a cada uma das variáveis independentes, mantendo as outras variáveis fixas. A existência e continuidade dessas derivadas parciais garantem que a função possui um comportamento suave e contínuo em seu domínio. É o que diz o próximo resultado.
+
+\vspace{0.3cm}
+
+\begin{proposicao}\cite[Proposição XX]{E2} \label{prop:dif0} 	Se a função  $F:A\subset \mathbb{R}^n \to \mathbb{R}$ possui derivadas parciais em todos os pontos do aberto $A$ e cada uma delas é contínua em $p_0$, então   $F$ é diferenciável em $p_0$.
+\end{proposicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:dif1}
+	Se $F:A\subset \mathbb{R}^n \to \mathbb{R}^m$ é diferenciável em $p_0$, então para todo vetor $w\in \mathbb{R}^n$,
+	$$ dF_{p_0}(w) = \displaystyle\lim_{t\to 0}\dfrac{F(p_0+tw) -F(p_0)}{t}$$
+
+\end{proposicao}
+\begin{proof}
+	Se $F:A\subset \mathbb{R}^n \to \mathbb{R}^m$ é diferenciável em $p_0$, existe uma aplicação linear $dF_{p_0}:\mathbb{R}^n \to \mathbb{R}^m$ tal que, para todo vetor $v \in \mathbb{R}^n$, temos $F(p_0+v)-F(p_0) = dF_{p_0}(v)+R(v)$,  com $\displaystyle\lim_{v\to 0} \dfrac{R(v)}{||v||} = 0$.
+	Tomando $ tw = v$, temos:
+	$$ F(p_0+tw)-F(p_0) = dF_{p_0}(tw)+R(tw)$$
+	Como $dF_{p_0}$ é aplicação linear, temos $dF_{p_0}(tw) = t\cdot dF_{p_0}(w)$, logo:
+	$$ F(p_0+tw)-F(p_0) = t\cdot dF_{p_0}(w)+R(tw)$$
+	Como $R(tw) = \dfrac{R(tw)}{||w||} \cdot ||w||$ para $w$ e $t$ não nulos,
+	\begin{align*}
+		\dfrac{F(p_0+tw)-F(p_0)}{t} =  dF_{p_0}(w)+\dfrac{R(tw)}{t||w||}\cdot ||w|| &\implies\\~\\
+		\dfrac{F(p_0+tw)-F(p_0)}{t} =  dF_{p_0}(w)\pm \dfrac{R(tw)}{||t w||}\cdot ||w||
+	\end{align*}
+	Logo $ \dfrac{\partial F}{\partial w} (p_0) = \displaystyle\lim_{t\to 0} \dfrac{F(p_0+tw)-F(p_0)}{t} =  dF_{p_0}(w)$.
+
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Se $F:A\subset \mathbb{R}^n \to \mathbb{R}^m$ é diferenciável em $p_0$, então
+
+\vspace{0.3cm}
+
+	$$ dF_{p_0}(w) = \left[\begin{array}{cccc} \dfrac{\partial F_1}{\partial x_1} (p_0)& \dfrac{\partial F_1}{\partial x_2} (p_0)& \cdots& \dfrac{\partial F_1}{\partial x_n} (p_0) \\  \vdots &\vdots&&\vdots\\ \dfrac{\partial F_n}{\partial x_1} (p_0)& \dfrac{\partial F_n}{\partial x_2} (p_0)& \cdots& \dfrac{\partial F_n}{\partial x_n} (p_0) \\  \end{array} \right]\cdot w$$
+
+\end{proposicao}
+
+\vspace{0.3cm}
+
+\begin{proof}
+	Se $F:A\subset \mathbb{R}^n \to \mathbb{R}^m$ é diferenciável em $p_0$, então pelas proposições \ref{prop:dif1} e \ref{prop:difcomp} temos $\left( \dfrac{\partial F_1}{\partial w} (a), \dfrac{\partial F_2}{\partial w} (a), \cdots, \dfrac{\partial F_m}{\partial w} (a) \right) =  \dfrac{\partial F}{\partial w} (p_0)  =  dF_{p_0}(w)$ para todo $w \in \mathbb{R}^n$.  Sendo $\left\{e_1,e_2,\cdots, e_n\right\}$ a base canônica de $\mathbb{R}^n$, temos:
+	\begin{align*}
+		dF_{p_0}(e_1) &= \left( \dfrac{\partial F_1}{\partial x_1} (p_0), \dfrac{\partial F_2}{\partial x_1} (p_0), \cdots, \dfrac{\partial F_m}{\partial x_1} (p_0) \right),\\
+		dF_{p_0}(e_2) &= \left( \dfrac{\partial F_1}{\partial x_2} (p_0), \dfrac{\partial F_2}{\partial x_2} (p_0), \cdots, \dfrac{\partial F_m}{\partial x_2} (p_0) \right),\\
+		\vdots \\
+		dF_{p_0}(e_n) &= \left( \dfrac{\partial F_1}{\partial x_n} (p_0), \dfrac{\partial F_2}{\partial x_n} (p_0), \cdots, \dfrac{\partial F_m}{\partial x_n} (p_0) \right).
+	\end{align*}
+	De forma análoga a proposição \ref{prop:linap}, temos
+	\begin{align*}
+		dF_{p_0}(w) &= \left[\begin{array}{cccc} dF_{p_0}(e_1)& dF_{p_0}(e_2)& \cdots& dF_{p_0}(e_n)  \end{array} \right]\cdot w \\~\\
+			&= \left[\begin{array}{cccc} \dfrac{\partial F_1}{\partial x_1} (p_0)& \dfrac{\partial F_1}{\partial x_2} (p_0)& \cdots& \dfrac{\partial F_1}{\partial x_n} (p_0) \\  \vdots &\vdots&&\vdots\\ \dfrac{\partial F_m}{\partial x_1} (p_0)& \dfrac{\partial F_m}{\partial x_2} (p_0)& \cdots& \dfrac{\partial F_m}{\partial x_n} (p_0) \\  \end{array}\right] \cdot w
+	\end{align*}
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Matriz Jacobiana]
+	A matriz $$F'(p_0) = \left[\begin{array}{cccc} \dfrac{\partial F_1}{\partial x_1} (p_0)& \dfrac{\partial F_1}{\partial x_2} (p_0)& \cdots& \dfrac{\partial F_1}{\partial x_n} (p_0) \\  \vdots &\vdots&&\vdots\\ \dfrac{\partial F_m}{\partial x_1} (p_0)& \dfrac{\partial F_m}{\partial x_2} (p_0)& \cdots& \dfrac{\partial F_m}{\partial x_n} (p_0) \\  \end{array}\right]$$
+		é denominada matriz jacobiana.
+
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+
+	Se $F:A\subset \mathbb{R}^n \to \mathbb{R}^m$ é diferenciável em $p_0$, então $F$ é contínua em $p_0$.
+\end{proposicao}
+
+\begin{proof}
+	Temos para todo $w\in \mathbb{R}^n$, $F(p+w) - F(p) = dF_p(w) + R(w) \implies 0 \leq || F(p+w) - F(p) || = || dF_p(w) + R(w) || \leq || dF_p(w) || + \left|\left| R(w) \right|\right| $. Logo para todo $w$  temos
+	\begin{align*}
+		\lim_{w\to 0}  F(p+w) - F(p) & = \lim_{w\to 0} dF_p(w) +R(w)  \\~\\
+		&=   \lim_{w\to 0}  dF_p(w)  +\dfrac{ R(w) }{||w||} \cdot ||w|| \\~\\
+		&= 0
+	\end{align*}
+	Logo $\lim_{w\to 0} F(p+w) = F(p)$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\label{prop:difn}
+	Se todas as funções coordenadas $\left(F_1,F_2,\cdots, F_m\right) $ de uma aplicação $F:A\subset \mathbb{R}^n \to \mathbb{R}^m$ são diferenciáveis em $p_0$, então $F$ é diferenciável em $p_0$.
+
+\end{proposicao}
+\begin{proof}
+	A igualdade $F(p_0+w)-F(p_0) = dF_{p_0}(w)+R(w)$ equivale a $n$ igualdades $$F_i(p_0 +w) - F_i(p_0) = dF_{p_{0_i}}(w)+R_i(w).$$
+	Como cada uma das funções coordenadas são diferenciáveis, temos que $dF_{p_{0_i}}(w)$ existe para todo $i$.
+	Logo existe $dF_{p_0}(w) = \left(dF_{p_{0_1}}(w), dF_{p_{0_2}}(w), \cdots, dF_{p_{0_m}}(w)\right)$ tal que $F(p_0+w)-F(p_0) = dF_{p_0}(w)+R(w)$ com $\displaystyle\lim_{w\to 0} \dfrac{R(w)}{||w||} = 0$. Logo F é diferenciável.
+
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{corolario}
+	\label{cor:e1}
+	Seja $F:A\subset \mathbb{R}^n\to \mathbb{R}^m$, com $A$ aberto. Se todas as derivadas parciais $\dfrac{\partial F_i}{\partial x_j}$ das funções coordenadas são contínuas em $A$, então $f$ é diferenciável em $A$.
+\end{corolario}
+\begin{proof}
+	Pela proposição \ref{prop:dif0}, cada função coordenada $F_i$ é diferenciável em $A$. Pela porposição \ref{prop:difn}, cada função coordenada ser diferenciável em $A$ implica $F$ diferenciável em $A$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Difeomorfismo]
+	Uma função $F$ diferenciável de classe $C^k$, que tem uma função inversa $F^{-1}$ takbém diferenciável de classe $C^k$, é denominada um difeomorfismo de classe $C^k$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\subsubsection{Caminhos em espaços Euclideanos}
+
+\begin{definicao}[Caminho]
+	Um caminho num conjunto $X\subset \mathbb{R}^n$  é uma aplicação contínua $f:I\to \mathbb{R}^n$, definida num intervalo $I$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Caminho Retilíneo]
+	Por exemplo, dados $x,y \in \mathbb{R}^n$, o caminho $f: [0,1] \to \mathbb{R}^n$ , definido por $f(t) = (1 - t)x + ty$ chama-se o caminho retilíneo que liga $x$ a $y$. Pode ser denotado por $[x,y]$.
+\end{definicao}
+
+
+
+\begin{definicao}[Função Vetorial]
+	Uma função vetorial $\alpha: I\subset \mathbb{R} \to \mathbb{R}^3$ é um caminho que associa um $\alpha(t)\in \mathbb{R}^3$ (ponto) para cada $t \in I$ (número real).
+\end{definicao}
+
+\begin{proposicao}
+	Seja $\alpha: I\subset \mathbb{R} \to \mathbb{R}^3$ uma função vetorial; então existem funções $x,y,z:I\to \mathbb{R}$ tal que para todo $t\in I$, $$\alpha(t) =(x(t),y(t), z(t))$$
+\end{proposicao}
+
+\begin{proof}
+	Seja $\alpha: I\subset \mathbb{R} \to \mathbb{R}^3$ uma função vetorial. $\alpha$ associa todo $t\in I$ a um único ponto $\alpha(t) = (x_t,y_t,z_t)$ do $\mathbb{R}^3$. Definindo, para todo $t \in I$,  $x(t) = x_t$, $y(t) = y_t$ e $z(t) = z_t$. Temos portanto para todo $t\in I$:$$\alpha(t) =(x(t),y(t), z(t))$$
+\end{proof}
+
+\begin{definicao}[Funções Coordenadas]
+	Uma função vetorial $\alpha: I\subset \mathbb{R} \to \mathbb{R}^3$ pode ser representada por $$\alpha(t) =(x(t),y(t), z(t)).$$
+	As funções $x,y,z:I \to \mathbb{R}$ são denominadas funções coordenadas de $\alpha$.
+\end{definicao}
+
+
+\begin{definicao}[Limite de caminho $I\subset\mathbb{R} \to \mathbb{R}^n$]
+	Uma função $f:I \subset \mathbb{R} \to \mathbb{R}^m$, onde  $I$ é um aberto em $\mathbb{R}$ tem limite $L$ quando $t\in A$ tende a $t_0$ se, dado qualquer $\varepsilon >0$, existe $\delta > 0$ tal que, se $0< |t -t_0| < \delta$, então $||f(t) - L || < \varepsilon$.  Nesse caso, denotamos por $$\lim_{t\to t_0} f(p) = L.$$
+\end{definicao}
+\begin{proposicao}
+	Se $f:\mathbb{R}\to \mathbb{R}^n$ é dada por $f(t) = (f_1(t), f_2(t),\cdots f_n(t))$ e $L = (l_1,l_2,\cdots,l_n)$, então $\displaystyle\lim_{t\to t_0} f(t) = L $ se , e somente se, $\displaystyle\lim_{t\to t_0} f_i(t) = l_i$ para todo $i$.
+\end{proposicao}
+\begin{proof}
+	Se $\displaystyle\lim_{t \to t_0} f(t) = L$, temos que dado um $\varepsilon>0$, existe um $\delta > 0$ tal que se $ 0< |t-t_0|< \delta$, temos $ ||f(t) -L || < \varepsilon$. Observe que $ ||f(t) - L|| = \sqrt{\displaystyle \sum_{i = 0}^n \left(f_i(t) - l_i\right)^2}$ e que $|f_i(t) - l_i | = \sqrt{\left( f_i(t) - l_i\right)^2} \leq\sqrt{\displaystyle \sum_{i = 0}^n \left(f_i(t) - l_i\right)^2}$ para todo $i\in \left\{1,2,\cdots,n\right\}$ e para todo $t\in \mathbb{R}$. Logo para todo $\varepsilon>0$ existe um $\delta > 0$ tal que $ 0 < |t-t_0| < \delta \implies |f_i (t) -l_i|\leq || f(t) -L|| < \varepsilon \implies |f_i(t) - l_i | < \varepsilon $. Logo $\displaystyle \lim_{t \to t_o} f_i(t) = l_i$ para todo $i\in \{1,2,\cdots,n \}$.
+\end{proof}
+
+
+\vspace{0.3cm}
+
+\begin{definicao}[Conexo por Caminhos]
+	Um conjunto $X\subset \mathbb{R}^n$ diz-se conexo por caminhos quando dois pontos quaisquer $a,b\in X$ podem ser ligados por um caminho em $X$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Conjunto Convexo]
+	Um subconjunto $X\subset\mathbb{R}^n$ diz-se convexo quando contém qualquer segmento de reta cujos extremos pertençam a $X$, ou seja: $x, y \in X \implies [x, y] \subset X$.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Uma bola aberta $B_{d}(p)$ é convexa.
+\end{proposicao}
+\begin{proof}
+	Se $x,y\in B_{d}(p)$, temos $|| x-p||<d$ e $|| y-p|| < d$. A reta passando por $x$ e $y$ é dada por $X = x+(y-x)\cdot t = (1-t)x +t y$. E o segmento é dado por $ [x,y] = \left\{ (1-t)x +ty; 0 \leq t \leq 1\right\}$. Para todo $v\in [x,y] \implies || v-p || = || (1-t)x +ty -p|| = || (1-t)x -(p-tp) +ty-pt|| \leq |1-t|\cdot || x-p|| + |t| \cdot || y-p|| < \left( 1+t -t \right) \cdot d = d$. Logo $[x,y] \subset B_{d}(p)$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{definicao}[Caminho Poligonal]
+	Diremos que $f : [0, 1] \to X$ é um caminho poligonal em $X$ quando $f$ é a justaposição de um número  finito de caminhos retilíneos.
+\end{definicao}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Um aberto $A \subset \mathbb{R}^n$ é conexo se, e somente se, é conexo por caminhos.
+\end{proposicao}
+\begin{proof}
+	Se $A$ é conexo por caminhos. Fixando $p \in A$, temos para todo $x\in A$ que existe um caminho $f:I\to \mathbb{R}^n$ contínuo ligando $p$ e $x$. Como o intervalo $I$ é conexo e a imagem contínua de um conjunto conexo é conexa, temos $f(I) = C_{p,x}$ conexo para todo $x$. Como a união de conexos com um ponto $p$ em comum é um conjunto conexo, temos que $A= \displaystyle\bigcup_{x\in A} C_{p,x}$ é conexo.
+	Se $A$ é conexo e aberto. Dado $p \in A$, seja $U \subset A$ o conjunto de pontos que podem ser conectados a $p$ por um caminho poligonal em $A$. Todo $x\in U$ está em $A$. Como $A$ é aberto,  existe uma bola $B_{\delta}(x)$ contida em $A$. Como toda bola é convexa, temos que se $y \in B_{\delta}(x)$, então o segmento de reta $[x,y]$ está contido em $B_{\delta}(x)$. Como  $x$ está conectado a $p$ e $x$ está conectado a $y$, temos que existe uma poligonal conectando $y$ a $p$, logo $y\in U$. Portanto para todo $x\in U$, existe uma bola $B_{\delta}(x) \subset U$, logo $U$ é aberto. Definindo $V = A-U \subset A$. Para todo $z\in V$, existe uma bola $B_{\delta}(z)\subset A$. Tomando $v\in B_{\delta}(z)$. Se existe um caminho poligonal ligando $v$ a $p$, justapondo ao segmento $[v,z]$, existiria um caminho poligonal ligando $z$ a $p$, que implica $z\in U$. Portanto não existe caminho poligonal ligando $v$ a $a$, que implica $v\in V$. Logo $B_{\delta}(z) \subset V$. Temos $U,V$ abertos  com $A= U\cup V$. Como $p\in U$, temos $V = \emptyset$. Logo $A= U$.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Seja $F:U \to \mathbb{R}$ definida no aberto $U\subset \mathbb{R}$.  Suponhamos que o segmento de reta $[a, a + v]$ esteja contido em $U$, que a restrição $f|[a, a + v]$ seja contínua e que exista a derivada direcional $\dfrac{\partial F}{\partial v}(x)$, segundo $v$, em todo ponto $x \in (a, a + v)$. Então existe $\theta \in (0, 1)$  tal que $F(a + v) - F(a) =\dfrac{\partial F}{\partial v}(a + \theta v)$.
+\end{proposicao}
+\begin{proof}
+	Definindo a função $g:[0,1] \to \mathbb{R}$ como $g(x) = F(a+xv)$. Como $F$ restrita a $[a, a+v]$ é contínua, temos $g$ contínua. E como $F$ tem derivada direcional na direção $v$ em todo ponto $x\in (a,a+v)$, temos que o limite $ \dfrac{\partial F}{\partial v} (a+xv) = \displaystyle\lim_{t\to 0} \dfrac{F(a+xv+tv) -F(a +xv)}{t} =  \displaystyle\lim_{t\to 0} \dfrac{g(x+t) -g(x)}{t}= g'(x)$ existe para todo $x \in (0,1)$. Temos $g(0) = F(a)$ e $g(1) = F(a+v)$, pelo Teorma do Valor Intermediário de variáveis reais, existe $\theta \in (0,1)$ tal que $g(1) - g(0) = g'(\theta) \cdot (1-0) \implies F(a+v) - F(a) = \dfrac{\partial F}{\partial v}(x+\theta v) $.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Seja $f:\mathbb{R}^n \to \mathbb{R}$ é uma função diferenciável definida em um conjunto aberto e conexo $A$. Se a diferencial de $f$ em $p$, $df_p:\mathbb{R}^n \to \mathbb{R}$, é identicamente nula, para todo $p\in A$, então $f$ é constante em $A$.
+\end{proposicao}
+\begin{proof}
+	Como $f$ é diferenciável, temos que $f$ é contínua em $A$. Fixando $x,y\in A$. Como $A$ é conexo e aberto, temos que existe uma poligonal de vértices $a_0 = x, a_1,\cdots, a_k = y$ contida em $A$. Pelo teorema do valor médio, temos para todo $[a_i, a_{i+1}]\in A$ que existe um $\theta \in (0,1)$ tal que $f(a_{i+1})-f(a_i) = df_v( a_{i+1} + w\theta ) = 0 \implies f(a_{i+1}) = f(a_{i})$. Logo temos $f(x) = f(a_1) = \cdots = f(y) \implies f(x) = f(y)$. Logo $f$ é constante.
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Seja $A:\mathbb{R}^n \to \mathbb{R}^m$ é uma função diferenciável de classe $C^k$ e $p_0 \in A$ tal que $dF_{p_0}$ é injetora. Então, existe uma vizinhança $U$ de $p_0$, contida em $A$, tal que $F(U)$ é aberto em $\mathbb{R}^n$ e a restrição de $F$ a $U$ é um difeomorfismo de classe $C^k$, de $U$ sobre $F(U)$.
+\end{proposicao}
+\begin{proof}
+	???
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	Seja $F:A\subset\mathbb{R}^{n+m} \to \mathbb{R}^n$  uma função diferenciável de classe $C^k$ e $F_1,\cdots, F_n$ as funções coordenadas de $F$. Denotaremos por $x = (x_1,\cdots, x_n)$ , $y = (y_1,\cdots,y_m)$ e $(x,y) = (x_1,\cdots, x_n, y_1, \cdots, y_m)$ os pontos de $\mathbb{R}^n$ , $\mathbb{R}^m$, $\mathbb{R}^{n+m}$, respectivamente. Fixados $(a,b)\in A$ e $c\in \mathbb{R}^n$ tal que $F(a,b) = c$, se a matriz determinada por $\frac{\partial F_i}{x_j}(a,b), i,j = 1,\cdots,n$ tem posto $n$, então existe uma vizinhança $U$ de $b$ em $\mathbb{R}^m$ e uma única função $G:U\subset \mathbb{R}^m \to \mathbb{R}^n$, diferenciáel de classe $C^k$, tal que $G(b) = a$ e $F(G(y), y) = c$, para todo $y\in U$.
+\end{proposicao}
+\begin{proof}
+	???
+\end{proof}
+
+\vspace{0.3cm}
+
+\begin{proposicao}
+	\textbf{(Teorema de Weierstrass).} Se $f$ for contínua em $[a,b]$, então existirão $x_1$ e $x_2$ em $[a,b]$ tais que $f(x_1) \leq f(x) \leq f(x_2)$ para todo $x$ em $[a,b]$.
+\end{proposicao}
+
+\vspace{0.3cm}
+
+\subsection{Exercícios}
+\begin{color}{red}
+    OS EXERCÍCIOS E SOLUÇÕES SERÃO INCLUÍDOS COMO EXEMPLOS NO CORPO DO TEXTO EM LOCAIS APROPRIADOS  A SEREM DECIDIDOS DEPOIS.
+\end{color}
+
+\begin{enumerate}
+	\item Considere as seguintes funções $F:\mathbb{R}^2 \to \mathbb{R}^3$:
+		\begin{enumerate}
+			\item $F(x,y) = (x,y,x+y)$;
+			\item $F(x,y) = (x\cos y,x\sen y)$;
+			\item $F(x,y) = \left(x+y, (x+y)^2,(x+y)^3\right)$.
+		\end{enumerate}
+		Em cada caso, verifique que $F$ é diferenciável e obtenha a matriz jacobiana. Indique os pontos $p\in \mathbb{R}^2$ onde $dF_p$ não é injetora.
+
+		\textbf{Solução:}
+
+		Com o corolário \ref{cor:e1} em mãos, basta analisar a contuinuidade das derivadas parciais para mostrar que uma função é diferenciável.
+
+		A proposição \ref{prop:aplinj} nos diz que $dF_p(w) = 0 \implies w = 0$ é equivalente a  $dF_p$ ser injetora. Ou seja: basta termos $dF_p(w) =0$ com $w\neq 0$ para $dF_p$ não ser injetora.
+
+
+		\begin{enumerate}
+			\item $F(x,y) = (x,y,x+y)$;
+
+				$F$ é uma aplicação linear, logo pela proposição \ref{prop:apln}  é diferenciável.
+				A matriz jacobiana de $F$ é dada por:
+				\begin{align*}
+					F'(x,y) &= \left[\begin{array}{cc} \dfrac{\partial F_1}{\partial x} (x,y) &\dfrac{\partial F_1}{\partial y} (x,y)  \\~\\ \dfrac{\partial F_2}{\partial x} (x,y) &\dfrac{\partial F_2}{\partial y} (x,y)  \\~\\ \dfrac{\partial F_3}{\partial x} (x,y) &\dfrac{\partial F_3}{\partial y} (x,y)  \end{array}\right] \\~\\
+						&= \left[\begin{array}{cc} 1 & 0 \\ 0 & 1 \\ 1 & 1  \end{array}\right]
+				\end{align*}
+				Como $F$ é uma aplicação linear $dF_p(w) = F(w)$.
+				Se $w = (a,b)\in \mathbb{R}^2$ é um ponto qualqeur, temos $dF_p(w) = 0 \iff (a,b, a+b) = (0,0,0) \iff a =0 \land b=0 \land a+b =0 \iff a =0 \land b =0 \iff w = 0$. Como essa solução não depende de $p$, $dF_p$ é injetora para qualquer $p\in \mathbb{R}^2$.
+
+
+			\item $F(x,y) = (x\cos y,x\sen y, 2x)$;
+
+
+				\begin{align*}
+					F'(x,y) &= \left[\begin{array}{cc} \dfrac{\partial F_1}{\partial x} (x,y) &\dfrac{\partial F_1}{\partial y} (x,y)  \\~\\ \dfrac{\partial F_2}{\partial x} (x,y) &\dfrac{\partial F_2}{\partial y} (x,y)  \\~\\ \dfrac{\partial F_3}{\partial x} (x,y) &\dfrac{\partial F_3}{\partial y} (x,y)  \end{array}\right] \\~\\
+						&= \left[\begin{array}{cc} \cos y & -x\sen y \\ \sen y & x\cos x \\ 2 & 0  \end{array}\right]
+				\end{align*}
+				Como cada uma das parciais são contínuas no $\mathbb{R}^2$, temos que $F$ é diferenciável no $\mathbb{R}^2$. Se $w = (a,b) \in \mathbb{R}^2$. \\
+				\begin{align*}
+					dF_p(w) &= F'(p)\cdot w\\~\\
+					&= \left[\begin{array}{cc} \cos y & -x\sen y \\ \sen y & x\cos x \\ 2 & 0  \end{array}\right] \cdot  \left[\begin{array}{c} a \\ b \end{array}\right] \\
+						&= (a \cdot \cos y -b\cdot \sen y, a \sen y+b x\cos x , 2a)
+				\end{align*}
+				Temos
+				\begin{align*}
+					dF_p(w) = 0 &\iff \\
+					(a \cdot \cos y -b\cdot \sen y, a \sen y+b x\cos x , 2a) = 0  &\iff  \\
+					\begin{cases}
+						a\cdot \cos t - b \cdot \sen y = 0\\
+						a\sen y +b x\cos x =0\\
+						2a = 0
+					\end{cases} &\implies \\~\\
+					\begin{cases}
+						- b \cdot \sen y = 0\\
+						+b x\cos x =0\\
+					\end{cases} &\implies\\~\\
+					y = k\pi, x = \dfrac{q\pi}{2}, k,q \in \mathbb{Z}
+				\end{align*}
+				Portanto se $p = \left(\dfrac{q\pi}{2}, k\pi \right)$ com $q,k \in \mathbb{Z}$, temos $dF_p$ não injetora.
+
+
+			\item $F(x,y) = \left(x+y, (x+y)^2,(x+y)^3\right)$.
+
+
+				\begin{align*}
+					F'(x,y) &= \left[\begin{array}{cc} \dfrac{\partial F_1}{\partial x} (x,y) &\dfrac{\partial F_1}{\partial y} (x,y)  \\~\\ \dfrac{\partial F_2}{\partial x} (x,y) &\dfrac{\partial F_2}{\partial y} (x,y)  \\~\\ \dfrac{\partial F_3}{\partial x} (x,y) &\dfrac{\partial F_3}{\partial y} (x,y)  \end{array}\right] \\~\\
+						&= \left[\begin{array}{cc} 1 & 1\\ 2\cdot(x+y)& 2\cdot(x+y) \\ 3\cdot(x+y)^2 &  3\cdot(x+y)^2 \end{array}\right]
+				\end{align*}
+				Como cada uma das parciais são contínuas no $\mathbb{R}^2$, temos que $F$ é diferenciável no $\mathbb{R}^2$. Se $w = (a,b) \in \mathbb{R}^2$. \\
+				\begin{align*}
+					dF_p(w) &= F'(p)\cdot w\\~\\
+					&= \left[\begin{array}{cc} 1 & 1\\ 2\cdot(x+y)& 2\cdot(x+y) \\ 3\cdot(x+y)^2 &  3\cdot(x+y)^2 \end{array}\right] \cdot  \left[\begin{array}{c} a \\ b \end{array}\right] \\
+						&= \left(a+b, 2\cdot(a+b)(x+y), 3(a+b)(x+y)^2\right)
+				\end{align*}
+				Temos
+				\begin{align*}
+					dF_p(w) = 0 &\iff \\
+					\left(a+b, 2\cdot(a+b)(x+y), 3(a+b)(x+y)^2\right) = 0  &\iff  \\
+					\begin{cases}
+						a+b = 0 \\
+						2\cdot(a+b)(x+y) =0\\
+						3(a+b)(x+y)^2 = 0
+					\end{cases} &\implies \\~\\
+					x+y = 0 &\implies \\
+					y = -x, x\in \mathbb{R}
+				\end{align*}
+				Portanto se $p = \left(x, -x\right)$ com $x \in \mathbb{R}$, temos $dF_p$ não injetora.
+
+		\end{enumerate}
+	\item Seja $F: \mathbb{R}^2 - \left\{0\right\}\to \mathbb{R}$ uma função contínua tal que $F\left(\lambda x, \lambda y\right) = F(x,y)$, para todo $(x,y) \in \mathbb{R}^2 -\left\{ (0,0)\right\}$ e $\lambda$ um número real não-nulo. Prove que $F$ é limitada, isto é, a função $F$ tem um máximo e um mínimo. (Sugestão: Considere a função $F$ restrita a uma circunferência de raio unitário).
+
+\textbf{Solução:}
+
+		Seja $F: \mathbb{R}^2 - \left\{0\right\}\to \mathbb{R}$ uma função contínua tal que $F\left(\lambda x, \lambda y\right) = F(x,y)$, para todo $(x,y) \in \mathbb{R}^2 -\left\{ (0,0)\right\}$ e $\lambda$ um número real não-nulo. Tomando $U = \left\{ p \in \mathbb{R}^2 ;\: || p || = 1 \right\} \subset \mathbb{R}^2 - \left\{0 \right\}$. Como $U$ é compacto, temos  que $F(U)$ é compacto, portanto limitado. Logo existem $x,y\in U$ tal que para todo $p\in U$, temos  $F(x) \leq F(p) \leq F(y)$.
+		Para todo $w\in \mathbb{R}^2-\left\{0 \right\}$, temos $ \left|\left| \dfrac{w}{||w||} \right|\right|   = 1  \implies \dfrac{w}{||w||} \in U $. Temos $F(w) = F\left(\dfrac{w}{||w||}\right)$. Portanto existem $x,y \in U$ tal que $ F(x) \leq F(w) \leq F(y)$. Logo $F$ é limitada.
+\end{enumerate}
+
+	%\section*{Acknowledgements}
+	%The authors thanks to the anonymous referee for the comments which helped to improve the paper.
+
+	%The authors thanks...In particular the first author would like to thank.... the second...
+
+	%\section*{Acknowledgements}
+	%We would like to thank you for following the above instructions. This will hep to speed up the publication process of your paper.
+
+\end{color}
+
+	\begin{thebibliography}{999}
+
+
+		\bibitem{T}  Tenenblat, Keti \emph{Introdução à geometria diferencial}. 2ªed. São Paulo. Blucher, 2008.
+		\bibitem{E1} Lima, Elon \emph{Análise real. Funções de uma váriavel}. 13ª ed. Rio de Janeiro. Impa, 2020.
+  \bibitem{E2} Lima, Elon \emph{Curso de An{\'a}lise, vol. 2}. Rio de Janeiro. Impa, 2020.
+  \bibitem{E3} Lima, Elon \emph{Algebra Linear}. Rio de Janeiro. Impa, 2006.
+
+
+	\end{thebibliography}
+
+
+\end{document}
