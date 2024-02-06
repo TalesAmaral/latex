@@ -16,10 +16,12 @@
 \theoremstyle{remark}
 \newtheorem{obs}{Observação}[section]
 \newtheorem{exemp}{Exemplo}[section]
+\newtheorem{exercicio}{Exercício}[subsection]
 \DeclareMathOperator{\card}{card}
 
 \begin{document}
-\section{Teoria de conjuntos}
+\section{Análise Real}
+\subsection{Teoria de conjuntos}
 \begin{prop}
 	$$(A-B)\cup B =  A\cup B$$
 \end{prop}
@@ -202,8 +204,8 @@
 %\begin{proof}
 	%Definindo $\phi: Z \to W$, que associa $h\in Z$ a $g: Y \to Y$, definida por $g(y) = f(h(f^{-1}(y)))$.  Como $g$ é composição de bijeções, temos $g$ bijeção. Logo $g\in W$.  Se $\phi(h) = \phi(p)$, temos $f(h(f^{-1}(y))) = f(p(f^{-1}(y)))$ para todo $y\in Y$. Como $f$ é injetiva, temos $h(f^{-1}(y)) = p(f^{-1}(y))$.  Tomando $y = f(x)$, para $x\in X$, temos $h(f^{-1}(f(x))) = p(f^{-1}(f(x))) \implies h(x) = p(x)$ para todo $x\in X$. Logo $h = p$.
 %\end{proof}
-\section{Conjuntos Finitos e Infinitos}
-\subsection{Números naturais}
+\subsection{Conjuntos Finitos e Infinitos}
+\subsubsection{Números naturais}
 \paragraph{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb{N}$, cujos elementos são os números naturais, e uma função $s:\mathbb{N} \to \mathbb{N}$. Para cada $n\in \mathbb{N}$, o número $s(n)$ é o sucessor de $n$.  Temos os axiomas:}
 \begin{axioma}
 	$s:\mathbb{N} \to \mathbb{N}$ é injetiva.
@@ -547,7 +549,7 @@
 \end{proof}
 
 
-\section{Conjuntos Finitos e Infinitos}
+\subsection{Conjuntos Finitos e Infinitos}
 
 \begin{definicao}[ Conjuntos finitos]
 	Um conjunto $X$ é finito quando for vazio ou quando existir para algum $n\in \mathbb{N}$ uma bijeção $\phi \: :\: I_n \to X$
@@ -886,6 +888,17 @@
 		Temos $h(n) \neq f_n(n)$ para todo $n\in \mathbb{N}$, logo $h \neq f_n$ para todo $n\in \mathbb{N}$. Como $h\in Y$ e $h \not \in f(\mathbb{N})$, temos que $f$ não é sobrejetiva. Logo $f$ não é bijetiva (contradição). Logo $Y$ não é enumerável.
 		%falta mostrar que não existe uma injeção f: Y -> N$
 \end{proof}
+\subsection{Números Reais}
+
+\begin{prop}
+	Seja $A,B\subset \mathbb{R}^{+}-\left\{0\right\}$, temos $\displaystyle\sup_{a\in A } a \cdot \displaystyle\sup_{b\in B} b = \displaystyle\sup_{(a,b)\in A\times B} ab$.
+\end{prop}
+\begin{proof}
+	%carro
+	Temos $\forall a \in A : 0 \leq a \leq \sup A$ e $\forall b \in B : 0\leq b \leq \sup B$. Logo $\forall (a,b)\in A\times B \: : \: ab \leq \sup A \sup B$. Logo $\sup A \sup B$ é uma conta superior para $\left\{ ab | (a,b) \in A\times B \right\}$. Logo $\sup_{(a,b) \in A\times B} ab \leq \sup A \sup B$.
+
+Temos para todos $(a,b)\in A\times B$ que $a\cdot b \leq \sup_{(a,b)\in A\times B} ab \implies a \leq \dfrac{\sup_{(a,b)\in A\times B}}{b}$. Fixando $b \in B$, obtemos uma cota superior para $a\in A$. Logo $\sup_{a\in A} \leq \dfrac{\sup_{(a,b)\in A\times B}}{b} \implies  b \leq \dfrac{\sup_{(a,b)\in A\times B}}{\sup_{a\in A} }$. Obtemos uma cota superior para $b\in B$, logo $\sup_{b\in B} \leq \dfrac{\sup_{(a,b)\in A\times B}}{\sup_{a\in A} } \implies \sup_{a\in A } a \cdot \sup_{b\in B} b \leq \sup_{(a,b)\in A\times B} $
+\end{proof}
 
 
 
@@ -1024,8 +1037,22 @@ Afirmo que $S_T(H) = Df(T)(H)$. De fato, $S_T$ é linear (confia) e temos \begin
 \end{align*}
 	\end{proof}
 \subsection{Integração}
+\begin{definicao}[Retângulo]
+	Um retângulo ou bloco é um produto cartesiano $A = \displaystyle\prod_{i = 1}^m [a_i,b_i] \subset \mathbb{R}^m$, com $a_i < b_i$ para $i\in \left\{1,2, \cdots ,m \right\}$.
+\end{definicao}
+\begin{definicao}[Partição do intervalo]
+	Uma partição de um intervalo $[a,b] \subset \mathbb{R}$ é uma sequência  $t_1,t_2,\cdots, t_k$ com $a = t_1 \leq t_2 \leq \cdots \leq t_k = b$.
+\end{definicao}
+\begin{definicao}[Partição de um retângulo]
+	Uma partição de um retângulo $A \subset \mathbb{R}^m$ é uma coleção $P = (P_1,P_2,\cdots P_m)$, onde $P_i$ é uma partição do  intervalo $[a_i,b_i]$ para todo $i\in \left\{1,2, \cdots ,m \right\}$.
+\end{definicao}
 
-
+\begin{definicao}[Subretângulo de uma Partição]
+	Dada uma partição $P = (P_1, P_2, \cdots P_m)$ do retângulo $A\subset \mathbb{R}^n$, um subretângulo $S$ de $P$ é um retângulo da forma $S = \displaystyle\prod_{j = 1}^m I_j$, onde $I_j$ é um intervalo da partição $P_j$.
+\end{definicao}
+\begin{definicao}[Refinamento de uma partição]
+	Dada uma partição $P$ de um retângulo $A$, dizemos que $Q$ é um refinamento de $P$ se todo subretângulo de $Q$ está contido em um subretângulo de $P$.
+\end{definicao}
 \begin{definicao}[Medida Nula]
 	Um conjunto $A\subset \mathbb{R}^n$ tem medida nula se para todo $\varepsilon>0$,  existe uma cobertura enumerável    $\left\{ U_i \right\}_{i\in L}$ de $A$ por retângulos fechados tal que $\displaystyle\sum_{i = 1}^{\infty} v\left(U_i\right) < \varepsilon$.
 \end{definicao}
@@ -1051,9 +1078,17 @@ Afirmo que $S_T(H) = Df(T)(H)$. De fato, $S_T$ é linear (confia) e temos \begin
 \begin{proof}
 	%carro
 \end{proof}
-\begin{prop}
+\subsubsection{Exercícios}
+\begin{exercicio}
+	Sejam $f:A \to \mathbb{R}, \: g:B \to \mathbb{R}$ funções limitadas não-negativas nos blocos $A,B$. Defina $\phi: A\times B \to \mathbb{R}$ pondo $\phi(x,y) = f(x)\cdot g(y)$. Prove que $$ \overline{\int_{A\times B}} \phi(z) \d dz = \overline{\int_{A}} f(x) \d dx \cdot \overline{\int_{ B}} g(y) \d dy$$
+	e que vale um resultado análogo para integrais inferiores.
+\end{exercicio}
+\begin{proof}
+	Temos $ \displaystyle\overline{\int_{A\times B}} \phi(z) \d dz = \inf_{Q}\left\{ U(\phi; Q)\right\}$. Seja $Q = (P,P')$ uma partição de $A\times B$. Temos $P$ partição de $A$ e $P'$ partição de  $B$. Temos $0 \leq U(f,P) \geq \inf_{P} \left\{ U(f,P)\right\}$ e  $ 0\leq U(g,P') \geq \inf_{P} \left\{ U(g,P')\right\}$. Logo 
+\end{proof}
+\begin{exercicio}
 	Se $X\subset \mathbb{R}^m$ tem medida nula, então  para todo $Y \subset \mathbb{R}^m$, o produto cartesiano $X\times Y \subset \mathbb{R}^{m+n}$ tem medida nula.
-\end{prop}
+\end{exercicio}
 \begin{proof}
 	Basta provar que se $X\subset \mathbb{R}^n$ tem medida nula, então $X\times \mathbb{R}^m$ tem medida nula. Pois uma cobertura do conjunto $X\times \mathbb{R}^m$ cobre o conjunto $X\times Y \subset X \times \mathbb{R}^m$.
 

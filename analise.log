@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  5 FEB 2024 20:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  6 FEB 2024 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -157,29 +157,30 @@ LaTeX Info: Redefining \] on input line 2954.
 \c@definicao=\count281
 \c@obs=\count282
 \c@exemp=\count283
+\c@exercicio=\count284
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count284
+\l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box54
 )
 (./analise.aux)
 \openout1 = `analise.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -200,16 +201,16 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
+\scratchcounter=\count286
 \scratchdimen=\dimen160
 \scratchbox=\box55
-\nofMPsegments=\count286
-\nofMParguments=\count287
+\nofMPsegments=\count287
+\nofMParguments=\count288
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count288
+\MPscratchCnt=\count289
 \MPscratchDim=\dimen161
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
 \everyMPtoPDFconversion=\toks31
 )))
 (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
@@ -224,13 +225,13 @@ e
 \Gin@req@height=\dimen162
 \Gin@req@width=\dimen163
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -238,7 +239,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (10.82709pt too wide) in paragraph at lines 79--80
+Overfull \hbox (10.82709pt too wide) in paragraph at lines 81--82
 []\OT1/cmr/m/n/10 Seja $(\OML/cmm/m/it/10 g[]; h[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m
 /n/10 2 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; Y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/
 10 ^^B F\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 ; Y\OT1/cmr/m/n/10 )$. Seja $\OML/
@@ -247,64 +248,64 @@ mm/m/it/10 ; f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []$.
  []
 
 [2] [3]
-Overfull \hbox (21.84447pt too wide) in paragraph at lines 178--179
+Overfull \hbox (21.84447pt too wide) in paragraph at lines 180--181
 []\OT1/cmr/m/n/10 Suponha que ex-ista a so-breje^^Xc~ao $\OML/cmm/m/it/10 f \OT
 1/cmr/m/n/10 : \OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 ! P\OT1/cmr/m/n/10 (\OML/cmm
 /m/it/10 X\OT1/cmr/m/n/10 )$. Seja $\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = []$.
  []
 
 [4] [5]
-Overfull \hbox (2.9448pt too wide) in paragraph at lines 244--244
+Overfull \hbox (2.9448pt too wide) in paragraph at lines 246--246
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$. Da defini^^Xc
 ~ao
  []
 
 [6]
-Overfull \hbox (1.19443pt too wide) in paragraph at lines 285--286
+Overfull \hbox (1.19443pt too wide) in paragraph at lines 287--288
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$. Temos
  []
 
 [7] [8]
-Overfull \hbox (66.18355pt too wide) in paragraph at lines 330--331
+Overfull \hbox (66.18355pt too wide) in paragraph at lines 332--333
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$,
  []
 
 [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 432--433
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
 [11] [12] [13] [14]
-Overfull \hbox (22.64381pt too wide) in paragraph at lines 575--576
+Overfull \hbox (22.64381pt too wide) in paragraph at lines 577--578
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$.
  []
 
 [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 662--663
+Underfull \hbox (badness 10000) in paragraph at lines 664--665
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--674
+Underfull \hbox (badness 10000) in paragraph at lines 675--676
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 677--678
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 679--680
 
  []
 
-[17] [18]
-Overfull \hbox (12.31955pt too wide) in paragraph at lines 738--739
-\OT1/cmr/bx/n/10 Proposi^^Xc~ao 3.9. \OT1/cmr/m/it/10 Temos para to-dos $\OML/c
-mm/m/it/10 m; n \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N$ \OT1/cmr/m/it/10 que $\OMS/
-cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 )$ \OT1/
-cmr/m/it/10 ^^Se finito e $\OMS/cmsy/m/n/10 jF\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
- I[]; I[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 =
+[18]
+Overfull \hbox (18.06952pt too wide) in paragraph at lines 740--741
+\OT1/cmr/bx/n/10 Proposi^^Xc~ao 1.48. \OT1/cmr/m/it/10 Temos para to-dos $\OML/
+cmm/m/it/10 m; n \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N$ \OT1/cmr/m/it/10 que $\OMS
+/cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 )$ \OT1
+/cmr/m/it/10 ^^Se finito e $\OMS/cmsy/m/n/10 jF\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 I[]; I[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (14.28745pt too wide) in paragraph at lines 743--744
+Overfull \hbox (14.28745pt too wide) in paragraph at lines 745--746
 \OT1/cmr/m/n/10 bije^^Xc~ao en-tre $\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 ([] \OML/
 cmm/m/it/10 ; I[]\OT1/cmr/m/n/10 )$ e $\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/
 cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 )$. Logo ex-iste uma bije^^Xc~ao en-tre $\O
@@ -313,25 +314,38 @@ S/cmsy/m/n/10 ^^B
  []
 
 [19] [20] [21] [22]
-Overfull \hbox (12.43742pt too wide) in paragraph at lines 876--877
-\OT1/cmr/bx/n/10 Proposi^^Xc~ao 3.21. \OT1/cmr/m/it/10 (\OT1/cmr/bx/it/10 Canto
+Overfull \hbox (12.43742pt too wide) in paragraph at lines 878--879
+\OT1/cmr/bx/n/10 Proposi^^Xc~ao 1.60. \OT1/cmr/m/it/10 (\OT1/cmr/bx/it/10 Canto
 r-Bernstein-Schr^^?oder The-o-rem\OT1/cmr/m/it/10 ) Se ex-i-s-tir inje^^Xc~oes
  []
 
-[23] [24] [25] [26] [27] [28] (./analise.aux)
+[23] [24] [25] [26] [27]
+
+LaTeX Warning: Command \d invalid in math mode on input line 1083.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 1083.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 1083.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 1087.
+
+[28] [29] (./analise.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3314 strings out of 475626
- 49964 string characters out of 5780897
+ 3322 strings out of 475626
+ 50093 string characters out of 5780897
  1945457 words of memory out of 5000000
- 25395 multiletter control sequences out of 15000+600000
+ 25403 multiletter control sequences out of 15000+600000
  563573 words of font info for 57 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 70i,10n,79p,948b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,10n,79p,948b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/talesamaral/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm10
 00.600pk></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
@@ -348,10 +362,10 @@ ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on analise.pdf (28 pages, 263821 bytes).
+Output written on analise.pdf (29 pages, 271115 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 178 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
