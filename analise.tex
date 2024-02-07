@@ -1084,7 +1084,26 @@ Afirmo que $S_T(H) = Df(T)(H)$. De fato, $S_T$ é linear (confia) e temos \begin
 	e que vale um resultado análogo para integrais inferiores.
 \end{exercicio}
 \begin{proof}
-	Temos $ \displaystyle\overline{\int_{A\times B}} \phi(z) \d dz = \inf_{Q}\left\{ U(\phi; Q)\right\}$. Seja $Q = (P,P')$ uma partição de $A\times B$. Temos $P$ partição de $A$ e $P'$ partição de  $B$. Temos $0 \leq U(f,P) \geq \inf_{P} \left\{ U(f,P)\right\}$ e  $ 0\leq U(g,P') \geq \inf_{P} \left\{ U(g,P')\right\}$. Logo 
+	Temos $ \displaystyle\overline{\int_{A\times B}} \phi(z) \d dz = \inf_{Q}\left\{ U(\phi; Q)\right\}$. Seja $Q = (P,P')$ uma partição de $A\times B$. Temos $P$ partição de $A$ e $P'$ partição de  $B$. Seja $S_b = S\times S'$ um subretângulo de $Q$, temos $S$ subretângulo de $P$ e $S'$ subretângulo de $P'$. Temos $\forall x\in S \: : \:  0 \leq f(x) \leq M_{S}(f) $ e $\forall y\in S' \: : \:  0 \leq g(y) \leq M_{S'}(g) $, logo $\forall (x,y) \in S \times S' = S_b \: : \: 0 \leq f(x) \cdot g(y) \leq M_S(f)\cdot M_{S'}(g)$. Logo $M_s(f)\cdot M_{S'}(g)$ é cota superior para $f(x)\cdot g(y)$ em $S\times S'$, logo $ \sup \left\{ f(x)\cdot g(y) \: | \: (x,y)\in S\times S'\right\} = M_{S\times S'}(\phi) \leq M_S(f) \cdot M_{S'}(g)$.
+
+	%carro, usar que sup(AB) = sup(A) * sup(B)
+	Se $M_{S}(f) = 0$ , temos $0 \leq f(x) \leq M_{S}(f)  \leq 0 \implies f(x) = 0$ para todo $x\in S$, logo $\forall (x,y) \in (S\times S') \: : \: f(x) \times g(y) = 0\cdot g(y) = 0 $, logo $M_{S\times S'} ( \phi) = 0$.  É análogo se $M_{S'}(g) = 0$.
+
+	Supondo $M_{S}(f) \neq 0 $ e $M_{S'}(g) \neq 0$. Dado $\varepsilon>0$,   existe $x_1 \in S$ tal que $f(x_1) > M_S(f) - \dfrac{\varepsilon}{ 2\cdot M_{S'}(g)}$ e existe $y_1 \in S'$ tal que $g(y_1) > M_S'(g) - \dfrac{\varepsilon}{2\cdot M_S(f)}$. Logo existe $(x_1,x_2) \in S\times S'$ tal qu $f(x_1)\cdot f(x_2) > \left(M_S(f) - \dfrac{\varepsilon}{2\cdot M_{S'}(g)}\right)\cdot  \left(M_{S'}(g) - \dfrac{\varepsilon}{2\cdot M_{S}(f)}\right)  = M_S(f)\cdot M_{S'}(g) - \dfrac{\varepsilon}{2} - \dfrac{\varepsilon}{2} +\dfrac{\varepsilon^2}{2M_{S}(f) \cdot M_{S'}(g)}  > M_S(f)\cdot M_{S'}(g) - \varepsilon$. Como dado $\varepsilon > 0 $, existem $(x_1,y_1) \in S\times S'$ tal que $f(x_1)\cdot g(y_1) < M_S(f) \cdot M_{S'}(g) - \varepsilon$ e $M_{S}(f)\cdot M_{S'}(g)$ é cota superior para $\left\{ f(x)\cdot g(y) | (x,y) \in S\times S'\right\}$, temos $M_{S\times S'} (\phi) = M_{S}(f) \times M_{S}(g)$.
+
+	Logo 
+	\begin{align*}
+		U(\phi, Q)  &= \displaystyle \sum_{S\times S'\in (P,P')} M_{S\times S'}(\phi) \cdot V(S\times S') \\~\\
+		&=\displaystyle \sum_{S\times S'\in (P,P')} M_{S}(f) \cdot M_{S'}(g)\cdot V(S)\cdot V(S') \\~\\
+		&=\displaystyle \sum_{\substack{S \in P, \\ S'\in P'}}\left[ M_{S}(f)\cdot V(S) \right] \cdot \left[ M_{S'}(g)\cdot V(S') \right] \\~\\
+		&=\displaystyle \sum_{S \in P} \sum_{S'\in P'} \left[ M_{S}(f)\cdot V(S) \right] \cdot \left[ M_{S'}(g)\cdot V(S') \right] \\~\\
+		&=\displaystyle \sum_{S \in P}\left[ M_{S}(f)\cdot V(S) \right] \cdot \sum_{S'\in P'}  \left[ M_{S'}(g)\cdot V(S') \right] \\~\\
+		&=\displaystyle \left[ \sum_{S'\in P'}   M_{S'}(g)\cdot V(S') \right]\cdot  \left[\sum_{S \in P} M_{S}(f)\cdot V(S) \right] \\~\\
+		&=U(f,P)  \cdot U(g,P') 
+	\end{align*}
+
+	Logo$ \displaystyle\overline{\int_{A\times B}} \phi(z) \d dz = \inf_{Q}\left\{ U(\phi; Q)\right\} = \inf_{(P,P')}\left\{ U(f, P) \cdot U(g,P') \right\} = \inf_{P}\left\{ U(f,P)\right\} \cdot\inf_{P'}\left\{ U(g,P')\right\} = \overline{\int_{A}} f(x) \d dx \cdot \overline{\int_{ B}} g(y) \d dy $
+
 \end{proof}
 \begin{exercicio}
 	Se $X\subset \mathbb{R}^m$ tem medida nula, então  para todo $Y \subset \mathbb{R}^m$, o produto cartesiano $X\times Y \subset \mathbb{R}^{m+n}$ tem medida nula.
