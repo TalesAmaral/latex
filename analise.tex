@@ -3,6 +3,7 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{imakeidx}
 \usepackage{amsmath}
 \theoremstyle{plain}
 \newtheorem{axioma}{Axioma}
@@ -20,8 +21,13 @@
 \DeclareMathOperator{\card}{card}
 
 \begin{document}
-\section{Análise Real}
-\subsection{Teoria de conjuntos}
+
+\makeindex
+\section{Introdução}
+
+Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.  
+
+\section{Teoria de conjuntos}
 \begin{prop}
 	$$(A-B)\cup B =  A\cup B$$
 \end{prop}
@@ -204,6 +210,15 @@
 %\begin{proof}
 	%Definindo $\phi: Z \to W$, que associa $h\in Z$ a $g: Y \to Y$, definida por $g(y) = f(h(f^{-1}(y)))$.  Como $g$ é composição de bijeções, temos $g$ bijeção. Logo $g\in W$.  Se $\phi(h) = \phi(p)$, temos $f(h(f^{-1}(y))) = f(p(f^{-1}(y)))$ para todo $y\in Y$. Como $f$ é injetiva, temos $h(f^{-1}(y)) = p(f^{-1}(y))$.  Tomando $y = f(x)$, para $x\in X$, temos $h(f^{-1}(f(x))) = p(f^{-1}(f(x))) \implies h(x) = p(x)$ para todo $x\in X$. Logo $h = p$.
 %\end{proof}
+\section{Aneis e Corpos}
+
+\begin{definicao}[Anel]
+	Seja $A$ um conjunto e $+ : A\times A \to A$, $\cdot : A \times A \to A$ funções. Dizemos que $(A, +, \cdot) $ é um anel se:
+	\begin{enumerate}
+		\item $ x+ (y+z) = (x+y) + z $
+	\end{enumerate}
+\end{definicao}
+\section{Análise Real}
 \subsection{Conjuntos Finitos e Infinitos}
 \subsubsection{Números naturais}
 \paragraph{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb{N}$, cujos elementos são os números naturais, e uma função $s:\mathbb{N} \to \mathbb{N}$. Para cada $n\in \mathbb{N}$, o número $s(n)$ é o sucessor de $n$.  Temos os axiomas:}
@@ -890,14 +905,28 @@
 \end{proof}
 \subsection{Números Reais}
 
+\begin{axioma}
+	Existe um conjunto $\mathbb{R}$ com as seguintes propriedades
+\end{axioma}
 \begin{prop}
-	Seja $A,B\subset \mathbb{R}^{+}-\left\{0\right\}$, temos $\displaystyle\sup_{a\in A } a \cdot \displaystyle\sup_{b\in B} b = \displaystyle\sup_{(a,b)\in A\times B} ab$.
+	Sejam $A,B\subset \mathbb{R}^{+}-\left\{0\right\}$ limitados, então $C = \left\{ ab \: | \: (a,b) \in A\times B \right\}$ é limitado e $\sup C = \sup A \times \sup B$.
 \end{prop}
 \begin{proof}
-	%carro
-	Temos $\forall a \in A : 0 \leq a \leq \sup A$ e $\forall b \in B : 0\leq b \leq \sup B$. Logo $\forall (a,b)\in A\times B \: : \: ab \leq \sup A \sup B$. Logo $\sup A \sup B$ é uma conta superior para $\left\{ ab | (a,b) \in A\times B \right\}$. Logo $\sup_{(a,b) \in A\times B} ab \leq \sup A \sup B$.
+	Como $A,B$ são limitados, então existe $\sup A$ e $\sup B$.
+	Dado $(a,b) \in A\times B$, temos $ 0 \leq a \leq \sup A $ e $0\leq b \leq \sup B$, logo $0\leq ab \leq \sup A\cdot \sup B$, logo $\sup A \sup B$ é uma cota superior para $ C = \left\{ ab | (a,b) \in A\times B \right\}$. Portanto $C$ é limitado.  Além disso $\sup C  \leq \sup A \cdot \sup B$.
 
-Temos para todos $(a,b)\in A\times B$ que $a\cdot b \leq \sup_{(a,b)\in A\times B} ab \implies a \leq \dfrac{\sup_{(a,b)\in A\times B}}{b}$. Fixando $b \in B$, obtemos uma cota superior para $a\in A$. Logo $\sup_{a\in A} \leq \dfrac{\sup_{(a,b)\in A\times B}}{b} \implies  b \leq \dfrac{\sup_{(a,b)\in A\times B}}{\sup_{a\in A} }$. Obtemos uma cota superior para $b\in B$, logo $\sup_{b\in B} \leq \dfrac{\sup_{(a,b)\in A\times B}}{\sup_{a\in A} } \implies \sup_{a\in A } a \cdot \sup_{b\in B} b \leq \sup_{(a,b)\in A\times B} $
+
+	Seja $(x_n)_{n\in \mathbb{N}}$ uma sequência em $A$ com $\lim x_n = \sup A$ e $(y_n)_{n\in \mathbb{N}}$ uma sequência em $B$ com $\lim y_n = \sup B$, temos $(x_n\cdot y_n)_{n \in \mathbb{N}}$ uma sequência em $C$ com $\lim x_n \cdot y_n = \sup A \sup B$. Logo $\sup A \cdot \sup B  \leq \sup C$.
+
+
+	Como $\sup A \sup B \leq \sup C$ e $\sup C \leq \sup A \sup B$, temos $\sup C = \sup A \sup B$.
+
+\end{proof}
+\begin{prop}
+	Sejam $A,B\subset \mathbb{R}^{+}-\left\{0\right\}$ limitados, então $C = \left\{ ab \: | \: (a,b) \in A\times B \right\}$ é limitado e $\sup C = \sup A \times \sup B$.
+\end{prop}
+\begin{proof}
+	Exercício. %carro
 \end{proof}
 
 
