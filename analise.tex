@@ -3,6 +3,7 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage[brazilian]{babel}
 \theoremstyle{plain}
@@ -224,9 +225,11 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 %\begin{proof}
 	%Definindo $\phi: Z \to W$, que associa $h\in Z$ a $g: Y \to Y$, definida por $g(y) = f(h(f^{-1}(y)))$.  Como $g$ é composição de bijeções, temos $g$ bijeção. Logo $g\in W$.  Se $\phi(h) = \phi(p)$, temos $f(h(f^{-1}(y))) = f(p(f^{-1}(y)))$ para todo $y\in Y$. Como $f$ é injetiva, temos $h(f^{-1}(y)) = p(f^{-1}(y))$.  Tomando $y = f(x)$, para $x\in X$, temos $h(f^{-1}(f(x))) = p(f^{-1}(f(x))) \implies h(x) = p(x)$ para todo $x\in X$. Logo $h = p$.
 %\end{proof}
-\section{Aneis e Corpos}
+\section{Anéis }
 
+\subsection{Definições iniciais}
 \begin{definicao}[Anel]
+	%carro
 	Seja $A$ um conjunto e $+ : A\times A \to A$, $\cdot : A \times A \to A$ funções. Dizemos que $(A, +, \cdot) $ é um anel se :
 	\begin{enumerate}
 		\item  $ \forall x,y,z\in A \: : \:  x+ (y+z) = (x+y) + z $
@@ -234,8 +237,84 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 		\item Existe $0_A \in A$ tal que para todo $x\in A$, $$x+0_A = x$$.
 		\item Para todo $x\in A$, existe $x'\in A$ tal que:  $$ x + x' = 0_A$$
 		\item  $ \forall x,y,z\in A \: : \:  x\cdot (y\cdot z) = (x\cdot y)\cdot z$.
+		\item  $ \forall x,y,z\in A \: :$
+			$$x\cdot (y+ z) = x\cdot y + x\cdot z$$
+			$$ (x+ y) \cdot z = x\cdot z + y\cdot z$$
+		\item  Existe um elemnto $1_A \in A$ tal que para todo $x\in A$: $$ x\cdot 1_A = 1_A\cdot x =  x.$$
+		\item  $ \forall x,y\in A \: : \:  x\cdot y = y\cdot x$.
 	\end{enumerate}
 \end{definicao}
+
+\begin{prop}
+	Existe um único elemento $0_A\in A$ tal que $ \forall x\in A \: : \: x+0_A = x$.
+\end{prop}
+\begin{proof}
+	Suponha que existam $0_A, 0_A'\in A$ tal que $\forall x\in A \: : \:  \begin{cases} x+0_A = x \\ x+0_A' = x\end{cases}$. Como $0_A,0_A' \in A$, temos $0_A'+ 0_A = 0_A'$ e $0_A + 0_A' = 0_A$. Logo pela comutatividade da soma $0_A' = 0_A' + 0_A = 0_A +0_A' = 0_A \iff 0_A = 0_A'$.  
+		Logo existe um único $0_A\in A$ tal que $\forall x\in A \: : \: x+0_A = x$.
+\end{proof}
+\begin{definicao}[Elemento Neutro da Soma]
+	O único elemento $0_A\in A$ tal que $\forall x\in A \: : \: x+0_A  = x$ é chamado de elemento neutro da soma.
+\end{definicao}
+
+
+\begin{prop}
+	Para todo $x\in A$, existe um único $y \in A$ tal que $x+y = 0_A$.
+\end{prop}
+\begin{proof}
+	Suponha que existam $y,y' \in A$ tal que $x + y = x+y' = 0$. Logo $y = y+0_A = y+(x+y') = y+(x+y') = (y+x) +y' = (x+y)+y' = 0_A +y' = y'+0_A = y' \iff y = y'$.
+
+	Logo existe um único $y\in A$ tal que $x+y = 0_A$.
+\end{proof}
+\begin{definicao}[Simétrico]
+	Dado $x\in A$, chamamos o único elemento $y\in A$ tal que $x+y = 0_A$ de simétrico e escrevemos $y = -x$. Logo $x+(-x) = 0_A$.
+\end{definicao}
+\begin{definicao}[Subtração]
+	A operação "somar com inverso" é chamada subtração e escrevemos $$x+(-y) = x-y$$.
+\end{definicao}
+\subsubsection{Exercícios}
+\begin{exercicio}
+	Se $A$ é um anel e $x,y,z\in A$ então:
+	\begin{enumerate}[label = (\alph*)]
+		\item $ x+z = y+z \implies x  =y $
+		\item $x+y = x \implies y = 0_A$
+	\end{enumerate}
+\end{exercicio}
+\begin{proof}
+ ~\\
+	\begin{enumerate}[label = (\alph*)]
+		\item Supondo $x+z = y+z$,  temos  $ y = y +0_A = y + (z-z) = (y+z) -z = (x+z) - z = x+(z-z) = x+0_A = x$. Logo $ x+z = y+z \implies x  =y $.
+	\end{enumerate}
+
+\end{proof}
+
+\subsection{Invertibilidade}
+\begin{definicao}[Invertível]
+	Um elemento $x\in A$ é invertível em $A$ se existe $y\in A$ tal que $$x \cdot y = 1_A.$$
+\end{definicao}
+\begin{prop}
+	Se $x\in A$ é invertível, então existe um único $y\in A$ tal que $x\cdot y = 1_A$.
+\end{prop}
+\begin{proof}
+	Dado $x\in A$ invertível, suponha que existam $y,y' \in A$ tal que $x\cdot y = x\cdot y' = 1_A$.
+
+	Logo $y' = 1_A \cdot y' = (x\cdot y) \cdot y' =  x\cdot (y\cdot y') = x\cdot (y'\cdot y) = (x \cdot y')\cdot y = 1_A \cdot y =y \iff y' = y$.
+
+	Logo existe um único $y\in A$ tal que $x\cdot y = 1_A$.
+\end{proof}
+
+\begin{definicao}[Conjunto dos invertíveis]
+	Dado um anel $A$, o conjunto dos invertíveis em $A$ é denotado por $A^{\times}$.
+\end{definicao}
+\begin{definicao}[Conjunto dos não-nulos]
+	Dado um anel $A$, o conjunto dos não-nulos em $A$ é denotado por $A^{*} = A - \left\{0\right\}$.
+\end{definicao}
+\begin{prop}
+	\subsection{Corpos, domínios e anéis reduzidos}
+	\begin{definicao}[Corpo]
+		Um anel $A$ é um corpo se $A^{*} = A^{\times}$, ou seja, todo elemento não nulo for invertível.
+	\end{definicao}
+
+\end{prop}
 \section{Análise Real}
 \subsection{Conjuntos Finitos e Infinitos}
 \subsubsection{Números naturais}
