@@ -3,13 +3,24 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{mathtools}
-\usepackage{imakeidx}
 \usepackage{amsmath}
+\usepackage[brazilian]{babel}
 \theoremstyle{plain}
 \newtheorem{axioma}{Axioma}
 \newtheorem{prop}{Proposição}[section]
 \newtheorem{teo}{Teorema}
 \newtheorem{lema}{Lema}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\title{Notas do Tales}
+\author{Tales da Silva Amaral}
+\date{\today}
 
 \theoremstyle{definition}
 \newtheorem{definicao}{Definição}[section]
@@ -21,8 +32,11 @@
 \DeclareMathOperator{\card}{card}
 
 \begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
 
-\makeindex
 \section{Introdução}
 
 Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.  
@@ -213,9 +227,13 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \section{Aneis e Corpos}
 
 \begin{definicao}[Anel]
-	Seja $A$ um conjunto e $+ : A\times A \to A$, $\cdot : A \times A \to A$ funções. Dizemos que $(A, +, \cdot) $ é um anel se:
+	Seja $A$ um conjunto e $+ : A\times A \to A$, $\cdot : A \times A \to A$ funções. Dizemos que $(A, +, \cdot) $ é um anel se :
 	\begin{enumerate}
-		\item $ x+ (y+z) = (x+y) + z $
+		\item  $ \forall x,y,z\in A \: : \:  x+ (y+z) = (x+y) + z $
+		\item $ \forall x,y \in A \: : \:  x+ y = y+x $
+		\item Existe $0_A \in A$ tal que para todo $x\in A$, $$x+0_A = x$$.
+		\item Para todo $x\in A$, existe $x'\in A$ tal que:  $$ x + x' = 0_A$$
+		\item  $ \forall x,y,z\in A \: : \:  x\cdot (y\cdot z) = (x\cdot y)\cdot z$.
 	\end{enumerate}
 \end{definicao}
 \section{Análise Real}
