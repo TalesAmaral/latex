@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  13 FEB 2024 18:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  14 FEB 2024 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -444,61 +444,48 @@ mm/m/it/10 ; f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []$.
  []
 
 [4] [5] [6] [7]
-Overfull \hbox (9.50914pt too wide) in paragraph at lines 252--254
-[]\OT1/cmr/m/n/10 Suponha que exis-tam $0[]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0
-[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 tal que $\OMS/cmsy/m/
-n/10 8\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 A  \OT1/cmr/m/n/10
- :  []$.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
-
- []
-
-[8] [9]
-Overfull \hbox (1.23335pt too wide) in paragraph at lines 358--358
+Overfull \hbox (1.23335pt too wide) in paragraph at lines 268--268
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$. Da
  []
 
-[10] [11]
-Overfull \hbox (7.8534pt too wide) in paragraph at lines 399--400
+[8]
+Overfull \hbox (7.8534pt too wide) in paragraph at lines 309--310
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$.
  []
 
-[12]
-Overfull \hbox (105.02774pt too wide) in paragraph at lines 444--445
+[9] [10]
+Overfull \hbox (105.02774pt too wide) in paragraph at lines 354--355
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$,
  []
 
-[13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 546--547
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
 
  []
 
-[15] [16] [17] [18]
-Overfull \hbox (61.488pt too wide) in paragraph at lines 689--690
+[13] [14] [15] [16]
+Overfull \hbox (61.488pt too wide) in paragraph at lines 601--602
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$.
  []
 
-[19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 776--777
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 688--689
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--788
+Underfull \hbox (badness 10000) in paragraph at lines 699--700
 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 791--792
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
 
  []
 
-[22]
-Overfull \hbox (18.06952pt too wide) in paragraph at lines 852--853
-[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.28. []\OT1/cmr/m/it/10 Te-mos para to-dos
+[20]
+Overfull \hbox (18.06952pt too wide) in paragraph at lines 764--765
+[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 2.48. []\OT1/cmr/m/it/10 Te-mos para to-dos
  $\OML/cmm/m/it/10 m; n \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N$ \OT1/cmr/m/it/10 qu
 e $\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 
 )$ \OT1/cmr/m/it/10 ^^Se fi-nito e $\OMS/cmsy/m/n/10 jF\OT1/cmr/m/n/10 (\OML/cm
@@ -506,7 +493,7 @@ m/m/it/10 I[]; I[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (14.28745pt too wide) in paragraph at lines 857--858
+Overfull \hbox (14.28745pt too wide) in paragraph at lines 769--770
 \OT1/cmr/m/n/10 bije^^Xc~ao en-tre $\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 ([] \OML/
 cmm/m/it/10 ; I[]\OT1/cmr/m/n/10 )$ e $\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/
 cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 )$. Logo existe uma bije^^Xc~ao en-tre $\OM
@@ -514,22 +501,40 @@ S/cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 ) \OMS
 /cmsy/m/n/10 ^^B
  []
 
-[23] [24] [25] [26]
-Overfull \hbox (12.43742pt too wide) in paragraph at lines 990--991
-[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.40. []\OT1/cmr/m/it/10 (\OT1/cmr/bx/it/10
+[21] [22] [23] [24]
+Overfull \hbox (12.43742pt too wide) in paragraph at lines 902--903
+[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 2.60. []\OT1/cmr/m/it/10 (\OT1/cmr/bx/it/10
  Cantor-Bernstein-Schr^^?oder The-o-rem\OT1/cmr/m/it/10 ) Se exis-tir inje^^Xc~
 oes
  []
 
+[25]
+Overfull \hbox (9.50914pt too wide) in paragraph at lines 939--941
+[]\OT1/cmr/m/n/10 Suponha que exis-tam $0[]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0
+[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 tal que $\OMS/cmsy/m/
+n/10 8\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 A  \OT1/cmr/m/n/10
+ :  []$.
+ []
 
-Overfull \hbox (23.45946pt too wide) in paragraph at lines 1009--1010
-[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.42. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m
-/it/10 A; B \OMS/cmsy/m/n/10 ^^Z \U/msb/m/n/10 R[] \OMS/cmsy/m/n/10 ^^@ []$ \OT
-1/cmr/m/it/10 li-mi-ta-dos, ent~ao $\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = []$
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 968--969
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 983--984
+
  []
 
 [27]
-Overfull \hbox (8.34749pt too wide) in paragraph at lines 1019--1020
+Overfull \hbox (17.70949pt too wide) in paragraph at lines 1026--1027
+[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.1. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m/
+it/10 A; B \OMS/cmsy/m/n/10 ^^Z \U/msb/m/n/10 R[] \OMS/cmsy/m/n/10 ^^@ []$ \OT1
+/cmr/m/it/10 li-mi-ta-dos, ent~ao $\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = []$
+ []
+
+
+Overfull \hbox (8.34749pt too wide) in paragraph at lines 1036--1037
 []\OT1/cmr/m/n/10 Como $[] \OML/cmm/m/it/10 A [] B \OMS/cmsy/m/n/10 ^^T [] \OML
 /cmm/m/it/10 C$ \OT1/cmr/m/n/10 e $[] \OML/cmm/m/it/10 C \OMS/cmsy/m/n/10 ^^T [
 ] \OML/cmm/m/it/10 A [] B$\OT1/cmr/m/n/10 , te-mos $[] \OML/cmm/m/it/10 C \OT1/
@@ -537,40 +542,39 @@ cmr/m/n/10 = [] \OML/cmm/m/it/10 A [] B$\OT1/cmr/m/n/10 .
  []
 
 
-Overfull \hbox (23.45946pt too wide) in paragraph at lines 1023--1024
-[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.43. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m
-/it/10 A; B \OMS/cmsy/m/n/10 ^^Z \U/msb/m/n/10 R[] \OMS/cmsy/m/n/10 ^^@ []$ \OT
-1/cmr/m/it/10 li-mi-ta-dos, ent~ao $\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = []$
+Overfull \hbox (17.70949pt too wide) in paragraph at lines 1040--1041
+[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.2. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m/
+it/10 A; B \OMS/cmsy/m/n/10 ^^Z \U/msb/m/n/10 R[] \OMS/cmsy/m/n/10 ^^@ []$ \OT1
+/cmr/m/it/10 li-mi-ta-dos, ent~ao $\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = []$
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1031.
+(hyperref)                removing `math shift' on input line 1048.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1031.
+(hyperref)                removing `superscript' on input line 1048.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1031.
+(hyperref)                removing `math shift' on input line 1048.
 
-[28] [29] [30] [31]
+[28] [29] [30] [31] [32]
 
-LaTeX Warning: Command \d invalid in math mode on input line 1209.
-
-
-LaTeX Warning: Command \d invalid in math mode on input line 1209.
+LaTeX Warning: Command \d invalid in math mode on input line 1227.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 1209.
-
-[32]
-
-LaTeX Warning: Command \d invalid in math mode on input line 1213.
+LaTeX Warning: Command \d invalid in math mode on input line 1227.
 
 
-Overfull \hbox (15.61229pt too wide) in paragraph at lines 1218--1219
+LaTeX Warning: Command \d invalid in math mode on input line 1227.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 1231.
+
+
+Overfull \hbox (15.61229pt too wide) in paragraph at lines 1236--1237
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) \OMS/c
 msy/m/n/10 ^^A \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g\OT1/cmr/
 m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 "$ \OT1/cmr/m/n/10 e $\OML/cmm/m
@@ -581,16 +585,16 @@ m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 "$ \OT1/cmr/m/n/10 e $\OML/cmm/m
 
 [33]
 
-LaTeX Warning: Command \d invalid in math mode on input line 1231.
+LaTeX Warning: Command \d invalid in math mode on input line 1249.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 1231.
+LaTeX Warning: Command \d invalid in math mode on input line 1249.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 1231.
+LaTeX Warning: Command \d invalid in math mode on input line 1249.
 
 
-Overfull \hbox (14.18147pt too wide) in paragraph at lines 1231--1232
+Overfull \hbox (14.18147pt too wide) in paragraph at lines 1249--1250
 []\OT1/cmr/m/n/10 Logo$[]\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
 z\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 z \OT1/cmr/m/n/10 = [] [] = [] [] = [] [] 
 \OMS/cmsy/m/n/10 ^^A
@@ -602,13 +606,13 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
  ***********
 Package rerunfilecheck Info: File `analise.out' has not changed.
-(rerunfilecheck)             Checksum: C14B90712876CB0E17EBE973AE1905A9;2380.
+(rerunfilecheck)             Checksum: EC757C07C1E7677CFB3F9713ED1C2452;2961.
  ) 
 Here is how much of TeX's memory you used:
- 12114 strings out of 475626
- 188922 string characters out of 5780897
- 1945457 words of memory out of 5000000
- 33823 multiletter control sequences out of 15000+600000
+ 12126 strings out of 475626
+ 189118 string characters out of 5780897
+ 1947457 words of memory out of 5000000
+ 33827 multiletter control sequences out of 15000+600000
  568219 words of font info for 75 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  75i,14n,79p,948b,734s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -631,10 +635,10 @@ exlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
 ive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on analise.pdf (35 pages, 324308 bytes).
+Output written on analise.pdf (35 pages, 326341 bytes).
 PDF statistics:
- 576 PDF objects out of 1000 (max. 8388607)
- 497 compressed objects within 5 object streams
- 227 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 603 PDF objects out of 1000 (max. 8388607)
+ 523 compressed objects within 6 object streams
+ 235 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 
