@@ -43,6 +43,7 @@
 Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.  
 
 \section{Teoria de conjuntos}
+\subsection{Organizar Ainda}
 \begin{prop}
 	$$(A-B)\cup B =  A\cup B$$
 \end{prop}
@@ -1002,6 +1003,9 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 
 	Logo existe um único $y\in A$ tal que $x\cdot y = 1_A$.
 \end{proof}
+\begin{definicao}[Inverso multiplicativo]
+	Dado um anel $A$ e $x\in A$ invertível, definimos $x^{-1}$ como o único elemento de $A$ tal que $x\cdot x^{-1} = 1_A$.
+\end{definicao}
 
 \begin{definicao}[Conjunto dos invertíveis]
 	Dado um anel $A$, o conjunto dos invertíveis em $A$ é denotado por $A^{\times}$.
@@ -1009,13 +1013,71 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{definicao}[Conjunto dos não-nulos]
 	Dado um anel $A$, o conjunto dos não-nulos em $A$ é denotado por $A^{*} = A - \left\{0\right\}$.
 \end{definicao}
+\begin{definicao}[Anel Nulo]
+	Dizemos que um anel $A$ é nulo se $A = \left\{ 0_A \right\}$.
+\end{definicao}
+\subsection{Corpos, domínios e anéis reduzidos}
+\begin{definicao}[Divisor de Zero]
+	Dado $A$ um anel, $x\in A$ é um divisor de zero em $A$ se existe $y\in A-\left\{0 \right\}$ tal que $xy = 0_A$.
+\end{definicao}
 \begin{prop}
-	\subsection{Corpos, domínios e anéis reduzidos}
-	\begin{definicao}[Corpo]
-		Um anel $A$ é um corpo se $A^{*} = A^{\times}$, ou seja, todo elemento não nulo for invertível.
-	\end{definicao}
-
+	Dado um anel não-nulo $A$, $0_A$ é um divisor de zero.
 \end{prop}
+\begin{proof}
+	Como $A$ é não nulo, existe $y\in A - \left\{0\right\}$. Além disso, $0_A \cdot y = 0_A$. Logo $0_A$ é um divisor de zero.
+\end{proof}
+\begin{definicao}[Domínio]
+	Um anel não nulo $A$ é um Domínio se $0_A \in A$ for o único divisor de zero.
+\end{definicao}
+\begin{prop}
+	Dado um anel $A$ não nulo, as afirmações a seguir são equivalentes:
+	\begin{enumerate}[label=(\alph*)]
+		\item $A$ é um Domínio;
+		\item $\forall x,y \in A - \left\{ 0_A\right\} \: : \: xy \neq 0_A$
+		\item $\forall x,y \in A  \: : \: xy = 0_A \implies x = 0_A \lor y = 0_A$
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	\begin{enumerate}[itemindent=36pt]
+		\item[(a) $\implies$ (b):] Supondo $A$ um domínio. Dados $x,y\in A$ com $x,y\neq 0_A$,  se $xy = 0_A$, teríamos $x,y$ divisores de zero em $A$. Logo teríamos divisores de zero em A diferentes de $0_A$. Logo $A$ não seria um domínio (contradição). Portanto devemos ter $xy \neq 0_A$.
+		\item[(b) $\implies$ (c):] Supondo $x,y\in A$ com $xy = 0_A$. Se $x,y\neq 0_A$, teríamos de (b) que $xy \neq 0_A$, logo devemos ter $x = 0_A$ ou $y = 0_A$.
+		\item[(c) $\implies$ (a):] Supondo $x$ um divisor de zero em $A$, logo $xy = 0_A$ com $y\in A-\left\{ 0_A\right\}$. De (c), temos $xy =0_A \implies x = 0_A \lor y = 0_A$. Como $y\neq 0_A$, devemos ter $x = 0_A$. Mostramos que qualquer divisor de zero em $A$ é igual a $0_A$. Logo $A$ é um domínio.
+	\end{enumerate}
+\end{proof}
+\begin{prop}[Lei do Corte]
+	Seja $A$ um domínio. Se $a,x,y \in A$ e $a\neq 0_A$, então $$ ax = ay \implies x = y.$$
+\end{prop}
+\begin{proof}
+	Supondo $a,x,y\in A$ com $a\neq 0_A$ e $ax=ay$. Temos $ax -ay = 0_A  \iff a(x-y) = 0_A \implies a = 0_A \lor x-y = 0_A$.  Como $a\neq 0_A$, temos $x-y = 0_A \implies x = y$.
+\end{proof}
+\begin{definicao}[Nilpotente]
+	%carro, definir potencias
+	Dado um anel $A$. Um elemento $x\in A$ é nilpotente se $x^n = 0_A$ para algum $n\in \mathbb{N}$.
+\end{definicao}
+\begin{prop}
+	Dado um anel $A$, $0_A \in A$ é nilpotente.
+\end{prop}
+\begin{proof}
+	Tems $0_A^1 = 0_A $, logo $0_A$ é nilpotente.
+\end{proof}
+\begin{definicao}[Anel Reduzido]
+	Um anel $A$ é um Anel Reduzido  se o único elemento nilpotente de $A$ for $0_A$.
+\end{definicao}
+\begin{definicao}[Corpo]
+	Um anel não nulo $A$ é um corpo se $A^{*} = A^{\times}$, ou seja, todo elemento não nulo for invertível.
+\end{definicao}
+
+\begin{prop}
+	Se um anel $A$ é um corpo, então é um domínio.
+\end{prop}
+\begin{proof}
+	%carro
+\end{proof}
+\begin{prop}
+	Se um anel $A$ é um domínio, então é um reduzido.
+\end{prop}
+\begin{proof}
+\end{proof}
 \section{Análise Real}
 \subsection{Números Reais}
 
