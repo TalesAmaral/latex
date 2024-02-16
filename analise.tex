@@ -1044,6 +1044,21 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 		\item[(c) $\implies$ (a):] Supondo $x$ um divisor de zero em $A$, logo $xy = 0_A$ com $y\in A-\left\{ 0_A\right\}$. De (c), temos $xy =0_A \implies x = 0_A \lor y = 0_A$. Como $y\neq 0_A$, devemos ter $x = 0_A$. Mostramos que qualquer divisor de zero em $A$ é igual a $0_A$. Logo $A$ é um domínio.
 	\end{enumerate}
 \end{proof}
+\begin{prop}
+	Se $A$ é um domínio, $n\in \mathbb{N}$ e $x_1,\cdots x_n\in A- \left\{0_A\right\}$, então $x_1\cdot \cdots x_n \neq 0_A$.
+\end{prop}
+\begin{proof}
+	A prova será por indução. Para $n=1$, é imediato. Para $n = 2$, segue da proposição anterior. Supondo válido para um $n\in \mathbb{N}$ qualquer.
+	Supondo $x_1,\cdots x_n, x_{n+1} \in A - \left\{0_A \right\}$, então $x_1\cdot x_2\cdots x_n \cdot x_{n+1} = (x_1\cdot x_2\cdots x_n) \cdot x_{n+1} $. Pelo passo de indução, temos $ y = x_1\cdot x_2\cdots x_n \neq 0_A$. Como $y\neq 0_A$ e $x_{n+1}\neq 0_A$, temos $y\cdot x_{n+1} \neq 0_A$ pelo caso $n=2$. Logo vale para qualquer $n\in \mathbb{N}$.
+\end{proof}
+\begin{prop}
+	\label{propNilpotente}
+	Se $A$ é um domínio, $n\in \mathbb{N}$ e $x\in A- \left\{0_A\right\}$, então $x^n \neq 0_A$.
+\end{prop}
+\begin{proof}
+	%era pra ser por indução
+	Tomando $x\in A - \left\{0 \right\}$ e  $x^n = \underbrace{x\cdot x\cdots \cdot x}_{n \text{ vezes}}$ e usando a proposição anterior com $x_1 = x_2 = \cdots = x_n = x \neq 0 $, temos $x^n \neq 0$.
+\end{proof}
 \begin{prop}[Lei do Corte]
 	Seja $A$ um domínio. Se $a,x,y \in A$ e $a\neq 0_A$, então $$ ax = ay \implies x = y.$$
 \end{prop}
@@ -1077,6 +1092,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Se um anel $A$ é um domínio, então é um reduzido.
 \end{prop}
 \begin{proof}
+	Supondo $A$ um domínio. Seja $x\in A$ nilpotente, ou seja, $x^n = 0_A$ com $n\in \mathbb{N}$. Se $x\neq 0$, temos pela proposição \ref{propNilpotente} que $x^n \neq 0$.  Logo devemos ter $x = 0$.
 \end{proof}
 \section{Análise Real}
 \subsection{Números Reais}

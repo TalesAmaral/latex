@@ -19,6 +19,6 @@
 \contentsline {section}{\numberline {5}Análise no $\mathbb {R}^n$}{30}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Topologia}{30}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Métrica e Norma}{30}{subsubsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.2}Diferenciação}{32}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}Diferenciação}{33}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Integração}{34}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Exercícios}{35}{subsubsection.5.3.1}%
