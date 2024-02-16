@@ -960,9 +960,33 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	A operação "somar com inverso" é chamada subtração e escrevemos $$x+(-y) = x-y$$.
 \end{definicao}
 \begin{prop}
+	Existe um único elemento $1_A\in A$ tal que $\forall x\in A \: x\cdot 1_A = 1_A\cdot x = x$.
+\end{prop}
+\begin{proof}
+	Suponha que existam $1_A,1_A'\in A$ tal que $\forall x\in A \: : \:  \begin{cases} x\cdot 1_A = x \\ x\cdot1_A' = x\end{cases}$. Em particular, temos  $\begin{cases} 1_A'\cdot 1_A = 1_A' \\ 1_A\cdot1_A' = 1_A\end{cases} \implies 1_A' = 1_A'\cdot 1_A = 1_A\cdot 1_A' = 1_A$.
+		Logo existe um único elemento $1_A\in A$ tal que $\forall x\in A \: x\cdot 1_A = 1_A\cdot x  = x$.
+\end{proof}
+\begin{definicao}[Elemento Neutro do Produto]
+	O único elemento $1_A\in A$ tal que $\forall x\in A \: x\cdot 1_A = 1_A\cdot x = x$ é chamado de elemento neutro do produto.
+\end{definicao}
+\begin{prop}
+	Se $A$ é um anel  $x,y,z\in A$, então  $ x+z = y+z \implies x  =y $.
+\end{prop}
+\begin{proof}
+		Supondo $x+z = y+z$,  temos  $ y = y +0_A = y + (z-z) = (y+z) -z = (x+z) - z = x+(z-z) = x+0_A = x$. Logo $ x+z = y+z \implies x  =y $.
+\end{proof}
+\begin{prop}
+	Se $A$ é um anel, então $\forall x \in A \: : \: x\cdot 0_A = 0_A$
+\end{prop}
+\begin{proof}
+	Temos $x\cdot 0_A = x\cdot (0_A + 0_A) = x\cdot 0_A +x\cdot 0_A \iff x\cdot 0_A + 0_A = x\cdot 0_A + x\cdot 0_A \implies x\cdot 0_A = 0_A $ pela proposição anterior.
+\end{proof}
+\begin{prop}
 	Seja $A$  um anel. Para todos $x,y,z \in A$, temos:
 	\begin{enumerate}[label=(\alph*)]
 		\item $-(-x) = x$
+		\item $-(xy) = (-x)y = x(-y)$
+		\item $(-1_A)x = -x$
 	\end{enumerate}
 \end{prop}
 \begin{proof}
@@ -970,23 +994,16 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	
 	\begin{enumerate}[label=(\alph*)]
 		\item Definimos $-y = z$ como o único elemento $z\in A$ tal que $y + z = 0_A $.   Logo $(-x) +(-(-x)) =   0_A$ por definição. Mas $x + (-x) = 0_A$. Logo pela unicidade, temos $x =-(-x)$.
+		\item Temos  $(-x)y +xy = (-x+x)y = 0_A y = 0_A$ e $x(-y) +xy = x(-y+y) = x\cdot 0_A = 0_A$, que implica $(-x)y$ e $x(-y)$ inversos aditivos de $xy$. Da unicidade, temos $-(xy) = (-x)y = x(-y)$.
+		\item Do item (b), temos $(-1_A)x = -(1_A\cdot x) = -x$.
 	\end{enumerate}
 \end{proof}
 \subsubsection{Exercícios}
 \begin{exercicio}
-	Se $A$ é um anel e $x,y,z\in A$ então:
-	\begin{enumerate}[label = (\alph*)]
-		\item $ x+z = y+z \implies x  =y $
-		\item $x+y = x \implies y = 0_A$
-	\end{enumerate}
+	Se $A$ é um anel e $x,y,z\in A$, então $x+y = x \implies y = 0_A$.
 \end{exercicio}
 \begin{proof}
- ~\\
-	\begin{enumerate}[label = (\alph*)]
-		\item Supondo $x+z = y+z$,  temos  $ y = y +0_A = y + (z-z) = (y+z) -z = (x+z) - z = x+(z-z) = x+0_A = x$. Logo $ x+z = y+z \implies x  =y $.
-		\item Se $x+y = x$, temos $x+y = x = x+0_A \implies y = 0_A$, pelo item anterior.
-	\end{enumerate}
-
+		Se $x+y = x$, temos $x+y = x = x+0_A \implies y = 0_A$, pelo item anterior.
 \end{proof}
 
 \subsection{Invertibilidade}
