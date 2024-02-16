@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  15 FEB 2024 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  15 FEB 2024 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -526,14 +526,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 984--985
 
  []
 
-[27] [28]
+[27] [28] [29]
 Overfull \hbox (17.70949pt too wide) in paragraph at lines 1088--1089
 [][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.1. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m/
 it/10 A; B \OMS/cmsy/m/n/10 ^^Z \U/msb/m/n/10 R[] \OMS/cmsy/m/n/10 ^^@ []$ \OT1
 /cmr/m/it/10 li-mi-ta-dos, ent~ao $\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = []$
  []
 
-[29]
+
 Overfull \hbox (8.34749pt too wide) in paragraph at lines 1098--1099
 []\OT1/cmr/m/n/10 Como $[] \OML/cmm/m/it/10 A [] B \OMS/cmsy/m/n/10 ^^T [] \OML
 /cmm/m/it/10 C$ \OT1/cmr/m/n/10 e $[] \OML/cmm/m/it/10 C \OMS/cmsy/m/n/10 ^^T [
@@ -635,7 +635,7 @@ exlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
 ive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on analise.pdf (37 pages, 331030 bytes).
+Output written on analise.pdf (37 pages, 331483 bytes).
 PDF statistics:
  638 PDF objects out of 1000 (max. 8388607)
  556 compressed objects within 6 object streams
