@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  16 FEB 2024 17:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.6)  16 FEB 2024 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -525,19 +525,19 @@ n/10 8\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 A  \OT1/cmr/m/n/10
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 993--994
+Underfull \hbox (badness 10000) in paragraph at lines 994--995
 
  []
 
-[28] [29]
-Overfull \hbox (17.70949pt too wide) in paragraph at lines 1121--1122
-[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.1. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m/
+[28] [29] [30]
+Overfull \hbox (17.70949pt too wide) in paragraph at lines 1177--1178
+[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.5. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m/
 it/10 A; B \OMS/cmsy/m/n/10 ^^Z \U/msb/m/n/10 R[] \OMS/cmsy/m/n/10 ^^@ []$ \OT1
 /cmr/m/it/10 li-mi-ta-dos, ent~ao $\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = []$
  []
 
-
-Overfull \hbox (8.34749pt too wide) in paragraph at lines 1131--1132
+[31]
+Overfull \hbox (8.34749pt too wide) in paragraph at lines 1187--1188
 []\OT1/cmr/m/n/10 Como $[] \OML/cmm/m/it/10 A [] B \OMS/cmsy/m/n/10 ^^T [] \OML
 /cmm/m/it/10 C$ \OT1/cmr/m/n/10 e $[] \OML/cmm/m/it/10 C \OMS/cmsy/m/n/10 ^^T [
 ] \OML/cmm/m/it/10 A [] B$\OT1/cmr/m/n/10 , te-mos $[] \OML/cmm/m/it/10 C \OT1/
@@ -545,41 +545,40 @@ cmr/m/n/10 = [] \OML/cmm/m/it/10 A [] B$\OT1/cmr/m/n/10 .
  []
 
 
-Overfull \hbox (17.70949pt too wide) in paragraph at lines 1135--1136
-[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.2. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m/
+Overfull \hbox (17.70949pt too wide) in paragraph at lines 1191--1192
+[][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 4.6. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m/
 it/10 A; B \OMS/cmsy/m/n/10 ^^Z \U/msb/m/n/10 R[] \OMS/cmsy/m/n/10 ^^@ []$ \OT1
 /cmr/m/it/10 li-mi-ta-dos, ent~ao $\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = []$
  []
 
-[30]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1143.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1143.
+(hyperref)                removing `math shift' on input line 1199.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1143.
-
-[31] [32] [33] [34]
-
-LaTeX Warning: Command \d invalid in math mode on input line 1322.
+(hyperref)                removing `superscript' on input line 1199.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 1322.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1199.
+
+[32] [33] [34] [35]
+
+LaTeX Warning: Command \d invalid in math mode on input line 1378.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 1322.
-
-[35]
-
-LaTeX Warning: Command \d invalid in math mode on input line 1326.
+LaTeX Warning: Command \d invalid in math mode on input line 1378.
 
 
-Overfull \hbox (15.61229pt too wide) in paragraph at lines 1331--1332
+LaTeX Warning: Command \d invalid in math mode on input line 1378.
+
+[36]
+
+LaTeX Warning: Command \d invalid in math mode on input line 1382.
+
+
+Overfull \hbox (15.61229pt too wide) in paragraph at lines 1387--1388
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) \OMS/c
 msy/m/n/10 ^^A \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g\OT1/cmr/
 m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 "$ \OT1/cmr/m/n/10 e $\OML/cmm/m
@@ -588,39 +587,39 @@ m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 "$ \OT1/cmr/m/n/10 e $\OML/cmm/m
 ^^Se cota su-pe-rior para $[]$,
  []
 
-[36]
+[37]
 
-LaTeX Warning: Command \d invalid in math mode on input line 1344.
-
-
-LaTeX Warning: Command \d invalid in math mode on input line 1344.
+LaTeX Warning: Command \d invalid in math mode on input line 1400.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 1344.
+LaTeX Warning: Command \d invalid in math mode on input line 1400.
 
 
-Overfull \hbox (14.18147pt too wide) in paragraph at lines 1344--1345
+LaTeX Warning: Command \d invalid in math mode on input line 1400.
+
+
+Overfull \hbox (14.18147pt too wide) in paragraph at lines 1400--1401
 []\OT1/cmr/m/n/10 Logo$[]\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
 z\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 z \OT1/cmr/m/n/10 = [] [] = [] [] = [] [] 
 \OMS/cmsy/m/n/10 ^^A
  []
 
-[37] [38] (./analise.aux)
+[38] [39] (./analise.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
  ***********
 Package rerunfilecheck Info: File `analise.out' has not changed.
-(rerunfilecheck)             Checksum: 6364A4E2D731C3972510EAD303F13A83;3097.
+(rerunfilecheck)             Checksum: DE8BB18BF2FCC5E0B69963445586C696;3238.
  ) 
 Here is how much of TeX's memory you used:
- 12154 strings out of 475626
- 189430 string characters out of 5780897
+ 12172 strings out of 475626
+ 189627 string characters out of 5780897
  1948457 words of memory out of 5000000
- 33830 multiletter control sequences out of 15000+600000
+ 33831 multiletter control sequences out of 15000+600000
  568219 words of font info for 75 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,14n,79p,948b,745s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,79p,948b,743s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/talesamaral/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm10
 00.600pk></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
@@ -640,10 +639,10 @@ exlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
 ive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on analise.pdf (38 pages, 335252 bytes).
+Output written on analise.pdf (39 pages, 339445 bytes).
 PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
- 260 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 677 PDF objects out of 1000 (max. 8388607)
+ 593 compressed objects within 6 object streams
+ 277 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

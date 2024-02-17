@@ -986,6 +986,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	\begin{enumerate}[label=(\alph*)]
 		\item $-(-x) = x$
 		\item $-(xy) = (-x)y = x(-y)$
+		\item $(-x)(-y) = xy$
 		\item $(-1_A)x = -x$
 	\end{enumerate}
 \end{prop}
@@ -995,6 +996,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	\begin{enumerate}[label=(\alph*)]
 		\item Definimos $-y = z$ como o único elemento $z\in A$ tal que $y + z = 0_A $.   Logo $(-x) +(-(-x)) =   0_A$ por definição. Mas $x + (-x) = 0_A$. Logo pela unicidade, temos $x =-(-x)$.
 		\item Temos  $(-x)y +xy = (-x+x)y = 0_A y = 0_A$ e $x(-y) +xy = x(-y+y) = x\cdot 0_A = 0_A$, que implica $(-x)y$ e $x(-y)$ inversos aditivos de $xy$. Da unicidade, temos $-(xy) = (-x)y = x(-y)$.
+		\item Pelos itens anteriores, temos $(-x)(-y) = -(x\cdot (-y)) = -(-(xy)) = xy$.
 		\item Do item (b), temos $(-1_A)x = -(1_A\cdot x) = -x$.
 	\end{enumerate}
 \end{proof}
@@ -1113,10 +1115,64 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \end{proof}
 \section{Análise Real}
 \subsection{Números Reais}
+\subsubsection{Corpo Ordenado}
+\begin{definicao}[Corpo Ordenado]
+	Um corpo $K$ é ordenado se existe um conjunto $P\subset K$ tal que :
+	\begin{enumerate}
+		\item Para todos $x,y\in P$, temos $x+y\in P$ e $x\cdot y \in P$.
+		\item Dado $x\in K$, apenas uma das possibilidades ocorre: ou $x \in P$, ou $x = 0_K $ ou $-x\in P$.
+	\end{enumerate}
+\end{definicao}
+\begin{definicao}[Positivos]
+	Dado um corpo ordenado $K$, chamamos os elementos $x\in P$ de positivos.
+\end{definicao}
+\begin{definicao}[Negativos]
+	Dado um corpo ordenado $K$, chamamos os elementos $ y = -x$ com  $x\in P$ de negativos.
+\end{definicao}
+\begin{definicao}[ Conjunto dos Negativos]
+	Dado um corpo ordenado $K$, denotamos por $-P = \left\{ -x \: | \: x\in P\right\}$ como o conjunto dos elementos negativos.
+\end{definicao}
+\begin{prop}
+	Se $K$ é um corpo ordenado, $K = (-P) \cup \left\{ 0_K \right\} \cup P$.
+\end{prop}
+\begin{proof}
+	Dado $x\in K$, pela definição, temos $x \in P$ ou $x = 0_K \iff x\in \left\{0_K\right\}$ ou $-x\in P \iff x \in -P$, logo $x\in (-P) \cup \left\{ 0_K \right\} \cup P$. Temos $P,\left\{0_K\right\}, -P \subset K$, logo $(-P) \cup \left\{ 0_K \right\} \cup P \subset K$. Portanto $(-P) \cup \left\{ 0_K \right\} \cup P = K$.
+\end{proof}
+\begin{prop}
+	Se $K$ é um corpo ordenado, $(-P) \cap \left\{ 0_K \right\} \cap P = \emptyset$.
+\end{prop}
+\begin{proof}
+	Dado $x\in K$, pela definição, apenas um dos três ocorre: $x \in P$ ou $x = 0_K \iff x\in \left\{0_K\right\}$ ou $-x\in P \iff x \in -P$. Logo $(-P) \cap \left\{ 0_K \right\} \cap P = \emptyset$.
+\end{proof}
+\begin{prop}
+	Se $K$ é um corpo ordenado, temos $ \forall a\in K-\left\{0_K\right\}  \: : \: a^2 \in P$.
+\end{prop}
+\begin{proof}
+	Dado $a\in K-\left\{0_K\right\}$, temos $-a \in P$  ou $a\in P$.  Se $a\in P$, temos $a^2 = a\cdot a \in P$. Se $-a\in P$, temos $(-a)\cdot (-a) = a^2 \in P$. Em ambos os casos, temos $a^2\in P$.
+\end{proof}
+\begin{prop}
+	Se $K$ é um corpo ordenado, então $1_K \in P$.
+\end{prop}
+\begin{proof}
+	Temos $1_K = 1_K \cdot 1_K  = 1_K^2 \implies 1_K \in P$, pela proposição anterior.
+\end{proof}
+\begin{obs}
+	Segue da proposição anterior que $-1_K\in -P$ para todo corpo ordenado $K$. Logo num corpo ordenado $-1_K$ nunca é um quadrado.
+\end{obs}
+\begin{definicao}[$<$]
+	Num corpo ordenado $K$ com $x,y \in K$, definimos:
+	$$ x< y \iff y - x \in P.$$
+\end{definicao}
+\begin{definicao}[$>$]
+	Num corpo ordenado $K$ com $x,y \in K$, definimos:
+	$$ y> x \iff x < y.$$
+\end{definicao}
 
-\begin{axioma}
-	Existe um conjunto $\mathbb{R}$ com as seguintes propriedades
-\end{axioma}
+\begin{definicao}[$\leq$ e $\geq$]
+	Num corpo ordenado $K$ com $x,y \in K$, definimos:
+	$$ y \geq x \iff  x\leq y \iff  x<y \lor x = y$$
+\end{definicao}
+
 \begin{prop}
 	Sejam $A,B\subset \mathbb{R}^{+}-\left\{0\right\}$ limitados, então $C = \left\{ ab \: | \: (a,b) \in A\times B \right\}$ é limitado e $\sup C = \sup A \times \sup B$.
 \end{prop}
