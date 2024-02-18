@@ -1167,6 +1167,39 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Num corpo ordenado $K$ com $x,y \in K$, definimos:
 	$$ y> x \iff x < y.$$
 \end{definicao}
+\begin{prop}
+	Dado um corpo ordenado $K$, temos para todos $x,y,z\in K$:
+	\begin{enumerate}
+		\item $ x <y \land y < z \implies x< z$
+		\item Apenas uma das três possibilidades ocorre: $x < y$ ou $x = y$, ou $y < x$.
+		\item $x < y \iff x\pm z < y+z$
+		\item Se $z>0$, temos $ x< y \implies xz < yz$
+		\item Se $z<0$, temos $ x< y \implies xz > yz$
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	\begin{enumerate}
+		\item Se $x<y$  e $y<z$, temos $y-x\in P$ e $z-y \in P$, logo $(y-x) +(z-y) = z-x \in P$, que equivale a $x<z$.
+		\item Dado $x,y\in K$, tomando $w = x-y \in K$, temos $w \in P$, ou $w = 0$ ou $-w \in P$. Logo $x-y \i P$, ou $x-y = 0$ ou $-(x-y) = y-x \in P$. Portanto $y <x$, ou $x = y$< ou $x<y$.
+		\item Se $x<y$, temos $y-x\in P$. Logo $y-x = y+0_K -x  = y +(z-z) -x = (y+z) -(x+z) \in P \iff x+z < y +z$.
+		\item Se $z>0$ e $x<y \iff y-x\in P$, temos que $ yz - xz = (y-x)\cdot z \in P \iff xz<yz$.
+		\item Se $z<0 \iff -z \in P$ e $x<y \iff y-x\in P$, temos que $  xz - yz = (y-x)\cdot (-z) \in P \iff yz<xz$.
+	\end{enumerate}
+\end{proof}
+\begin{prop}
+	Dado um corpo ordenado $K$, temos para todos $x,y,z,w\in K$:
+	$$ x<y \land z<w \implies x+z < y+w$$
+\end{prop}
+\begin{proof}
+	Temos $x < y \implies x+z < y+z$ e $z<w \implies y+z = z+y < w+y = y +w$, logo $x+z < y+w$.
+\end{proof}
+\begin{prop}
+	Dado um corpo ordenado $K$, temos para todos $x,y,z,w\in K$:
+	$$ 0 < x<y \land 0<z<w \implies 0 < xz < yw$$
+\end{prop}
+\begin{proof}
+	Como $z>0$  e $x<y$, temos $xz<yz$. Como $y>0$  e $z<w$, temos $yz < yw$. Logo $xz<yw$.
+\end{proof}
 
 \begin{definicao}[$\leq$ e $\geq$]
 	Num corpo ordenado $K$ com $x,y \in K$, definimos:
