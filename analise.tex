@@ -8,6 +8,7 @@
 \usepackage[brazilian]{babel}
 \theoremstyle{plain}
 \newtheorem{axioma}{Axioma}
+\newtheorem{conceitoPrimitivo}{Conceito Primitivo}
 \newtheorem{prop}{Proposição}[section]
 \newtheorem{teo}{Teorema}
 \newtheorem{lema}{Lema}
@@ -56,52 +57,110 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	É tomada como regra de inferência o modus ponens:
 	Se $P$ e $P\implies Q$ são teoremas, então $Q$ é um teorema. Portanto $$ \left\{ P, P\implies Q \right\} \vdash Q.$$ 
 \end{inferencia}
-%\paragraph{Tomando como termos primitivos: o alfabeto $\left\{ a, b, c,\cdots \right\}$; e ($\land$); ou ($\lor$); negação $(\neg)$; existe $(\exists)$; igual ($=$).}
-%\begin{definicao}[$\equiv$, Equivalência]
-%	$p \equiv q$ significa $p $ é  equivalente a $q$.
-%\end{definicao}
-%\begin{definicao}[$\implies$, Implicação]
-%	$p \implies q \equiv \neg p \lor q$ . Diz-se "$p$ implica $q$", "Se $p$, então $q$" etc.
-%\end{definicao}
-%\begin{definicao}[$\iff$]
-%	$p \iff q \equiv ( p \implies q) \land (q \implies p)$ . Diz-se "$p$ se, e somente se, $q$".
-%\end{definicao}
-%\begin{definicao}[$c$, Contradição]
-%	A letra $c$ é reservada para a "contradição".
-%\end{definicao}
-%\begin{definicao}[$t$, Tautologia]
-%	A letra $t$ é reservada para a "contradição".
-%\end{definicao}
-%\begin{definicao}[$ \nexists x  P(x)$, Não existe]
-%	$\neg (\exists x  P(x))  \equiv \nexists  P(x)$. Diz-se "Não existe $x$ tal que $P(x)$".
-%\end{definicao}
-%\begin{definicao}[$\forall$, Para todo]
-%	$\forall x P(x) \equiv \neg \exists x ( \neg P(x) )$. Diz-se "Para todo $x$, temos $P(x)$".
-%\end{definicao}
-%\begin{definicao}[$ \exists! x  P(x)$, Existe um único]
-%	$\exists! x  P(x)  \equiv \exists x  P(x)  \land  \forall y ( P(y) \implies y =x ) $. Diz-se "Existe um único $x$ tal que $P(x)$".
-%\end{definicao}
-%\begin{axioma}
-%	Para quaisquer $p,q,$, temos:
-%	\begin{enumerate}
-%		\item $p\equiv p$
-%		\item Se $p\equiv q$, então $q\equiv p$.
-%		\item Se $p\equiv q$ e $q \equiv r$, então $p\equiv r$.
-%		\item Se $p\equiv q$ , então $\not p\equiv \not q$.
-%		\item $\neg (\neg p ) \equiv p$.
-%	\end{enumerate}
-%\end{axioma}
-%\begin{axioma}
-%	Para quaisquer $p,q,$, temos:
-%	\begin{enumerate}
-%		\item $p \lor q \equiv q\lor p$.
-%		\item $(p \lor q) \lor r \equiv p \lor (q\lor r)$.
-%		\item $p\lor (q \land r)  \equiv (p\lor q) \land (p\lor r)$.
-%		\item $p\lor p \equiv p$
-%		\item $\neg (p\lor q)  \equiv (\neg p \land \neg q)$
-%	\end{enumerate}
-%\end{axioma}
+\subsection{Organizar}
+\paragraph{Tomando como termos primitivos: o alfabeto $\left\{ a, b, c,\cdots \right\}$; e ($\land$); ou ($\lor$); negação $(\neg)$; existe $(\exists)$; igual ($=$).}
+\begin{definicao}[$\equiv$, Equivalência]
+	$p \equiv q$ significa $p $ é  equivalente a $q$.
+\end{definicao}
+\begin{definicao}[$\implies$, Implicação]
+	$p \implies q \equiv \neg p \lor q$ . Diz-se "$p$ implica $q$", "Se $p$, então $q$" etc.
+\end{definicao}
+\begin{definicao}[$\iff$]
+	$p \iff q \equiv ( p \implies q) \land (q \implies p)$ . Diz-se "$p$ se, e somente se, $q$".
+\end{definicao}
+\begin{definicao}[$c$, Contradição]
+	A letra $c$ é reservada para a "contradição".
+\end{definicao}
+\begin{definicao}[$t$, Tautologia]
+	A letra $t$ é reservada para a "contradição".
+\end{definicao}
+\begin{definicao}[$ \nexists x  P(x)$, Não existe]
+	$\neg (\exists x  P(x))  \equiv \nexists  P(x)$. Diz-se "Não existe $x$ tal que $P(x)$".
+\end{definicao}
+\begin{definicao}[$\forall$, Para todo]
+	$\forall x P(x) \equiv \neg \exists x ( \neg P(x) )$. Diz-se "Para todo $x$, temos $P(x)$".
+\end{definicao}
+\begin{definicao}[$ \exists! x  P(x)$, Existe um único]
+	$\exists! x  P(x)  \equiv \exists x  P(x)  \land  \forall y ( P(y) \implies y =x ) $. Diz-se "Existe um único $x$ tal que $P(x)$".
+\end{definicao}
+\begin{axioma}
+	Para quaisquer $p,q,$, temos:
+	\begin{enumerate}
+		\item $p\equiv p$
+		\item Se $p\equiv q$, então $q\equiv p$.
+		\item Se $p\equiv q$ e $q \equiv r$, então $p\equiv r$.
+		\item Se $p\equiv q$ , então $\not p\equiv \not q$.
+		\item $\neg (\neg p ) \equiv p$.
+	\end{enumerate}
+\end{axioma}
+\begin{axioma}
+	Para quaisquer $p,q,$, temos:
+	\begin{enumerate}
+		\item $p \lor q \equiv q\lor p$.
+		\item $(p \lor q) \lor r \equiv p \lor (q\lor r)$.
+		\item $p\lor (q \land r)  \equiv (p\lor q) \land (p\lor r)$.
+		\item $p\lor p \equiv p$
+		\item $\neg (p\lor q)  \equiv (\neg p \land \neg q)$
+	\end{enumerate}
+\end{axioma}
 \section{Teoria de conjuntos}
+\subsection{Axioma da Extensão}
+\begin{conceitoPrimitivo}[Conjunto]
+	Temos como conceito primitivo a noção de Conjunto, Coleção. Ou seja, não tentarei definir tal conceito.
+\end{conceitoPrimitivo}
+\begin{conceitoPrimitivo}[Elementos de um Conjunto]
+	A noção de elementos ou membros de um conjunto também será tomada como conceito primitivo.
+\end{conceitoPrimitivo}
+\begin{definicao}[Pertinência]
+	Se $x$ é um elemento de $A$, ou $x$ pertence a $A$, escrevemos $x\in A$.
+\end{definicao}
+\begin{definicao}[ Não Pertinência]
+	Se $x$ não pertence a $A$, escrevemos $x \not \in A$. Ou seja:
+	$$x \not \in A \iff \neg (x\in A)$$
+\end{definicao}
+\begin{axioma}[Axioma da Extensão]
+	Dois conjuntos são iguais se, e somente se, possuem os mesmos elementos. Ou seja: 
+	$$ A = B \iff \forall x ( x\in A \iff x \in B) $$
+\end{axioma}
+\begin{definicao}[Diferente]
+	Dois conjuntos $A$ e $B$ são diferentes se não são iguais e escrevemos $A\neq B$. Ou seja:
+	$$A\neq B \iff \neg (A = B)$$
+\end{definicao}
+\begin{prop}
+	Dois conjuntos $A$ e $B$  são diferentes se existe $x\in A$ com $x\not \in B $ ou $x\in B$ com $x\not \in A$. Ou seja:
+	$$A \neq B \iff \exists x ( ( x\in A \land x\not \in B) \lor (x\in B  \land x\not \in A))$$
+\end{prop}
+\begin{proof}
+	%carro
+	\begin{align*}
+		A\neq B &\iff \neg (A = B) \\~\\
+		&\iff \neg (\forall x ( x\in A \iff x \in B)) \\~\\
+		&\iff \exists x ( \neg ( x\in A \iff x \in B)) \\~\\
+		&\iff \exists x ( \neg (( x\in A \implies x \in B) \land (x\in B \implies x\in A))) \\~\\
+		&\iff \exists x ( \neg ((  x\not\in A \lor x\in B) \land ( x\not\in B \lor x\in A))) \\~\\
+		&\iff \exists x ( (  x\in A \land x\not\in B) \lor ( x\in B \land x\not \in A)) \\~\\
+	\end{align*}
+\end{proof}
+\begin{definicao}[Subconjunto]
+	Dizemos que $A$ é um subconjunto de $B$ se  todo elemento de $A$ for um elemento de $B$ e escrevemos $A\subset B$. Ou seja:
+	$$ A \subset B \iff \forall x ( x\in A \implies x \in B)$$ 
+\end{definicao}
+\begin{prop}
+	$$A\subset A$$
+\end{prop}
+\begin{proof}
+	Temos $p \implies p$ uma tautologia para toda fórmula $p$, logo $x\in A \implies x \in A$ é uma tautologia. Portanto $A \subset A \iff \forall x ( x \in A \implies x\in A) $ é uma tautologia.
+\end{proof}
+\begin{prop}
+	$$A\subset B \land B \subset C \implies A \subset C$$
+\end{prop}
+%carro
+	\begin{align*}
+		A\subset B \land B\subset C \implies A \subset C &\iff \neg ( A\subset B \land B\subset C) \lor  A \subset C\\~\\
+	\end{align*}
+\begin{definicao}[Subconjunto Próprio]
+	Se $A$ e $B$ são conjuntos tais que $A\subset B$ e $A \neq B$, então $A$ é chamado de subconjunto próprio.
+\end{definicao}
 \subsection{Organizar Ainda}
 \begin{prop}
 	$$(A-B)\cup B =  A\cup B$$
@@ -116,9 +175,6 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 		x \in A \cup B  &\iff \\~\\
 	\end{align*}
 \end{proof}
-\begin{obs}
-	Acima, $t$ representa tautologia.  Algo que sempre tem valor lógico verdadeiro.
-\end{obs}
 \begin{prop}
 	$$A\times (B\cup C ) = (A\times B )\cup( A\times C)$$
 \end{prop}

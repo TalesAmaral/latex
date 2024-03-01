@@ -2,26 +2,29 @@
 \contentsline {section}{\numberline {1}Introdução}{3}{section.1}%
 \contentsline {section}{\numberline {2}Lógica}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Cálculo Proposicional}{3}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Teoria de conjuntos}{3}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Organizar Ainda}{3}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Números Naturais}{8}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Axiomas de Peano}{8}{subsubsection.3.2.1}%
-\contentsline {paragraph}{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb {N}$, cujos elementos são os números naturais, e uma função $s:\mathbb {N} \to \mathbb {N}$. Para cada $n\in \mathbb {N}$, o número $s(n)$ é o sucessor de $n$. Temos os axiomas:}{8}{section*.2}%
-\contentsline {subsubsection}{\numberline {3.2.2}Soma nos Naturais}{8}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Ordem nos Naturais}{12}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Produto nos Naturais}{13}{subsubsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.3}Conjuntos Finitos e Infinitos}{17}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Anéis }{26}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Definições iniciais}{26}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Exercícios}{28}{subsubsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}Invertibilidade}{28}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Corpos, domínios e anéis reduzidos}{29}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Análise Real}{30}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Números Reais}{30}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Corpo Ordenado}{30}{subsubsection.5.1.1}%
-\contentsline {section}{\numberline {6}Análise no $\mathbb {R}^n$}{33}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Topologia}{33}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Métrica e Norma}{33}{subsubsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.2}Diferenciação}{35}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Integração}{36}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Exercícios}{37}{subsubsection.6.3.1}%
+\contentsline {subsection}{\numberline {2.2}Organizar}{3}{subsection.2.2}%
+\contentsline {paragraph}{Tomando como termos primitivos: o alfabeto $\left \{ a, b, c,\cdots \right \}$; e ($\land $); ou ($\lor $); negação $(\neg )$; existe $(\exists )$; igual ($=$).}{3}{section*.2}%
+\contentsline {section}{\numberline {3}Teoria de conjuntos}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Axioma da Extensão}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Organizar Ainda}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Números Naturais}{10}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Axiomas de Peano}{10}{subsubsection.3.3.1}%
+\contentsline {paragraph}{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb {N}$, cujos elementos são os números naturais, e uma função $s:\mathbb {N} \to \mathbb {N}$. Para cada $n\in \mathbb {N}$, o número $s(n)$ é o sucessor de $n$. Temos os axiomas:}{10}{section*.3}%
+\contentsline {subsubsection}{\numberline {3.3.2}Soma nos Naturais}{11}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Ordem nos Naturais}{14}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Produto nos Naturais}{15}{subsubsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.4}Conjuntos Finitos e Infinitos}{20}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Anéis }{29}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definições iniciais}{29}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Exercícios}{31}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}Invertibilidade}{31}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Corpos, domínios e anéis reduzidos}{31}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Análise Real}{33}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Números Reais}{33}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Corpo Ordenado}{33}{subsubsection.5.1.1}%
+\contentsline {section}{\numberline {6}Análise no $\mathbb {R}^n$}{35}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Topologia}{35}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Métrica e Norma}{35}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Diferenciação}{38}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Integração}{39}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Exercícios}{40}{subsubsection.6.3.1}%
