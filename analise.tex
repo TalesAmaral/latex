@@ -341,6 +341,52 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 %\begin{proof}
 	%Definindo $\phi: Z \to W$, que associa $h\in Z$ a $g: Y \to Y$, definida por $g(y) = f(h(f^{-1}(y)))$.  Como $g$ é composição de bijeções, temos $g$ bijeção. Logo $g\in W$.  Se $\phi(h) = \phi(p)$, temos $f(h(f^{-1}(y))) = f(p(f^{-1}(y)))$ para todo $y\in Y$. Como $f$ é injetiva, temos $h(f^{-1}(y)) = p(f^{-1}(y))$.  Tomando $y = f(x)$, para $x\in X$, temos $h(f^{-1}(f(x))) = p(f^{-1}(f(x))) \implies h(x) = p(x)$ para todo $x\in X$. Logo $h = p$.
 %\end{proof}
+\subsection{Relações}
+\begin{definicao}[Relação]
+	Uma relação $R$ entre os conjuntos $A$ e $B$ é um subconjunto do conjunto $A\times B$.
+\end{definicao}
+\begin{definicao}[$\overset{R}{\sim}$]
+	Dado uma relação entre $A$ e $B$, dizemos que $a\in A$ está relacionado a $b\in B$ se $(a,b) \in R$. Escrevemos nesse caso $a\overset{R}{\sim}  b$, ou $aRb$. Portanto:
+	$$ a\overset{R}{\sim} b \iff aRb \iff  (a,b) \in R$$
+\end{definicao}
+\begin{obs}
+	Quando não houver confusão sobre a relação que estamos tratando, escreverei somente $a\sim b$ no lugar de $a\overset{R}{\sim} b$. 
+\end{obs}
+\begin{definicao}[Relação de equivalência]
+	Uma relação $R \subset A \times A$ é de equivalência, se para todos $a,b,c \in A$ :
+	\begin{itemize}
+		\item (Simetria) $a\sim b \iff  b \sim a$.
+		\item (Transitividade)  $a \sim b \land b \sim c \implies a \sim c$.
+		\item  (Reflexividade) $a \sim a$.
+	\end{itemize}
+\end{definicao}
+\begin{definicao}[Relação de Ordem]
+	%carro
+\end{definicao}
+\begin{definicao}[Classe de equivalência]
+	Dado uma relação de equivalência $R\subset A\times A$, a classe de equivalência de um elemento  $a\in A$ (denotada por $\bar{a}$) é dada por $$ \bar{a} = \left\{ x\in A \: | \: x\sim a \right\}$$.
+\end{definicao}
+\begin{prop}
+	Dada uma relação de equivalência $R\subset A \times A$ e $a\in A$, temos $a\in \bar{a}$. 
+\end{prop}
+\begin{proof}
+	Temos $\bar{a} = \left\{ x\in A \: | \: x\sim a \right\}$. Como $a\sim a$ pela reflexividade, temos $a\in \bar{a}$.
+\end{proof}
+\begin{prop}
+	Dado uma relação $R \subset A \times A$ e $a,b\in A$, as afirmações abaixo são equivalentes:
+	\begin{enumerate}[label = (\alph*)]
+		\item  $\bar{a} = \bar{b}$
+		\item  $ a\sim b$
+		\item  $ \bar{a} \cap \bar{b} \neq \emptyset$
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	\begin{enumerate}[itemindent=36pt]
+		\item[(a) $\implies$ (b):] Supondo $\bar{a} = \bar{b}$. Como $a\in \bar{a}$, temos $a\in \bar{b}$ pela hipótese. Logo $a \sim b$ pela definição de $\bar{b}$.
+		\item[(b) $\implies$ (c):] Supondo $a\sim b$.  Logo $a\in \bar{b}$. Como $a\in \bar{a}$ e $a\in \bar{b}$, temos $a\in \bar{a} \cap \bar{b} \implies \bar{a} \cap \bar{b} \neq\emptyset$.
+		\item[(c) $\implies$ (a):] Supondo $\bar{a} \cap \bar{b} \neq \emptyset$, logo existe $c\in  \bar{a} \cap \bar{b}$, logo $c\sim a$ e $c\sim b$. Se $y \in \bar{a}$, temos $ y\sim a$. Como $c\sim a$, temos $y\sim c$. Como $c\sim b$, temos $y\sim b \implies y\in \bar{b}$. Supondo $y\in \bar{b}$, logo $y\sim b$. De $y\sim b \land b\sim c \land c \sim a$, temos $y\sim a \implies y\in \bar{a}$. Logo $\bar{a} = \bar{b}$.
+	\end{enumerate}
+\end{proof}
 \subsection{Números Naturais}
 \subsubsection{Axiomas de Peano}
 \paragraph{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb{N}$, cujos elementos são os números naturais, e uma função $s:\mathbb{N} \to \mathbb{N}$. Para cada $n\in \mathbb{N}$, o número $s(n)$ é o sucessor de $n$.  Temos os axiomas:}
