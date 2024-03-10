@@ -341,28 +341,44 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 %\begin{proof}
 	%Definindo $\phi: Z \to W$, que associa $h\in Z$ a $g: Y \to Y$, definida por $g(y) = f(h(f^{-1}(y)))$.  Como $g$ é composição de bijeções, temos $g$ bijeção. Logo $g\in W$.  Se $\phi(h) = \phi(p)$, temos $f(h(f^{-1}(y))) = f(p(f^{-1}(y)))$ para todo $y\in Y$. Como $f$ é injetiva, temos $h(f^{-1}(y)) = p(f^{-1}(y))$.  Tomando $y = f(x)$, para $x\in X$, temos $h(f^{-1}(f(x))) = p(f^{-1}(f(x))) \implies h(x) = p(x)$ para todo $x\in X$. Logo $h = p$.
 %\end{proof}
+\subsection{Produto Cartesiano}
 \subsection{Relações}
+\subsubsection{Definições iniciais}
 \begin{definicao}[Relação]
 	Uma relação $R$ entre os conjuntos $A$ e $B$ é um subconjunto do conjunto $A\times B$.
 \end{definicao}
+\begin{definicao}[$a\mathrel{R}b$]
+	Dado uma relação entre $A$ e $B$, dizemos que $a\in A$ está relacionado a $b\in B$ se $(a,b) \in R$. Escrevemos nesse caso $a\mathrel{R}b$. Portanto:
+	$$ a\mathrel{R}b \iff  (a,b) \in R$$
+
+	Não utilizarei essa notação, mas algumas fontes usam.
+\end{definicao}
+\subsubsection{Relações de Equivalência}
+\begin{definicao}[Relação de equivalência]
+	Uma relação $R \subset A \times A$ é de equivalência, se para todos $a,b,c \in A$ :
+	\begin{itemize}
+		\item (Simetria) $(a,b) \in R \iff  (b,a)\in R$.
+		\item (Transitividade)  $(a,b)\in R \land (b,c)\in R \implies (a,c) \in R$.
+		\item  (Reflexividade) $(a,a) \in R$.
+	\end{itemize}
+\end{definicao}
 \begin{definicao}[$\overset{R}{\sim}$]
-	Dado uma relação entre $A$ e $B$, dizemos que $a\in A$ está relacionado a $b\in B$ se $(a,b) \in R$. Escrevemos nesse caso $a\overset{R}{\sim}  b$, ou $aRb$. Portanto:
-	$$ a\overset{R}{\sim} b \iff aRb \iff  (a,b) \in R$$
+	Quando uma relação $R$ entre $A$ e $B$ for de equivalência, escrevemos $a\overset{R}{\sim} b$ no lugar de $(a,b) \in R$.
 \end{definicao}
 \begin{obs}
 	Quando não houver confusão sobre a relação que estamos tratando, escreverei somente $a\sim b$ no lugar de $a\overset{R}{\sim} b$. 
 \end{obs}
-\begin{definicao}[Relação de equivalência]
+\begin{obs}
+
+	Re-escrevendo a definição de relação de equivalência usando a nova notação, temos:
+
 	Uma relação $R \subset A \times A$ é de equivalência, se para todos $a,b,c \in A$ :
 	\begin{itemize}
 		\item (Simetria) $a\sim b \iff  b \sim a$.
 		\item (Transitividade)  $a \sim b \land b \sim c \implies a \sim c$.
 		\item  (Reflexividade) $a \sim a$.
 	\end{itemize}
-\end{definicao}
-\begin{definicao}[Relação de Ordem]
-	%carro
-\end{definicao}
+\end{obs}
 \begin{definicao}[Classe de equivalência]
 	Dado uma relação de equivalência $R\subset A\times A$, a classe de equivalência de um elemento  $a\in A$ (denotada por $\bar{a}$) é dada por $$ \bar{a} = \left\{ x\in A \: | \: x\sim a \right\}$$.
 \end{definicao}
@@ -387,6 +403,45 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 		\item[(c) $\implies$ (a):] Supondo $\bar{a} \cap \bar{b} \neq \emptyset$, logo existe $c\in  \bar{a} \cap \bar{b}$, logo $c\sim a$ e $c\sim b$. Se $y \in \bar{a}$, temos $ y\sim a$. Como $c\sim a$, temos $y\sim c$. Como $c\sim b$, temos $y\sim b \implies y\in \bar{b}$. Supondo $y\in \bar{b}$, logo $y\sim b$. De $y\sim b \land b\sim c \land c \sim a$, temos $y\sim a \implies y\in \bar{a}$. Logo $\bar{a} = \bar{b}$.
 	\end{enumerate}
 \end{proof}
+\subsubsection{Relação de Ordem}
+\begin{definicao}[Ordem Parcial]
+	Uma relação $R \subset A \times A$ é  uma ordem parcial, se para todos $a,b,c \in A$ :
+	\begin{itemize}
+		\item (Anti-Simetria) $(a,b) \in R \land (b,a) \in R \iff  a = b$.
+		\item (Transitividade)  $(a,b)\in R \land (b,c)\in R \implies (a,c) \in R$.
+		\item  (Reflexividade) $(a,a) \in R$.
+	\end{itemize}
+\end{definicao}
+\begin{definicao}[$\leq$]
+	Se $R$ é uma ordem parcial de $A$, geralmente escrevemos $a\leq b$ no lugar de  $(a,b) \in R$.
+\end{definicao}
+\begin{obs}
+
+	Re-escrevendo a definição de relação de ordem parcial usando a nova notação, temos:
+
+	Uma relação $R \subset A \times A$ é uma ordem parcial, se para todos $a,b,c \in A$ :
+	\begin{itemize}
+		\item (Anti-Simetria) $a \leq b \land b \leq a \iff a = b$.
+		\item (Transitividade)  $a \leq b \land b \leq c \implies a \leq c$.
+		\item  (Reflexividade) $a \leq a$.
+	\end{itemize}
+\end{obs}
+\begin{definicao}[Comparável]
+	Dado um conjunto $A$ e uma relação de ordem $R$, dois elementos $a,b\in A$ são comparáveis se $a\leq b$ ou $b\leq a$.
+\end{definicao}
+\begin{obs}
+	Dois elementos de um conjunto parcialmente ordenado podem não ser comparáveis.
+\end{obs}
+\begin{definicao}[Ordem Total]
+	Uma ordem parcial $R$ onde quaisquer dois elementos são comparáveis é uma ordem total. Outros possíveis nomes são ordem linear ou ordem simples.
+\end{definicao}
+\subsubsection{Funções}
+\begin{definicao}[Produto Cartesiano de uma Família]
+	Se $\left\{ A_i \right\}_{i\in I}$ é uma família de conjuntos indexada por $I$, definimos $\displaystyle\prod_{i\in I} A_i$  como o conjunto de todas as funções $f:I \to \displaystyle\bigcup_{i\in I} A_i $  com $f(i) \in A_i$ para todo $i\in I$.
+\end{definicao}
+
+
+
 \subsection{Números Naturais}
 \subsubsection{Axiomas de Peano}
 \paragraph{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb{N}$, cujos elementos são os números naturais, e uma função $s:\mathbb{N} \to \mathbb{N}$. Para cada $n\in \mathbb{N}$, o número $s(n)$ é o sucessor de $n$.  Temos os axiomas:}
@@ -737,6 +792,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 
 \subsection{Conjuntos Finitos e Infinitos}
 
+\subsubsection{Conjuntos Finitos}
 \begin{definicao}[ Conjuntos finitos]
 	Um conjunto $X$ é finito quando for vazio ou quando existir para algum $n\in \mathbb{N}$ uma bijeção $\phi \: :\: I_n \to X$
 \end{definicao}
@@ -821,6 +877,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{proof}
 	Como $f$ é sobrejetiva, ela admite inversa à direita. Seja $g: Y\to X$ a inversa à direita de $f$.  Se $g(y) = g(y')$, temos $f(g(y)) = f(g(y'))$, logo $y = y'$. Logo $g$ é injetiva. Pela proposição anterior, temos $Y$ finito com $|Y| \leq |X|$. 
 \end{proof}
+\subsubsection{Conjuntos Infinitos}
 \begin{definicao}[Conjunto infinito]
 	Um conjunto é infinito quando não for finito.
 \end{definicao}
