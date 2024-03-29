@@ -1442,12 +1442,25 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Uma forma mais humana de dizer a definição de supremo é: O supremo de um conjunto $X$ é a menor cota superior deste conjunto.
 \end{obs}
 \begin{obs}
-	Podemos tomar a contrapositiva na segunda condição e obter : Se $c < s$, então $c$ não é cota superior. Mas não ser cota superior é o mesmo que existir um $x\in X$ com $c< X$. Logo obtemos uma definição equivalente:\\
+	Podemos tomar a contrapositiva na segunda condição e obter: Se $c < s$, então $c$ não é cota superior. Mas não ser cota superior é o mesmo que existir um $x\in X$ com $c< x$. Logo obtemos uma definição equivalente:\\
 	Seja $K$ um corpo ordenado e $X\subset K$. Um elemento $s\in K$ é o supremo de $X$ quando:
 	\begin{enumerate}
 		\item $s$ é cota superior de $X$.
 		\item Se $c\in K$ com $c < s$, então existe $x\in X$ com  $c< x$.
 	\end{enumerate}
+\end{obs}
+\begin{prop}
+	Podemos trocar a segunda condição da definição de supremo do conjunto $X$ por:
+	
+	$$\forall \varepsilon>0 \: \exists x\in X \: : \: x > s- \varepsilon $$
+\end{prop}
+\begin{proof}
+	Seja $s$  o supremo de $X$ pela definição usual. Dado $\varepsilon >0$, sabemos que $s - \varepsilon < s$, logo existe $x\in X$ com $s-\varepsilon < x$ pela definição equivalente acima.
+
+	Supondo que $s$ seja cota superior de $X$ e $\forall \varepsilon>0 \: \exists x\in X \: : \: x > s- \varepsilon $. Se $c$ é uma cota superior de $X$ com $c < s$, temos $s - c > 0 $. Tomando $\varepsilon = s-c>0$, existe $x\in X$ tal que $x > s-\varepsilon = s-(s-c) = c$, logo $c$ não é cota superior (contradição). Logo se $c$ é uma cota superior de $X$, temos $s \leq c$. Logo $s$ é  a menor cota superior. Logo $s$ é um supremo de $X$.
+\end{proof}
+\begin{obs}
+	Vou usar a segunda condição que for mais conveniente na situação.
 \end{obs}
 \begin{prop}
 	O supremo de um conjunto $X\subset K$, quando existir, é único.
@@ -1458,15 +1471,12 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{definicao}[$\sup X$]
 	Quando existir o supremo de um conjunto $X\subset K$, escreveremos $\sup X$.
 \end{definicao}
-\begin{prop}
-	Dado um conjunto limitado $A\neq \emptyset$, temos $s = \sup A$ se, e somente se, $s$ é cota superior de $A$ e para todo $\varepsilon >0$, existe $a\in A$ tal que $a > s - \varepsilon$.
-\end{prop}
-\begin{proof}
-	Se $s = \sup A$, temos $s$ cota superior de $A$. Dado $\varepsilon >0$, se $\forall a\in A \: : \: a \leq s-\varepsilon$, teríamos $s-\varepsilon$ uma cota superior, logo $s \leq s- \varepsilon$, contradição. Logo existe $a\in A$ tal que $a > s-\varepsilon$.
-
-	Se $s$ é cota superior e para todo $\varepsilon >0$, existe $a\in A$ tal que $a > s - \varepsilon$. Suponha que $c\in \mathbb{R}$ seja outra cota superior de $A$ e que $ s > c \implies s-c>0$.
-
-\end{proof}
+\begin{definicao}[Corpo Completo]
+	Um corpo ordernao $K$ é completo se todo subconjunto não-vazio $X\subset K$ , limitado superiormente, possui supremo em $K$.
+\end{definicao}
+\begin{axioma}
+	Existe um corpo ordenado completo, denotado por $\mathbb{R}$.
+\end{axioma}
 \subsection{Sequências}
 \begin{definicao}[Sequência estritamente crescente]
 	Uma sequência $(x_n)$ é estritamente crescente se $\forall n \in \mathbb{N} \: : \: x_{n+1} > x_n$.
@@ -1475,7 +1485,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Uma sequência $(x_n)$ é crescente se $\forall n \in \mathbb{N} \: : \: x_{n+1} \geq x_n$.
 \end{definicao}
 \begin{prop}
-	Uma sequência é crescente se, e somente se, $\forall m,n\in \mathbb{N} \: : \: m > n \implies x_m > x_n$.
+	Uma sequência é estritamente crescente se, e somente se, $\forall m,n\in \mathbb{N} \: : \: m > n \implies x_m > x_n$.
 \end{prop}
 \begin{proof}
 	Supondo $(x_n)$ crescente. Logo $\forall n \in \mathbb{N} \: : \: x_{n+1} > x_n$. Seja $X = \left\{ p\in \mathbb{N} \: | \:\forall n \in \mathbb{N} \: : \: x_{n+p} > x_n\right\}$. Temos $1\in X$, pois $(x_n)$ é crescente. Supondo $m \in X$. Logo $\forall n \in \mathbb{N} \: : \: x_{n+m} > x_n$. Tomando $n\in \mathbb{N}$ qualquer, temos $x_{n+m+1} = x_{(n+m)+1} > x_{n+m} > x_n \implies x_{n+m+1} > x_n$. Logo $m+1\in X$. Logo $X = \mathbb{N}$. Se $m>n$, temos $m = n+p$, com $p\in \mathbb{N}$, logo $x_{m} = x_{n+p} > x_n$. 
@@ -1483,13 +1493,13 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Supondo $\forall m,n\in \mathbb{N} \: : \: m > n \implies x_m > x_n$. Temos $\forall n \in \mathbb{N} \: : \:  n+1 > n \implies x_{n+1} > x_n$. Logo $(x_n)$ é crescente.
 \end{proof}
 \begin{definicao}[Sequência estritamente decrescente]
-	Uma sequência $(x_n)$ é decrescente se $\forall n \in \mathbb{N} \: : \: x_{n+1} < x_n$.
+	Uma sequência $(x_n)$ é   estritamente decrescente se $\forall n \in \mathbb{N} \: : \: x_{n+1} < x_n$.
 \end{definicao}
 \begin{definicao}[Sequência decrescente]
 	Uma sequência $(x_n)$ é decrescente se $\forall n \in \mathbb{N} \: : \: x_{n+1} \leq x_n$.
 \end{definicao}
 \begin{prop}
-	Uma sequência é decrescente se, e somente se, $\forall m,n\in \mathbb{N} \: : \: m > n \implies x_m < x_n$.
+	Uma sequência é estritamente decrescente se, e somente se, $\forall m,n\in \mathbb{N} \: : \: m > n \implies x_m < x_n$.
 \end{prop}
 \begin{proof}
 	Supondo $(x_n)$ decrescente. Logo $\forall n \in \mathbb{N} \: : \: x_{n+1} < x_n$. Seja $X = \left\{ p\in \mathbb{N} \: | \:\forall n \in \mathbb{N} \: : \: x_{n+p} < x_n\right\}$. Temos $1\in X$, pois $(x_n)$ é decrescente. Supondo $m \in X$. Logo $\forall n \in \mathbb{N} \: : \: x_{n+m} < x_n$. Tomando $n\in \mathbb{N}$ qualquer, temos $x_{n+m+1} = x_{(n+m)+1} < x_{n+m} < x_n \implies x_{n+m+1} < x_n$. Logo $m+1\in X$. Logo $X = \mathbb{N}$. Se $m>n$, temos $m = n+p$, com $p\in \mathbb{N}$, logo $x_{m} = x_{n+p} < x_n$. 
@@ -1504,7 +1514,9 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \end{teo}
 \begin{proof}
 	Suponha $(x_n)$ uma sequência monótoma limitada. Logo $(x_n)$ é crescente ou decrescente.
-	Supondo que $(x_n)$ seja crescente. Temos de $(x_n)$ ser limitada que $X = \left\{ x_n \: | \: n\in \mathbb{N} \right\}$ é limitado e não vazio. Logo existe $\sup X$.
+	Supondo que $(x_n)$ seja crescente. Temos de $(x_n)$ ser limitada que $X = \left\{ x_n \: | \: n\in \mathbb{N} \right\}$ é limitado e não vazio. Logo existe $s = \sup X$. Temos que $\forall \varepsilon>0 \exists x \in X \: : \: x > s - \varepsilon$, logo existe $n_0 \in \mathbb{N}$ tal que $x_{n_0} > s - \varepsilon \iff x_{n_0} -s > -\varepsilon \iff s - x_{n_0}< \varepsilon$. Como $(x_n)$ é crescente, temos $m > n_0 \implies x_m \geq x_{n_0} \iff s-x_{m} \leq s- x_{n_0} < \varepsilon$.  Como $s$ é cota superior, temos para todo $n\in \mathbb{N}$ que  $s - x_n \geq 0  > -\varepsilon$. Logo existe $n_0\in \mathbb{N}$ tal que $m > n_0 \implies -\varepsilon < s - x_m < \varepsilon \iff |s-x_m| < \varepsilon$, logo $\lim x_n = s$.
+
+	Se $(x_n)$ é decrescente, tomando $X = \left\{x_n \: | \: n\in \mathbb{N}\right\}$,  temos que $\forall \varepsilon >0 \: \exists n_0\in \mathbb{N} \: : \: x_{n_0} > \inf X +\varepsilon$. Temos $m > n_0 \implies x_m \leq x_{n_0} \iff x_m - \inf X \leq x_{n_0} -\inf X < \varepsilon$, logo $m>n_0 \implies -\varepsilon \leq 0 \leq x_m - \inf X < \varepsilon \iff |x_m - \inf X | < \varepsilon$. Logo $\lim (x_n) = \inf X$.
 \end{proof}
 \subsection{Organizar}
 
