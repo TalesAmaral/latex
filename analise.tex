@@ -617,10 +617,11 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 
 \end{proof}
 \begin{prop}
-	Dados $m,n,p$ naturais, temos $$m +p < n+p \implies m <n.$$
+	Dados $m,n,p$ naturais, temos $$m +p < n+p \iff m <n.$$
 \end{prop}
 \begin{proof}
 	Temos $m+p < n+p \implies \exists q \in \mathbb{N} \: : \: n+p = (m+p) + q \implies  \exists q \in \mathbb{N} \: : \: n = m + q \implies m<n$.
+	Se $m < n$, existe $q \in \mathbb{N}$ tal que $n = m+q$, daí $n+p = (m+q) + p = (m+p) + q$, logo $ m+ p < n+p$.
 \end{proof}
 \begin{lema}
 	\label{lemaDesigualdade}
@@ -630,6 +631,14 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Supondo $m<n+1$. Logo existe $q\in \mathbb{N}$ tal que $n+1 = m+q$. Se $q = 1$, temos $n+1  = m+1 \implies n = m \implies m \leq n$. Se $q\neq 1$, existe $q_0$ tal que $s(q_0) = q$. Logo $n+1 = m+s(q_0) = m+q_0+1\implies n = m+q_0 \implies m< n \implies m \leq n$. 
 
 	Se $m \leq n$, temos $m\leq n < n+1 \implies m<n+1$.
+\end{proof}
+\begin{lema}
+	$$ m < n \iff m +1\leq n$$
+\end{lema}
+\begin{proof}
+	Pelo lema anterior:
+	$$m < n \iff m+1  < n+1 \iff m+1 \leq n $$
+
 \end{proof}
 \subsubsection{Produto nos Naturais}
 \begin{definicao}[Multiplicação]
@@ -791,7 +800,14 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Temos $1 \in X$, pois $1\not \in X$ implicaria na existência de um $m < 1$ com $m\not \in X$.    Supondo $X\neq \mathbb{N}$ e $A = \mathbb{N} - X$. Como $X\neq \mathbb{N}$, temos $A \neq \emptyset$. Logo $A$ possui um menor elemento $a\in A$.  Se $p\in \mathbb{N}$ com $p < a $, então $p \not \in A$, logo $p\in X$. Como $ \forall p \in \mathbb{N} \: : \: p < a \implies p \in X$, temos $a \in X$. Contradição. Logo $A$ é vazio. Logo $X = \mathbb{N}$.
 \end{proof}
 
+\subsubsection{Exercícios}
 
+\begin{exercicio}
+	Se $\phi: \mathbb{N} \to \mathbb{N}$ é estritamente crescente, então é $\forall n \in \mathbb{N} \: : \: \phi(n) \geq n$.
+\end{exercicio}
+\begin{proof}
+	Seja $X = \left\{ n \in \mathbb{N} \: | \: \phi(n) \geq n \right\}$. Temos $1\in X$ pois $\forall p \in \mathbb{N} \: p\geq 1$. Suponha $n\in X$, logo $\phi(n) \geq n$. Daí temos $\phi(n+1) > \phi(n) \geq n \implies \phi(n+1) > n \iff \phi(n+1) \geq n+1$. Como $1\in X$ e $n\in X \implies n+1\in X$, temos $X = \mathbb{N}$.
+\end{proof}
 \subsection{Conjuntos Finitos e Infinitos}
 
 \subsubsection{Conjuntos Finitos}
@@ -1133,6 +1149,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 		Temos $h(n) \neq f_n(n)$ para todo $n\in \mathbb{N}$, logo $h \neq f_n$ para todo $n\in \mathbb{N}$. Como $h\in Y$ e $h \not \in f(\mathbb{N})$, temos que $f$ não é sobrejetiva. Logo $f$ não é bijetiva (contradição). Logo $Y$ não é enumerável.
 		%falta mostrar que não existe uma injeção f: Y -> N$
 \end{proof}
+
 \section{Anéis }
 
 \subsection{Definições iniciais}
@@ -1335,8 +1352,20 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \end{proof}
 \section{Aritmética}
 \section{Análise Real}
-\subsection{Números Reais}
-\subsubsection{Corpo Ordenado}
+%\subsection{ Conjuntos e Funções
+%   \subsubsection{ Conjuntos
+%   \subsubsection{ Operações entre conjuntos
+%   \subsubsection{ Funções
+%   \subsubsection{ Composição de funções
+%   \subsubsection{ Famílias
+%\subsection{ Conjuntos Finitos, Enumeráveis e Não-Enumeráveis
+%   \subsubsection{ Números naturais
+%   \subsubsection{Boa ordenação e o Segundo Princípio de Indução
+%   \subsubsection{Conjuntos finitos e infinitos
+%   \subsubsection{Conjuntos enumeráveis
+%   \subsubsection{Conjuntos não-enumeráveis
+\subsection{ Números Reais}
+   \subsubsection{Corpos ordenados}
 \begin{definicao}[Corpo Ordenado]
 	Um corpo $K$ é ordenado se existe um conjunto $P\subset K$ tal que :
 	\begin{enumerate}
@@ -1426,7 +1455,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Num corpo ordenado $K$ com $x,y \in K$, definimos:
 	$$ y \geq x \iff  x\leq y \iff  x<y \lor x = y$$
 \end{definicao}
-\subsubsection{Números Reais}
+   \subsubsection{Números reais}
 \begin{definicao}[Cota Superior]
 	Seja $K$ um corpo ordenado e $X\subset K$ . Um elemento $s\in K$ é cota superior de $X$ quando $$ \forall x\in X \: : \: x\leq s.$$
 \end{definicao}
@@ -1480,8 +1509,46 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{axioma}
 	Existe um corpo ordenado completo, denotado por $\mathbb{R}$.
 \end{axioma}
-\subsection{Sequências e Séries}
-\subsubsection{Sequências}
+\subsection{ Sequências e Séries de Números Reais}
+   \subsubsection{ Sequências}
+   \begin{definicao}[Sequência]
+	   Uma sequência é uma função $x: \mathbb{N} \to K$, onde $K$ é um conjunto qualquer não-vazio. Nos importaremos aqui com $K = \mathbb{R}$. 
+   \end{definicao}
+   \begin{definicao}[$x_n$]
+	   Dada uma sequência $x: \mathbb{N} \to K$, Utilizaremos a notação $x_n \coloneqq x(n)$ para todo $n \in \mathbb{N}$. O termo $x_n$ é chamado termo de ordem $n$, ou $n-$ésimo termo da sequência.
+   \end{definicao}
+   \begin{definicao}[$(x_n)$]
+	   Dada uma sequência $x: \mathbb{N} \to K$, será útil representar ela como $(x_1,x_2,\cdots)$ ou $(x_n)$ ou $(x_n)_{n\in \mathbb{N}}$.
+   \end{definicao}
+   \begin{definicao}[Dois a dois Distintos]
+	   Quando a sequência $(x_n)$ é injetiva, isto é, $m\neq n \implies x_m \neq x_n$, dizemos que $(x_n)$ é uma sequência de termos dois a dois distintos.
+   \end{definicao}
+   \begin{definicao}[Sequência Limitada Inferiormente]
+	   A sequência $(x_n)$ é limitada inferiormente quando $x\left(\mathbb{N}\right)$ é limitado inferiormente. Ou seja: Existe $c \in \mathbb{R}$  $\forall n \in \mathbb{N} \: : \:   x_n \geq c$.
+   \end{definicao}
+   \begin{definicao}[Sequência Limitada Superiormente]
+	   A sequência $(x_n)$ é limitada superiormente quando $x\left(\mathbb{N}\right)$ é limitado superiormente. Ou seja: Existe $c \in \mathbb{R}$  $\forall n \in \mathbb{N} \: : \:   x_n \leq c$.
+   \end{definicao}
+   \begin{definicao}[Sequência Limitada ]
+	   A sequência $(x_n)$ é limitada quando é limitada superiormente e inferiormente. Ou seja: Existem $a,b \in \mathbb{R}$ tal que  $\forall n \in \mathbb{N} \: : \:   a \leq x_n \leq b$.
+   \end{definicao}
+   \begin{prop}
+	   Uma sequência $(x_n)$ é limitada se, e somente se, existe $c\in \mathbb{R}$ com $c\geq 0 $ e $ \forall n \in \mathbb{N} : |x_n| \leq c$.
+   \end{prop}
+   \begin{proof}
+	   Se $(x_n)$ é limitada, existem $a,b\in \mathbb{R}$ tal que $\forall n \in \mathbb{N} \: : \: a\leq x_n \leq b $. Tomando $c = \max\left\{ |a|, |b| \right\}$. Temos $ -c \leq -|a| \leq a $ e $b \leq |b| \leq c$, daí  $\forall n \in \mathbb{N} -c \leq a \leq  x_n  \leq b \leq c$, que implica $\forall n \in \mathbb{N} \: : \: |x_n| \leq c$.
+	   Se $\forall n \in \mathbb{N} \: : \: |x_n| \leq c$, temos  $\forall n \in \mathbb{N} \: : \: -c \leq x_N \leq c$. Daí tomamos $a = -c$ e $b = c$.
+   \end{proof}
+   \begin{prop}
+	   $(x_n)$ é limitada, se e somente se,   $(|x_n|)$ é limitada.
+   \end{prop}
+   \begin{proof}
+	   $$(x_n) \text{ é limitada} \iff \forall n \in \mathbb{N} :   |x_n| \leq c \iff \forall n \in \mathbb{N} \: : \: ||x_n|| \leq c \iff (|x_n|) \text{ é limitada} $$
+   \end{proof}
+   \begin{definicao}[Subsequência]
+	   Dada uma sequência $x: \mathbb{N} \to \mathbb{R}$, uma subseqência é uma composição $x \circ \phi : \mathbb{N} \to \mathbb{R}$, onde  $\phi : \mathbb{N} \to \mathbb{N}$ é uma função estritamente crescente. Denotaremos por $(x_{\phi(n)})$.
+   \end{definicao}
+
 \begin{definicao}[Sequência estritamente crescente]
 	Uma sequência $(x_n)$ é estritamente crescente se $\forall n \in \mathbb{N} \: : \: x_{n+1} > x_n$.
 \end{definicao}
@@ -1513,7 +1580,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{definicao}[Sequência monótoma]
 	Uma sequência $(x_n)$ é monótoma se é crescente ou decrescente. 
 \end{definicao}
-\subsubsection{Limite de uma sequência}
+   \subsubsection{ Limite de uma sequência}
 \begin{teo}
 	Toda sequência monótona limitada é convergente.
 \end{teo}
@@ -1523,7 +1590,8 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 
 	Se $(x_n)$ é decrescente, tomando $X = \left\{x_n \: | \: n\in \mathbb{N}\right\}$,  temos que $\forall \varepsilon >0 \: \exists n_0\in \mathbb{N} \: : \: x_{n_0} > \inf X +\varepsilon$. Temos $m > n_0 \implies x_m \leq x_{n_0} \iff x_m - \inf X \leq x_{n_0} -\inf X < \varepsilon$, logo $m>n_0 \implies -\varepsilon \leq 0 \leq x_m - \inf X < \varepsilon \iff |x_m - \inf X | < \varepsilon$. Logo $\lim (x_n) = \inf X$.
 \end{proof}
-\subsubsection{Subsequências}
+   \subsubsection{ Propriedades aritméticas dos limites}
+   \subsubsection{ Subsequências}
 \begin{prop}
 	Temos $\lim x_n = a$ se, e somente se, para todo $\varepsilon>0$,  o conjunto $\mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é finito.
 \end{prop}
@@ -1534,6 +1602,45 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{prop}
 	Seja $(x_n)$ é uma sequência em $\mathbb{R}$. Temos que $a$ é limite de alguma subsequência de $(x_n)$ se, e somente se, $x^{-1}((a-\varepsilon, a+\varepsilon))$ é infinito para todo $\varepsilon>0$.
 \end{prop}
+   \subsubsection{ Sequências de Cauchy}
+   \subsubsection{ Limites infinitos}
+   \subsubsection{ Séries numéricas}
+\subsection{ Topologia da Reta}
+   \subsubsection{ Conjuntos abertos}
+   \subsubsection{ Conjuntos fechados}
+   \subsubsection{ Pontos de acumulação}
+   \subsubsection{ Conjuntos compactos}
+\subsection{ Limites de Funções}
+   \subsubsection{ Definição e propriedades do limite}
+   \subsubsection{ Exemplos de limites}
+   \subsubsection{ Limites laterais}
+   \subsubsection{ Limites no infinito}
+   \subsubsection{ Valores de aderência de uma função; lim sup e lim inf}
+\subsection{ Funções Contínuas}
+   \subsubsection{ A noção de função contínua}
+   \subsubsection{ Descontinuidades}
+   \subsubsection{ Funções contínuas em intervalos}
+   \subsubsection{ Funções contínuas em conjuntos compactos}
+   \subsubsection{ Continuidade uniforme}
+\subsection{ Derivadas}
+   \subsubsection{ Definição e propriedades da derivada num ponto}
+   \subsubsection{ Funções deriváveis num intervalo}
+   \subsubsection{ Fórmula de Taylor}
+   \subsubsection{ Série de Taylor, funções analíticas}
+\subsection{ Integral de Riemann}
+   \subsubsection{ Integral superior e integral inferior}
+   \subsubsection{ Funções integráveis}
+   \subsubsection{ O Teorema Fundamental do Cálculo}
+   \subsubsection{ Fórmulas clássicas do Cálculo Integral}
+   \subsubsection{ A integral como limite de somas}
+   \subsubsection{ Caracterização das funções integráveis}
+   \subsubsection{ Logaritmos e exponenciais}
+\subsection{ Sequências e Séries de Funções}
+   \subsubsection{ Convergência simples e convergência uniforme}
+   \subsubsection{ Propriedades da convergência uniforme}
+   \subsubsection{ Séries de potências}
+   \subsubsection{ Funções analíticas}
+   \subsubsection{ Equicontinuidade}
 \subsection{Organizar}
 
 \begin{prop}
@@ -1570,8 +1677,9 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Se $x\in \Null(A)$, temos $Ax = 0 \implies A^T (Ax) = A^T \cdot 0 \implies (A^T A) x = 0 \implies x \in \Null(A^T A)$. Se $x\in \Null(A^T A)$, temos $(A^T A)x = 0 \implies x^T (A^T A) x = 0 \implies (x^TA^T)(Ax) = 0 \implies  (Ax)^T (Ax) = 0 \implies Ax = 0 \implies x \in \Null(A)$. Logo $\Null(A) = \Null(A^T A)$. Pelo Teorema do posto e da unidade, temos que $\rank A + \Null A = m$ e que $\rank A^TA +\Null A = $ %carro
 \end{proof}
 \section{Análise no $\mathbb{R}^n$}
-\subsection{Topologia}
-\subsubsection{Métrica e Norma}
+\subsection{ Topologia do Espaço Euclidiano}
+   \subsubsection{O espaço vetorial $\mathbb{R}^n$}
+   \subsubsection{Métrica, Produto interno e norma}
 \begin{definicao}[Métrica]
 	Dado um espaço vetorial $E$ sobre um corpo $K$, uma métrica é uma função $d: E\times E \to \mathbb{R}$, que satisfaz para todos $a,b\in E$ e $\lambda \in K$:
 	\begin{enumerate}
@@ -1649,6 +1757,85 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{prop}
 	Se um espaço normado $E$ tiver dimensão finita, então todas as suas normas são equivalentes.
 \end{prop}
+   \subsubsection{Números complexos}
+   \subsubsection{Bolas e conjuntos limitados}
+   \subsubsection{Sequências no espaço euclidiano}
+   \subsubsection{Pontos de acumulação}
+   \subsubsection{Aplicações contínuas}
+   \subsubsection{Homeomorfismos}
+   \subsubsection{Limites}
+   \subsubsection{ Conjuntos abertos}
+   \subsubsection{ Conjuntos fechados}
+   \subsubsection{ Conjuntos compactos}
+   \subsubsection{ Distância entre dois conjuntos; diâmetro}
+   \subsubsection{ Conexidade}
+   \subsubsection{ A norma de uma transformação linear}
+\subsection{ Caminhos no Espaço Euclidiano}
+   \subsubsection{ Caminhos diferenciáveis}
+   \subsubsection{ Integral de um caminho}
+   \subsubsection{ Os teoremas clássicos do Cálculo}
+   \subsubsection{ Caminhos retificáveis}
+   \subsubsection{ O comprimento de arco como parâmetro}
+   \subsubsection{ Curvatura e torção}
+   \subsubsection{ A função-ângulo}
+\subsection{ Funções Reais de n Variáveis}
+   \subsubsection{Derivadas parciais}
+   \subsubsection{Derivadas direcionais}
+   \subsubsection{Funções diferenciáveis}
+   \subsubsection{A diferencial de uma função}
+   \subsubsection{O gradiente de uma função diferenciável}
+   \subsubsection{A Regra de Leibniz}
+   \subsubsection{O Teorema de Schwarz}
+   \subsubsection{Fórmula de Taylor: pontos críticos}
+   \subsubsection{O teorema da função implícita}
+   \subsubsection{ Multiplicador de Lagrange}
+\subsection{ Integrais Curvilíneas}
+   \subsubsection{Formas diferenciais de grau 1}
+   \subsubsection{Integral de Stieltjes}
+   \subsubsection{Integral de uma forma ao longo de um caminho}
+   \subsubsection{Justaposição de caminhos: caminho inverso}
+   \subsubsection{Integral curvilínea de um campo de vetores e de uma função}
+   \subsubsection{Formas exatas e formas fechadas}
+   \subsubsection{Homotopia}
+   \subsubsection{Integrais curvilíneas e homotopia}
+   \subsubsection{Cohomologia}
+   \subsubsection{ A fórmula de Kronecker}
+\subsection{ Aplicações Diferenciáveis}
+   \subsubsection{Diferenciabilidade de uma aplicação}
+   \subsubsection{Exemplos de aplicações diferenciáveis}
+   \subsubsection{A regra da cadeia}
+   \subsubsection{A fórmula de Taylor}
+   \subsubsection{A desigualdade do valor médio}
+   \subsubsection{Sequências de aplicações diferenciáveis}
+   \subsubsection{Aplicações fortemente diferenciáveis}
+   \subsubsection{O teorema da aplicação inversa}
+   \subsubsection{Aplicação: o Lema de Morse}
+   \subsubsection{ A forma local das imersões}
+   \subsubsection{ A forma local das submersões}
+   \subsubsection{ O teorema do posto}
+   \subsubsection{ Superfícies no espaço euclidiano}
+   \subsubsection{ Superfícies orientáveis}
+   \subsubsection{ O método dos multiplicadores de Lagrange}
+
+\subsection{ Integrais Múltiplas}
+   \subsubsection{A definição de integral}
+   \subsubsection{Conjuntos de medida nula}
+   \subsubsection{Caracterização das funções integráveis}
+   \subsubsection{A integral como limite de somas de Riemann}
+   \subsubsection{Integração repetida}
+   \subsubsection{Mudança de variáveis}
+
+\subsection{ Integrais de Superfície}
+   \subsubsection{Formas alternadas}
+   \subsubsection{Formas diferenciais}
+   \subsubsection{A diferencial exterior}
+   \subsubsection{Partições da unidade}
+   \subsubsection{Aplicações da partição da unidade}
+   \subsubsection{Integrais de superfície}
+   \subsubsection{Superfícies com bordo}
+   \subsubsection{O Teorema de Stokes}
+   \subsubsection{Grau de uma aplicação}
+   \subsubsection{ A integral de Kronecker}
 \subsection{Organizar}
 \begin{definicao}[$L(\mathbb{R}^n, \mathbb{R}^m)$]
 	$$L(\mathbb{R}^n, \mathbb{R}^m) = \left\{ T \in F(\mathbb{R}^n, \mathbb{R}^m) \: | \: T \text{ é linear}\right\}$$
