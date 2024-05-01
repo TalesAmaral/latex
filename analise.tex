@@ -33,6 +33,8 @@
 \newtheorem{exemp}{Exemplo}[section]
 \newtheorem{exercicio}{Exercício}[subsection]
 \DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Null}{Null}
 
 \begin{document}
 \maketitle
@@ -1331,6 +1333,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{proof}
 	Supondo $A$ um domínio. Seja $x\in A$ nilpotente, ou seja, $x^n = 0_A$ com $n\in \mathbb{N}$. Se $x\neq 0$, temos pela proposição \ref{propNilpotente} que $x^n \neq 0$.  Logo devemos ter $x = 0$.
 \end{proof}
+\section{Aritmética}
 \section{Análise Real}
 \subsection{Números Reais}
 \subsubsection{Corpo Ordenado}
@@ -1477,7 +1480,8 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{axioma}
 	Existe um corpo ordenado completo, denotado por $\mathbb{R}$.
 \end{axioma}
-\subsection{Sequências}
+\subsection{Sequências e Séries}
+\subsubsection{Sequências}
 \begin{definicao}[Sequência estritamente crescente]
 	Uma sequência $(x_n)$ é estritamente crescente se $\forall n \in \mathbb{N} \: : \: x_{n+1} > x_n$.
 \end{definicao}
@@ -1509,6 +1513,7 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{definicao}[Sequência monótoma]
 	Uma sequência $(x_n)$ é monótoma se é crescente ou decrescente. 
 \end{definicao}
+\subsubsection{Limite de uma sequência}
 \begin{teo}
 	Toda sequência monótona limitada é convergente.
 \end{teo}
@@ -1518,6 +1523,17 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 
 	Se $(x_n)$ é decrescente, tomando $X = \left\{x_n \: | \: n\in \mathbb{N}\right\}$,  temos que $\forall \varepsilon >0 \: \exists n_0\in \mathbb{N} \: : \: x_{n_0} > \inf X +\varepsilon$. Temos $m > n_0 \implies x_m \leq x_{n_0} \iff x_m - \inf X \leq x_{n_0} -\inf X < \varepsilon$, logo $m>n_0 \implies -\varepsilon \leq 0 \leq x_m - \inf X < \varepsilon \iff |x_m - \inf X | < \varepsilon$. Logo $\lim (x_n) = \inf X$.
 \end{proof}
+\subsubsection{Subsequências}
+\begin{prop}
+	Temos $\lim x_n = a$ se, e somente se, para todo $\varepsilon>0$,  o conjunto $\mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é finito.
+\end{prop}
+\begin{proof}
+	Se $\lim x_n = a$, dado $\varepsilon >0$, existe $n_0 \in \mathbb{N}$ tal que $n > n_0 \implies |x_n - a| < \varepsilon \iff x_n \in (a-\varepsilon, a+\varepsilon) \iff n \in x^{-1}((a-\varepsilon, a+\varepsilon))$. Logo $n \in \mathbb{N} - x^{-1}( (a-\varepsilon, a+\varepsilon)) \implies n \not \in x^{-1}( (a-\varepsilon, a+\varepsilon)) \implies n \leq n_0$ .  Como o conjunto $\mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é limitado, temos que ele é finito.
+	Se o conjunto $ X = \mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é finito para todo $\varepsilon >0$, então é limitado.  Logo existe um maior elemento $n_0 \in  X$. Se $n > n_0$,  temos $n \not \in X$, logo $n \in x^{-1}((a-\varepsilon, a+\varepsilon)) \iff x_n \in (a-\varepsilon, a+\varepsilon) \iff |x_n -a| < \varepsilon$. Logo $\lim x_n = a$.
+\end{proof}
+\begin{prop}
+	Seja $(x_n)$ é uma sequência em $\mathbb{R}$. Temos que $a$ é limite de alguma subsequência de $(x_n)$ se, e somente se, $x^{-1}((a-\varepsilon, a+\varepsilon))$ é infinito para todo $\varepsilon>0$.
+\end{prop}
 \subsection{Organizar}
 
 \begin{prop}
@@ -1543,6 +1559,16 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 
 
 
+\section{Geometria Analítica}
+\section{Álgebra Linear}
+\subsection{Posto}
+\begin{prop}
+	Seja $A$ uma matriz $m\times n$.
+	$$\rank{A} = \rank{A A^T} = \rank{A^T A}$$
+\end{prop}
+\begin{proof}
+	Se $x\in \Null(A)$, temos $Ax = 0 \implies A^T (Ax) = A^T \cdot 0 \implies (A^T A) x = 0 \implies x \in \Null(A^T A)$. Se $x\in \Null(A^T A)$, temos $(A^T A)x = 0 \implies x^T (A^T A) x = 0 \implies (x^TA^T)(Ax) = 0 \implies  (Ax)^T (Ax) = 0 \implies Ax = 0 \implies x \in \Null(A)$. Logo $\Null(A) = \Null(A^T A)$. Pelo Teorema do posto e da unidade, temos que $\rank A + \Null A = m$ e que $\rank A^TA +\Null A = $ %carro
+\end{proof}
 \section{Análise no $\mathbb{R}^n$}
 \subsection{Topologia}
 \subsubsection{Métrica e Norma}
