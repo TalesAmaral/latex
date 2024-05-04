@@ -803,10 +803,18 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \subsubsection{Exercícios}
 
 \begin{exercicio}
-	Se $\phi: \mathbb{N} \to \mathbb{N}$ é estritamente crescente, então é $\forall n \in \mathbb{N} \: : \: \phi(n) \geq n$.
+	Se $\phi: \mathbb{N} \to \mathbb{N}$ é estritamente crescente, então:
+	\begin{enumerate}[label=(\alph*)]
+		\item $\forall n \in \mathbb{N} \: : \: \phi(n) \geq n$.
+		\item $\phi$ é injetiva.
+	\end{enumerate}
 \end{exercicio}
 \begin{proof}
-	Seja $X = \left\{ n \in \mathbb{N} \: | \: \phi(n) \geq n \right\}$. Temos $1\in X$ pois $\forall p \in \mathbb{N} \: p\geq 1$. Suponha $n\in X$, logo $\phi(n) \geq n$. Daí temos $\phi(n+1) > \phi(n) \geq n \implies \phi(n+1) > n \iff \phi(n+1) \geq n+1$. Como $1\in X$ e $n\in X \implies n+1\in X$, temos $X = \mathbb{N}$.
+	~\\
+	\begin{enumerate}[label=(\alph*)]
+		\item Seja $X = \left\{ n \in \mathbb{N} \: | \: \phi(n) \geq n \right\}$. Temos $1\in X$ pois $\forall p \in \mathbb{N} \: p\geq 1$. Suponha $n\in X$, logo $\phi(n) \geq n$. Daí temos $\phi(n+1) > \phi(n) \geq n \implies \phi(n+1) > n \iff \phi(n+1) \geq n+1$. Como $1\in X$ e $n\in X \implies n+1\in X$, temos $X = \mathbb{N}$.
+		\item Se $a \neq b$, temos $a < b$ ou $a > b$, daí $\phi(a) > \phi(b)$ ou $\phi(a) < \phi(b)$. Em ambos os casos, temos  $\phi(a) \neq \phi(b)$.
+	\end{enumerate}
 \end{proof}
 \subsection{Conjuntos Finitos e Infinitos}
 
@@ -1058,13 +1066,16 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	f(n+1) = \min( X- f(I_n)) \end{cases}$$
 	Como $f(I_n)$ é sempre finito, temos $X-f(I_n) \neq \emptyset$ para todo $n \in \mathbb{N}$. Logo o princípio da boa ordenação vale para $X - f(I_n)$. Logo $f$ está bem definida. 
 
-	Se $f(x+1) = f(y+1)$, com $x<y$ (sem perda de generalidade), temos $x+1 \in I_y \implies f(x+1) \in f(I_y)$. Logo $f(x+1) \not \in X - f(I_y)$. Logo $f(x+1) \neq f(y+1)$, pois $f(y+1) \in X - f(I_y)$. Logo $f$ é injetiva.
+	Se $f(x+1) = f(y+1)$, com $x<y$ (sem perda de generalidade), temos $x+1 \leq y$, portanto  $x+1 \in I_y \implies f(x+1) \in f(I_y)$. Logo $f(x+1) \not \in X - f(I_y)$. Logo $f(x+1) \neq f(y+1)$, pois $f(y+1) \in X - f(I_y)$ (contradição). Logo $f$ é injetiva.
 	
-	Suponha $X \neq f(\mathbb{N})$. Logo $X - f(\mathbb{N}) \neq \emptyset$. Seja $y \in X - f(\mathbb{N})$.  Seja $x\in f(\mathbb{N})$ qualquer. Logo $x = f(n)$ para algum $n \in \mathbb{N}$. Se $x = f(1)$, temos $x = \min(X)$. Como $y \in X$, temos $x \leq y$. Se $x\neq f(1)$, temos $x = f(n+1) = \min (X - f(I_n))$. Como $y \in X - f(\mathbb{N}) \subset X - f(I_n)$, temos $y \in X - f(I_n)$, logo $x\leq y$. Ou seja: $\forall x \in \mathbb{N} \: : \: x\leq y$. Logo $\mathbb{N}$ é limitado superiormente por $y$.  Contradição (conjunto finito não possui limite superior). Logo $X = f(\mathbb{N})$.
+	Suponha $X \neq f(\mathbb{N})$. Logo $X - f(\mathbb{N}) \neq \emptyset$. Seja $y \in X - f(\mathbb{N})$.  Seja $x\in f(\mathbb{N})$ qualquer. Logo $x = f(n)$ para algum $n \in \mathbb{N}$. Se $n = 1$, temos $x = f(1) =  \min(X)$. Como $y \in X$, temos $x \leq y$. Se $n\neq 1 \implies \exists n_0 \in \mathbb{N} \: : \: n = n_0+1$, temos $x = f(n) =  f(n_0+1) = \min (X - f(I_{n_0}))$. Como $y \in X - f(\mathbb{N}) \subset X - f(I_{n_0})$, temos $y \in X - f(I_{n_0})$, logo $x = f(n) = \min( X - I_{n_0}) \leq y$. Ou seja: $\forall x \in f\left(\mathbb{N}\right) \: : \: x\leq y$. Logo $f\left(\mathbb{N}\right)$ é limitado superiormente por $y$.  Contradição (conjunto infinito não possui limite superior). Logo $X = f(\mathbb{N})$.
 
 	Como $f$ é injetiva e sobrejetiva, temos $f$ bijetiva. Logo $X$ é enumerável.
 
 \end{proof}
+\begin{obs}
+	A função construída na proposição anterior é estritamente crescente. De fato, seja $Y = \left\{ n \in \mathbb{N} \: | \: \forall m \in \mathbb{N} \: : \:  m > n \implies f(m) > f(n)\right\}$. Temos $1\in X$, dado $m\in \mathbb{N}$ com $m > 1$, temos  $  m = m_0 +1$ com $m_0 \in \mathbb{N}$, daí  $ f(m) = \min( X- f\left(I_{m_0}\right))$ . Como $f(1) \in f\left(I_{m_0}\right)$, temos $f(m) \neq f(1)$. Como $f(m) \in X$ e $f(m) \neq f(1)$, temos  $f(1) = \min X  < f(m)$ para todo $m>1$. Se $n\in X$, temos $\forall m \in \mathbb{N}\: : \: m > n \implies f(m) > f(n)$. Dado $m\in \mathbb{N}$ com $m > n+1 > n$, temos $f(m) > f(n)$ e $f(n+1) > f(n)$. Como $I_{n+1} $. %carro
+\end{obs}
 \begin{prop}
 	Se $f:X\to Y$ é uma bijeção e $Y$ é enumerável, então $X$ é enumerável.
 \end{prop}
@@ -1148,6 +1159,13 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 	Lembrando que cada elemento de $Y$ é uma função $\phi: \mathbb{N} \to\displaystyle\bigcup_{\lambda \in \mathbb{N}} X_{\lambda}$, onde $\phi(n) \in X_n$. Suponha $Y$ enumerável. Logo existe uma bijeção $f: \mathbb{N} \to Y$. Para simplificar a notação, denotaremos a função $f(n)$ por $f_n$.  Como $X_{\lambda}$ possui pelo menos 2 elementos, existem $a_\lambda, b_\lambda \in X_{\lambda}$ para todo $\lambda\in \mathbb{N}$. Seja $h: \mathbb{N} \to \displaystyle\bigcup_{\lambda \in \mathbb{N}} X_{\lambda}$, definida por $$h(x) = \begin{cases} a_x , & f_x(x) \neq a_x\\ b_x, & f_x(x) = a_x \end{cases}.$$
 		Temos $h(n) \neq f_n(n)$ para todo $n\in \mathbb{N}$, logo $h \neq f_n$ para todo $n\in \mathbb{N}$. Como $h\in Y$ e $h \not \in f(\mathbb{N})$, temos que $f$ não é sobrejetiva. Logo $f$ não é bijetiva (contradição). Logo $Y$ não é enumerável.
 		%falta mostrar que não existe uma injeção f: Y -> N$
+\end{proof}
+\section{Exercícios}
+\begin{exercicio}
+	Se $X \subset \mathbb{N}$ é  infinito, então existe uma única bijeção $\phi: \mathbb{N} \to \mathbb{X}$ crescente.
+\end{exercicio}
+\begin{proof}
+	Tomo subconjunto dos naturais é enumerável, existe uma bijeção $f : \mathbb{N} \to X$. Definindo $\phi: \mathbb{N} \to X$, dada por $\phi(1) = \min X = \min f\left(\mathbb{N}\right)$ 
 \end{proof}
 
 \section{Anéis }
