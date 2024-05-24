@@ -44,7 +44,7 @@
 
 \section{Introdução}
 
-Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.  
+O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e definições, onde são colocados o maior número possível de detalhes. Quem nunca leu um livro e se deparou com demonstrações incompletas, repletas de "é fácil ver que" e falas similares. Meu objetivo é reduzir isso, visto que PDF não tem limite de páginas.
 
 \section{Lógica}
 \subsection{Cálculo Proposicional}
@@ -1074,7 +1074,15 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 
 \end{proof}
 \begin{obs}
-	A função construída na proposição anterior é estritamente crescente. De fato, seja $Y = \left\{ n \in \mathbb{N} \: | \: \forall m \in \mathbb{N} \: : \:  m > n \implies f(m) > f(n)\right\}$. Temos $1\in X$, dado $m\in \mathbb{N}$ com $m > 1$, temos  $  m = m_0 +1$ com $m_0 \in \mathbb{N}$, daí  $ f(m) = \min( X- f\left(I_{m_0}\right))$ . Como $f(1) \in f\left(I_{m_0}\right)$, temos $f(m) \neq f(1)$. Como $f(m) \in X$ e $f(m) \neq f(1)$, temos  $f(1) = \min X  < f(m)$ para todo $m>1$. Se $n\in X$, temos $\forall m \in \mathbb{N}\: : \: m > n \implies f(m) > f(n)$. Dado $m\in \mathbb{N}$ com $m > n+1 > n$, temos $f(m) > f(n)$ e $f(n+1) > f(n)$. Como $I_{n+1} $. %carro
+	\label{obsCrescente}
+	A função construída na proposição anterior é estritamente crescente. De fato, seja $Y = \left\{ p \in \mathbb{N} \: | \: \forall n \in \mathbb{N} \: : \:  f(n + p) > f(n)\right\}$. 
+
+	Temos $1\in Y$. De fato, temos $f(n+1) =  \min(X - f(I_n))$, logo $f(n+1) \in X - f(I_n)$, logo $f(n+1) \neq f(n)$, pois $f(n) \in f(I_n)$. Se $n=1$, temos $f(2) \in X-f(I_1) \implies f(2) \in X \implies f(2)\leq f(1)$, pois $f(1) =  \min X$. De $f(2) \neq f(1)$, obtemos $f(2) < f(1)$. Se $n \neq 1$, existe $n_0 \in \mathbb{N}$ tal que $n = n_0 +1$. Daí $f(n +1\in X - f(I_n) \subset X - f(I_{n_0})$, logo $f(n+1) = \min(X - f(I_n)) \leq \min(X - f(I_{n_0}))  = f(n)$. Como $f(n+1) \neq f(n)$, temos $f(n+1) > f(n)$. Logo $1\in Y$.
+	Supondo $p\in Y$, temos para todo $n\in \mathbb{N}$ que $f(n+p) > f(n)$. Como $1\in Y$, temos $f(p+1) > f(p) > f(n)$, logo $p+1\in Y$. Logo $Y = \mathbb{N}$.
+
+	Se $m>n$, temos $m = n +p$ para algum $p \in \mathbb{N}$, daí $f(m) > f(n)$. Logo $f$ é crescente. 
+
+	Essa é outra forma de mostrar a injetividade da função $f$.
 \end{obs}
 \begin{prop}
 	Se $f:X\to Y$ é uma bijeção e $Y$ é enumerável, então $X$ é enumerável.
@@ -1160,12 +1168,12 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 		Temos $h(n) \neq f_n(n)$ para todo $n\in \mathbb{N}$, logo $h \neq f_n$ para todo $n\in \mathbb{N}$. Como $h\in Y$ e $h \not \in f(\mathbb{N})$, temos que $f$ não é sobrejetiva. Logo $f$ não é bijetiva (contradição). Logo $Y$ não é enumerável.
 		%falta mostrar que não existe uma injeção f: Y -> N$
 \end{proof}
-\section{Exercícios}
+\subsubsection{Exercícios}
 \begin{exercicio}
-	Se $X \subset \mathbb{N}$ é  infinito, então existe uma única bijeção $\phi: \mathbb{N} \to \mathbb{X}$ crescente.
+	Se $X \subset \mathbb{N}$ é  infinito, então existe uma única bijeção $\phi: \mathbb{N} \to \mathbb{X}$ estritamente crescente.
 \end{exercicio}
 \begin{proof}
-	Tomo subconjunto dos naturais é enumerável, existe uma bijeção $f : \mathbb{N} \to X$. Definindo $\phi: \mathbb{N} \to X$, dada por $\phi(1) = \min X = \min f\left(\mathbb{N}\right)$ 
+	A existência é pela observação \ref{obsCrescente}. Se $\phi,f:\mathbb{N} \to  X$ são bijeções estritamente crescentes. Seja $Y = \left\{n \in \mathbb{N} | \phi(n) = f(n)\right\}$. Seja $p = f^{-1}(\min X)$, se $p\neq 1$, temos $f(p) \leq f(1)$ com $p > 1$. Logo $f(1) = \min X$. O argumento é análogo para $\phi(1) = \min X$. Logo $f(1) = \min X = \phi(1)\ \implies 1 \in X$. Suponha $n\in X$. Se $f(n+1) \neq \phi(n+1)$, temos $\phi(n+1) < f(n+1)$ ou $f(n+1) < \phi(n+1)$. Suponha sem perda de generalidade que $\phi(n+1) < f(n+1)$. Seja $p = f^{-1}(\phi(n+1))$. Se $p > n+1$, temos $f(p) < f(n+1)$ (contradição). Se $p < n+1$, temos $p \neq n$, pois $f(p) = \phi(n+1) > \phi(n) = f(n)$. Logo $p < n$ com $f(p) > f(n)$ (contradição). Logo não podemos ter $\phi(n+1) \neq f(n+1)$. Logo $n+1\in Y$. Logo $\phi  = f$.
 \end{proof}
 
 \section{Anéis }
@@ -1566,6 +1574,14 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
    \begin{definicao}[Subsequência]
 	   Dada uma sequência $x: \mathbb{N} \to \mathbb{R}$, uma subseqência é uma composição $x \circ \phi : \mathbb{N} \to \mathbb{R}$, onde  $\phi : \mathbb{N} \to \mathbb{N}$ é uma função estritamente crescente. Denotaremos por $(x_{\phi(n)})$.
    \end{definicao}
+\begin{prop}
+	Uma sequência $(x_n)$ é limitada se, e somente se, qualquer subsequência $(x_{\phi(n)})$ é limitada.
+\end{prop}
+\begin{proof}
+	Se $(x_n)$ é limitada. Seja $(x_{\phi(n)})$ uma subsequência. Existe $c\in \mathbb{R}$ tal que $\forall n\in \mathbb{N} \: : \: |x_n| \leq c$. Daí $\phi(n) \in \mathbb{N} \implies |x_{\phi(n)}| \leq c$.
+	
+	Se qualquer subsequência $(x_{\phi(n)})$ é limitada, tomando $\phi:\mathbb{N} \to \mathbb{N}$ com $\phi(n) = n$, temos $(x_n) = (x_{\phi(n)})$, logo $(x_n)$ é limitada, pois $(x_{\phi(n)})$ é limitada.
+\end{proof}
 
 \begin{definicao}[Sequência estritamente crescente]
 	Uma sequência $(x_n)$ é estritamente crescente se $\forall n \in \mathbb{N} \: : \: x_{n+1} > x_n$.
@@ -1598,7 +1614,61 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \begin{definicao}[Sequência monótoma]
 	Uma sequência $(x_n)$ é monótoma se é crescente ou decrescente. 
 \end{definicao}
+\begin{prop}
+	Uma sequência monótoma $(x_n)$ é limitada superiormente ou inferiormente.
+\end{prop}
+\begin{proof}
+	Se $(x_n)$ é monótoma, ela é crescente ou decrescente. Se $(x_n)$ é crescente, temos $ n \geq 1 $ para todo $n \in \mathbb{N}$, logo $x_n \geq x_1$, logo $x_n$ é limitada inferiormente. Se $(x_n)$ é decrescente, temos $x_n \leq x_1$ para todo $n\in \mathbb{N}$. Logo $(x_n)$ é limitada superiormente.
+\end{proof}
+\begin{prop}
+	Uma sequência monótoma $(x_n)$ é limitada se, e somente se, existe uma subsequência $(x_{\phi(n)})$  limitada.
+\end{prop}
+\begin{proof}
+	Se $(x_n)$ é limitada, qualquer subsequência $(x_{\phi(n)})$ será limitada, em particular a subsequência $\phi:\mathbb{N} \to \mathbb{N}$ com  $\phi(n) = n$ é limitada.
+	Se existe uma subsequência $(x_{\phi(n)})$ limitada,  temos $\forall n \in \mathbb{N} : |x_{\phi(n)}| \leq c$ para algum $c\in \mathbb{R}$. Se $(x_n)$ é crescente, temos $(x_n)$ limitada inferiormente por $x_1$. Dado $n \in \mathbb{N}$, temos $\phi(n) \geq n$, logo $ x_1 \leq x_{n} \leq x_{\phi(n)} \leq c$. Logo $(x_n)$ é limitada.  Se $(x_n)$ é decrescente, temos $(x_n)$ limitada superiormente pode $x_1$ e de $\phi(n) \geq n$, obtemos $-c \leq x_{\phi(n)} \leq x_n \leq x_1 $, logo $(x_n)$ é limitada.
+\end{proof}
    \subsubsection{ Limite de uma sequência}
+   \begin{definicao}[Limite de Sequência]
+	   Dizemos que $a\in \mathbb{R}$ é limite da sequência $(x_n)$ se para cada $\varepsilon\in \mathbb{R}$ com $\varepsilon > 0$, existe $n_0 \in \mathbb{N}$ (que depende de $\varepsilon$) tal que $|x_n - a| < \varepsilon$ sempre que $n\in \mathbb{N}$ com $n>n_0$. Ou:
+
+	   $$ \forall \varepsilon >0 \:  \exists n_0 \in \mathbb{N}\: \forall n \in \mathbb{N} : n> n_0 \implies |x_n -a| < \varepsilon$$
+   \end{definicao}
+   \begin{obs}
+	   Quando existir um limite da sequência $(x_n)$, diremos que $(x_n)$ converge ou é convergente. Além disso, se $a\in \mathbb{R}$ for limite de $(x_n)$, diremos que $(x_n)$ tende a $a$. 
+	   Quando o limite não existir para nenhum $a\in \mathbb{R}$, diremos que a sequência é divergente.
+   \end{obs}
+   \begin{prop}
+	   O limite de uma sequência $(x_n)$, quando existir, é único.
+   \end{prop}
+   \begin{proof}
+	   Suponha que a sequência $(x_n)$ tenha como limites os números $a,b\in \mathbb{R}$ com $a\neq b$. Daí $|a-b| \neq 0 \implies |a-b| > 0$. Tomando $\varepsilon = |a-b|$, 
+	   $$ \exists n_0\in \mathbb{N} \: : \: \forall n \in \mathbb{N} \: n > n_0 \implies |x_n - a| < \dfrac{|a-b|}{2}$$ 
+	   $$ \exists n_1 \in \mathbb{N} \: : \: \forall n \in \mathbb{N} \: : \: n > n_1 \implies |x_n -b| < \dfrac{|a-b|}{2}$$
+
+	   Tomando $n = \max\{n_0 , n_1\} +1$, temos $n_3>n_0$ e $n_3 > n_1$, logo $|a-b| = |a+x_{n} -x_n -b | \leq |a-x_n| + |x_n - b|< \dfrac{|a-b|}{2} + \dfrac{|a-b|}{2}  = |a-b| \implies |a-b| < |a-b|$. Contradição.
+   \end{proof}
+   \begin{definicao}[$\lim x_n$]
+	   Quando o limite da sequência $(x_n)$ existir e for $a\in \mathbb{R}$, denotaremos por $a = \lim x_n$.
+   \end{definicao}
+\begin{prop}
+	Temos $\lim x_n = a$ se, e somente se, para todo $\varepsilon>0$,  o conjunto $\mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é finito.
+\end{prop}
+\begin{proof}
+	Se $\lim x_n = a$, dado $\varepsilon >0$, existe $n_0 \in \mathbb{N}$ tal que $n > n_0 \implies |x_n - a| < \varepsilon \iff x_n \in (a-\varepsilon, a+\varepsilon) \iff n \in x^{-1}((a-\varepsilon, a+\varepsilon))$. Logo $n \in \mathbb{N} - x^{-1}( (a-\varepsilon, a+\varepsilon)) \implies n \not \in x^{-1}( (a-\varepsilon, a+\varepsilon)) \implies n \leq n_0$ .  Como o conjunto $\mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é limitado, temos que ele é finito.
+	Se o conjunto $ X = \mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é finito para todo $\varepsilon >0$, então é limitado.  Logo existe um maior elemento $n_0 \in  X$. Se $n > n_0$,  temos $n \not \in X$, logo $n \in x^{-1}((a-\varepsilon, a+\varepsilon)) \iff x_n \in (a-\varepsilon, a+\varepsilon) \iff |x_n -a| < \varepsilon$. Logo $\lim x_n = a$.
+\end{proof}
+\begin{prop}
+	Se $\lim x_n = a$, então toda subsequência de $(x_n)$ converge para $a$.
+\end{prop}
+\begin{proof}
+	Seja $\lim x_n = a$ e $\phi: \mathbb{N} \to \mathbb{N}$ uma função crescente. Dado $\varepsilon>0$, existe $n_0 \in \mathbb{N}$ tal que $n> n_0 \implies |x_n -a| < \varepsilon$. Temos $\phi(n) \geq  n > n_0$, logo $|x_{\phi(n)} -a| < \varepsilon$. Logo $\lim x_{\phi(n)}  = a$.
+\end{proof}
+\begin{prop}
+	Toda sequência convergente é limitada.
+\end{prop}
+\begin{proof}
+	Se $(x_n)$ é convergente com $\lim x_n = a\in\mathbb{R}$. Existe $n_0 \in \mathbb{N}$ tal que $n>n_0 \implies |x_n - a|<1$. Daí tomando $c = \max\{|x_1 - a|, |x_2-a|, \cdots, |x_{n_0} -a |, 1\}$. Dado $n\in \mathbb{N}$, temos que ou $n>n_0$ ou $n\leq n_0$. Se $n>n_0$, temos $|x_n -a| < 1 \leq c \implies a-c \leq x_n \leq a+c$. Se $n\leq n_0$, temos $|x_n-a| \leq c \implies a-c \leq x_n \leq a+c$. Logo $(x_n)$ é limitada.
+\end{proof}
 \begin{teo}
 	Toda sequência monótona limitada é convergente.
 \end{teo}
@@ -1610,13 +1680,6 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
 \end{proof}
    \subsubsection{ Propriedades aritméticas dos limites}
    \subsubsection{ Subsequências}
-\begin{prop}
-	Temos $\lim x_n = a$ se, e somente se, para todo $\varepsilon>0$,  o conjunto $\mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é finito.
-\end{prop}
-\begin{proof}
-	Se $\lim x_n = a$, dado $\varepsilon >0$, existe $n_0 \in \mathbb{N}$ tal que $n > n_0 \implies |x_n - a| < \varepsilon \iff x_n \in (a-\varepsilon, a+\varepsilon) \iff n \in x^{-1}((a-\varepsilon, a+\varepsilon))$. Logo $n \in \mathbb{N} - x^{-1}( (a-\varepsilon, a+\varepsilon)) \implies n \not \in x^{-1}( (a-\varepsilon, a+\varepsilon)) \implies n \leq n_0$ .  Como o conjunto $\mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é limitado, temos que ele é finito.
-	Se o conjunto $ X = \mathbb{N} - x^{-1}( (a - \varepsilon, a+\varepsilon))$ é finito para todo $\varepsilon >0$, então é limitado.  Logo existe um maior elemento $n_0 \in  X$. Se $n > n_0$,  temos $n \not \in X$, logo $n \in x^{-1}((a-\varepsilon, a+\varepsilon)) \iff x_n \in (a-\varepsilon, a+\varepsilon) \iff |x_n -a| < \varepsilon$. Logo $\lim x_n = a$.
-\end{proof}
 \begin{prop}
 	Seja $(x_n)$ é uma sequência em $\mathbb{R}$. Temos que $a$ é limite de alguma subsequência de $(x_n)$ se, e somente se, $x^{-1}((a-\varepsilon, a+\varepsilon))$ é infinito para todo $\varepsilon>0$.
 \end{prop}
@@ -1785,6 +1848,19 @@ Aqui estão depositadas as notas do aluno de graduação Tales da Silva Amaral.
    \subsubsection{ Conjuntos abertos}
    \subsubsection{ Conjuntos fechados}
    \subsubsection{ Conjuntos compactos}
+\begin{definicao}[Conjunto Compacto]
+	Um conjunto $X\subset \mathbb{R}^n$ é compacto $\iff $ é fechado e limitado.
+\end{definicao}
+\begin{prop}
+	Um conjunto $X\subset \mathbb{R}^n$ é compacto $\iff$ toda sequência $(x_n)$  em $X$ possui uma subsequência convergente com limite em $X$.
+\end{prop}
+\begin{proof}
+	Supondo $X\subset\mathbb{R}^n$ compacto. Seja $(x_n)$ uma sequência em $X$. Como $X$ é limitado, $(x_n)$ admite uma subsequência $(x_{\phi(n)})$ convergente. Como $X$ é fechado, temos que $\lim x_{\phi(x)}= x\in X$.
+
+	Tomando a contrapositiva, suponha que $X$ não seja compacto. Logo $X$ não é fechado ou não é limitado. Se $X$ não é fechado, existe um $x\in \overline{X} \setminus X$. Logo existe uma sequência $(x_n)\in X$ com $\lim x_n = x$. Qualquer subequência $\phi:\mathbb{N}\to \mathbb{N}$  de $(x_n)$ terá $\lim x_{\phi(n)} = x$. Logo existe uma sequência $(x_n)$ tal que nenhuma subsequência $(x_{\phi(n)})$ tenha limite $x\in X$.
+	Suponha que $X$ não seja limitado, logo para todo $\varepsilon$, existe $x\in X$ tal que $|x| > \varepsilon$. Daí tomando $x_n\in X$ tal que $|x_n| > n$, temos que a sequência não admite valores de aderência. Logo não existe subsequência convergente.
+
+\end{proof}
    \subsubsection{ Distância entre dois conjuntos; diâmetro}
    \subsubsection{ Conexidade}
    \subsubsection{ A norma de uma transformação linear}
