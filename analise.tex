@@ -13,6 +13,13 @@
 \newtheorem{teo}{Teorema}
 \newtheorem{lema}{Lema}
 \newtheorem{inferencia}{Regra de Inferência}
+  
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={3.0},
+]{doclicense}
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -45,6 +52,8 @@
 \section{Introdução}
 
 O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e definições, onde são colocados o maior número possível de detalhes. Quem nunca leu um livro e se deparou com demonstrações incompletas, repletas de "é fácil ver que" e falas similares. Meu objetivo é reduzir isso, visto que PDF não tem limite de páginas.
+
+\doclicenseThis
 
 \section{Lógica}
 \subsection{Cálculo Proposicional}
@@ -1683,6 +1692,13 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 \begin{prop}
 	Seja $(x_n)$ é uma sequência em $\mathbb{R}$. Temos que $a$ é limite de alguma subsequência de $(x_n)$ se, e somente se, $x^{-1}((a-\varepsilon, a+\varepsilon))$ é infinito para todo $\varepsilon>0$.
 \end{prop}
+\begin{prop}
+	Toda sequência $(x_n)$ possui uma subsequência monótoma.
+\end{prop}
+\begin{proof}
+	Dizemos que a sequência $(x_n)$ é eventualmente crescente se existe uma subsequência $\phi:\mathbb{N} \to \mathbb{N}$ tal que $(x_{\phi(n)})$ é crescente. Se a sequência $(x_n)$ for eventualmente crescente, temos que a sequência $(x_{\phi(n)})$ é  uma subsequência monótoma.
+	Supondo que a sequência $(x_n)$ não é eventualmente crescente.  Para todo $k\in \mathbb{N}$, a subsequência $(x_{n+k})$ não é crescente. Definindo $\phi: \mathbb{N} \to \mathbb{N}$, com $\phi(1) = 1$ e, supondo $\phi(n)$ definida, temos que a sequência $(x_{n+\phi(n)})$ não é crescente, logo existe $p,q\in \mathbb{N}$ tal que $n+p>n+q$ e $x_{n+p} < x_{n+q}$
+\end{proof}
    \subsubsection{ Sequências de Cauchy}
    \subsubsection{ Limites infinitos}
    \subsubsection{ Séries numéricas}
@@ -2071,5 +2087,34 @@ Afirmo que $S_T(H) = Df(T)(H)$. De fato, $S_T$ é linear (confia) e temos \begin
 
 	
 \end{proof}
+\section{Geometria diferencial}
+\subsection{Superfícies Regulares}
+\begin{definicao}[Superfície]
+	Um subconjunto $S\subset \mathbb{R}^n$ é uma superfície de dimensão $m$ quando, para todo $x\in S$, existe $A \subset S$ aberto em $S$ contendo $x$, $A_0$ aberto em $\mathbb{R}^m$ e um homeomorfismo $\phi: A_0 \to A$.
+\end{definicao}
+\begin{obs}
+	Observe que $A$ é aberto em $S$ se, e somente se, existe um aberto $V\subset \mathbb{R}^n$ tal que $A = V\cap S$.
+\end{obs}
+\begin{obs}
+	Aqui estamos preocupados quando $n = 3$ e $m = 2$.
+\end{obs}
+\begin{definicao}[Superfície regular]
+	Um conjunto $S\subset \mathbb{R}^3$ é uma superfície regular se, para todo $p\in S$, existe um aberto $V\subset \mathbb{R}^3$ com $p\in V$ e uma aplicação $x: U \to V\cap S$ tal que:
+	\begin{enumerate}
+		\item $x$ é diferenciável;
+		\item $x$ é um homeomorfismo.
+		\item $x$ é uma imersão.
+	\end{enumerate}
+\end{definicao}
 
+\begin{prop}
+	Se $f:U\to \mathbb{R}$ é uma função diferenciável em um conjunto aberto $U\subset \mathbb{R}^2$, então o gráfico de $f$ é uma superfície regular.
+\end{prop}
+
+\begin{proof}
+	Seja $S = \text{Graf}(f) = \{ (x,y,z) \in \mathbb{R}^3 | (x,y) \in U \land z = f(x,y) \}$. Tomando $\phi: U \to S\cap \mathbb{R}^3 = S$ com $\phi(x,y) = (x,y, f(x,y))$. Temos $\phi$ diferenciável com $(\phi)^{-1} = \pi_{|S}$, logo é um homeomorfismo. Além disso, $D\phi(x,y) = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ f_1(x,y) & f_2(x,y) \end{bmatrix}$ com $\rank(D\phi(x,y)) = 2$ para todo $(x,y) \in U$, logo é uma imersão.
+\end{proof}
+\begin{definicao}
+	Dada uma aplicação diferenciável $F: U \subset \mathbb{R}^n \to \mathbb{R}^m$ definida em um aberto $U$, dizemos que $p\in U$ é um ponto crítico de $F$ se $\rank(DF(p)) < m$. A imagem $F(p) \in \mathbb{R}^m$ de um ponto crítico é chamado um valor crítico de $F$. Um ponto de $\mathbb{R}^m$ que não é valor crítico é chamado um valor regular de $F$.
+\end{definicao}
 \end{document}
