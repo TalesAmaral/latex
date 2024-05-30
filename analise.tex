@@ -2,6 +2,7 @@
 
 \usepackage{amsthm}
 \usepackage{amssymb}
+\usepackage{physics}
 \usepackage{mathtools}
 \usepackage{enumitem}
 \usepackage{amsmath}
@@ -40,7 +41,6 @@
 \newtheorem{exemp}{Exemplo}[section]
 \newtheorem{exercicio}{Exercício}[subsection]
 \DeclareMathOperator{\card}{card}
-\DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\Null}{Null}
 
 \begin{document}
@@ -83,7 +83,7 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	A letra $c$ é reservada para a "contradição".
 \end{definicao}
 \begin{definicao}[$t$, Tautologia]
-	A letra $t$ é reservada para a "contradição".
+	A letra $t$ é reservada para a "tautologia".
 \end{definicao}
 \begin{definicao}[$ \nexists x  P(x)$, Não existe]
 	$\neg (\exists x  P(x))  \equiv \nexists  P(x)$. Diz-se "Não existe $x$ tal que $P(x)$".
@@ -1857,10 +1857,27 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
    \subsubsection{Números complexos}
    \subsubsection{Bolas e conjuntos limitados}
    \subsubsection{Sequências no espaço euclidiano}
+   \begin{teo}
+	   Uma sequência $(x_k)\in \mathbb{R}^n$ converge para o ponto $a = (a_1,\cdots a_n)$ se, e somente se, para cada $i = 1,2,\cdots, n$, tem-se $\lim x_{ki} = a_i$.
+   \end{teo}
+   \begin{proof}
+	   Tomando a norma do máximo e supondo $\lim x_k = a$. Dado $\varepsilon>0$, existe $k_0 \in \mathbb{N}$ tal que $k>k_0 \implies  |x_k - a| < \varepsilon$. Para todo $i\in I_n$, temos $k>k_0 \implies |x_{ki} - a_i|\leq |x_k - a| < \varepsilon$, logo $\lim x_{ki} = a_i$.
+
+	   Supondo $\lim x_{ki}  = a_i$ para todo $i\in I_n$. Dado $\varepsilon >0$, existe para todo $i\in I_n$ um $k_i\in \mathbb{N}$ tal que $k > k_i \implies |x_{ki} - a_i | < \varepsilon$. Tomando $k_0 = \max\{ k_1,k_2,\cdots, k_n\}$. Temos $k>k_0 \implies \displaystyle\max_{i\in I_n} |x_{ki} -a_i| = |x_k -a| < \varepsilon$.Logo $\lim x_k = a$
+   \end{proof}
    \subsubsection{Pontos de acumulação}
    \subsubsection{Aplicações contínuas}
    \subsubsection{Homeomorfismos}
    \subsubsection{Limites}
+   \begin{prop}
+	\label{propLimites}
+	   Seja \(a\) um ponto de acumulação do conjunto \(X\subset \mathbb{R}^m\). Dada a aplicação \(f:X\to \mathbb{R}^n\), cujas funções coordenadas são \(f_1,\cdots,f_n:X \to \mathbb{R}\), tem-se \(\displaystyle\lim_{x\to a} f(x) = b = (b_1, \cdots, b_n)\) se, e somente se, \(\displaystyle\lim_{x\to a} f_i(x) = b_i\) para cada \(i \in I_n\).
+   \end{prop}
+   \begin{proof}
+	   Tomando a norma do máximo e supondo $\displaystyle\lim_{x\to a} f(x) = b$. Dado $\varepsilon>0$, existe $\delta >0$ tal que $\forall x \in X \: : \: |x-a| < \delta \implies  |f_i(x) - b_i | \leq |f(x) - b| < \varepsilon$ para  todo $i\in I_n$.  logo $\displaystyle\lim_{x\to a} f_i(x) = b_i$ para todo $i\in I_n$.
+
+	   Supondo $\displaystyle\lim_{x\to a} f(x)  = b_i$ para todo $i\in I_n$. Dado $\varepsilon >0$, existe para todo $i\in I_n$ um $\delta_i > 0 $ tal que $\forall x\in X \: : \: |x-a| < \delta_i \implies |f_i(x) - b_i | < \varepsilon$. Tomando $\delta = \min\{ \delta_1,\delta_2,\cdots, \delta_n\}$. Temos $\forall x\in X \: : \: |x-a|<\delta \implies \displaystyle\max_{i\in I_n} |f_i(x) -b_i| = |f(x) -b| < \varepsilon$. Logo \(\displaystyle \lim_{x\to a} f(x) = b\).
+   \end{proof}
    \subsubsection{ Conjuntos abertos}
    \subsubsection{ Conjuntos fechados}
    \subsubsection{ Conjuntos compactos}
@@ -1882,6 +1899,73 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
    \subsubsection{ A norma de uma transformação linear}
 \subsection{ Caminhos no Espaço Euclidiano}
    \subsubsection{ Caminhos diferenciáveis}
+   \begin{definicao}[Caminho]
+	   Um caminho é uma aplicação $f: I \to \mathbb{R}^n$, onde $I \subset\mathbb{R}$ é um intervalo.
+   \end{definicao}
+   \begin{definicao}[Funções coordenadas]
+	Se $f = (f_1,\cdots, f_n)$ é um caminho, as $n$ funções $f_i : I \to \mathbb{R}$ são chamadas de funções coordenadas de $f$.
+   \end{definicao}
+   \begin{definicao}
+	   O vetor velocidade do caminho $f:I\to \mathbb{R}$ no ponto $a\in I$ é , por definição, o limite \[ \dv{f}{t}(a) = Df(a) = f'(a) = \lim \dfrac{f(a+t) - f(a)}{t},\]
+	   quando ele existir. 
+   \end{definicao}
+   \begin{definicao}
+	   Quando a velocidade de um caminho $f:I\to \mathbb{R}$ no ponto $a\in I$ existir, a norma $|f'(a)|$ é a velocidade escalar de $f$ no ponto $a$.
+   \end{definicao}
+   \begin{definicao}
+	   Quando a velocidade de um caminho $f:I\to \mathbb{R}$ no ponto $a\in I$ existir, dizemos que $f$ é diferenciável em $a$. Se $f$ for diferenciável em todo $a\in I$, dizemos que $f$ é diferenciável.
+   \end{definicao}
+   \begin{prop}
+	   A função $f = (f_1,\cdots, f_n) : I \to \mathbb{R}^n$ é diferenciável em $a\in I$ se, e somente se, $f_i : I \to \mathbb{R}$ é diferenciável em $a$ para todo $i\in I_n$.  E $f'(a) = ( f_1'(a), \cdots, f_n'(a))$.
+   \end{prop}
+   \begin{proof}
+	   Se $f = (f_1,\cdots, f_n)$ é diferenciável em $a\in I$, então o limite $f'(a) = \displaystyle\lim_{t\to 0} \dfrac{f(a+t) - f(a)}{t}$ existe. Temos:
+
+	   \begin{align*}
+		   f'(a) &= \lim_{t\to 0} \dfrac{f(a+t) - f(a)}{t} \\
+		   &= \lim_{t \to 0} \left( \dfrac{f_i(a+t) - f_i(a)}{t}\right)_{1\leq i \leq n}\\
+		   &=  \left(\lim_{t \to 0} \dfrac{f_i(a+t) - f_i(a)}{t}\right)_{1\leq i \leq n}\\
+		   &=(f_1'(a),\cdots, f_n'(a))
+	   \end{align*}
+
+	   Logo pela proposição \ref{propLimites}, o limite  \(\displaystyle\lim_{t\to 0} \dfrac{f(a+t) - f(a)}{t}\) existe se, e somente se, \(\displaystyle\lim_{t\to 0} \dfrac{f_i(a+t) - f(a)}{t}\) existe para todo \(i\in I_n\).
+   \end{proof}
+   \begin{prop}
+	   Um caminho \( f:I\to \mathbb{R}^n \) é diferenciável em \(a\in I\) se, e somente se, existe um vetor \(v\in \mathbb{R}^n\) e uma função $r: \mathbb{R} \to \mathbb{R}^n$ (resto) tal que para \(a+t\in I\) se tenha \[ f(a+t) - f(a) = t\cdot v + r(t), \text{ onde } \lim_{t \to 0} \dfrac{r(t)}{t} = 0.\]
+	   Além disso, temos \(f'(a) = v\).
+   \end{prop}
+   \begin{proof}
+	   Se \( f: I\to \mathbb{R}^n \) é diferenciável em \(a\in I\), tomando $v = f'(a)$ e definindo \(r:\mathbb{R}\to \mathbb{R}^n\) por \[ r(t) = \begin{cases} f(a+t) - f(a)  - t\cdot f'(a), &   t\neq 0\land a+t \in I\\
+		   0, &   t = 0 \lor a+t \not \in I
+	   \end{cases}.\]
+	   Se \(t = 0\), temos \(f(a+t) - f(a) = t\cdot v + r(t)\), pois \( 0 = f(a) - f(a) = 0\cdot v + r(0) = 0\). Dado \(t\in \mathbb{R}\setminus \{0\} \) tal que \(a+t\in I\), temos \(r(t) = f(a+t) - f(a) - t\cdot f'(a) \implies f(a+t) - f(a) = t\cdot f'(a) +r(t)\). Como \(\displaystyle \lim_{t\to 0} \dfrac{f(a+t) -f(a)}{t} = f'(a)\), dado \(\varepsilon>0\), existe \(\delta>0\) tal que \(0 < |t| < \delta\) com \( a+t\in I\) implica em \( \left| \dfrac{r(t)}{t} \right| = \left| \dfrac{f(a+t) - f(a)}{t} - f'(a) \right| < \varepsilon\). Logo se \(0 < |t| < \delta\), temos \(a+t\in I\) ou \(a+t\not \in I\). Se \(a+t\in I \), temos \( \left|\dfrac{r(t)}{t} \right\| < \varepsilon\). Se \( a+t\not \in I\), temos \( r(t) = 0 < \varepsilon\). Em ambos os casos, temos \( \left|\dfrac{r(t)}{t} \right| < \varepsilon \). Logo \( \displaystyle\lim_{t \to 0} \dfrac{r(t)}{t} =0 \).
+
+	   Se existe um vetor \(v\in \mathbb{R}^n\) e uma função $r: \mathbb{R} \to \mathbb{R}^n$  tal que para \(a+t\in I\) se tenha \( f(a+t) - f(a) = t\cdot v + r(t)\) onde \(\displaystyle \lim_{t \to 0} \dfrac{r(t)}{t} = 0\). Temos 
+	   \begin{align*}
+		   \lim_{t\to 0}\dfrac{f(a+t) - f(a)}{t} &=  \lim_{t\to 0}\left( \dfrac{f(a+t) - f(a)}{t} +v - v\right) \\~\\
+		   &=  \lim_{t\to 0}\left( \dfrac{f(a+t) - f(a)}{t} - v\right) + \lim_{t\to 0} v \\~\\
+		   &=  \lim_{t\to 0} \dfrac{r(t)}{t}  + \lim_{t\to 0} v \\~\\
+		   &=  v \\~\\
+	   \end{align*}
+
+	   Logo \(f\) é  diferenciável em \(a\in I\) e \(f'(a) = v\).
+
+   \end{proof}
+   \begin{prop}
+	   Um caminho \( f:I\to \mathbb{R}^n \) é diferenciável em \(a\in I\) se, e somente se, existe um vetor \(v\in \mathbb{R}^n\) e uma função $\rho : \mathbb{R} \to \mathbb{R}^n$ (resto) tal que para \(a+t\in I\) se tenha \[ f(a+t) - f(a) = t\cdot\left[ v + \rho(t)\right], \text{ onde } \lim_{t \to 0} \rho(t) = 0.\]
+	   Além disso, temos \(f'(a) = v\).
+   \end{prop}
+   \begin{proof}
+	   Basta tomar \(\rho(t) = \begin{cases} \dfrac{r(t)}{t} &, t\neq 0 \\ 0 &, t=0 \end{cases} \), onde $r$ é a função definida  na proposição anterior.
+   \end{proof}
+   \subsubsection{Exercícios}
+   \begin{exercicio}
+	   Seja \(f:I\to \mathbb{R}^n\) um caminho diferenciável. Se \(a\in I\) é ponto de acumulação do conjunto \(f^{-1}(v)\), para algum \(v\in \mathbb{R}^n\), então $f'(a) = 0$.
+   \end{exercicio}
+   \begin{proof}
+
+   \end{proof}
+	   
    \subsubsection{ Integral de um caminho}
    \subsubsection{ Os teoremas clássicos do Cálculo}
    \subsubsection{ Caminhos retificáveis}

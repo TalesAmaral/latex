@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  26 MAY 2024 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  29 MAY 2024 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -47,32 +47,22 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2024/03/11 v1.30 mathematical typesetting tools
+(/usr/local/texlive/2024/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks24
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count197
-\calc@Bcount=\count198
-\calc@Adimen=\dimen141
-\calc@Bdimen=\dimen142
-\calc@Askip=\skip53
-\calc@Bskip=\skip54
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count199
-\calc@Cskip=\skip55
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
-Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-04-11 L3 programming layer (loader) 
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count197
+\l__pdf_internal_box=\box51
+))
+Package: xparse 2024-03-14 L3 Experimental document command parser
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
-\@mathmargin=\skip56
+\@mathmargin=\skip53
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -80,65 +70,88 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks25
-\ex@=\dimen143
+\@emptytoks=\toks24
+\ex@=\dimen141
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen144
+\pmbraise@=\dimen142
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count266
+\inf@bad=\count198
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count267
-\leftroot@=\count268
+\uproot@=\count199
+\leftroot@=\count266
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count269
-\DOTSCASE@=\count270
+\classnum@=\count267
+\DOTSCASE@=\count268
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box51
-\strutbox@=\box52
+\Mathstrutbox@=\box52
+\strutbox@=\box53
 LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen145
+\big@size=\dimen143
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count271
+\macc@depth=\count269
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count272
+\c@MaxMatrixCols=\count270
 \dotsspace@=\muskip16
-\c@parentequation=\count273
-\dspbrk@lvl=\count274
-\tag@help=\toks26
-\row@=\count275
-\column@=\count276
-\maxfields@=\count277
-\andhelp@=\toks27
-\eqnshift@=\dimen146
-\alignsep@=\dimen147
-\tagshift@=\dimen148
-\tagwidth@=\dimen149
-\totwidth@=\dimen150
-\lineht@=\dimen151
-\@envbody=\toks28
-\multlinegap=\skip57
-\multlinetaggap=\skip58
-\mathdisplay@stack=\toks29
+\c@parentequation=\count271
+\dspbrk@lvl=\count272
+\tag@help=\toks25
+\row@=\count273
+\column@=\count274
+\maxfields@=\count275
+\andhelp@=\toks26
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks27
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2024/03/11 v1.30 mathematical typesetting tools
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks29
 )
-\g_MT_multlinerow_int=\count278
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count276
+\calc@Bcount=\count277
+\calc@Adimen=\dimen150
+\calc@Bdimen=\dimen151
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count278
+\calc@Cskip=\skip58
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count279
 \l_MT_multwidth_dim=\dimen152
 \origjot=\skip59
 \l_MT_shortvdotswithinadjustabove_dim=\dimen153
@@ -147,7 +160,7 @@ LaTeX Info: Redefining \] on input line 2954.
 \l_MT_below_intertext_sep=\dimen156
 \l_MT_above_shortintertext_sep=\dimen157
 \l_MT_below_shortintertext_sep=\dimen158
-\xmathstrut@box=\box53
+\xmathstrut@box=\box54
 \xmathstrut@dim=\dimen159
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -155,19 +168,19 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip60
 \enit@outerparindent=\dimen160
 \enit@toks=\toks30
-\enit@inbox=\box54
-\enit@count@id=\count279
-\enitdp@description=\count280
+\enit@inbox=\box55
+\enit@count@id=\count280
+\enitdp@description=\count281
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/04/20 v24.4 The Babel package
-\babel@savecnt=\count281
+\babel@savecnt=\count282
 \U@D=\dimen161
 \l@unhyphenated=\language25
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count282
+\bbl@dirlevel=\count283
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/babel-portuges/brazilian.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
@@ -180,12 +193,12 @@ Package babel Info: Making " an active character on input line 143.
 Package babel Info: Importing font and identification data for brazilian
 (babel)             from babel-pt-BR.ini. Reported on input line 11.
 )
-\c@axioma=\count283
-\c@conceitoPrimitivo=\count284
-\c@prop=\count285
-\c@teo=\count286
-\c@lema=\count287
-\c@inferencia=\count288
+\c@axioma=\count284
+\c@conceitoPrimitivo=\count285
+\c@prop=\count286
+\c@teo=\count287
+\c@lema=\count288
+\c@inferencia=\count289
  (/usr/local/texlive/2024/texmf-dist/tex/latex/doclicense/doclicense.sty
 Package: doclicense 2023/10/01 v3.3.0 Support for putting documents under a lic
 ense
@@ -210,14 +223,14 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
-\xs_counta=\count289
-\xs_countb=\count290
+\xs_counta=\count290
+\xs_countb=\count291
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count291
+\etb@tempcnta=\count292
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -277,11 +290,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count292
+\c@section@level=\count293
 )
 \@linkdim=\dimen162
-\Hy@linkcounter=\count293
-\Hy@pagecounter=\count294
+\Hy@linkcounter=\count294
+\Hy@pagecounter=\count295
  (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -290,7 +303,7 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count295
+\Hy@SavedSpaceFactor=\count296
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
@@ -304,7 +317,7 @@ Package hyperref Info: Plain pages OFF on input line 4194.
 Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4446.
-\c@Hy@tempcnt=\count296
+\c@Hy@tempcnt=\count297
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -320,7 +333,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count297
+\Fld@menulength=\count298
 \Field@Width=\dimen164
 \Fld@charsize=\dimen165
 Package hyperref Info: Hyper figures OFF on input line 6063.
@@ -335,9 +348,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6093.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count298
-\c@Item=\count299
-\c@Hfootnote=\count300
+\Hy@abspage=\count299
+\c@Item=\count300
+\c@Hfootnote=\count301
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -349,8 +362,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count301
-\c@bookmark@seq@number=\count302
+\Fld@listcount=\count302
+\c@bookmark@seq@number=\count303
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -363,11 +376,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip62
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 30.
-\c@definicao=\count303
-\c@obs=\count304
-\c@exemp=\count305
-\c@exercicio=\count306
+Package hyperref Info: Option `colorlinks' set `true' on input line 31.
+\c@definicao=\count304
+\c@obs=\count305
+\c@exemp=\count306
+\c@exercicio=\count307
  (/usr/local/texlive/2024/texmf-dist/tex/latex/ccicons/ccicons.sty
 Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
 
@@ -379,7 +392,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks33
 \XKV@tempa@toks=\toks34
 )
-\XKV@depth=\count307
+\XKV@depth=\count308
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -404,12 +417,12 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count308
-\csq@gtype=\count309
-\csq@glevel=\count310
-\csq@qlevel=\count311
-\csq@maxlvl=\count312
-\csq@tshold=\count313
+\csq@reset=\count309
+\csq@gtype=\count310
+\csq@glevel=\count311
+\csq@qlevel=\count312
+\csq@maxlvl=\count313
+\csq@tshold=\count314
 \csq@ltx@everypar=\toks35
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -421,11 +434,6 @@ Package csquotes Info: ... configuration file loaded successfully.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
 ))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count314
-\l__pdf_internal_box=\box55
-)
 (./analise.aux)
 \openout1 = `analise.aux'.
 
@@ -500,13 +508,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./anal
-ise.toc)
+ise.toc
+[2] [3] [4])
 \tf@toc=\write4
 \openout4 = `analise.toc'.
 
-
-[2]
-<doclicense-CC-by-nc-sa-88x31.pdf, id=695, 90.3375pt x 31.61812pt>
+ [5]
+<doclicense-CC-by-nc-sa-88x31.pdf, id=880, 90.3375pt x 31.61812pt>
 File: doclicense-CC-by-nc-sa-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-sa-88x31.pdf>
 Package pdftex.def Info: doclicense-CC-by-nc-sa-88x31.pdf  used on input line 5
@@ -519,8 +527,8 @@ Overfull \hbox (2.19133pt too wide) in paragraph at lines 62--64
 ^Sormulas: 
  []
 
-[3 </usr/local/texlive/2024/texmf-dist/tex/latex/doclicense/images/doclicense-C
-C-by-nc-sa-88x31.pdf>] [4] [5] [6]
+[6 </usr/local/texlive/2024/texmf-dist/tex/latex/doclicense/images/doclicense-C
+C-by-nc-sa-88x31.pdf>] [7] [8] [9]
 Overfull \hbox (10.82709pt too wide) in paragraph at lines 229--230
 []\OT1/cmr/m/n/10 Seja $(\OML/cmm/m/it/10 g[]; h[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m
 /n/10 2 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; Y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/
@@ -529,37 +537,37 @@ cmm/m/it/10 f \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 [ [] \OML/c
 mm/m/it/10 ; f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []$.
  []
 
-[7] [8] [9] [10] [11] [12]
+[10] [11] [12] [13] [14] [15]
 Overfull \hbox (1.23335pt too wide) in paragraph at lines 496--496
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$. Da
  []
 
-[13] [14]
+[16] [17]
 Overfull \hbox (7.8534pt too wide) in paragraph at lines 537--538
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$.
  []
 
-[15]
+[18]
 Overfull \hbox (105.02774pt too wide) in paragraph at lines 582--583
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$,
  []
 
-[16] [17]
+[19] [20]
 Underfull \hbox (badness 10000) in paragraph at lines 695--696
 
  []
 
-[18] [19] [20] [21]
+[21] [22] [23] [24]
 Underfull \hbox (badness 10000) in paragraph at lines 822--823
 
  []
 
-[22]
+[25]
 Overfull \hbox (61.488pt too wide) in paragraph at lines 854--855
 []\OT1/cmr/m/n/10 Seja $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = []$.
  []
 
-[23] [24]
+[26] [27]
 Overfull \hbox (0.20805pt too wide) in paragraph at lines 920--921
 [][]\OT1/cmr/m/it/10 Observa^^Xc~ao \OT1/cmr/m/n/10 3.10\OT1/cmr/m/it/10 . []\O
 T1/cmr/m/n/10 A fun^^Xc~ao su-ces-sor com o con-tra-dom^^S^^Pnio re-du-zido ^^S
@@ -576,12 +584,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 953--954
 
  []
 
-[25]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 957--958
 
  []
 
-[26]
+[29]
 Overfull \hbox (18.06952pt too wide) in paragraph at lines 1018--1019
 [][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 3.53. []\OT1/cmr/m/it/10 Te-mos para to-dos
  $\OML/cmm/m/it/10 m; n \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N$ \OT1/cmr/m/it/10 qu
@@ -599,14 +607,14 @@ S/cmsy/m/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[]; I[]\OT1/cmr/m/n/10 ) \OMS
 /cmsy/m/n/10 ^^B
  []
 
-[27] [28] [29] [30]
+[30] [31] [32] [33]
 Overfull \hbox (12.43742pt too wide) in paragraph at lines 1167--1168
 [][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 3.65. []\OT1/cmr/m/it/10 (\OT1/cmr/bx/it/10
  Cantor-Bernstein-Schr^^?oder The-o-rem\OT1/cmr/m/it/10 ) Se exis-tir inje^^Xc~
 oes
  []
 
-[31] [32]
+[34] [35]
 Overfull \hbox (9.50914pt too wide) in paragraph at lines 1212--1214
 []\OT1/cmr/m/n/10 Suponha que exis-tam $0[]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0
 [] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 tal que $\OMS/cmsy/m/
@@ -622,16 +630,16 @@ n/10 8\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 A  \OT1/cmr/m/n/10
  :  []$.
  []
 
-[33]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 1266--1267
 
  []
 
-[34] [35] [36] [37]
+[37] [38] [39] [40]
 
 LaTeX Warning: Command \i invalid in math mode on input line 1468.
 
-[38] [39]
+[41] [42]
 Overfull \hbox (34.18216pt too wide) detected at line 1581
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[]  \OMS/cmsy/m/n/10 ([])
   8\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m/n/10 : \OMS
@@ -642,18 +650,18 @@ T1/cmr/m/n/10 :  \OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 jj ^^T
 \OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 )[]
  []
 
-[40] [41] [42] [43]
+[43] [44] [45] [46]
 Overfull \hbox (23.45946pt too wide) in paragraph at lines 1744--1745
 [][]\OT1/cmr/bx/n/10 Proposi^^Xc~ao 6.23. []\OT1/cmr/m/it/10 Se-jam $\OML/cmm/m
 /it/10 A; B \OMS/cmsy/m/n/10 ^^Z \U/msb/m/n/10 R[] \OMS/cmsy/m/n/10 ^^@ []$ \OT
 1/cmr/m/it/10 li-mi-ta-dos, ent~ao $\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 = []$
  []
 
-[44] [45]
+[47] [48]
 Overfull \vbox (224.33252pt too high) has occurred while \output is active []
 
 
-[46]
+[49]
 Overfull \hbox (8.34749pt too wide) in paragraph at lines 1754--1755
 []\OT1/cmr/m/n/10 Como $[] \OML/cmm/m/it/10 A [] B \OMS/cmsy/m/n/10 ^^T [] \OML
 /cmm/m/it/10 C$ \OT1/cmr/m/n/10 e $[] \OML/cmm/m/it/10 C \OMS/cmsy/m/n/10 ^^T [
@@ -692,25 +700,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1778.
 
-[47] [48] [49] [50] [51]
-Overfull \vbox (746.16528pt too high) has occurred while \output is active []
+[50] [51] [52] [53] [54] [55] [56] [57]
+Overfull \vbox (651.87372pt too high) has occurred while \output is active []
 
 
-[52] [53] [54]
+[58] [59] [60]
 
-LaTeX Warning: Command \d invalid in math mode on input line 2049.
-
-
-LaTeX Warning: Command \d invalid in math mode on input line 2049.
+LaTeX Warning: Command \d invalid in math mode on input line 2125.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 2049.
+LaTeX Warning: Command \d invalid in math mode on input line 2125.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 2053.
+LaTeX Warning: Command \d invalid in math mode on input line 2125.
 
 
-Overfull \hbox (15.61229pt too wide) in paragraph at lines 2058--2059
+LaTeX Warning: Command \d invalid in math mode on input line 2129.
+
+
+Overfull \hbox (15.61229pt too wide) in paragraph at lines 2134--2135
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) \OMS/c
 msy/m/n/10 ^^A \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g\OT1/cmr/
 m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 "$ \OT1/cmr/m/n/10 e $\OML/cmm/m
@@ -719,24 +727,24 @@ m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 "$ \OT1/cmr/m/n/10 e $\OML/cmm/m
 ^^Se cota su-pe-rior para $[]$,
  []
 
-[55]
+[61]
 
-LaTeX Warning: Command \d invalid in math mode on input line 2071.
-
-
-LaTeX Warning: Command \d invalid in math mode on input line 2071.
+LaTeX Warning: Command \d invalid in math mode on input line 2147.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 2071.
+LaTeX Warning: Command \d invalid in math mode on input line 2147.
 
 
-Overfull \hbox (14.18147pt too wide) in paragraph at lines 2071--2072
+LaTeX Warning: Command \d invalid in math mode on input line 2147.
+
+
+Overfull \hbox (14.18147pt too wide) in paragraph at lines 2147--2148
 []\OT1/cmr/m/n/10 Logo$[]\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
 z\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 z \OT1/cmr/m/n/10 = [] [] = [] [] = [] [] 
 \OMS/cmsy/m/n/10 ^^A
  []
 
-[56] [57] [58] (./analise.aux)
+[62] [63] [64] (./analise.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
@@ -745,13 +753,13 @@ Package rerunfilecheck Info: File `analise.out' has not changed.
 (rerunfilecheck)             Checksum: CD5202DE9AE2AC9827BCBCC538BFBD72;32305.
  ) 
 Here is how much of TeX's memory you used:
- 14119 strings out of 475501
- 222530 string characters out of 5777496
+ 14804 strings out of 475501
+ 230617 string characters out of 5777496
  1946751 words of memory out of 5000000
- 35562 multiletter control sequences out of 15000+600000
- 568219 words of font info for 75 fonts, out of 8000000 for 9000
+ 36220 multiletter control sequences out of 15000+600000
+ 568917 words of font info for 77 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 70i,14n,79p,948b,784s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,14n,93p,948b,783s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/talesamaral/.texlive2024/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm10
 00.600pk></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
@@ -771,10 +779,10 @@ exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
 texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on analise.pdf (58 pages, 421699 bytes).
+Output written on analise.pdf (64 pages, 445934 bytes).
 PDF statistics:
- 1518 PDF objects out of 1728 (max. 8388607)
- 1405 compressed objects within 15 object streams
- 572 named destinations out of 1000 (max. 500000)
+ 1727 PDF objects out of 1728 (max. 8388607)
+ 1606 compressed objects within 17 object streams
+ 588 named destinations out of 1000 (max. 500000)
  1350 words of extra memory for PDF output out of 10000 (max. 10000000)
 
