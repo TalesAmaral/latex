@@ -7,11 +7,14 @@
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage[brazilian]{babel}
-\theoremstyle{plain}
+
 \newtheorem{axioma}{Axioma}
 \newtheorem{conceitoPrimitivo}{Conceito Primitivo}
+
 \newtheorem{prop}{Proposição}[section]
+\theoremstyle{theorem}
 \newtheorem{teo}{Teorema}
+\theoremstyle{lemma}
 \newtheorem{lema}{Lema}
 \newtheorem{inferencia}{Regra de Inferência}
   
@@ -1968,6 +1971,59 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	   
    \subsubsection{ Integral de um caminho}
    \subsubsection{ Os teoremas clássicos do Cálculo}
+   \begin{lema}
+	   Seja \(f:I\to \mathbb{R}^n\) diferenciável no ponto \(c\in I\). Dadas sequências de números \(a_k \neq b_k\) em \(I\), com \(a_k \leq c \leq b_k\) e \(\lim a_k = \lim b_k = c\), tem-se \[ f'(c) = \lim \dfrac{f(b_k) - f(a_k)}{b_k - a_k} \]
+   \end{lema}
+   \begin{proof}
+	   Seja \(Y = \{k\in \mathbb{N} \: | \: a_k = c \lor b_k  = c \}\). Se \( X_1 = \{k\in \mathbb{N} \: | \: a_k = c  \}\) e \( X_2 = \{k\in \mathbb{N} \: | \: b_k = c  \}\), temos \( Y = X_1\cup X_2 \). Daí temos \(Y\) infinito se, e somente se, \(X_1\) ou \(X_2\) são infinitos. Se \(X_1\) é infinito, tomando uma subsequência \(\phi : \mathbb{N} \to X_1\), temos  \[ \lim \dfrac{f(b_{\phi(k)}) - f(a_{\phi(k)})}{b_{\phi(k)} - a_{\phi(k)}} = \lim \dfrac{f(b_{\phi(k)}) - f(c)}{b_{\phi(k)} - c}  = f'(c) .\]
+	   O caso \(X_2\) infinito é análogo.  Se \(Y\) é finito, podemos supor \(k\) maior que \(\max Y\). Supondo \(a_k < c < b_k\).  Temos  para \(k\in \mathbb{N}\):
+	   \begin{align*}
+		   \dfrac{f(b_k) - f(a_k)}{b_k - a_k} &=  \dfrac{f(b_k) - f(c) }{b_k -a_k} + \dfrac{ f(c) - f(a_k)}{b_k - a_k }\\
+		   &=  \dfrac{f(b_k) - f(c) }{b_k -a_k} + \dfrac{ f(c) - f(a_k)}{b_k - a_k }\\
+		   &=  \dfrac{f(b_k) - f(c) }{b_k -c} \cdot \left( \dfrac{b_k - c}{b_k - a_k}\right)  + \dfrac{ f(c) - f(a_k)}{c - a_k } \cdot \left( \dfrac{c - a_k}{b_k - a_k}\right) \\
+		   &=  \dfrac{f(b_k) - f(c) }{b_k -c} \cdot \left( \dfrac{b_k - a_k + a_k - c}{b_k - a_k}\right)  + \dfrac{ f(c) - f(a_k)}{c - a_k } \cdot \left( \dfrac{c - a_k}{b_k - a_k}\right) \\
+		   &=  \dfrac{f(b_k) - f(c) }{b_k -c} \cdot \left( 1 - \dfrac{ c- a_k}{b_k - a_k}\right)  + \dfrac{ f(c) - f(a_k)}{c - a_k } \cdot \left( \dfrac{c - a_k}{b_k - a_k}\right) \\
+	   \end{align*}
+
+	   Tomando \( t_k = \dfrac{c - a_k}{b_k -a_k} \), temos \( c < b_k \implies 0 < c-a_k < b_k - a_k \implies 0 < \dfrac{c-a_k}{b_k -a_k} < 1 \implies 0< t_k < 1 \).  Como \((t_k)\) é limitada, existe uma subsequência convergente.  Passando a subsequências, se $t = \lim t_k$, obtemos:  
+	   \begin{align*}
+		   \lim \dfrac{f(b_k) - f(a_k)}{b_k - a_k}   &= \lim \left[ \dfrac{f(b_k) - f(c) }{b_k -c} \cdot \left( 1 - \dfrac{ c- a_k}{b_k - a_k}\right)  + \dfrac{ f(c) - f(a_k)}{c - a_k } \cdot \left( \dfrac{c - a_k}{b_k - a_k}\right) \right] \\
+		   &= \lim \left[ \dfrac{f(b_k) - f(c) }{b_k -c} \cdot \left( 1 - t_k \right)  + \dfrac{ f(c) - f(a_k)}{c - a_k } \cdot t_k\right] \\
+		   &=  f'(c) \cdot \left( 1 - t \right)  + f'(c) \cdot t  \\
+		   &=  f'(c)  \\
+	   \end{align*}
+   \end{proof}
+   \begin{lema}
+	   Sejam \(f:[a,b] \to \mathbb{R}^n\) e \(\phi: [a,b] \to \mathbb{R}\) contínuas e diferenciáveis em \( [a,b] \). Se \(|f'(t)  | \leq \phi'(t) \) e \(\phi'(t) > 0 \) para todo \( t\in [a,b] \), então \( |f(b) - f(a) | \leq \phi(b) - \phi(a) \).
+   \end{lema}
+   \begin{proof}
+	   Supondo \(f,\phi\) diferenciáveis em \([a,b]\), suponha por contradição que \(|f(b) -f(a)| > \phi(b) - \phi(a) \). Logo existe $A>0$ tal que \(|f(b) -f(a)| >A\cdot\left[ \phi(b) - \phi(a)\right] \) Dividindo o intervalo \( [a,b] \) em 2 intervalos iguais \( [a,b] = [a,c] \cup [c,b] \). Se \( |f(c) - f(a)| \leq A \left [\phi(c) - \phi(a) \right] \) e \( |f(b) - f(c)| \leq A\cdot\left[ \phi(b) - \phi(c)\right]\), temos \( |f(b) - f(a)| \leq |f(b) - f(c)| + |f(c) - f(a)| \leq A\cdot [ \phi(b) - \phi(a) ] \), logo podemos tomar \( [a_2, b_2] \subset [a,b] \) tal que \( |f(b_2) - f(a_2)| > \phi(b_2) - \phi(a_2) \). Aplicando esse processo, obtemos uma sequência \([a,b] \supset [a_2, b_2] \supset \cdots \supset [a_k, b_k] \supset \cdots  \) tal que \(\lim a_k = \lim b_k = c \in [a,b]\) e \( |f(b_k) - f(a_k)| > \phi(b_k) - \phi(a_k) \). Pelo lema passado:
+	   \begin{align*}
+		   |f'(c) | &= \lim \dfrac{|f(b_k) - f(a_k)|}{b_k -a_k} \\~\\
+		   &\geq \lim \dfrac{A\cdot \left[ \phi(b_k) - \phi(a_k)\right]}{b_k-a_k} \\
+		   &= A\cdot\lim \dfrac{ \left[ \phi(b_k) - \phi(a_k)\right]}{b_k-a_k} \\
+		   &= A\cdot \phi'(c) \\~\\
+		   &> \phi'(c)
+	   \end{align*}
+
+	   Contradição, pois $|f'(c)| \leq \phi'(c)$. Logo devemos ter $|f(b) - f(a)|\leq \phi(b) - \phi(a)$.
+   \end{proof}
+   \begin{lema}
+	   Sejam \(f:[a,b] \to \mathbb{R}^n\) e \(\phi: [a,b] \to \mathbb{R}\) contínuas em \([a,b]\) e diferenciáveis em \( (a,b) \). Se \(|f'(t)  | \leq \phi'(t) \) e \(\phi'(t) > 0 \) para todo \( t\in (a,b) \), então \( |f(b) - f(a) | \leq \phi(b) - \phi(a) \).
+   \end{lema}
+   \begin{proof}
+	   Usando o lema anterior, temos que \( |f(c) - f(d)| \leq \phi(c) - \phi(d)\) para todo \([c,d] \subset (a,b)\). Fazendo \(c_k\to a\) e \(d_k\to b\), temos da continuidade de \(f\) e \(\phi\) que \(|f(b) - f(a)| = \lim |f(d_k) - f(c_k)| \leq \lim [ \phi(d_k) - \phi(c_k) ] = \phi(b) - \phi(a) \).
+
+   \end{proof}
+   \begin{teo}
+	   Seja \(f:[a,b] \to \mathbb{R}^n\) um caminho contínuo, diferenciável no aberto \( (a,b) \). Se \( |f'(t)| \leq M\) para todo \( t\in (a,b) \), então \( |f(b) - f(a)| \leq M \cdot (b-a) \).
+   \end{teo}
+   \begin{proof}
+	   
+   \end{proof}
+   \begin{proof}
+	   Basta tomar \(\phi:[a,b] \to \mathbb{R}\) como \(\phi(t) = M\cdot t\). Temos \( |f'(t)| \leq  M = \phi'(t) \) 
+   \end{proof}
    \subsubsection{ Caminhos retificáveis}
    \subsubsection{ O comprimento de arco como parâmetro}
    \subsubsection{ Curvatura e torção}
