@@ -1897,6 +1897,21 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	Suponha que $X$ não seja limitado, logo para todo $\varepsilon$, existe $x\in X$ tal que $|x| > \varepsilon$. Daí tomando $x_n\in X$ tal que $|x_n| > n$, temos que a sequência não admite valores de aderência. Logo não existe subsequência convergente.
 
 \end{proof}
+\begin{lema}
+	Seja \((x_n) \) uma sequência com \( \lim x_n = a\in \mathbb{R}^n \). O conjunto \( Y = x\left( \mathbb{N} \right) \cup \{ a\} \) é compacto.
+\end{lema}
+\begin{proof}
+	Seja \( b\in \mathbb{R}^n - Y\). Temos que \( b\neq \lim x_n = a \), logo existe um \(\varepsilon>0 \) tal que \(B(b, \varepsilon) \cap x\left(\mathbb{N}\right)\) é finito.  Tomando  \( I = x^{-1}\left(B(b, \varepsilon) \cap x\left(\mathbb{N}\right) \right)\). Tomando \( \delta  = \displaystyle\min_{i\in I} |b- x_i| < \varepsilon \). Temos \(\delta > 0\), pois se \( \delta = 0\), teríamos para algum \(i\in I\) que \( |b-x_i| =0 \implies b = x_i \in x\left(\mathbb{N}\right)\). Além disso, \( B(b, \delta ) \cap x\left(\mathbb{N}\right) = \emptyset \), pois se \( x_n \in B(b,\delta) \implies x_n \in B(b,\varepsilon) \implies n \in I \) com \( |x_n -b| < \min |b-x_i| = \delta\), contradição. Logo existe \(\delta>0\) tal que \( B(b, \delta) \subset \mathbb{R}^n - Y \), logo \( Y \) é fechado.
+	O conjunto \( Y\) é limitado, pois toda sequência convergente é limitada e a união de dois conjuntos limitados é limitada.
+\end{proof}
+\begin{prop}
+	Se \(f: X \to \mathbb{R}^n \) é contínua em todo compacto \( Y \subset X\), então \(f\) é contínua em \(X\). 
+\end{prop}
+\begin{proof}
+	Se \(f\) é contínua em \(X\), então a restrição \( f|_{Y}\) é contínua para todo \( Y \subset X\), sendo compacto ou não.
+
+	Se \(f: X \to \mathbb{R}^n \) é contínua em todo compacto \( Y \subset X\). Dado \(a\in X\) qualquer. Seja \( (x_n) \) uma sequência em \( X\) com \( \lim x_n = a\). Seja o conjunto \( Y = x\left( \mathbb{N} \right) \cup \left\{a\right\} \)  compacto, logo \(f|_{Y}\) é contínua. Logo \(\lim  f( x_n) = \lim f|_Y(x_n) = f|_Y(\lim x_n) = f|_Y(a) = f(a)  \). Logo \(f\) é contínua.
+\end{proof}
    \subsubsection{ Distância entre dois conjuntos; diâmetro}
    \subsubsection{ Conexidade}
    \subsubsection{ A norma de uma transformação linear}
@@ -1909,7 +1924,7 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	Se $f = (f_1,\cdots, f_n)$ é um caminho, as $n$ funções $f_i : I \to \mathbb{R}$ são chamadas de funções coordenadas de $f$.
    \end{definicao}
    \begin{definicao}
-	   O vetor velocidade do caminho $f:I\to \mathbb{R}$ no ponto $a\in I$ é , por definição, o limite \[ \dv{f}{t}(a) = Df(a) = f'(a) = \lim \dfrac{f(a+t) - f(a)}{t},\]
+	   O vetor velocidade do caminho $f:I\to \mathbb{R}$ no ponto $a\in I$ é , por definição, o limite \[ \dfrac{\partial f}{\partial t}(a) = Df(a) = f'(a) = \lim_{t\to 0} \dfrac{f(a+t) - f(a)}{t},\]
 	   quando ele existir. 
    \end{definicao}
    \begin{definicao}
@@ -2022,7 +2037,9 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	   
    \end{proof}
    \begin{proof}
-	   Basta tomar \(\phi:[a,b] \to \mathbb{R}\) como \(\phi(t) = M\cdot t\). Temos \( |f'(t)| \leq  M = \phi'(t) \) 
+	   Se \(M>0\), basta tomar \(\phi:[a,b] \to \mathbb{R}\) como \(\phi(t) = M\cdot t\). Temos \( |f'(t)| \leq  M = \phi'(t) \) e \(\phi'(t) = M >0\), logo \(|f(b) - f(a) | \leq \phi(b) - \phi(a) = M\cdot(b-a)\). 
+	   
+	   Se \( M  = 0 \), temos \(|f'(t)| \leq 0 \implies |f'(t)| = 0\) para todo \(t\in (a,b)\). Logo \(f_i'(t) = 0\) para todo \( i \in I_n\). Pelo TVM real, existe \(t_i \in (a,b)\) tal  que \( f_i(b) - f_i(a) = f_i'(t_i)(b - a) = 0 \). Logo  \( |f(b) - f(a)| =   0 = 0 (b-a)\)
    \end{proof}
    \subsubsection{ Caminhos retificáveis}
    \subsubsection{ O comprimento de arco como parâmetro}
@@ -2030,7 +2047,43 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
    \subsubsection{ A função-ângulo}
 \subsection{ Funções Reais de n Variáveis}
    \subsubsection{Derivadas parciais}
+   \begin{definicao}
+	   Dada uma função \(f:U\to \mathbb{R}\), onde \(U\subset \mathbb{R}^n\) é um aberto. Dado o  ponto  \(a\in U\), a i-ésima derivada parcial de \(f\) em \(a\) é o limite \[\partial_i f(a) =  \dfrac{\partial f}{\partial x_i} (a) =   \lim_{t\to 0} \dfrac{f(a+t\cdot e_i) - f(a)}{t},\]
+	   quando ele existir. 
+   \end{definicao}
    \subsubsection{Derivadas direcionais}
+   \begin{definicao}
+	   Dada uma função \(f:U\to \mathbb{R}\), onde \(U\subset \mathbb{R}^n\) é um aberto. Dado o  ponto  \(a\in U\) e \( v\in \mathbb{R}^n\) , a derivada direcional de  \(f\) em \(a\) segundo \(v\),  é o limite \[ \dfrac{\partial f}{\partial v} (a) =   \lim_{t\to 0} \dfrac{f(a+t\cdot v) - f(a)}{t},\]
+	   quando ele existir. 
+   \end{definicao}
+   \begin{obs}
+	   Fica claro que as derivadas parciais são derivadas dericionais tomando \(v = e_i\).
+   \end{obs}
+   \begin{prop}
+	   
+	   Dada uma função \(f:U\to \mathbb{R}\), onde \(U\subset \mathbb{R}^n\) é um aberto. Dado o  ponto  \(a+c\cdot v\in U\) e \( v\in \mathbb{R}^n\) ,  \(\dfrac{\partial f}{\partial v}(a + c\cdot v)\) existe se, e somente se, a derivada da função \(h = f\circ \lambda : \lambda^{-1}( U) \to \mathbb{R}^n \) existir em \(c\), onde \(\lambda:\mathbb{R} \to \mathbb{R}^n \) é dada por \( \lambda(t) = a + t\cdot v \). Quando afirmativo, ambos os valores são iguais.
+   \end{prop}
+   \begin{proof}
+	   Como \(h(t) = f\circ \lambda (t) = f(a+t\cdot v) \), temos \( h(c) = f(a + c\cdot v) \). Logo 
+	   \begin{align*}
+		   \dfrac{\partial f}{\partial v} (a + c\cdot v) &=   \lim_{t\to 0} \dfrac{f(a+(c+t) \cdot v) - f(a + c\cdot v)}{t}\\~\\
+		   &= \lim_{t\to 0} \dfrac{h(c+ t) - h(c)}{t} \\~\\
+		   &= h'(c) \\~\\
+	   \end{align*}
+	   Logo os limites são iguais. 
+   \end{proof}
+   \begin{teo}[Teorema do Valor Médio]
+	   Seja \( f: U \to \mathbb{R}\) definida no aberto \( U \subset \mathbb{R}^n\). Se \( [a,a+v]\subset U\) e \(f|[a,a+v]\) é contínua e \( \dfrac{\partial f}{\partial v}(a)\) existe para todo \( x\in (a,a+v)\). Então existe \(\phi\in(0,1) \) tal que \( f(a+v) - f(a) = \dfrac{\partial f}{\partial v}(a+\theta v).\).
+   \end{teo}
+   \begin{proof}
+	   Definindo \(h: [0,1] \to \mathbb{R}\) dada por \( h(t) = f(a+tv) \). Temos \(h\) contínua em \( [0,1]\), pois é composição de funções contínuas. Além disso, ela é diferenciável em \((0,1)\), pela proposiçaõ anterior. Pelo TVM de funções reais, existe \( \theta\in (0,1) \) tal que \( h(1) - h(0) = h'(\theta)\), logo \( f(a+v) - f(a) = \dfrac{\partial f}{\partial v}(a+\theta\cdot v) \).
+   \end{proof}
+   \begin{prop}
+	   Seja \( U \subset \mathbb{R}^n \) aberto e conexo. Se \( f: U \to \mathbb{R} \) possui derivadas direcionais em todo ponto \(x\in U\) e \( \dfrac{\partial f}{\partial v} (x) = 0 \) para todo \(v\in \mathbb{R}^n \), então \(f \) é constante.
+   \end{prop}
+   \begin{proof}
+
+   \end{proof}
    \subsubsection{Funções diferenciáveis}
    \subsubsection{A diferencial de uma função}
    \subsubsection{O gradiente de uma função diferenciável}

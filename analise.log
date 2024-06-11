@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  7 JUN 2024 18:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  10 JUN 2024 21:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,35 +707,35 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1781.
 
-[50] [51] [52] [53] [54] [55]
-Overfull \hbox (5.35973pt too wide) detected at line 1986
+[50] [51] [52] [53] [54] [55] [56]
+Overfull \hbox (5.35973pt too wide) detected at line 2001
 []
  []
 
-[56]
-Overfull \hbox (25.2707pt too wide) detected at line 1994
+
+Overfull \hbox (25.2707pt too wide) detected at line 2009
 []
  []
 
-[57] [58] [59]
-Overfull \vbox (614.95709pt too high) has occurred while \output is active []
+[57] [58] [59] [60] [61]
+Overfull \vbox (483.7489pt too high) has occurred while \output is active []
 
 
-[60] [61] [62]
+[62] [63] [64]
 
-LaTeX Warning: Command \d invalid in math mode on input line 2183.
-
-
-LaTeX Warning: Command \d invalid in math mode on input line 2183.
+LaTeX Warning: Command \d invalid in math mode on input line 2242.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 2183.
+LaTeX Warning: Command \d invalid in math mode on input line 2242.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 2187.
+LaTeX Warning: Command \d invalid in math mode on input line 2242.
 
 
-Overfull \hbox (15.61229pt too wide) in paragraph at lines 2192--2193
+LaTeX Warning: Command \d invalid in math mode on input line 2246.
+
+
+Overfull \hbox (15.61229pt too wide) in paragraph at lines 2251--2252
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) \OMS/c
 msy/m/n/10 ^^A \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g\OT1/cmr/
 m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 "$ \OT1/cmr/m/n/10 e $\OML/cmm/m
@@ -744,24 +744,24 @@ m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 "$ \OT1/cmr/m/n/10 e $\OML/cmm/m
 ^^Se cota su-pe-rior para $[]$,
  []
 
-[63]
+[65]
 
-LaTeX Warning: Command \d invalid in math mode on input line 2205.
-
-
-LaTeX Warning: Command \d invalid in math mode on input line 2205.
+LaTeX Warning: Command \d invalid in math mode on input line 2264.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 2205.
+LaTeX Warning: Command \d invalid in math mode on input line 2264.
 
 
-Overfull \hbox (14.18147pt too wide) in paragraph at lines 2205--2206
+LaTeX Warning: Command \d invalid in math mode on input line 2264.
+
+
+Overfull \hbox (14.18147pt too wide) in paragraph at lines 2264--2265
 []\OT1/cmr/m/n/10 Logo$[]\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
 z\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 z \OT1/cmr/m/n/10 = [] [] = [] [] = [] [] 
 \OMS/cmsy/m/n/10 ^^A
  []
 
-[64] [65] [66] (./analise.aux)
+[66] [67] [68] (./analise.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
@@ -770,8 +770,8 @@ Package rerunfilecheck Info: File `analise.out' has not changed.
 (rerunfilecheck)             Checksum: 7761239B1D7081DA034A01618C42A807;32427.
  ) 
 Here is how much of TeX's memory you used:
- 14813 strings out of 475501
- 230712 string characters out of 5777496
+ 14823 strings out of 475501
+ 230801 string characters out of 5777496
  1950751 words of memory out of 5000000
  36221 multiletter control sequences out of 15000+600000
  568917 words of font info for 77 fonts, out of 8000000 for 9000
@@ -796,10 +796,10 @@ exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
 texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on analise.pdf (66 pages, 454871 bytes).
+Output written on analise.pdf (68 pages, 463709 bytes).
 PDF statistics:
- 1747 PDF objects out of 2073 (max. 8388607)
- 1624 compressed objects within 17 object streams
- 596 named destinations out of 1000 (max. 500000)
+ 1765 PDF objects out of 2073 (max. 8388607)
+ 1640 compressed objects within 17 object streams
+ 606 named destinations out of 1000 (max. 500000)
  1358 words of extra memory for PDF output out of 10000 (max. 10000000)
 
