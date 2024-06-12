@@ -111,62 +111,62 @@
 \contentsline {subsection}{\numberline {9.3} Funções Reais de n Variáveis}{59}{subsection.9.3}%
 \contentsline {subsubsection}{\numberline {9.3.1}Derivadas parciais}{59}{subsubsection.9.3.1}%
 \contentsline {subsubsection}{\numberline {9.3.2}Derivadas direcionais}{59}{subsubsection.9.3.2}%
-\contentsline {subsubsection}{\numberline {9.3.3}Funções diferenciáveis}{62}{subsubsection.9.3.3}%
-\contentsline {subsubsection}{\numberline {9.3.4}A diferencial de uma função}{62}{subsubsection.9.3.4}%
-\contentsline {subsubsection}{\numberline {9.3.5}O gradiente de uma função diferenciável}{62}{subsubsection.9.3.5}%
-\contentsline {subsubsection}{\numberline {9.3.6}A Regra de Leibniz}{62}{subsubsection.9.3.6}%
-\contentsline {subsubsection}{\numberline {9.3.7}O Teorema de Schwarz}{62}{subsubsection.9.3.7}%
-\contentsline {subsubsection}{\numberline {9.3.8}Fórmula de Taylor: pontos críticos}{62}{subsubsection.9.3.8}%
-\contentsline {subsubsection}{\numberline {9.3.9}O teorema da função implícita}{62}{subsubsection.9.3.9}%
-\contentsline {subsubsection}{\numberline {9.3.10} Multiplicador de Lagrange}{62}{subsubsection.9.3.10}%
-\contentsline {subsection}{\numberline {9.4} Integrais Curvilíneas}{62}{subsection.9.4}%
-\contentsline {subsubsection}{\numberline {9.4.1}Formas diferenciais de grau 1}{62}{subsubsection.9.4.1}%
-\contentsline {subsubsection}{\numberline {9.4.2}Integral de Stieltjes}{62}{subsubsection.9.4.2}%
-\contentsline {subsubsection}{\numberline {9.4.3}Integral de uma forma ao longo de um caminho}{62}{subsubsection.9.4.3}%
-\contentsline {subsubsection}{\numberline {9.4.4}Justaposição de caminhos: caminho inverso}{62}{subsubsection.9.4.4}%
-\contentsline {subsubsection}{\numberline {9.4.5}Integral curvilínea de um campo de vetores e de uma função}{62}{subsubsection.9.4.5}%
-\contentsline {subsubsection}{\numberline {9.4.6}Formas exatas e formas fechadas}{62}{subsubsection.9.4.6}%
-\contentsline {subsubsection}{\numberline {9.4.7}Homotopia}{62}{subsubsection.9.4.7}%
-\contentsline {subsubsection}{\numberline {9.4.8}Integrais curvilíneas e homotopia}{62}{subsubsection.9.4.8}%
-\contentsline {subsubsection}{\numberline {9.4.9}Cohomologia}{62}{subsubsection.9.4.9}%
-\contentsline {subsubsection}{\numberline {9.4.10} A fórmula de Kronecker}{62}{subsubsection.9.4.10}%
-\contentsline {subsection}{\numberline {9.5} Aplicações Diferenciáveis}{62}{subsection.9.5}%
-\contentsline {subsubsection}{\numberline {9.5.1}Diferenciabilidade de uma aplicação}{62}{subsubsection.9.5.1}%
-\contentsline {subsubsection}{\numberline {9.5.2}Exemplos de aplicações diferenciáveis}{62}{subsubsection.9.5.2}%
-\contentsline {subsubsection}{\numberline {9.5.3}A regra da cadeia}{62}{subsubsection.9.5.3}%
-\contentsline {subsubsection}{\numberline {9.5.4}A fórmula de Taylor}{62}{subsubsection.9.5.4}%
-\contentsline {subsubsection}{\numberline {9.5.5}A desigualdade do valor médio}{62}{subsubsection.9.5.5}%
-\contentsline {subsubsection}{\numberline {9.5.6}Sequências de aplicações diferenciáveis}{62}{subsubsection.9.5.6}%
-\contentsline {subsubsection}{\numberline {9.5.7}Aplicações fortemente diferenciáveis}{62}{subsubsection.9.5.7}%
-\contentsline {subsubsection}{\numberline {9.5.8}O teorema da aplicação inversa}{62}{subsubsection.9.5.8}%
-\contentsline {subsubsection}{\numberline {9.5.9}Aplicação: o Lema de Morse}{62}{subsubsection.9.5.9}%
-\contentsline {subsubsection}{\numberline {9.5.10} A forma local das imersões}{62}{subsubsection.9.5.10}%
-\contentsline {subsubsection}{\numberline {9.5.11} A forma local das submersões}{62}{subsubsection.9.5.11}%
-\contentsline {subsubsection}{\numberline {9.5.12} O teorema do posto}{62}{subsubsection.9.5.12}%
-\contentsline {subsubsection}{\numberline {9.5.13} Superfícies no espaço euclidiano}{62}{subsubsection.9.5.13}%
-\contentsline {subsubsection}{\numberline {9.5.14} Superfícies orientáveis}{62}{subsubsection.9.5.14}%
-\contentsline {subsubsection}{\numberline {9.5.15} O método dos multiplicadores de Lagrange}{62}{subsubsection.9.5.15}%
-\contentsline {subsection}{\numberline {9.6} Integrais Múltiplas}{62}{subsection.9.6}%
-\contentsline {subsubsection}{\numberline {9.6.1}A definição de integral}{62}{subsubsection.9.6.1}%
-\contentsline {subsubsection}{\numberline {9.6.2}Conjuntos de medida nula}{62}{subsubsection.9.6.2}%
-\contentsline {subsubsection}{\numberline {9.6.3}Caracterização das funções integráveis}{62}{subsubsection.9.6.3}%
-\contentsline {subsubsection}{\numberline {9.6.4}A integral como limite de somas de Riemann}{62}{subsubsection.9.6.4}%
-\contentsline {subsubsection}{\numberline {9.6.5}Integração repetida}{62}{subsubsection.9.6.5}%
-\contentsline {subsubsection}{\numberline {9.6.6}Mudança de variáveis}{62}{subsubsection.9.6.6}%
-\contentsline {subsection}{\numberline {9.7} Integrais de Superfície}{62}{subsection.9.7}%
-\contentsline {subsubsection}{\numberline {9.7.1}Formas alternadas}{62}{subsubsection.9.7.1}%
-\contentsline {subsubsection}{\numberline {9.7.2}Formas diferenciais}{62}{subsubsection.9.7.2}%
-\contentsline {subsubsection}{\numberline {9.7.3}A diferencial exterior}{62}{subsubsection.9.7.3}%
-\contentsline {subsubsection}{\numberline {9.7.4}Partições da unidade}{62}{subsubsection.9.7.4}%
-\contentsline {subsubsection}{\numberline {9.7.5}Aplicações da partição da unidade}{62}{subsubsection.9.7.5}%
-\contentsline {subsubsection}{\numberline {9.7.6}Integrais de superfície}{62}{subsubsection.9.7.6}%
-\contentsline {subsubsection}{\numberline {9.7.7}Superfícies com bordo}{62}{subsubsection.9.7.7}%
-\contentsline {subsubsection}{\numberline {9.7.8}O Teorema de Stokes}{62}{subsubsection.9.7.8}%
-\contentsline {subsubsection}{\numberline {9.7.9}Grau de uma aplicação}{62}{subsubsection.9.7.9}%
-\contentsline {subsubsection}{\numberline {9.7.10} A integral de Kronecker}{62}{subsubsection.9.7.10}%
-\contentsline {subsection}{\numberline {9.8}Organizar}{62}{subsection.9.8}%
-\contentsline {subsection}{\numberline {9.9}Diferenciação}{63}{subsection.9.9}%
-\contentsline {subsection}{\numberline {9.10}Integração}{64}{subsection.9.10}%
-\contentsline {subsubsection}{\numberline {9.10.1}Exercícios}{65}{subsubsection.9.10.1}%
-\contentsline {section}{\numberline {10}Geometria diferencial}{67}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Superfícies Regulares}{67}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {9.3.3}Funções diferenciáveis}{60}{subsubsection.9.3.3}%
+\contentsline {subsubsection}{\numberline {9.3.4}A diferencial de uma função}{64}{subsubsection.9.3.4}%
+\contentsline {subsubsection}{\numberline {9.3.5}O gradiente de uma função diferenciável}{64}{subsubsection.9.3.5}%
+\contentsline {subsubsection}{\numberline {9.3.6}A Regra de Leibniz}{64}{subsubsection.9.3.6}%
+\contentsline {subsubsection}{\numberline {9.3.7}O Teorema de Schwarz}{64}{subsubsection.9.3.7}%
+\contentsline {subsubsection}{\numberline {9.3.8}Fórmula de Taylor: pontos críticos}{64}{subsubsection.9.3.8}%
+\contentsline {subsubsection}{\numberline {9.3.9}O teorema da função implícita}{64}{subsubsection.9.3.9}%
+\contentsline {subsubsection}{\numberline {9.3.10} Multiplicador de Lagrange}{64}{subsubsection.9.3.10}%
+\contentsline {subsection}{\numberline {9.4} Integrais Curvilíneas}{64}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Formas diferenciais de grau 1}{64}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}Integral de Stieltjes}{64}{subsubsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.3}Integral de uma forma ao longo de um caminho}{64}{subsubsection.9.4.3}%
+\contentsline {subsubsection}{\numberline {9.4.4}Justaposição de caminhos: caminho inverso}{64}{subsubsection.9.4.4}%
+\contentsline {subsubsection}{\numberline {9.4.5}Integral curvilínea de um campo de vetores e de uma função}{64}{subsubsection.9.4.5}%
+\contentsline {subsubsection}{\numberline {9.4.6}Formas exatas e formas fechadas}{64}{subsubsection.9.4.6}%
+\contentsline {subsubsection}{\numberline {9.4.7}Homotopia}{64}{subsubsection.9.4.7}%
+\contentsline {subsubsection}{\numberline {9.4.8}Integrais curvilíneas e homotopia}{64}{subsubsection.9.4.8}%
+\contentsline {subsubsection}{\numberline {9.4.9}Cohomologia}{64}{subsubsection.9.4.9}%
+\contentsline {subsubsection}{\numberline {9.4.10} A fórmula de Kronecker}{64}{subsubsection.9.4.10}%
+\contentsline {subsection}{\numberline {9.5} Aplicações Diferenciáveis}{64}{subsection.9.5}%
+\contentsline {subsubsection}{\numberline {9.5.1}Diferenciabilidade de uma aplicação}{64}{subsubsection.9.5.1}%
+\contentsline {subsubsection}{\numberline {9.5.2}Exemplos de aplicações diferenciáveis}{64}{subsubsection.9.5.2}%
+\contentsline {subsubsection}{\numberline {9.5.3}A regra da cadeia}{64}{subsubsection.9.5.3}%
+\contentsline {subsubsection}{\numberline {9.5.4}A fórmula de Taylor}{64}{subsubsection.9.5.4}%
+\contentsline {subsubsection}{\numberline {9.5.5}A desigualdade do valor médio}{64}{subsubsection.9.5.5}%
+\contentsline {subsubsection}{\numberline {9.5.6}Sequências de aplicações diferenciáveis}{64}{subsubsection.9.5.6}%
+\contentsline {subsubsection}{\numberline {9.5.7}Aplicações fortemente diferenciáveis}{64}{subsubsection.9.5.7}%
+\contentsline {subsubsection}{\numberline {9.5.8}O teorema da aplicação inversa}{64}{subsubsection.9.5.8}%
+\contentsline {subsubsection}{\numberline {9.5.9}Aplicação: o Lema de Morse}{64}{subsubsection.9.5.9}%
+\contentsline {subsubsection}{\numberline {9.5.10} A forma local das imersões}{64}{subsubsection.9.5.10}%
+\contentsline {subsubsection}{\numberline {9.5.11} A forma local das submersões}{64}{subsubsection.9.5.11}%
+\contentsline {subsubsection}{\numberline {9.5.12} O teorema do posto}{64}{subsubsection.9.5.12}%
+\contentsline {subsubsection}{\numberline {9.5.13} Superfícies no espaço euclidiano}{64}{subsubsection.9.5.13}%
+\contentsline {subsubsection}{\numberline {9.5.14} Superfícies orientáveis}{64}{subsubsection.9.5.14}%
+\contentsline {subsubsection}{\numberline {9.5.15} O método dos multiplicadores de Lagrange}{64}{subsubsection.9.5.15}%
+\contentsline {subsection}{\numberline {9.6} Integrais Múltiplas}{64}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}A definição de integral}{64}{subsubsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.2}Conjuntos de medida nula}{64}{subsubsection.9.6.2}%
+\contentsline {subsubsection}{\numberline {9.6.3}Caracterização das funções integráveis}{64}{subsubsection.9.6.3}%
+\contentsline {subsubsection}{\numberline {9.6.4}A integral como limite de somas de Riemann}{64}{subsubsection.9.6.4}%
+\contentsline {subsubsection}{\numberline {9.6.5}Integração repetida}{64}{subsubsection.9.6.5}%
+\contentsline {subsubsection}{\numberline {9.6.6}Mudança de variáveis}{64}{subsubsection.9.6.6}%
+\contentsline {subsection}{\numberline {9.7} Integrais de Superfície}{64}{subsection.9.7}%
+\contentsline {subsubsection}{\numberline {9.7.1}Formas alternadas}{64}{subsubsection.9.7.1}%
+\contentsline {subsubsection}{\numberline {9.7.2}Formas diferenciais}{64}{subsubsection.9.7.2}%
+\contentsline {subsubsection}{\numberline {9.7.3}A diferencial exterior}{64}{subsubsection.9.7.3}%
+\contentsline {subsubsection}{\numberline {9.7.4}Partições da unidade}{64}{subsubsection.9.7.4}%
+\contentsline {subsubsection}{\numberline {9.7.5}Aplicações da partição da unidade}{64}{subsubsection.9.7.5}%
+\contentsline {subsubsection}{\numberline {9.7.6}Integrais de superfície}{64}{subsubsection.9.7.6}%
+\contentsline {subsubsection}{\numberline {9.7.7}Superfícies com bordo}{64}{subsubsection.9.7.7}%
+\contentsline {subsubsection}{\numberline {9.7.8}O Teorema de Stokes}{64}{subsubsection.9.7.8}%
+\contentsline {subsubsection}{\numberline {9.7.9}Grau de uma aplicação}{64}{subsubsection.9.7.9}%
+\contentsline {subsubsection}{\numberline {9.7.10} A integral de Kronecker}{64}{subsubsection.9.7.10}%
+\contentsline {subsection}{\numberline {9.8}Organizar}{64}{subsection.9.8}%
+\contentsline {subsection}{\numberline {9.9}Diferenciação}{65}{subsection.9.9}%
+\contentsline {subsection}{\numberline {9.10}Integração}{66}{subsection.9.10}%
+\contentsline {subsubsection}{\numberline {9.10.1}Exercícios}{67}{subsubsection.9.10.1}%
+\contentsline {section}{\numberline {10}Geometria diferencial}{69}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Superfícies Regulares}{69}{subsection.10.1}%
