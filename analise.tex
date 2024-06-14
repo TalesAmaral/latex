@@ -141,7 +141,7 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	$$A\neq B \iff \neg (A = B)$$
 \end{definicao}
 \begin{prop}
-	Dois conjuntos $A$ e $B$  são diferentes se existe $x\in A$ com $x\not \in B $ ou $x\in B$ com $x\not \in A$. Ou seja:
+	Dois conjuntos $A$ e $B$  são diferentes se, e somente se, existe $x\in A$ com $x\not \in B $ ou $x\in B$ com $x\not \in A$. Ou seja:
 	$$A \neq B \iff \exists x ( ( x\in A \land x\not \in B) \lor (x\in B  \land x\not \in A))$$
 \end{prop}
 \begin{proof}
@@ -169,12 +169,45 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	$$A\subset B \land B \subset C \implies A \subset C$$
 \end{prop}
 %carro
+\begin{proof}
+	Supondo \( A\subset B\) e \( B \subset C\). Tomando \(x\in A\), temos que \( x\in B\) de \(A\subset B\). Além disso, temos \(x\in C\), de \(B\subset C\). Como \(x\in A \implies x\in C\) para \(x\) qualquer, temos que \( A\subset C\).
+\end{proof}
+\begin{prop}
+	$$A\subset B \land B \subset A \iff A = B$$
+\end{prop}
+\begin{proof}
 	\begin{align*}
-		A\subset B \land B\subset C \implies A \subset C &\iff \neg ( A\subset B \land B\subset C) \lor  A \subset C\\~\\
+		(A\subset B \land B\subset A) &\iff \forall x (x\in A\implies x\in B) \land \forall x ( x\in B\implies x\in A) \\~\\
+		&\iff \forall x ((x\in A\implies x\in B) \land ( x\in B \implies x\in A) )  \\~\\
+		&\iff \forall x (x\in A\iff x\in B  )  \\~\\
+		&\iff A = B 
 	\end{align*}
+\end{proof}
 \begin{definicao}[Subconjunto Próprio]
 	Se $A$ e $B$ são conjuntos tais que $A\subset B$ e $A \neq B$, então $A$ é chamado de subconjunto próprio.
 \end{definicao}
+\subsection{Axioma da especificação}
+\begin{axioma}
+	Para todo conjunto \(A\) e um predicado \( P(x) \), existe um conjunto \(B\) cujos elementos são os elementos \(x\in A\) com \(P(x)\) verdadeiro.
+	Em termos lógigos:
+
+	\[ \forall A: \exists B: \forall x:  (x \in B \iff ( x \in A \land P(x))) \]
+\end{axioma}
+\begin{obs}
+	É comum escrever \( B = \{ x\in A \: | \: P(x) \} \) para indicar que o axioma da especificação foi utilizado.
+\end{obs}
+\begin{prop}
+	Não existe conjunto universo, isto é: não existe um conjunto que contem todos os conjuntos.
+	\[ \neg ( \exists \Omega \: \forall A \: ( A\in \Omega) ) \]
+\end{prop}
+\begin{proof}
+	Dado um conjunto \(A\) qualquer, podemos tomar \(B = \{ x\in A \: | \: x\not \in x \} \). Queremos mostrar que \( B \not \in A\). Supondo por contradição que  \(B\in A\). Temos que \(B\in B \) ou \(B \not \in B\). Não podemos ter \( B\in B\) pela definição de \(B\). Logo devemos ter \(B\not \in B\),  que nos leva a \( B\in A \) com \(B\not \in B\), mas isso implica em \(B\in B\) (contradição). Logo devemos ter \(B\not \in A\).  
+
+	Observe que dado qualquer conjunto \(A\), conseguimos construir um conjunto \(B\) tal que \(B\not \in A\). Logo não existe um conjunto universo.
+\end{proof}
+\begin{axioma}[Axioma da existência]
+	\[ \exists A \: : \forall x \:  ( x\not \in A ) \]
+\end{axioma}
 \subsection{Organizar Ainda}
 \begin{prop}
 	$$(A-B)\cup B =  A\cup B$$
@@ -1975,6 +2008,9 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
    \end{prop}
    \begin{proof}
 	   Basta tomar \(\rho(t) = \begin{cases} \dfrac{r(t)}{t} &, t\neq 0 \\ 0 &, t=0 \end{cases} \), onde $r$ é a função definida  na proposição anterior.
+Se existe um vetor \(v\in \mathbb{R}^n\) e uma função $\rho : \mathbb{R} \to \mathbb{R}^n$  tal que para \(a+t\in I\) se tenha \[ f(a+t) - f(a) = t\cdot\left[ v + \rho(t)\right], \text{ onde } \lim_{t \to 0} \rho(t) = 0.\]
+
+	   Tomando \( r: \mathbb{R} \to \mathbb{R}^n \) dada por \( r(t) = \rho(t)\cdot t \), temos \[ f(a+t) - f(a) = t v + r(t), \text{ onde } \lim_{t \to 0} \dfrac{r(t)}{t} = 0.\] Logo \(f\) é diferenciável e \( v = f'(a) \).
    \end{proof}
    \subsubsection{Exercícios}
    \begin{exercicio}
@@ -2134,6 +2170,35 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 		   &= \lim_{v \to 0} \left[ \nabla f(a) \cdot v + r(v)  \right]+ \lim_{v\to 0} f(a) \\~\\
 		   &= f(a) \\~\\
 	   \end{align*}
+   \end{proof}
+   \begin{prop}
+	   A função \( f:U\to \mathbb{R} \), com \(U \subset \mathbb{R}^n \),   é diferenciável em \(a\in U\) se, e somente se,  existirem constantes \( A_1,\cdots, A_n\)  e uma função \(\rho : \mathbb{R}^n \to \mathbb{R}^n\) (resto) tal que para \(a+v\in U\), com \( v = (\alpha_1, \cdots , \alpha_n ) \)  se tenha \[ f(a+v) - f(a) = \sum_{i=1}^n A_i \cdot \alpha_i  + \rho(v)\cdot |v|, \text{ onde } \lim_{v \to 0} \rho(v) = 0.\]
+   \end{prop}
+   \begin{proof}
+	   Basta tomar \(\rho(t) = \begin{cases} \dfrac{r(v)}{|v|} &, v\neq 0 \\ 0 &, v=0 \end{cases} \).
+
+		   Se existem constantes \( A_1,\cdots, A_n \)  e uma função $\rho : \mathbb{R}^n \to \mathbb{R}$  tal que para \(a+t\in I\) se tenha 
+\[ f(a+v) - f(a) = \sum_{i=1}^n A_i \cdot \alpha_i  + \rho(v)\cdot |v|, \text{ onde } \lim_{v \to 0} \rho(v) = 0.\]
+
+	   Tomando \( r: \mathbb{R} \to \mathbb{R}^n \) dada por \( r(t) = \rho(t)\cdot t \), temos.
+	   \[ f(a+v) - f(a) = \sum_{i=1}^n A_i \cdot \alpha_i  + r(v), \text{ onde } \lim_{v \to 0} \dfrac{r(v)}{v} = 0.\]
+	   Logo \(f\) é diferenciável .
+   \end{proof}
+   \begin{prop}
+	   Se \(f:U\to \mathbb{R}\), com \( U \subset \mathbb{R}^n \) é diferenciável em \( a\in U \) , então \(f\) admite derivadas direcionais segundo qualquer vetor \( v = (\alpha_1,\cdots, \alpha_n) \) e vale \[ \dfrac{\partial f}{\partial v}(a) = \displaystyle\sum_{i = 1}^n \dfrac{\partial f}{\partial x_i}(a) \cdot \alpha_i \]
+   \end{prop}
+   \begin{proof}
+	   Como \( U \) é aberto, podemos supor \(t\neq 0 \) pequeno o suficiente para \( a+ t\cdot v\in U\), logo
+	   da diferenciabilidade de \(a\), temos 
+	  \begin{align*}
+		  f(a+tv) - f(a) = \sum_{i = 1}^n \dfrac{\partial f}{\partial x_i}\cdot t\cdot \alpha_i + \rho(tv) \cdot |t|\cdot |v| &\iff\\~\\
+		  \dfrac{f(a+tv) - f(a)}{t} = \sum_{i = 1}^n \dfrac{\partial f}{\partial x_i}\cdot \alpha_i \pm \rho(tv) \cdot |v| &\iff\\~\\
+		  \dfrac{f(a+tv) - f(a)}{t} = \sum_{i = 1}^n \dfrac{\partial f}{\partial x_i}\cdot \alpha_i \pm \rho(tv) \cdot |v| &\iff\\~\\
+	  \end{align*}
+	  Logo 
+	   \[ 
+		  \dfrac{\partial f}{\partial v}(a) = \lim_{t\to 0}\dfrac{f(a+tv) - f(a)}{t} = \lim_{t\to 0} \sum_{i = 1}^n \dfrac{\partial f}{\partial x_i}\cdot \alpha_i \pm \rho(tv) \cdot |v| = \sum_{i = 1}^n \dfrac{\partial f}{\partial x_i}\cdot \alpha_i
+		  \]
    \end{proof}
    \subsubsection{A diferencial de uma função}
    \subsubsection{O gradiente de uma função diferenciável}
