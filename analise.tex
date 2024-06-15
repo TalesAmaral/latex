@@ -205,9 +205,58 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 
 	Observe que dado qualquer conjunto \(A\), conseguimos construir um conjunto \(B\) tal que \(B\not \in A\). Logo não existe um conjunto universo.
 \end{proof}
+\subsection{Axioma do Pareamento}
 \begin{axioma}[Axioma da existência]
 	\[ \exists A \: : \forall x \:  ( x\not \in A ) \]
 \end{axioma}
+\begin{prop}
+	Existe um único conjunto conjunto \(A\) tal que \(\forall x\: (x\not \in A) \).
+\end{prop}
+\begin{proof}
+	Sejam \(A,B\) com  \(\forall x\: ( x\not \in A) \) e \(\forall x\: ( x\not \in B) \). Se \(A\neq B\), deve existir \(x\in A\) com \(x\not \in B\), ou \(x\in B \) com \(x\not \in A\), mas não existe \(x\) com \(x\in A\) ou \(x\in B\), logo \(A = B\). 
+\end{proof}
+\begin{definicao}
+	O conjunto conjunto \(A\) tal que \(\forall x\: (x\not \in A) \) será chamado de vazio, e usaremos o símbolo \(A = \emptyset\).
+\end{definicao}
+\begin{prop}
+	Para todo \(A\), temos \(\emptyset \subset A\)
+\end{prop}
+\begin{proof}
+	Dado \(A\), para \(\emptyset\not \subset A\), deveria existir um elemento \(x\in \emptyset\) com \(x\not \in A\), o que não é possível, logo \(\emptyset \subset A\).
+\end{proof}
+\begin{axioma}[Axioma do Par]
+	Para quaisquer dois conjuntos \(A,B\), existe um conjunto \(C\) tal que \(A\in C \) e \(B\in C\).
+	\[\forall A\: : \: \forall B \: : \: \exists C \: : \: ( A\in C\land B \in C  ) \]
+\end{axioma}
+\begin{prop}
+	Existe um conjunto \(C\) tal que \( A \in C \) e \( B\in C\) se, e somente se, existe um conjunto \(C\) tal que \(D \in C \iff D = A\lor D = B \) (\( A,B\) são os únicos  elementos de \(C\) ).
+\end{prop}
+\begin{proof}
+	Se existe um conjunto \(C\) tal que \( D\in C \iff D = A \lor D = B\), então existe um conjunto \(C\) tal que \(A\in C\) e \(B\in C\). 
+
+	Supondo que existe um conjunto \(C\) tal que \( A\in C\) e \( B \in C\). Pelo axioma da especificação, podemos tomar \( C' = \{ D\in C \: | \: D=  A \lor D  = B\} \) e o resultado está provado.
+\end{proof}
+\begin{definicao}
+	Dados \(A,B\) quaisquer, o conjunto \(C\) tal que \(D\in C \iff D = A \land D = B\) existe e é único pelo axioma da extensão. O denotaremos por \[ \{ A,B\}. \]
+	Tal conjunto é um par.
+\end{definicao}
+\begin{definicao}
+	Dado um conjunto \(A\) qualquer, podemos fomar o par \( \{ A,A\} \). Esse par é denotado por \[ \{ A \} = \{ A, A\} \]
+	e chama-se "singleton" de \(a\). Ele é caracterizado pelo fato de \( D\in \{ A\} \iff D = A\).
+\end{definicao}
+\subsection{Uniões e Interseções}
+
+\begin{axioma}[Axioma da União]
+	Para todo conjunto \( A\), existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \implies D \in U) \).
+	\[ \forall A \: : \:  \exists U  \: : \: \forall D  \: : \: ( (D \in B \land B\in A) \implies D\in U ) \]
+\end{axioma}
+\begin{prop}
+	Dado \( A\), existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \implies D \in U) \) se, e somente se, existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \iff D \in U) \).
+\end{prop}
+\begin{proof}
+Se existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \iff D \in U) \), então existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \implies D \in U) \).
+	Se existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \implies D \in U) \), então tomando \( U' = \{ D\in U \: | \: D\in B \land D \in A\} \) conclui a demonstração.
+\end{proof}
 \subsection{Organizar Ainda}
 \begin{prop}
 	$$(A-B)\cup B =  A\cup B$$
