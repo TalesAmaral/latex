@@ -132,6 +132,9 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	Se $x$ não pertence a $A$, escrevemos $x \not \in A$. Ou seja:
 	$$x \not \in A \iff \neg (x\in A)$$
 \end{definicao}
+\begin{axioma}[Axioma da Base]
+	Todo elemento matemático é um conjunto e dados conjuntos \(A,B\), temos \(A\in B \) ou \( A\not \in B\). 
+\end{axioma}
 \begin{axioma}[Axioma da Extensão]
 	Dois conjuntos são iguais se, e somente se, possuem os mesmos elementos. Ou seja: 
 	$$ A = B \iff \forall x ( x\in A \iff x \in B) $$
@@ -237,7 +240,7 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	Supondo que existe um conjunto \(C\) tal que \( A\in C\) e \( B \in C\). Pelo axioma da especificação, podemos tomar \( C' = \{ D\in C \: | \: D=  A \lor D  = B\} \) e o resultado está provado.
 \end{proof}
 \begin{definicao}
-	Dados \(A,B\) quaisquer, o conjunto \(C\) tal que \(D\in C \iff D = A \land D = B\) existe e é único pelo axioma da extensão. O denotaremos por \[ \{ A,B\}. \]
+	Dados \(A,B\) quaisquer, o conjunto \(C\) tal que \(D\in C \iff D = A \lor D = B\) existe e é único pelo axioma da extensão. O denotaremos por \[ \{ A,B\}. \]
 	Tal conjunto é um par.
 \end{definicao}
 \begin{definicao}
@@ -245,17 +248,81 @@ O objetivo do seguinte "livro" é ser um "dicionário" de demonstrações e defi
 	e chama-se "singleton" de \(a\). Ele é caracterizado pelo fato de \( D\in \{ A\} \iff D = A\).
 \end{definicao}
 \subsection{Uniões e Interseções}
+\subsubsection{União}
 
 \begin{axioma}[Axioma da União]
-	Para todo conjunto \( A\), existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \implies D \in U) \).
-	\[ \forall A \: : \:  \exists U  \: : \: \forall D  \: : \: ( (D \in B \land B\in A) \implies D\in U ) \]
+	Para todo conjunto \( A\), existe um conjunto \(U\) tal que \( \forall D ( \exists B (D\in B \land B\in A) \implies D \in U) \).
+	\[ \forall A \: : \:  \exists U  \: : \: \forall D  \: : \: (  ( \exists B \: : \:  (D \in B \land B\in A) )  \implies D\in U ) \]
 \end{axioma}
 \begin{prop}
-	Dado \( A\), existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \implies D \in U) \) se, e somente se, existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \iff D \in U) \).
+	Dado \( A\), existe um conjunto \(U\) tal que \( \forall D ( \exists B (D\in B \land B\in A) \implies D \in U) \) se, e somente se, existe um conjunto \(U\) tal que \( \forall D ( \exists (D\in B \land B\in A) \iff D \in U) \).
 \end{prop}
 \begin{proof}
-Se existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \iff D \in U) \), então existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \implies D \in U) \).
-	Se existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \implies D \in U) \), então tomando \( U' = \{ D\in U \: | \: D\in B \land D \in A\} \) conclui a demonstração.
+Se existe um conjunto \(U\) tal que \( \forall D ( (D\in B \land B\in A) \iff D \in U) \), então existe um conjunto \(U\) tal que \( \forall D ( \exists B (D\in B \land B\in A) \implies D \in U) \).
+	Se existe um conjunto \(U\) tal que \( \forall D ( \exists B (D\in B \land B\in A) \implies D \in U) \), então tomando \( U' = \{ D\in U \: | \:  \exists B : ( D\in B \land D \in A ) \} \) conclui a demonstração.
+\end{proof}
+\begin{definicao}
+	Dado um conjunto \(A\), o único \(U\) (pelo axioma da extensão) tal que \( \forall D ( \exists B (D\in B \land B\in A) \iff D \in U) \) é denotado por \[ U =  \bigcup A = \bigcup_{X\in A} X  \]
+\end{definicao}
+\begin{prop}
+	\[ \bigcup \varnothing = \varnothing \]
+\end{prop}
+\begin{proof}
+	De fato, \( D\in \bigcup \varnothing \iff \exists B \: (D\in B \land B\in \varnothing  \), mas isso implicaria em \( B\in \varnothing\), condtradição. Logo não existe \(D\) tal que \(D\in \bigcup \varnothing\). Logo \(\bigcup \varnothing = \varnothing\).
+\end{proof}
+\begin{prop}
+	Se \(A\) é um conjunto, temos:
+	\[ \bigcup \{ A \}  = A \]
+\end{prop}
+\begin{proof}
+	Temos \[ D\in   \bigcup \{ A \}  \iff \exists B \: ( D\in B \land B\in \{ A\} ) \iff \exists B \: (D\in B \land B = A \iff D\in A . \]
+
+	Logo \( \bigcup \{ A\} = A\).
+\end{proof}
+\begin{definicao}
+	Sejam \(A,B\) conjuntos quaisquer, definimos a notação:
+	\[ \bigcup \{ A,B\} = A\cup B \]
+\end{definicao}
+\begin{prop}
+	Dados \(A,B\) conjuntos quaiser, temos
+	\[ \forall D \: : \: (D\in A\cup B \iff D\in A \lor D \in B )\]
+\end{prop}
+\begin{proof}
+	De fato, dado \(D\) qualquer, temos: 
+	\begin{align*}
+		D \in A\cup B &\iff D \in  \bigcup \{ A,B\} \\~\\
+		&\iff \exists C \: ( D\in C \land C\in \{ A, B\} )\\~\\
+		&\iff \exists C \: ( D\in C \land C\in \{ A, B\} )\\~\\
+		&\iff \exists C \: ( D\in C \land ( C = A \lor C = B) )\\~\\
+		&\iff \exists C \: ( ( D\in C \land  C = A)  \lor (D\in C \land C = B ) )\\~\\
+		&\iff \exists C \: ( ( D\in C \land  C = A) )   \lor \exists C \:  (D\in C \land C = B)  \\~\\
+		&\iff D\in A   \lor D\in B \\~\\
+	\end{align*}
+\end{proof}
+\begin{prop}
+	Sejam \(A,B,C\) conjuntos quaisquer, temos:
+	\begin{enumerate}
+		\item \(A \cup \emptyset  = A\)
+		\item \(A \cup B  = B \cup A\)
+		\item \(A \cup ( B \cup C)  = (A \cup B) \cup C\)
+		\item \( A \cup A = A\)
+		\item \( A \subset B \iff A\cup B = B \) 
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	%carro
+\end{proof}
+\subsubsection{Interseção}
+\begin{prop}
+	Dado um conjunto \(A\neq \emptyset\), existe um conjunto \(V\) tal que \(D \in V \iff \forall B ( B\in A \implies D\in B) \).
+\end{prop}
+\begin{proof}
+	De fato, como \(A\neq \emptyset\), existe \(C \in A\). Tomando \( V = \{ D\in C \: | \: \forall B( B\in A \implies D\in B)\} \) pelo axioma da especifidade, temos 
+	\begin{align*}
+		D\in V &\iff D\in C \land \forall B ( B\in A \implies D \in B )\\~\\
+		&\iff \forall B ( D\in C )  \land \forall B ( B\in A \implies D \in B )\\~\\
+		&\iff \forall B (  D\in C )  \land \forall B ( B\in A \implies D \in B )\\~\\
+	\end{align*}
 \end{proof}
 \subsection{Organizar Ainda}
 \begin{prop}
@@ -2276,34 +2343,6 @@ Se existe um vetor \(v\in \mathbb{R}^n\) e uma função $\rho : \mathbb{R} \to \
    \subsubsection{Sequências de aplicações diferenciáveis}
    \subsubsection{Aplicações fortemente diferenciáveis}
    \subsubsection{O teorema da aplicação inversa}
-   \subsubsection{Aplicação: o Lema de Morse}
-   \subsubsection{ A forma local das imersões}
-   \subsubsection{ A forma local das submersões}
-   \subsubsection{ O teorema do posto}
-   \subsubsection{ Superfícies no espaço euclidiano}
-   \subsubsection{ Superfícies orientáveis}
-   \subsubsection{ O método dos multiplicadores de Lagrange}
-
-\subsection{ Integrais Múltiplas}
-   \subsubsection{A definição de integral}
-   \subsubsection{Conjuntos de medida nula}
-   \subsubsection{Caracterização das funções integráveis}
-   \subsubsection{A integral como limite de somas de Riemann}
-   \subsubsection{Integração repetida}
-   \subsubsection{Mudança de variáveis}
-
-\subsection{ Integrais de Superfície}
-   \subsubsection{Formas alternadas}
-   \subsubsection{Formas diferenciais}
-   \subsubsection{A diferencial exterior}
-   \subsubsection{Partições da unidade}
-   \subsubsection{Aplicações da partição da unidade}
-   \subsubsection{Integrais de superfície}
-   \subsubsection{Superfícies com bordo}
-   \subsubsection{O Teorema de Stokes}
-   \subsubsection{Grau de uma aplicação}
-   \subsubsection{ A integral de Kronecker}
-\subsection{Organizar}
 \begin{definicao}[$L(\mathbb{R}^n, \mathbb{R}^m)$]
 	$$L(\mathbb{R}^n, \mathbb{R}^m) = \left\{ T \in F(\mathbb{R}^n, \mathbb{R}^m) \: | \: T \text{ é linear}\right\}$$
 \end{definicao}
@@ -2317,8 +2356,7 @@ Se existe um vetor \(v\in \mathbb{R}^n\) e uma função $\rho : \mathbb{R} \to \
 	$GL(\mathbb{R}^n)$ é aberto.
 \end{prop}
 \begin{proof}
-	%carro
-	Seja $T\in GL(\mathbb{R}^n$. Logo $T$ é  invertível (bijetiva). 
+	Seja $T\in GL(\mathbb{R}^n$. Logo $T$ é  invertível (bijetiva). Tomando \( \delta = \dfrac{1}{|T^{-1}|} \).
 \end{proof}
 \begin{prop}
 	$f:GL(\mathbb{R}^n) \to GL(\mathbb{R}^n)$, dada for $f(T) = T^{-1}$ é contínua.
@@ -2326,7 +2364,6 @@ Se existe um vetor \(v\in \mathbb{R}^n\) e uma função $\rho : \mathbb{R} \to \
 \begin{proof}
 	%carro
 \end{proof}
-\subsection{Diferenciação}
 \begin{prop}
 Seja $f: GL(\mathbb{R}^n) \to GL(\mathbb{R}^n)$, dada por $f(T) = T^{-1}$.  Temos $f$ diferenciável.
 \end{prop}
@@ -2359,6 +2396,35 @@ Afirmo que $S_T(H) = Df(T)(H)$. De fato, $S_T$ é linear (confia) e temos \begin
 &=0
 \end{align*}
 	\end{proof}
+   \subsubsection{Aplicação: o Lema de Morse}
+   \subsubsection{ A forma local das imersões}
+   \subsubsection{ A forma local das submersões}
+   \subsubsection{ O teorema do posto}
+   \subsubsection{ Superfícies no espaço euclidiano}
+   \subsubsection{ Superfícies orientáveis}
+   \subsubsection{ O método dos multiplicadores de Lagrange}
+
+\subsection{ Integrais Múltiplas}
+   \subsubsection{A definição de integral}
+   \subsubsection{Conjuntos de medida nula}
+   \subsubsection{Caracterização das funções integráveis}
+   \subsubsection{A integral como limite de somas de Riemann}
+   \subsubsection{Integração repetida}
+   \subsubsection{Mudança de variáveis}
+
+\subsection{ Integrais de Superfície}
+   \subsubsection{Formas alternadas}
+   \subsubsection{Formas diferenciais}
+   \subsubsection{A diferencial exterior}
+   \subsubsection{Partições da unidade}
+   \subsubsection{Aplicações da partição da unidade}
+   \subsubsection{Integrais de superfície}
+   \subsubsection{Superfícies com bordo}
+   \subsubsection{O Teorema de Stokes}
+   \subsubsection{Grau de uma aplicação}
+   \subsubsection{ A integral de Kronecker}
+\subsection{Organizar}
+\subsection{Diferenciação}
 \subsection{Integração}
 \begin{definicao}[Retângulo]
 	Um retângulo ou bloco é um produto cartesiano $A = \displaystyle\prod_{i = 1}^m [a_i,b_i] \subset \mathbb{R}^m$, com $a_i < b_i$ para $i\in \left\{1,2, \cdots ,m \right\}$.

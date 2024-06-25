@@ -9,167 +9,169 @@
 \contentsline {subsection}{\numberline {3.2}Axioma da especificação}{9}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Axioma do Pareamento}{9}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Uniões e Interseções}{10}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Organizar Ainda}{11}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Produto Cartesiano}{15}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Relações}{15}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Definições iniciais}{15}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Relações de Equivalência}{16}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}Relação de Ordem}{17}{subsubsection.3.7.3}%
-\contentsline {subsubsection}{\numberline {3.7.4}Funções}{17}{subsubsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.8}Números Naturais}{18}{subsection.3.8}%
-\contentsline {subsubsection}{\numberline {3.8.1}Axiomas de Peano}{18}{subsubsection.3.8.1}%
-\contentsline {paragraph}{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb {N}$, cujos elementos são os números naturais, e uma função $s:\mathbb {N} \to \mathbb {N}$. Para cada $n\in \mathbb {N}$, o número $s(n)$ é o sucessor de $n$. Temos os axiomas:}{18}{section*.3}%
-\contentsline {subsubsection}{\numberline {3.8.2}Soma nos Naturais}{18}{subsubsection.3.8.2}%
-\contentsline {subsubsection}{\numberline {3.8.3}Ordem nos Naturais}{22}{subsubsection.3.8.3}%
-\contentsline {subsubsection}{\numberline {3.8.4}Produto nos Naturais}{23}{subsubsection.3.8.4}%
-\contentsline {subsubsection}{\numberline {3.8.5}Exercícios}{27}{subsubsection.3.8.5}%
-\contentsline {subsection}{\numberline {3.9}Conjuntos Finitos e Infinitos}{28}{subsection.3.9}%
-\contentsline {subsubsection}{\numberline {3.9.1}Conjuntos Finitos}{28}{subsubsection.3.9.1}%
-\contentsline {subsubsection}{\numberline {3.9.2}Conjuntos Infinitos}{30}{subsubsection.3.9.2}%
-\contentsline {subsubsection}{\numberline {3.9.3}Exercícios}{37}{subsubsection.3.9.3}%
-\contentsline {section}{\numberline {4}Anéis }{37}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Definições iniciais}{37}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Exercícios}{40}{subsubsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}Invertibilidade}{40}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Corpos, domínios e anéis reduzidos}{40}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Aritmética}{42}{section.5}%
-\contentsline {section}{\numberline {6}Análise Real}{42}{section.6}%
-\contentsline {subsection}{\numberline {6.1} Números Reais}{42}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Corpos ordenados}{42}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Números reais}{44}{subsubsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.2} Sequências e Séries de Números Reais}{45}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1} Sequências}{45}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2} Limite de uma sequência}{48}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3} Propriedades aritméticas dos limites}{49}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4} Subsequências}{49}{subsubsection.6.2.4}%
-\contentsline {subsubsection}{\numberline {6.2.5} Sequências de Cauchy}{51}{subsubsection.6.2.5}%
-\contentsline {subsubsection}{\numberline {6.2.6} Limites infinitos}{51}{subsubsection.6.2.6}%
-\contentsline {subsubsection}{\numberline {6.2.7} Séries numéricas}{51}{subsubsection.6.2.7}%
-\contentsline {subsection}{\numberline {6.3} Topologia da Reta}{51}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1} Conjuntos abertos}{51}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2} Conjuntos fechados}{51}{subsubsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.3} Pontos de acumulação}{51}{subsubsection.6.3.3}%
-\contentsline {subsubsection}{\numberline {6.3.4} Conjuntos compactos}{51}{subsubsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.4} Limites de Funções}{51}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1} Definição e propriedades do limite}{51}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2} Exemplos de limites}{51}{subsubsection.6.4.2}%
-\contentsline {subsubsection}{\numberline {6.4.3} Limites laterais}{51}{subsubsection.6.4.3}%
-\contentsline {subsubsection}{\numberline {6.4.4} Limites no infinito}{51}{subsubsection.6.4.4}%
-\contentsline {subsubsection}{\numberline {6.4.5} Valores de aderência de uma função; lim sup e lim inf}{51}{subsubsection.6.4.5}%
-\contentsline {subsection}{\numberline {6.5} Funções Contínuas}{51}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1} A noção de função contínua}{51}{subsubsection.6.5.1}%
-\contentsline {subsubsection}{\numberline {6.5.2} Descontinuidades}{51}{subsubsection.6.5.2}%
-\contentsline {subsubsection}{\numberline {6.5.3} Funções contínuas em intervalos}{51}{subsubsection.6.5.3}%
-\contentsline {subsubsection}{\numberline {6.5.4} Funções contínuas em conjuntos compactos}{51}{subsubsection.6.5.4}%
-\contentsline {subsubsection}{\numberline {6.5.5} Continuidade uniforme}{51}{subsubsection.6.5.5}%
-\contentsline {subsection}{\numberline {6.6} Derivadas}{51}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1} Definição e propriedades da derivada num ponto}{51}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2} Funções deriváveis num intervalo}{51}{subsubsection.6.6.2}%
-\contentsline {subsubsection}{\numberline {6.6.3} Fórmula de Taylor}{51}{subsubsection.6.6.3}%
-\contentsline {subsubsection}{\numberline {6.6.4} Série de Taylor, funções analíticas}{51}{subsubsection.6.6.4}%
-\contentsline {subsection}{\numberline {6.7} Integral de Riemann}{51}{subsection.6.7}%
-\contentsline {subsubsection}{\numberline {6.7.1} Integral superior e integral inferior}{51}{subsubsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.2} Funções integráveis}{51}{subsubsection.6.7.2}%
-\contentsline {subsubsection}{\numberline {6.7.3} O Teorema Fundamental do Cálculo}{51}{subsubsection.6.7.3}%
-\contentsline {subsubsection}{\numberline {6.7.4} Fórmulas clássicas do Cálculo Integral}{51}{subsubsection.6.7.4}%
-\contentsline {subsubsection}{\numberline {6.7.5} A integral como limite de somas}{51}{subsubsection.6.7.5}%
-\contentsline {subsubsection}{\numberline {6.7.6} Caracterização das funções integráveis}{51}{subsubsection.6.7.6}%
-\contentsline {subsubsection}{\numberline {6.7.7} Logaritmos e exponenciais}{51}{subsubsection.6.7.7}%
-\contentsline {subsection}{\numberline {6.8} Sequências e Séries de Funções}{51}{subsection.6.8}%
-\contentsline {subsubsection}{\numberline {6.8.1} Convergência simples e convergência uniforme}{51}{subsubsection.6.8.1}%
-\contentsline {subsubsection}{\numberline {6.8.2} Propriedades da convergência uniforme}{51}{subsubsection.6.8.2}%
-\contentsline {subsubsection}{\numberline {6.8.3} Séries de potências}{51}{subsubsection.6.8.3}%
-\contentsline {subsubsection}{\numberline {6.8.4} Funções analíticas}{51}{subsubsection.6.8.4}%
-\contentsline {subsubsection}{\numberline {6.8.5} Equicontinuidade}{51}{subsubsection.6.8.5}%
-\contentsline {subsection}{\numberline {6.9}Organizar}{51}{subsection.6.9}%
-\contentsline {section}{\numberline {7}Geometria Analítica}{52}{section.7}%
-\contentsline {section}{\numberline {8}Álgebra Linear}{52}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Posto}{52}{subsection.8.1}%
-\contentsline {section}{\numberline {9}Análise no $\mathbb {R}^n$}{52}{section.9}%
-\contentsline {subsection}{\numberline {9.1} Topologia do Espaço Euclidiano}{52}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}O espaço vetorial $\mathbb {R}^n$}{52}{subsubsection.9.1.1}%
-\contentsline {subsubsection}{\numberline {9.1.2}Métrica, Produto interno e norma}{52}{subsubsection.9.1.2}%
-\contentsline {subsubsection}{\numberline {9.1.3}Números complexos}{54}{subsubsection.9.1.3}%
-\contentsline {subsubsection}{\numberline {9.1.4}Bolas e conjuntos limitados}{54}{subsubsection.9.1.4}%
-\contentsline {subsubsection}{\numberline {9.1.5}Sequências no espaço euclidiano}{54}{subsubsection.9.1.5}%
-\contentsline {subsubsection}{\numberline {9.1.6}Pontos de acumulação}{55}{subsubsection.9.1.6}%
-\contentsline {subsubsection}{\numberline {9.1.7}Aplicações contínuas}{55}{subsubsection.9.1.7}%
-\contentsline {subsubsection}{\numberline {9.1.8}Homeomorfismos}{55}{subsubsection.9.1.8}%
-\contentsline {subsubsection}{\numberline {9.1.9}Limites}{55}{subsubsection.9.1.9}%
-\contentsline {subsubsection}{\numberline {9.1.10} Conjuntos abertos}{55}{subsubsection.9.1.10}%
-\contentsline {subsubsection}{\numberline {9.1.11} Conjuntos fechados}{55}{subsubsection.9.1.11}%
-\contentsline {subsubsection}{\numberline {9.1.12} Conjuntos compactos}{55}{subsubsection.9.1.12}%
-\contentsline {subsubsection}{\numberline {9.1.13} Distância entre dois conjuntos; diâmetro}{56}{subsubsection.9.1.13}%
-\contentsline {subsubsection}{\numberline {9.1.14} Conexidade}{56}{subsubsection.9.1.14}%
-\contentsline {subsubsection}{\numberline {9.1.15} A norma de uma transformação linear}{56}{subsubsection.9.1.15}%
-\contentsline {subsection}{\numberline {9.2} Caminhos no Espaço Euclidiano}{56}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1} Caminhos diferenciáveis}{56}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}Exercícios}{58}{subsubsection.9.2.2}%
-\contentsline {subsubsection}{\numberline {9.2.3} Integral de um caminho}{59}{subsubsection.9.2.3}%
-\contentsline {subsubsection}{\numberline {9.2.4} Os teoremas clássicos do Cálculo}{59}{subsubsection.9.2.4}%
-\contentsline {subsubsection}{\numberline {9.2.5} Caminhos retificáveis}{61}{subsubsection.9.2.5}%
-\contentsline {subsubsection}{\numberline {9.2.6} O comprimento de arco como parâmetro}{61}{subsubsection.9.2.6}%
-\contentsline {subsubsection}{\numberline {9.2.7} Curvatura e torção}{61}{subsubsection.9.2.7}%
-\contentsline {subsubsection}{\numberline {9.2.8} A função-ângulo}{61}{subsubsection.9.2.8}%
-\contentsline {subsection}{\numberline {9.3} Funções Reais de n Variáveis}{61}{subsection.9.3}%
-\contentsline {subsubsection}{\numberline {9.3.1}Derivadas parciais}{61}{subsubsection.9.3.1}%
-\contentsline {subsubsection}{\numberline {9.3.2}Derivadas direcionais}{61}{subsubsection.9.3.2}%
-\contentsline {subsubsection}{\numberline {9.3.3}Funções diferenciáveis}{62}{subsubsection.9.3.3}%
-\contentsline {subsubsection}{\numberline {9.3.4}A diferencial de uma função}{67}{subsubsection.9.3.4}%
-\contentsline {subsubsection}{\numberline {9.3.5}O gradiente de uma função diferenciável}{67}{subsubsection.9.3.5}%
-\contentsline {subsubsection}{\numberline {9.3.6}A Regra de Leibniz}{67}{subsubsection.9.3.6}%
-\contentsline {subsubsection}{\numberline {9.3.7}O Teorema de Schwarz}{67}{subsubsection.9.3.7}%
-\contentsline {subsubsection}{\numberline {9.3.8}Fórmula de Taylor: pontos críticos}{67}{subsubsection.9.3.8}%
-\contentsline {subsubsection}{\numberline {9.3.9}O teorema da função implícita}{67}{subsubsection.9.3.9}%
-\contentsline {subsubsection}{\numberline {9.3.10} Multiplicador de Lagrange}{67}{subsubsection.9.3.10}%
-\contentsline {subsection}{\numberline {9.4} Integrais Curvilíneas}{67}{subsection.9.4}%
-\contentsline {subsubsection}{\numberline {9.4.1}Formas diferenciais de grau 1}{67}{subsubsection.9.4.1}%
-\contentsline {subsubsection}{\numberline {9.4.2}Integral de Stieltjes}{67}{subsubsection.9.4.2}%
-\contentsline {subsubsection}{\numberline {9.4.3}Integral de uma forma ao longo de um caminho}{67}{subsubsection.9.4.3}%
-\contentsline {subsubsection}{\numberline {9.4.4}Justaposição de caminhos: caminho inverso}{67}{subsubsection.9.4.4}%
-\contentsline {subsubsection}{\numberline {9.4.5}Integral curvilínea de um campo de vetores e de uma função}{67}{subsubsection.9.4.5}%
-\contentsline {subsubsection}{\numberline {9.4.6}Formas exatas e formas fechadas}{67}{subsubsection.9.4.6}%
-\contentsline {subsubsection}{\numberline {9.4.7}Homotopia}{67}{subsubsection.9.4.7}%
-\contentsline {subsubsection}{\numberline {9.4.8}Integrais curvilíneas e homotopia}{67}{subsubsection.9.4.8}%
-\contentsline {subsubsection}{\numberline {9.4.9}Cohomologia}{67}{subsubsection.9.4.9}%
-\contentsline {subsubsection}{\numberline {9.4.10} A fórmula de Kronecker}{67}{subsubsection.9.4.10}%
-\contentsline {subsection}{\numberline {9.5} Aplicações Diferenciáveis}{67}{subsection.9.5}%
-\contentsline {subsubsection}{\numberline {9.5.1}Diferenciabilidade de uma aplicação}{67}{subsubsection.9.5.1}%
-\contentsline {subsubsection}{\numberline {9.5.2}Exemplos de aplicações diferenciáveis}{67}{subsubsection.9.5.2}%
-\contentsline {subsubsection}{\numberline {9.5.3}A regra da cadeia}{67}{subsubsection.9.5.3}%
-\contentsline {subsubsection}{\numberline {9.5.4}A fórmula de Taylor}{67}{subsubsection.9.5.4}%
-\contentsline {subsubsection}{\numberline {9.5.5}A desigualdade do valor médio}{67}{subsubsection.9.5.5}%
-\contentsline {subsubsection}{\numberline {9.5.6}Sequências de aplicações diferenciáveis}{67}{subsubsection.9.5.6}%
-\contentsline {subsubsection}{\numberline {9.5.7}Aplicações fortemente diferenciáveis}{67}{subsubsection.9.5.7}%
-\contentsline {subsubsection}{\numberline {9.5.8}O teorema da aplicação inversa}{67}{subsubsection.9.5.8}%
-\contentsline {subsubsection}{\numberline {9.5.9}Aplicação: o Lema de Morse}{67}{subsubsection.9.5.9}%
-\contentsline {subsubsection}{\numberline {9.5.10} A forma local das imersões}{67}{subsubsection.9.5.10}%
-\contentsline {subsubsection}{\numberline {9.5.11} A forma local das submersões}{67}{subsubsection.9.5.11}%
-\contentsline {subsubsection}{\numberline {9.5.12} O teorema do posto}{67}{subsubsection.9.5.12}%
-\contentsline {subsubsection}{\numberline {9.5.13} Superfícies no espaço euclidiano}{67}{subsubsection.9.5.13}%
-\contentsline {subsubsection}{\numberline {9.5.14} Superfícies orientáveis}{67}{subsubsection.9.5.14}%
-\contentsline {subsubsection}{\numberline {9.5.15} O método dos multiplicadores de Lagrange}{67}{subsubsection.9.5.15}%
-\contentsline {subsection}{\numberline {9.6} Integrais Múltiplas}{67}{subsection.9.6}%
-\contentsline {subsubsection}{\numberline {9.6.1}A definição de integral}{67}{subsubsection.9.6.1}%
-\contentsline {subsubsection}{\numberline {9.6.2}Conjuntos de medida nula}{67}{subsubsection.9.6.2}%
-\contentsline {subsubsection}{\numberline {9.6.3}Caracterização das funções integráveis}{67}{subsubsection.9.6.3}%
-\contentsline {subsubsection}{\numberline {9.6.4}A integral como limite de somas de Riemann}{67}{subsubsection.9.6.4}%
-\contentsline {subsubsection}{\numberline {9.6.5}Integração repetida}{67}{subsubsection.9.6.5}%
-\contentsline {subsubsection}{\numberline {9.6.6}Mudança de variáveis}{67}{subsubsection.9.6.6}%
-\contentsline {subsection}{\numberline {9.7} Integrais de Superfície}{67}{subsection.9.7}%
-\contentsline {subsubsection}{\numberline {9.7.1}Formas alternadas}{67}{subsubsection.9.7.1}%
-\contentsline {subsubsection}{\numberline {9.7.2}Formas diferenciais}{67}{subsubsection.9.7.2}%
-\contentsline {subsubsection}{\numberline {9.7.3}A diferencial exterior}{67}{subsubsection.9.7.3}%
-\contentsline {subsubsection}{\numberline {9.7.4}Partições da unidade}{67}{subsubsection.9.7.4}%
-\contentsline {subsubsection}{\numberline {9.7.5}Aplicações da partição da unidade}{67}{subsubsection.9.7.5}%
-\contentsline {subsubsection}{\numberline {9.7.6}Integrais de superfície}{67}{subsubsection.9.7.6}%
-\contentsline {subsubsection}{\numberline {9.7.7}Superfícies com bordo}{67}{subsubsection.9.7.7}%
-\contentsline {subsubsection}{\numberline {9.7.8}O Teorema de Stokes}{67}{subsubsection.9.7.8}%
-\contentsline {subsubsection}{\numberline {9.7.9}Grau de uma aplicação}{67}{subsubsection.9.7.9}%
-\contentsline {subsubsection}{\numberline {9.7.10} A integral de Kronecker}{67}{subsubsection.9.7.10}%
-\contentsline {subsection}{\numberline {9.8}Organizar}{67}{subsection.9.8}%
-\contentsline {subsection}{\numberline {9.9}Diferenciação}{68}{subsection.9.9}%
-\contentsline {subsection}{\numberline {9.10}Integração}{69}{subsection.9.10}%
-\contentsline {subsubsection}{\numberline {9.10.1}Exercícios}{70}{subsubsection.9.10.1}%
-\contentsline {section}{\numberline {10}Geometria diferencial}{72}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Superfícies Regulares}{72}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {3.4.1}União}{10}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Interseção}{12}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Organizar Ainda}{13}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Produto Cartesiano}{18}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Relações}{18}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Definições iniciais}{18}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Relações de Equivalência}{18}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Relação de Ordem}{19}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}Funções}{20}{subsubsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.8}Números Naturais}{20}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Axiomas de Peano}{20}{subsubsection.3.8.1}%
+\contentsline {paragraph}{Temos como conceitos primitivos o conjunto dos naturais, denotado por $\mathbb {N}$, cujos elementos são os números naturais, e uma função $s:\mathbb {N} \to \mathbb {N}$. Para cada $n\in \mathbb {N}$, o número $s(n)$ é o sucessor de $n$. Temos os axiomas:}{20}{section*.3}%
+\contentsline {subsubsection}{\numberline {3.8.2}Soma nos Naturais}{20}{subsubsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.3}Ordem nos Naturais}{24}{subsubsection.3.8.3}%
+\contentsline {subsubsection}{\numberline {3.8.4}Produto nos Naturais}{25}{subsubsection.3.8.4}%
+\contentsline {subsubsection}{\numberline {3.8.5}Exercícios}{29}{subsubsection.3.8.5}%
+\contentsline {subsection}{\numberline {3.9}Conjuntos Finitos e Infinitos}{30}{subsection.3.9}%
+\contentsline {subsubsection}{\numberline {3.9.1}Conjuntos Finitos}{30}{subsubsection.3.9.1}%
+\contentsline {subsubsection}{\numberline {3.9.2}Conjuntos Infinitos}{32}{subsubsection.3.9.2}%
+\contentsline {subsubsection}{\numberline {3.9.3}Exercícios}{39}{subsubsection.3.9.3}%
+\contentsline {section}{\numberline {4}Anéis }{39}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definições iniciais}{39}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Exercícios}{42}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}Invertibilidade}{42}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Corpos, domínios e anéis reduzidos}{42}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Aritmética}{44}{section.5}%
+\contentsline {section}{\numberline {6}Análise Real}{44}{section.6}%
+\contentsline {subsection}{\numberline {6.1} Números Reais}{44}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Corpos ordenados}{44}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Números reais}{46}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2} Sequências e Séries de Números Reais}{47}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1} Sequências}{47}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2} Limite de uma sequência}{50}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3} Propriedades aritméticas dos limites}{51}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4} Subsequências}{51}{subsubsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.5} Sequências de Cauchy}{53}{subsubsection.6.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.6} Limites infinitos}{53}{subsubsection.6.2.6}%
+\contentsline {subsubsection}{\numberline {6.2.7} Séries numéricas}{53}{subsubsection.6.2.7}%
+\contentsline {subsection}{\numberline {6.3} Topologia da Reta}{53}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1} Conjuntos abertos}{53}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2} Conjuntos fechados}{53}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3} Pontos de acumulação}{53}{subsubsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.4} Conjuntos compactos}{53}{subsubsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.4} Limites de Funções}{53}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1} Definição e propriedades do limite}{53}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2} Exemplos de limites}{53}{subsubsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.3} Limites laterais}{53}{subsubsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.4} Limites no infinito}{53}{subsubsection.6.4.4}%
+\contentsline {subsubsection}{\numberline {6.4.5} Valores de aderência de uma função; lim sup e lim inf}{53}{subsubsection.6.4.5}%
+\contentsline {subsection}{\numberline {6.5} Funções Contínuas}{53}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1} A noção de função contínua}{53}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2} Descontinuidades}{53}{subsubsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.3} Funções contínuas em intervalos}{53}{subsubsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.4} Funções contínuas em conjuntos compactos}{53}{subsubsection.6.5.4}%
+\contentsline {subsubsection}{\numberline {6.5.5} Continuidade uniforme}{53}{subsubsection.6.5.5}%
+\contentsline {subsection}{\numberline {6.6} Derivadas}{53}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1} Definição e propriedades da derivada num ponto}{53}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2} Funções deriváveis num intervalo}{53}{subsubsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.3} Fórmula de Taylor}{53}{subsubsection.6.6.3}%
+\contentsline {subsubsection}{\numberline {6.6.4} Série de Taylor, funções analíticas}{53}{subsubsection.6.6.4}%
+\contentsline {subsection}{\numberline {6.7} Integral de Riemann}{53}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1} Integral superior e integral inferior}{53}{subsubsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.2} Funções integráveis}{53}{subsubsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.3} O Teorema Fundamental do Cálculo}{53}{subsubsection.6.7.3}%
+\contentsline {subsubsection}{\numberline {6.7.4} Fórmulas clássicas do Cálculo Integral}{53}{subsubsection.6.7.4}%
+\contentsline {subsubsection}{\numberline {6.7.5} A integral como limite de somas}{53}{subsubsection.6.7.5}%
+\contentsline {subsubsection}{\numberline {6.7.6} Caracterização das funções integráveis}{53}{subsubsection.6.7.6}%
+\contentsline {subsubsection}{\numberline {6.7.7} Logaritmos e exponenciais}{53}{subsubsection.6.7.7}%
+\contentsline {subsection}{\numberline {6.8} Sequências e Séries de Funções}{53}{subsection.6.8}%
+\contentsline {subsubsection}{\numberline {6.8.1} Convergência simples e convergência uniforme}{53}{subsubsection.6.8.1}%
+\contentsline {subsubsection}{\numberline {6.8.2} Propriedades da convergência uniforme}{53}{subsubsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.3} Séries de potências}{53}{subsubsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.4} Funções analíticas}{53}{subsubsection.6.8.4}%
+\contentsline {subsubsection}{\numberline {6.8.5} Equicontinuidade}{53}{subsubsection.6.8.5}%
+\contentsline {subsection}{\numberline {6.9}Organizar}{53}{subsection.6.9}%
+\contentsline {section}{\numberline {7}Geometria Analítica}{54}{section.7}%
+\contentsline {section}{\numberline {8}Álgebra Linear}{54}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Posto}{54}{subsection.8.1}%
+\contentsline {section}{\numberline {9}Análise no $\mathbb {R}^n$}{54}{section.9}%
+\contentsline {subsection}{\numberline {9.1} Topologia do Espaço Euclidiano}{54}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}O espaço vetorial $\mathbb {R}^n$}{54}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}Métrica, Produto interno e norma}{54}{subsubsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.3}Números complexos}{56}{subsubsection.9.1.3}%
+\contentsline {subsubsection}{\numberline {9.1.4}Bolas e conjuntos limitados}{56}{subsubsection.9.1.4}%
+\contentsline {subsubsection}{\numberline {9.1.5}Sequências no espaço euclidiano}{56}{subsubsection.9.1.5}%
+\contentsline {subsubsection}{\numberline {9.1.6}Pontos de acumulação}{57}{subsubsection.9.1.6}%
+\contentsline {subsubsection}{\numberline {9.1.7}Aplicações contínuas}{57}{subsubsection.9.1.7}%
+\contentsline {subsubsection}{\numberline {9.1.8}Homeomorfismos}{57}{subsubsection.9.1.8}%
+\contentsline {subsubsection}{\numberline {9.1.9}Limites}{57}{subsubsection.9.1.9}%
+\contentsline {subsubsection}{\numberline {9.1.10} Conjuntos abertos}{57}{subsubsection.9.1.10}%
+\contentsline {subsubsection}{\numberline {9.1.11} Conjuntos fechados}{57}{subsubsection.9.1.11}%
+\contentsline {subsubsection}{\numberline {9.1.12} Conjuntos compactos}{57}{subsubsection.9.1.12}%
+\contentsline {subsubsection}{\numberline {9.1.13} Distância entre dois conjuntos; diâmetro}{58}{subsubsection.9.1.13}%
+\contentsline {subsubsection}{\numberline {9.1.14} Conexidade}{58}{subsubsection.9.1.14}%
+\contentsline {subsubsection}{\numberline {9.1.15} A norma de uma transformação linear}{58}{subsubsection.9.1.15}%
+\contentsline {subsection}{\numberline {9.2} Caminhos no Espaço Euclidiano}{58}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1} Caminhos diferenciáveis}{58}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}Exercícios}{60}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.3} Integral de um caminho}{61}{subsubsection.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.2.4} Os teoremas clássicos do Cálculo}{61}{subsubsection.9.2.4}%
+\contentsline {subsubsection}{\numberline {9.2.5} Caminhos retificáveis}{63}{subsubsection.9.2.5}%
+\contentsline {subsubsection}{\numberline {9.2.6} O comprimento de arco como parâmetro}{63}{subsubsection.9.2.6}%
+\contentsline {subsubsection}{\numberline {9.2.7} Curvatura e torção}{63}{subsubsection.9.2.7}%
+\contentsline {subsubsection}{\numberline {9.2.8} A função-ângulo}{63}{subsubsection.9.2.8}%
+\contentsline {subsection}{\numberline {9.3} Funções Reais de n Variáveis}{63}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Derivadas parciais}{63}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}Derivadas direcionais}{63}{subsubsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.3}Funções diferenciáveis}{64}{subsubsection.9.3.3}%
+\contentsline {subsubsection}{\numberline {9.3.4}A diferencial de uma função}{69}{subsubsection.9.3.4}%
+\contentsline {subsubsection}{\numberline {9.3.5}O gradiente de uma função diferenciável}{69}{subsubsection.9.3.5}%
+\contentsline {subsubsection}{\numberline {9.3.6}A Regra de Leibniz}{69}{subsubsection.9.3.6}%
+\contentsline {subsubsection}{\numberline {9.3.7}O Teorema de Schwarz}{69}{subsubsection.9.3.7}%
+\contentsline {subsubsection}{\numberline {9.3.8}Fórmula de Taylor: pontos críticos}{69}{subsubsection.9.3.8}%
+\contentsline {subsubsection}{\numberline {9.3.9}O teorema da função implícita}{69}{subsubsection.9.3.9}%
+\contentsline {subsubsection}{\numberline {9.3.10} Multiplicador de Lagrange}{69}{subsubsection.9.3.10}%
+\contentsline {subsection}{\numberline {9.4} Integrais Curvilíneas}{69}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Formas diferenciais de grau 1}{69}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}Integral de Stieltjes}{69}{subsubsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.3}Integral de uma forma ao longo de um caminho}{69}{subsubsection.9.4.3}%
+\contentsline {subsubsection}{\numberline {9.4.4}Justaposição de caminhos: caminho inverso}{69}{subsubsection.9.4.4}%
+\contentsline {subsubsection}{\numberline {9.4.5}Integral curvilínea de um campo de vetores e de uma função}{69}{subsubsection.9.4.5}%
+\contentsline {subsubsection}{\numberline {9.4.6}Formas exatas e formas fechadas}{69}{subsubsection.9.4.6}%
+\contentsline {subsubsection}{\numberline {9.4.7}Homotopia}{69}{subsubsection.9.4.7}%
+\contentsline {subsubsection}{\numberline {9.4.8}Integrais curvilíneas e homotopia}{69}{subsubsection.9.4.8}%
+\contentsline {subsubsection}{\numberline {9.4.9}Cohomologia}{69}{subsubsection.9.4.9}%
+\contentsline {subsubsection}{\numberline {9.4.10} A fórmula de Kronecker}{69}{subsubsection.9.4.10}%
+\contentsline {subsection}{\numberline {9.5} Aplicações Diferenciáveis}{69}{subsection.9.5}%
+\contentsline {subsubsection}{\numberline {9.5.1}Diferenciabilidade de uma aplicação}{69}{subsubsection.9.5.1}%
+\contentsline {subsubsection}{\numberline {9.5.2}Exemplos de aplicações diferenciáveis}{69}{subsubsection.9.5.2}%
+\contentsline {subsubsection}{\numberline {9.5.3}A regra da cadeia}{69}{subsubsection.9.5.3}%
+\contentsline {subsubsection}{\numberline {9.5.4}A fórmula de Taylor}{69}{subsubsection.9.5.4}%
+\contentsline {subsubsection}{\numberline {9.5.5}A desigualdade do valor médio}{69}{subsubsection.9.5.5}%
+\contentsline {subsubsection}{\numberline {9.5.6}Sequências de aplicações diferenciáveis}{69}{subsubsection.9.5.6}%
+\contentsline {subsubsection}{\numberline {9.5.7}Aplicações fortemente diferenciáveis}{69}{subsubsection.9.5.7}%
+\contentsline {subsubsection}{\numberline {9.5.8}O teorema da aplicação inversa}{69}{subsubsection.9.5.8}%
+\contentsline {subsubsection}{\numberline {9.5.9}Aplicação: o Lema de Morse}{69}{subsubsection.9.5.9}%
+\contentsline {subsubsection}{\numberline {9.5.10} A forma local das imersões}{69}{subsubsection.9.5.10}%
+\contentsline {subsubsection}{\numberline {9.5.11} A forma local das submersões}{69}{subsubsection.9.5.11}%
+\contentsline {subsubsection}{\numberline {9.5.12} O teorema do posto}{69}{subsubsection.9.5.12}%
+\contentsline {subsubsection}{\numberline {9.5.13} Superfícies no espaço euclidiano}{69}{subsubsection.9.5.13}%
+\contentsline {subsubsection}{\numberline {9.5.14} Superfícies orientáveis}{69}{subsubsection.9.5.14}%
+\contentsline {subsubsection}{\numberline {9.5.15} O método dos multiplicadores de Lagrange}{69}{subsubsection.9.5.15}%
+\contentsline {subsection}{\numberline {9.6} Integrais Múltiplas}{69}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}A definição de integral}{69}{subsubsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.2}Conjuntos de medida nula}{69}{subsubsection.9.6.2}%
+\contentsline {subsubsection}{\numberline {9.6.3}Caracterização das funções integráveis}{69}{subsubsection.9.6.3}%
+\contentsline {subsubsection}{\numberline {9.6.4}A integral como limite de somas de Riemann}{69}{subsubsection.9.6.4}%
+\contentsline {subsubsection}{\numberline {9.6.5}Integração repetida}{69}{subsubsection.9.6.5}%
+\contentsline {subsubsection}{\numberline {9.6.6}Mudança de variáveis}{69}{subsubsection.9.6.6}%
+\contentsline {subsection}{\numberline {9.7} Integrais de Superfície}{69}{subsection.9.7}%
+\contentsline {subsubsection}{\numberline {9.7.1}Formas alternadas}{69}{subsubsection.9.7.1}%
+\contentsline {subsubsection}{\numberline {9.7.2}Formas diferenciais}{69}{subsubsection.9.7.2}%
+\contentsline {subsubsection}{\numberline {9.7.3}A diferencial exterior}{69}{subsubsection.9.7.3}%
+\contentsline {subsubsection}{\numberline {9.7.4}Partições da unidade}{69}{subsubsection.9.7.4}%
+\contentsline {subsubsection}{\numberline {9.7.5}Aplicações da partição da unidade}{69}{subsubsection.9.7.5}%
+\contentsline {subsubsection}{\numberline {9.7.6}Integrais de superfície}{69}{subsubsection.9.7.6}%
+\contentsline {subsubsection}{\numberline {9.7.7}Superfícies com bordo}{69}{subsubsection.9.7.7}%
+\contentsline {subsubsection}{\numberline {9.7.8}O Teorema de Stokes}{69}{subsubsection.9.7.8}%
+\contentsline {subsubsection}{\numberline {9.7.9}Grau de uma aplicação}{69}{subsubsection.9.7.9}%
+\contentsline {subsubsection}{\numberline {9.7.10} A integral de Kronecker}{69}{subsubsection.9.7.10}%
+\contentsline {subsection}{\numberline {9.8}Organizar}{69}{subsection.9.8}%
+\contentsline {subsection}{\numberline {9.9}Diferenciação}{70}{subsection.9.9}%
+\contentsline {subsection}{\numberline {9.10}Integração}{71}{subsection.9.10}%
+\contentsline {subsubsection}{\numberline {9.10.1}Exercícios}{72}{subsubsection.9.10.1}%
+\contentsline {section}{\numberline {10}Geometria diferencial}{74}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Superfícies Regulares}{74}{subsection.10.1}%
