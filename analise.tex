@@ -2322,6 +2322,12 @@ Se existe um vetor \(v\in \mathbb{R}^n\) e uma função $\rho : \mathbb{R} \to \
    \subsubsection{O Teorema de Schwarz}
    \subsubsection{Fórmula de Taylor: pontos críticos}
    \subsubsection{O teorema da função implícita}
+   \begin{prop}
+	   Seja \(f : U \subset \mathbb{R}^{n+1} \to \mathbb{R} \) uma função de classe \(C^{k} \). Seja \((x_0,y_0)  \in U \) com \(x_0 \in \mathbb{R}^n \) e \(y_0  \in \mathbb{R}\) e \( \dfrac{\partial f}{\partial y}(x_0 ,y_0 ) \neq 0 \).  Então existem abertos \( V\subset \mathbb{R}^n \)  , \( W \subset \mathbb{R}\) com \( (x_0 , y_0 ) \in V\times W \)  e uma função \( \phi: V \to W \) com \( \forall (x,y) \in \) %carro
+   \end{prop}
+   \begin{proof}
+
+   \end{proof}
    \subsubsection{ Multiplicador de Lagrange}
 \subsection{ Integrais Curvilíneas}
    \subsubsection{Formas diferenciais de grau 1}
@@ -2530,14 +2536,23 @@ Afirmo que $S_T(H) = Df(T)(H)$. De fato, $S_T$ é linear (confia) e temos \begin
 	\end{enumerate}
 \end{definicao}
 
+\begin{exemp}
+\end{exemp}
 \begin{prop}
 	Se $f:U\to \mathbb{R}$ é uma função diferenciável em um conjunto aberto $U\subset \mathbb{R}^2$, então o gráfico de $f$ é uma superfície regular.
 \end{prop}
 
 \begin{proof}
-	Seja $S = \text{Graf}(f) = \{ (x,y,z) \in \mathbb{R}^3 | (x,y) \in U \land z = f(x,y) \}$. Tomando $\phi: U \to S\cap \mathbb{R}^3 = S$ com $\phi(x,y) = (x,y, f(x,y))$. Temos $\phi$ diferenciável com $(\phi)^{-1} = \pi_{|S}$, logo é um homeomorfismo. Além disso, $D\phi(x,y) = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ f_1(x,y) & f_2(x,y) \end{bmatrix}$ com $\rank(D\phi(x,y)) = 2$ para todo $(x,y) \in U$, logo é uma imersão.
+	Seja $S = \text{Graf}(f) = \{ (x,y,z) \in \mathbb{R}^3 | (x,y) \in U \land z = f(x,y) \}$. Tomando $\phi: U \to S\cap \mathbb{R}^3 = S$ com $\phi(x,y) = (x,y, f(x,y))$. Temos $\phi$ contínua com $(\phi)^{-1} = \pi_{|S}$ (linear, logo contínua), logo é um homeomorfismo. Além disso, $D\phi(x,y) = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ f_1(x,y) & f_2(x,y) \end{bmatrix}$ com $\rank(D\phi(x,y)) = 2$ para todo $(x,y) \in U$, logo é uma imersão.
 \end{proof}
 \begin{definicao}
 	Dada uma aplicação diferenciável $F: U \subset \mathbb{R}^n \to \mathbb{R}^m$ definida em um aberto $U$, dizemos que $p\in U$ é um ponto crítico de $F$ se $\rank(DF(p)) < m$. A imagem $F(p) \in \mathbb{R}^m$ de um ponto crítico é chamado um valor crítico de $F$. Um ponto de $\mathbb{R}^m$ que não é valor crítico é chamado um valor regular de $F$.
 \end{definicao}
+\begin{prop}
+	Se \( f: U \subset \mathbb{R}^3 \to \mathbb{R} \) é uma função diferenciável e \( a\in f(U) \) é um valor regular de \( f\), então \( f^{-1}(a) \) é uma superfície regular em \( \mathbb{R}^3 \).
+\end{prop}
+\begin{proof}
+	Seja \( p = (p_0, p_1, p_3) \in f^{-1}(a) \). Como \(a\) é um valor regular de \(f\), temos que \( Df(p) = \nabla f(p) \) é sobrejetiva. Logo podemos supor, sem perda de generalidade, que \( \dfrac{\partial f}{\partial z}(p) \neq 0 \). Pelo Teorema da Função Implícita, existem abertos \( V\subset \mathbb{R}^2 , W \subset \mathbb{R}\) tal que \( p \in V\times W \subset U \) e uma função diferenciável \( \phi : V \to W \) tal que \( \forall (x,y,z) \in V\times W \: : \: f(x,y,z) = f(p) = a \iff z = \phi(x,y) \). Tomando \( h: V \to f^{-1}(a) \cap ( V\times W) \) dada por \( h(x,y) = (x,y, \phi(x,y) ) \). Temos \(h\) diferenciável, com \( \rank( Dh(q)) = 2 \) para todo \(q\in V\). Além disso, temos \( h^{-1} = \pi|_{f^{-1}(a)\cap (V\times W)} \), onde \( \pi \) é a projeção das primeiras duas coordenadas. De fato, se \( (x,y) \in V\), temos \( \pi( h(x,y)) = \pi( (x,y, \phi(x,y))) = (x,y) \). Se \( (x,y,z) \in f^{-1}(a) \cap (V\times W) \), temos  \( f(x,y,z) = a \iff z = \phi(x,y) \), pois \( (x,y,z) \in V\times W\). Logo \( h(\pi(x,y,z))) = h(x,y) = (x,y,\phi(x,y)) = (x,y,z) \).  Logo \( h\) parametriza a superfície em volta de \(p \) qualquer.
+\end{proof}
+
 \end{document}
