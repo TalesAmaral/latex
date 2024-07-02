@@ -1,0 +1,140 @@
+\documentclass{article}
+
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[brazilian]{babel}
+
+\newtheorem{axioma}{Axioma}
+\newtheorem{conceitoPrimitivo}{Conceito Primitivo}
+
+\newtheorem{prop}{Proposição}[section]
+\theoremstyle{theorem}
+\newtheorem{teo}{Teorema}
+\theoremstyle{lemma}
+\newtheorem{lema}{Lema}
+\newtheorem{inferencia}{Regra de Inferência}
+  
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={3.0},
+]{doclicense}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\title{Prova 2}
+\author{Tales da Silva Amaral}
+\date{\today}
+
+\theoremstyle{definition}
+\newtheorem{definicao}{Definição}[section]
+
+\theoremstyle{remark}
+\newtheorem{obs}{Observação}[section]
+\newtheorem{exemp}{Exemplo}[section]
+\newtheorem{exercicio}{Exercício}[subsection]
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\Null}{Null}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{introdução}
+\begin{definicao}[Transformação Bilinear]
+	Uma transformação \( B : V\times W \to \mathbb{R}^m \) é 
+\end{definicao}
+
+\section{Questão 1}
+\begin{prop}[Questão 1]
+	Sejam \(f: U \subset \mathbb{R}^n \to \mathbb{R}^p \) e \( g: V \subset \mathbb{R}^p \to \mathbb{R}^m \) funções de classe \( C^2\)  nos abertos \( U\) e \(V\). Se \( x\in U\) e \( f(x) \in V\) , então \[ D^{2}(g\circ f)(x) = D^2g(f(x)) \circ \left(Df(x), Df(x)\right) + Dg(f(x)) \circ D^2f(x). \]
+\end{prop}
+\begin{proof}
+	Dado \( x\in U \) com \( f(x) \in V\). Pela Regra da Cadeia, temos que \( D( g\circ f)(x) = Dg(f(x)) \circ Df(x) \). Tomando \(m(A,B) = A\circ B\), temos \(D(g\circ f)(x) = Dg(f(x))\circ Df(x) = m(Dg(f(x)), Df(x)) \). Temos que \( m\) é \(C^{\infty} \subset C^2 \) e \( f,g \subset C^2\), logo \( D(g\circ f) \) é diferenciável. Logo:
+\begin{align*}
+	D^2(g\circ f)(x) &= D( D(g\circ f)(x)) \\~\\
+	&= D(m( Dg(f(x)), Df(x))) \\~\\
+	&= Dm( Dg(f(x)), Df(x)) \circ D( Dg(f(x)), Df(x))  \\~\\
+	&= Dm( Dg(f(x)), Df(x)) \circ ( D^2g(f(x)) \circ Df(x) , D^2f(x))  \\~\\
+	&= m( Dg(f(x)) , D^{2}f(x) )  + m(D^{2}g(f(x)) \circ Df(x) , Df(x)) \\~\\
+	&=  Dg(f(x)) \circ D^{2}f(x)   + D^{2}g(f(x)) \circ Df(x) \circ  Df(x) 
+\end{align*}
+\end{proof}
+\section{A definir}
+\begin{definicao}[$L(\mathbb{R}^n, \mathbb{R}^m)$]
+	$$L(\mathbb{R}^n, \mathbb{R}^m) = \left\{ T \in F(\mathbb{R}^n, \mathbb{R}^m) \: | \: T \text{ é linear}\right\}$$
+\end{definicao}
+\begin{definicao}[$L(\mathbb{R}^n)$]
+	$$L(\mathbb{R}^n) = L(\mathbb{R}^n, \mathbb{R}^n)$$
+\end{definicao}
+\begin{definicao}[$GL(\mathbb{R}^n)$]
+	$$GL(\mathbb{R}^n) = \left\{ T \in L(\mathbb{R}^n) \: | \: T \text{ é bijetiva}\right\}$$
+\end{definicao}
+\begin{prop}
+	$GL(\mathbb{R}^n)$ é aberto.
+\end{prop}
+\begin{proof}
+	Seja $T\in GL(\mathbb{R}^n)$. Logo $T$ é  invertível (bijetiva). Tomando \( \delta = \dfrac{1}{|T^{-1}|} \). Supondo \( S \in B( T, \delta) \subset \mathcal{L}( \mathbb{R}^n) \). Dado \( x\in \mathbb{R}^n \setminus \{0\} \), temos 
+\begin{align*}
+ \delta |x| &= \delta | T^{-1}\circ T (x)| \\~\\
+&\leq \delta |T^{-1}|\cdot |T(x)| \\~\\
+&= |T(x)|\\~\\
+&= |T(x) - S(x) + S(x) | \\~\\
+&\leq |T(x) - S(x)| + |S(x) | \\~\\
+&= |(T- S)(x)| + |S(x) | \\~\\
+&\leq |(T- S)|\cdot |x| + |S(x) | \\~\\
+&< \delta  |x| + |S(x) | 
+\end{align*}
+
+Logo \( |S(x)| + \delta |x| >  \delta|x| \implies |S(x)| > 0 \implies S(x) \neq 0 \). Como \( x\neq 0 \implies S(x) \neq 0 \), temos que \( S\) é injetiva. Como \( S \in \mathcal{L}(\mathbb{R}^n ) \), temos que \( S\) é um isomorfismo. Logo \( B(T,\delta ) \subset GL(\mathbb{R}^n ) \).
+\end{proof}
+\begin{prop}
+	$f:GL(\mathbb{R}^n) \to GL(\mathbb{R}^n)$, dada for $f(T) = T^{-1}$ é contínua.
+\end{prop}
+\begin{proof}
+	%carro
+\end{proof}
+\begin{prop}
+Seja $f: GL(\mathbb{R}^n) \to GL(\mathbb{R}^n)$, dada por $f(T) = T^{-1}$.  Temos $f$ diferenciável.
+\end{prop}
+	\begin{proof}
+	Temos  \begin{align*}
+(T+H)(T+H)^{-1} = I &\iff \\~\\
+T(T+H)^{-1} +H(T+H)^{-1} = I &\iff \\~\\
+T(T+H)^{-1} = I -H(T+H)^{-1} &\iff \\~\\
+(T+H)^{-1} = T^{-1}  ( I -H(T+H)^{-1} )  &\iff \\~\\
+\end{align*}
+
+Vou substituir $(T+H)^{-1}$ na equação acima.\begin{align*}
+(T+H)^{-1} &= T^{-1}  ( I -H(T+H)^{-1} )   \\~\\
+ &= T^{-1}  ( I -H \left[T^{-1}  ( I -H(T+H)^{-1} )\right])   \\~\\
+ &= T^{-1}  ( I -H T^{-1}  ( I -H(T+H)^{-1} ))   \\~\\
+ &= T^{-1}  ( I -H T^{-1}   +HT^{-1}H(T+H)^{-1} )   \\~\\
+ &= T^{-1}   -T^{-1}H T^{-1}   +T^{-1}HT^{-1}H(T+H)^{-1}    \\~\\
+\end{align*}
+
+Se chamarmos $S_T(H) = -T^{-1}HT^{-1}$, temos \begin{align*}
+f(T+H) &= (T+H)^{-1}    \\~\\
+ &= T^{-1}   -T^{-1}H T^{-1}   +T^{-1}HT^{-1}H(T+H)^{-1}    \\~\\
+ &= f(T)   +S_T(H)   +T^{-1}HT^{-1}H(T+H)^{-1}    \\~\\
+\end{align*}
+
+Afirmo que $S_T(H) = Df(T)(H)$. De fato, $S_T$ é linear (confia) e temos \begin{align*}
+\displaystyle\lim_{H\to 0} \dfrac{| f(T+H) - f(T) - S_T(H)|}{|H|} &= \displaystyle\lim_{H\to 0}\dfrac{| +T^{-1}HT^{-1}H(T+H)^{-1} |}{|H|} \\~\\
+&\leq \displaystyle\lim_{H \to 0}\dfrac{|T^{-1}|\cdot |H|\cdot |T^{-1}| \cdot |H| \cdot |(T+H)^{-1}|}{|H|} \\~\\
+&= \|T^{-1}\|^2\cdot \displaystyle\lim_{H \to 0}|H| \cdot |(T+H)^{-1}| \\~\\
+&=0
+\end{align*}
+	\end{proof}
+
+\end{document}
