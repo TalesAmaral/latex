@@ -70,7 +70,7 @@
 	&=  Dg(f(x)) \circ D^{2}f(x)   + D^{2}g(f(x)) \circ Df(x) \circ  Df(x) 
 \end{align*}
 \end{proof}
-\section{A definir}
+\section{Questão 2}
 \begin{definicao}[$L(\mathbb{R}^n, \mathbb{R}^m)$]
 	$$L(\mathbb{R}^n, \mathbb{R}^m) = \left\{ T \in F(\mathbb{R}^n, \mathbb{R}^m) \: | \: T \text{ é linear}\right\}$$
 \end{definicao}
@@ -98,17 +98,29 @@
 
 Logo \( |S(x)| + \delta |x| >  \delta|x| \implies |S(x)| > 0 \implies S(x) \neq 0 \). Como \( x\neq 0 \implies S(x) \neq 0 \), temos que \( S\) é injetiva. Como \( S \in \mathcal{L}(\mathbb{R}^n ) \), temos que \( S\) é um isomorfismo. Logo \( B(T,\delta ) \subset GL(\mathbb{R}^n ) \).
 \end{proof}
+\begin{proof}
+	Sabemos que a função \( \det : \mathcal{L}(\mathbb{R}^n) \to \mathbb{R} \) é uma função contínua (\( n \) linear ), logo o conjunto \( GL( \mathbb{R}^n = \det^{-1}(\mathbb{R}^n \setminus \{ 0\}) \) é aberto.
+\end{proof}
 \begin{prop}
 	$f:GL(\mathbb{R}^n) \to GL(\mathbb{R}^n)$, dada for $f(T) = T^{-1}$ é contínua.
 \end{prop}
 \begin{proof}
-	%carro
+	De fato, para  \( T,S\in GL(\mathbb{R}^n)\), temos 
+	\begin{align*}
+		| T^{-1} - S^{-1} | &= |T^{-1} S S^{-1} - T^{-1}TS^{-1} | \\~\\
+		&= | T^{-1} ( SS^{-1} - TS^{-1} ) | \\~\\
+		&= | T^{-1}  (S - T) S^{-1}  | \\~\\
+		&\leq | T^{-1} | \cdot |  S - T |\cdot | S^{-1}  | \\~\\
+		&= | T^{-1} | \cdot |  S - T |\cdot | S^{-1} -T^{-1} + T^{-1}  | \\~\\
+		&\leq | T^{-1} | \cdot |  S - T |\cdot ( | S^{-1} -T^{-1} |+|  T^{-1}  |) \\~\\
+	\end{align*}
+	Logo \[ |T^{-1} - S^{-1}| \leq \dfrac{|T^{-1}|^{2} \cdot |S-T|\cdot |T|}{1- |S - T||T^{-1}|}\]
 \end{proof}
 \begin{prop}
 Seja $f: GL(\mathbb{R}^n) \to GL(\mathbb{R}^n)$, dada por $f(T) = T^{-1}$.  Temos $f$ diferenciável.
 \end{prop}
 	\begin{proof}
-	Temos  \begin{align*}
+		Fixado \( T\in GL(\mathbb{R}^n) \), existe \(\delta >0 \) tal que \( B(T,\delta) \subset GL(\mathbb{R}^n \). Tomando \(H \in \mathcal{L}(\mathbb{R}^n ) \)    \begin{align*}
 (T+H)(T+H)^{-1} = I &\iff \\~\\
 T(T+H)^{-1} +H(T+H)^{-1} = I &\iff \\~\\
 T(T+H)^{-1} = I -H(T+H)^{-1} &\iff \\~\\
@@ -130,11 +142,19 @@ f(T+H) &= (T+H)^{-1}    \\~\\
 \end{align*}
 
 Afirmo que $S_T(H) = Df(T)(H)$. De fato, $S_T$ é linear (confia) e temos \begin{align*}
-\displaystyle\lim_{H\to 0} \dfrac{| f(T+H) - f(T) - S_T(H)|}{|H|} &= \displaystyle\lim_{H\to 0}\dfrac{| +T^{-1}HT^{-1}H(T+H)^{-1} |}{|H|} \\~\\
+\displaystyle\lim_{H\to 0} \dfrac{| f(T+H) - f(T) - S_T(H)|}{|H|} &= \displaystyle\lim_{H\to 0}\dfrac{| T^{-1}HT^{-1}H(T+H)^{-1} |}{|H|} \\~\\
 &\leq \displaystyle\lim_{H \to 0}\dfrac{|T^{-1}|\cdot |H|\cdot |T^{-1}| \cdot |H| \cdot |(T+H)^{-1}|}{|H|} \\~\\
 &= \|T^{-1}\|^2\cdot \displaystyle\lim_{H \to 0}|H| \cdot |(T+H)^{-1}| \\~\\
 &=0
 \end{align*}
+
+		O fato de \( \displaystyle \lim_{H\to 0} |(T+H)^{-1}| = \displaystyle \lim_{h \to 0} |f(T+H)| \) vem do fato de \( f\) ser contínua. Logo \(f\) é  diferenciável e \( Df(T)(H) = -T^{-1}HT^{-1}\).
 	\end{proof}
+\begin{prop}
+Seja $f: GL(\mathbb{R}^n) \to GL(\mathbb{R}^n)$, dada por $f(T) = T^{-1}$.  Temos $f$ diferenciável.
+\end{prop}
+\begin{proof}
+
+\end{proof}
 
 \end{document}

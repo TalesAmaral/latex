@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.2)  2 JUL 2024 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.2)  3 JUL 2024 19:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -522,18 +522,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [3]
 
-[4] (./prova.aux)
+[4]
+
+[5]
+
+[6] (./prova.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `prova.out' has not changed.
-(rerunfilecheck)             Checksum: 827B012131FDBBF4B12035E68ADFB219;284.
+(rerunfilecheck)             Checksum: D2028AFFEA88615A3B696183B467A9E3;287.
  ) 
 Here is how much of TeX's memory you used:
- 14002 strings out of 475035
- 220035 string characters out of 5763562
- 1945905 words of memory out of 5000000
+ 14005 strings out of 475035
+ 220055 string characters out of 5763562
+ 1943905 words of memory out of 5000000
  36462 multiletter control sequences out of 15000+600000
  565971 words of font info for 67 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -551,10 +555,10 @@ exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on prova.pdf (4 pages, 146032 bytes).
+Output written on prova.pdf (6 pages, 149855 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 124 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
